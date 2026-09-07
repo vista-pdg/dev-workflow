@@ -4,8 +4,10 @@
 > historial y habilitar opciones avanzadas según mi rol (estudiante o profesor).
 
 - **Rama:** `feat/HU-08-auth-roles-sesion` (en `backend` y en `frontend`)
-- **Estado:** Fase 0 — preparación
-- **Diseño:** documento "untitled" de pen (`~/.pencil/documents/f32caab9-3864-49f4-afa2-89fdd0b0fe55/pencil-new.pen`), hoy vacío
+- **Estado:** Fase 1 — diseño terminado, pendiente tu revisión
+- **Diseño:** documento "untitled" de pen (`~/.pencil/documents/f32caab9-3864-49f4-afa2-89fdd0b0fe55/pencil-new.pen`):
+  - `u3Viw5` Field · `sswXN` Button Primary (componentes reutilizables)
+  - `PVdTh` Bienvenida — Ingresar · `rzFxK` Bienvenida — Crear cuenta · `eKfSZ` Estados
 
 ## Criterios de aceptación
 
@@ -75,8 +77,25 @@ discusiones en una revisión. Se anotan aquí para levantarlos después.
 
 Se completa al cerrar cada fase. Es lo que convierte el PR en evidencia de cumplimiento.
 
-| CA | Implementación | Prueba backend | Prueba E2E |
-|---|---|---|---|
-| CA-1 | — | — | — |
-| CA-2 | — | — | — |
-| CA-3 | — | — | — |
+| CA | Diseño | Implementación | Prueba backend | Prueba E2E |
+|---|---|---|---|---|
+| CA-1 | `PVdTh`, `rzFxK`, `eKfSZ` | — | — | — |
+| CA-2 | n/a (backend) | — | — | — |
+| CA-3 | pendiente — ver nota | — | — | — |
+
+### Notas de diseño (fase 1)
+
+- Layout partido 835 / 605 sobre 1440×900. Panel izquierdo de marca sobre `#000000`, panel de
+  autenticación sobre `#121212` separado por borde de 1 px.
+- Registro e inicio de sesión integrados por **pestañas** en la misma pantalla, que es la lectura
+  literal de CA-1 ("integrados en la pantalla de bienvenida").
+- El motivo decorativo es un árbol de nodos y aristas construido con las mismas familias de color que
+  usa la escena 3D (`primary` → `purple` → `secondary` por profundidad), en vez de un panel de
+  marketing genérico.
+- El registro muestra explícitamente que la cuenta se crea con rol **Estudiante** y que Docente lo
+  asigna un administrador. Evita que el usuario espere elegir su rol en el formulario.
+- No se diseñó "¿olvidaste tu contraseña?": la recuperación está fuera de alcance y un enlace muerto
+  en la UI induce a implementarla.
+- No hay versión móvil. La app es escritorio por construcción (`h-screen w-screen overflow-hidden`
+  con sidebar fijo). Si se quiere móvil, es trabajo adicional.
+- Falta el shell del panel analítico (CA-3), a la espera de tu decisión sobre su alcance.
