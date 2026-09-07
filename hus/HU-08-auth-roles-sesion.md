@@ -4,7 +4,7 @@
 > historial y habilitar opciones avanzadas según mi rol (estudiante o profesor).
 
 - **Rama:** `feat/HU-08-auth-roles-sesion` (en `backend` y en `frontend`)
-- **Estado:** Fase 5 — backend 68/68, E2E 25/25; siguiente la integración
+- **Estado:** Fase 7 — integración superada (73/73 backend, 25/25 E2E). Pendiente validación humana para push y PR.
 - **Diseño:** documento "untitled" de pen (`~/.pencil/documents/f32caab9-3864-49f4-afa2-89fdd0b0fe55/pencil-new.pen`):
   - `u3Viw5` Field · `sswXN` Button Primary (componentes reutilizables)
   - `PVdTh` Bienvenida — Ingresar · `rzFxK` Bienvenida — Crear cuenta · `eKfSZ` Estados
@@ -78,6 +78,11 @@ discusiones en una revisión. Se anotan aquí para levantarlos después.
   no levanta; el volumen ajeno quedó intacto.
 - La imagen declarada es `postgres:17` pero el volumen preexistente era de la 16. Se resolvió al
   aislar el volumen, no hubo que degradar la imagen.
+- **El reenvío a `/error` pisaba el código de estado original.** Ese reenvío vuelve a atravesar la
+  cadena de seguridad como anónimo y, al no estar permitido, su propia respuesta reemplazaba a la
+  primera: un 403 por rol insuficiente llegaba al cliente como 401. MockMvc no ejecuta el despacho
+  de error, así que la suite no podía verlo; lo encontró el recorrido de integración de la fase 6.
+  Se añadió `HttpStatusContractTest`, que levanta un servidor real.
 - **Spring Security devolvía 403 tanto al no autenticado como al de rol insuficiente.** Eso dejaba
   muerto el refresco silencioso del frontend, que solo reintenta con 401. Se arregló en esta rama
   porque CA-2 no se cumple sin ello. Lo encontró el E2E: las pruebas de backend habían codificado el
@@ -97,6 +102,18 @@ Se completa al cerrar cada fase. Es lo que convierte el PR en evidencia de cumpl
 | CA-1 | `PVdTh`, `rzFxK`, `eKfSZ` | `WelcomePage`, `AuthController.register` | `AuthRegistrationTest` (9), `AuthLoginTest` (9) | `hu-08-ca1-*` (11) |
 | CA-2 | n/a (backend) | `RefreshTokenService`, `lib/http.ts`, `lib/session.ts`, `DataSeeder.migrateLegacyStudentRole` | `RefreshTokenRotationTest` (11), `RoleAuthorizationTest` (8), `RoleMigrationTest` (5) | `hu-08-ca2-*` (6) |
 | CA-3 | `AnalyticsPage` (shell) | `routes/guards.tsx`, `AuthContext.homeRoute` | `AuthLoginTest.loginDocente` | `hu-08-ca3-*` (8) |
+
+### Integración (fase 6)
+
+Base de datos destruida y recreada desde cero para ejercitar también el seeder. Resultado:
+
+| Comprobación | Resultado |
+|---|---|
+| Esquema y seeder sobre base virgen | 6 tablas, roles STUDENT/TEACHER/ADMIN, 3 usuarios demo |
+| `make test` | 73/73 |
+| `npx cypress run` | 25/25 |
+| `npx tsc -b` + `npm run build` | limpios |
+| Recorrido manual de los 3 criterios | 16/16 |
 
 ### Notas de pruebas E2E (fase 5)
 
