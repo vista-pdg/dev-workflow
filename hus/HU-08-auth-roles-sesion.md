@@ -4,7 +4,7 @@
 > historial y habilitar opciones avanzadas según mi rol (estudiante o profesor).
 
 - **Rama:** `feat/HU-08-auth-roles-sesion` (en `backend` y en `frontend`)
-- **Estado:** Fase 1 — diseño terminado, pendiente tu revisión
+- **Estado:** Fase 2 — backend implementado y verificado a mano; pendientes las pruebas automatizadas
 - **Diseño:** documento "untitled" de pen (`~/.pencil/documents/f32caab9-3864-49f4-afa2-89fdd0b0fe55/pencil-new.pen`):
   - `u3Viw5` Field · `sswXN` Button Primary (componentes reutilizables)
   - `PVdTh` Bienvenida — Ingresar · `rzFxK` Bienvenida — Crear cuenta · `eKfSZ` Estados
@@ -71,7 +71,15 @@ aquí y no durante la implementación.
 Defectos reales encontrados durante la HU que **no** se arreglan en esta rama, para no mezclar dos
 discusiones en una revisión. Se anotan aquí para levantarlos después.
 
-- _(vacío por ahora)_
+- **`compose.yaml` sin nombre de proyecto.** Compose lo derivaba del directorio (`backend`), así que
+  el volumen se llamaba `backend_postgres_data` y **colisionaba con el de cualquier otro proyecto con
+  una carpeta `backend/`**. En esta máquina el volumen estaba inicializado por otro proyecto y VISTA
+  nunca había podido usarlo. Sí se arregló en esta rama (`name: vista`) porque sin ello el proyecto
+  no levanta; el volumen ajeno quedó intacto.
+- La imagen declarada es `postgres:17` pero el volumen preexistente era de la 16. Se resolvió al
+  aislar el volumen, no hubo que degradar la imagen.
+- Siete archivos nunca habían pasado por Spotless pese a que lefthook lo ejecuta en pre-commit.
+  Reformateados en un commit aparte (`d610bf4`) para no mezclar ruido con la HU.
 
 ## Trazabilidad
 
@@ -79,9 +87,9 @@ Se completa al cerrar cada fase. Es lo que convierte el PR en evidencia de cumpl
 
 | CA | Diseño | Implementación | Prueba backend | Prueba E2E |
 |---|---|---|---|---|
-| CA-1 | `PVdTh`, `rzFxK`, `eKfSZ` | — | — | — |
-| CA-2 | n/a (backend) | — | — | — |
-| CA-3 | pendiente — ver nota | — | — | — |
+| CA-1 | `PVdTh`, `rzFxK`, `eKfSZ` | `AuthController.register`, `AuthService.register` | — | — |
+| CA-2 | n/a (backend) | `RefreshTokenService`, `JwtTokenProvider`, `DataSeeder.migrateLegacyStudentRole` | — | — |
+| CA-3 | pendiente — ver nota | roles en `AuthResponse.roles`; falta guard de frontend | — | — |
 
 ### Notas de diseño (fase 1)
 
