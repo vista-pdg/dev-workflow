@@ -4,7 +4,7 @@
 > historial y habilitar opciones avanzadas según mi rol (estudiante o profesor).
 
 - **Rama:** `feat/HU-08-auth-roles-sesion` (en `backend` y en `frontend`)
-- **Estado:** Fase 2 — backend implementado y verificado a mano; pendientes las pruebas automatizadas
+- **Estado:** Fase 3 — backend implementado y probado (68/68 en verde); siguiente el frontend
 - **Diseño:** documento "untitled" de pen (`~/.pencil/documents/f32caab9-3864-49f4-afa2-89fdd0b0fe55/pencil-new.pen`):
   - `u3Viw5` Field · `sswXN` Button Primary (componentes reutilizables)
   - `PVdTh` Bienvenida — Ingresar · `rzFxK` Bienvenida — Crear cuenta · `eKfSZ` Estados
@@ -87,9 +87,20 @@ Se completa al cerrar cada fase. Es lo que convierte el PR en evidencia de cumpl
 
 | CA | Diseño | Implementación | Prueba backend | Prueba E2E |
 |---|---|---|---|---|
-| CA-1 | `PVdTh`, `rzFxK`, `eKfSZ` | `AuthController.register`, `AuthService.register` | — | — |
-| CA-2 | n/a (backend) | `RefreshTokenService`, `JwtTokenProvider`, `DataSeeder.migrateLegacyStudentRole` | — | — |
-| CA-3 | pendiente — ver nota | roles en `AuthResponse.roles`; falta guard de frontend | — | — |
+| CA-1 | `PVdTh`, `rzFxK`, `eKfSZ` | `AuthController.register`, `AuthService.register` | `AuthRegistrationTest` (9), `AuthLoginTest` (9) | — |
+| CA-2 | n/a (backend) | `RefreshTokenService`, `JwtTokenProvider`, `DataSeeder.migrateLegacyStudentRole` | `RefreshTokenRotationTest` (11), `RoleAuthorizationTest` (8), `RoleMigrationTest` (5) | — |
+| CA-3 | pendiente — ver nota | roles en `AuthResponse.roles` | `AuthLoginTest.loginDocente` | — |
+
+### Notas de pruebas (fase 3)
+
+- 42 pruebas nuevas, 68 en total en el proyecto, todas en verde.
+- Se usa Postgres real por Testcontainers y no repositorios simulados: lo que se prueba —unicidad,
+  el `@Modifying` que revoca una familia entera, el comportamiento transaccional de la detección de
+  reuso— no se manifiesta contra mocks.
+- Contenedor único para toda la suite (patrón singleton) en vez de uno por clase.
+- Dos pruebas son regresiones de defectos hallados en la fase 2. `reusoRevocaLaFamiliaCompleta` se
+  validó quitando el `noRollbackFor`: falla con `expected:<401> but was:<200>`, que es justo el
+  escenario en que el token robado sigue sirviendo.
 
 ### Notas de diseño (fase 1)
 
