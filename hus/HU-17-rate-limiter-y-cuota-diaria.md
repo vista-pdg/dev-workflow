@@ -5,7 +5,7 @@
 > costos de consumo de la API del modelo generativo dentro de un presupuesto predecible.
 
 - **Rama:** `feat/HU-17-rate-limiter-y-cuota-diaria` (en `backend` y en `frontend`)
-- **Estado:** Fase 1 — diseño terminado; backend en curso
+- **Estado:** Fase 2 — backend implementado y verificado a mano (6/6 escenarios por API); pruebas en curso
 - **Estimación:** 3 puntos · Depende de HU-16 (fusionada el 2026-09-08)
 - **Trazabilidad:** nuevo RF5 (Anexo C) · objetivo específico c · mitiga R01 (presupuesto) · pruebas
   unitarias, integración; E2E porque toca interfaz
@@ -126,6 +126,22 @@ ventana diaria reiniciada a las **00:00 America/Bogota**.
 Consecuencia para el código: el naranja se usa como **texto sobre oscuro**, nunca como fondo con
 texto blanco encima. Si algún día se necesitara un botón naranja, el texto va en negro (6,51).
 
+### Notas de backend (fase 2)
+
+- Orden de comprobación en `reserve()`: **estado diario → ventana de un minuto → reserva atómica**.
+  El estado diario va primero para que quien ya agotó su cuota reciba siempre el mensaje diario
+  aunque además esté en ráfaga (verificado en el humo: tras el 429 diario, el siguiente intento
+  inmediato sigue siendo `DAILY_QUOTA_EXCEEDED`). La reserva es un `UPDATE … WHERE count < limit`:
+  dos peticiones simultáneas no pueden repartirse el último mensaje.
+- `reserve()` corre en `REQUIRES_NEW`: la reserva queda confirmada aunque la generación falle
+  después, porque la llamada al modelo ya se hizo y eso es lo que se factura.
+- Humo sobre la app levantada: `resetsAt` = `2026-09-09T05:00:00Z` (medianoche Bogotá), 5 mensajes →
+  `X-Quota-Remaining: 35`, 6.º → `429 RATE_LIMITED` con `Retry-After: 59`; cuota de `CEDI-G1` a 3 por
+  ADMIN (estudiante 403, `{0}` 422, curso inexistente 404), historial `null→3` con autor y fecha; con 2
+  de 3 usados `warning=true`; 4.º mensaje → `429 DAILY_QUOTA_EXCEEDED` con el literal exacto.
+- El perfil de pruebas de integración sube `assistant.rate.per-minute` a 1000: la suite de telemetría
+  genera seis veces seguidas con la misma cuenta. El limitador se prueba aparte con su propio reloj.
+
 ## Hallazgos fuera de alcance
 
 - _(vacío por ahora)_
@@ -134,9 +150,9 @@ texto blanco encima. Si algún día se necesitara un botón naranja, el texto va
 
 | CA | Diseño | Implementación | Prueba backend | Prueba E2E |
 |---|---|---|---|---|
-| CA-1 | — | — | — | — |
-| CA-2 | — | — | — | — |
-| CA-3 | — | — | — | — |
-| CA-4 | — | — | — | — |
-| CA-5 | — | — | — | — |
-| CA-6 | — | — | — | — |
+| CA-1 | `B9s15Y` | `AssistantQuotaService.status/reserve`, cabeceras `X-Quota-*` en `StructureController` | — | — |
+| CA-2 | `B9s15Y` | `reserve()` antes del adaptador; `DailyQuotaExceededException` (literal), 429 | — | — |
+| CA-3 | `B9s15Y` | `RateLimiter` (ventana deslizante 60 s), `RateLimitedException` + `Retry-After` | — | — |
+| CA-4 | `B9s15Y` | `QuotaStatus.warning` (restantes ≤ ⌈límite·0,2⌉) | — | — |
+| CA-5 | `B9s15Y` | `ClockConfig` (America/Bogota), fila por día calendario, `resetsAt` | — | — |
+| CA-6 | `B9s15Y` / `WKfiT` | `Course.dailyQuota`, `CourseQuotaService`, `QuotaChange`, `PUT /api/admin/courses/{code}/quota` | — | — |
