@@ -1,7 +1,7 @@
 # FIX — Generación de estructuras por chat: formato fijo y posiciones garantizadas
 
 - **Rama:** `fix/generacion-de-estructuras-por-chat` (backend; el frontend no necesitó cambios)
-- **Estado:** PR abierto ([backend #8](https://github.com/vista-pdg/backend/pull/8)); merge pendiente de validación del usuario
+- **Estado:** Fusionada el 2026-09-08 — backend PR #8
 - **Reporte del usuario (2026-09-08):** «los árboles siempre dan 3 nodos o ninguno, todos encima del
   otro; la generación por chat no es precisa». Ejemplo: «Genera un árbol ahora con inserción de 1, 2,
   3, 5, 6».
