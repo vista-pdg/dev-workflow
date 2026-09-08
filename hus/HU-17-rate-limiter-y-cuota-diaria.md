@@ -5,7 +5,7 @@
 > costos de consumo de la API del modelo generativo dentro de un presupuesto predecible.
 
 - **Rama:** `feat/HU-17-rate-limiter-y-cuota-diaria` (en `backend` y en `frontend`)
-- **Estado:** Fase 3 — backend probado (125/125), cobertura 97.6 % en assistant/**; siguiente el frontend
+- **Estado:** Fusionada el 2026-09-08 — backend PR #3, frontend PR #4
 - **Estimación:** 3 puntos · Depende de HU-16 (fusionada el 2026-09-08)
 - **Trazabilidad:** nuevo RF5 (Anexo C) · objetivo específico c · mitiga R01 (presupuesto) · pruebas
   unitarias, integración; E2E porque toca interfaz
