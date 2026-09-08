@@ -157,6 +157,28 @@ texto blanco encima. Si algún día se necesitara un botón naranja, el texto va
   espera 30, y un valor truncado haría que el cliente reintentara un instante antes y recibiera otro
   429.
 
+### Notas de E2E (fase 5)
+
+- 14 pruebas nuevas en `hu-17-ca1..ca6-*.cy.ts`; suite completa **56/56 en Chromium y 56/56 en
+  Firefox**.
+- Los antecedentes que piden decenas de mensajes (40 enviados, 32 enviados) no caben bajo el límite
+  de 5/min, así que CA-2 y CA-4 **bajan la cuota de `CEDI-G1` por el endpoint de administración**
+  (que es CA-6) y la restauran al terminar. La regla es la misma; cambia el número.
+- CA-5 (medianoche) no se puede provocar desde el navegador y no se abre ningún atajo de tiempo en
+  la API: lo automatiza `AssistantQuotaTest` con reloj desplazable; el E2E comprueba lo observable
+  (contador completo al entrar, `resetsAt` = próxima 05:00Z, envío normal).
+- Dos ajustes salieron de aquí: la cuenta regresiva pintaba «0 s» en el primer render (los segundos
+  se derivan ahora en el render, no tras el efecto) y en Chromium la cabecera *sticky* del panel de
+  administración cubría la pestaña que Cypress iba a pulsar (`scrollBehavior: 'center'` global).
+- `hu-16-ca3` se ajustó: al abrir el chat se precarga la cuota, y esa petición ya expulsa una sesión
+  falsificada antes de que el usuario escriba.
+
+### Integración (fase 6)
+
+- Base de datos recreada desde cero (`docker compose down -v`), `spotless:check` y `verify` en
+  verde con la puerta JaCoCo; Cypress completo en ambos navegadores; README del backend con la
+  sección «Cuota del asistente».
+
 ## Hallazgos fuera de alcance
 
 - _(vacío por ahora)_
@@ -165,9 +187,9 @@ texto blanco encima. Si algún día se necesitara un botón naranja, el texto va
 
 | CA | Diseño | Implementación | Prueba backend | Prueba E2E |
 |---|---|---|---|---|
-| CA-1 | `B9s15Y` | `AssistantQuotaService.status/reserve`, cabeceras `X-Quota-*` en `StructureController` | `AssistantQuotaTest (2)` | — |
-| CA-2 | `B9s15Y` | `reserve()` antes del adaptador; `DailyQuotaExceededException` (literal), 429 | `AssistantQuotaTest (3), HttpStatusContractTest` | — |
-| CA-3 | `B9s15Y` | `RateLimiter` (ventana deslizante 60 s), `RateLimitedException` + `Retry-After` | `RateLimiterTest (7), HttpStatusContractTest` | — |
-| CA-4 | `B9s15Y` | `QuotaStatus.warning` (restantes ≤ ⌈límite·0,2⌉) | `AssistantQuotaTest (2)` | — |
-| CA-5 | `B9s15Y` | `ClockConfig` (America/Bogota), fila por día calendario, `resetsAt` | `AssistantQuotaTest (2)` | — |
-| CA-6 | `B9s15Y` / `WKfiT` | `Course.dailyQuota`, `CourseQuotaService`, `QuotaChange`, `PUT /api/admin/courses/{code}/quota` | `AssistantQuotaTest (4)` | — |
+| CA-1 | `B9s15Y` | `AssistantQuotaService.status/reserve`, cabeceras `X-Quota-*` en `StructureController` | `AssistantQuotaTest (2)` | `hu-17-ca1` (2) |
+| CA-2 | `B9s15Y` | `reserve()` antes del adaptador; `DailyQuotaExceededException` (literal), 429 | `AssistantQuotaTest (3), HttpStatusContractTest` | `hu-17-ca2` (2) |
+| CA-3 | `B9s15Y` | `RateLimiter` (ventana deslizante 60 s), `RateLimitedException` + `Retry-After` | `RateLimiterTest (7), HttpStatusContractTest` | `hu-17-ca3` (2) |
+| CA-4 | `B9s15Y` | `QuotaStatus.warning` (restantes ≤ ⌈límite·0,2⌉) | `AssistantQuotaTest (2)` | `hu-17-ca4` (2) |
+| CA-5 | `B9s15Y` | `ClockConfig` (America/Bogota), fila por día calendario, `resetsAt` | `AssistantQuotaTest (2)` | `hu-17-ca5` (2) |
+| CA-6 | `B9s15Y` / `WKfiT` | `Course.dailyQuota`, `CourseQuotaService`, `QuotaChange`, `PUT /api/admin/courses/{code}/quota` | `AssistantQuotaTest (4)` | `hu-17-ca6` (4) |
