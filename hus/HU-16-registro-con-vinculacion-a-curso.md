@@ -5,7 +5,7 @@
 > segmentarse por usuario y por cohorte sin recurrir a datos identificables en los reportes.
 
 - **Rama:** `feat/HU-16-registro-con-vinculacion-a-curso` (en `backend` y en `frontend`)
-- **Estado:** Fase 1 — diseño terminado
+- **Estado:** Fase 2 — backend implementado y verificado a mano (CA-1..CA-4); CA-5 pendiente de prueba con LLM falso
 - **Estimación:** 5 puntos · Historia habilitadora, sin dependencias
 - **Trazabilidad:** extiende RF1 (Anexo C) · objetivos específicos c, d · mitiga R03 (privacidad)
 - **Diseño:** documento "untitled" de pen — `lmHaX` Select (componente), `F3NE1R` Registro con
@@ -129,8 +129,8 @@ texto blanco encima, que sí cumple.
 
 | CA | Diseño | Implementación | Prueba backend | Prueba E2E |
 |---|---|---|---|---|
-| CA-1 | `F3NE1R` | — | — | — |
-| CA-2 | `r46VI` (literal exacto) | — | — | — |
-| CA-3 | — | — | — | — |
-| CA-4 | — | — | — | — |
-| CA-5 | — | — | — | — |
+| CA-1 | `F3NE1R` | `Course`, `AcademicTerm`, `CourseService.requireEnrollable`, `AuthService.register` | — | — |
+| CA-2 | `r46VI` (literal exacto) | `AuthService.requireAllowedDomain` | — | — |
+| CA-3 | n/a | `SecurityConfig` (generate y steps ya no son permitAll) | — | — |
+| CA-4 | n/a | `AnalyticsController`, `SecurityConfig` (`/api/analytics/**` TEACHER) | — | — |
+| CA-5 | n/a | `GenerationEvent`, `Pseudonymizer`, `TelemetryService.recordGeneration` | — | — |
