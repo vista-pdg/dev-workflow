@@ -5,7 +5,7 @@
 > analítica sobre la cual identificar los temas que requieren refuerzo pedagógico.
 
 - **Rama:** `feat/HU-21-registro-analitico-de-interacciones` (en `backend` y en `frontend`)
-- **Estado:** Fase 0 — spec
+- **Estado:** Fase 7 — implementada, probada y documentada
 - **Estimación:** 5 puntos · Depende de HU-16 (curso) y HU-18 (modo de visualización); se apoya en la
   sesión de trabajo de HU-32 para el `id_sesion`
 - **Trazabilidad:** extiende RF4 (Anexo C) · objetivo específico d · mitiga R03 (privacidad) ·
@@ -78,17 +78,43 @@ Antecedentes: el esquema de evento incluye `id_evento`, `usuario_seudonimizado`,
 - El panel visual de analítica (es la otra mitad de la división citada en la historia).
 - Exportación de los eventos y retención/borrado programado.
 
+## Notas de implementación
+
+- **`schema_version` admite nulos.** Se pensó como `int` no nulo, y `ddl-auto=update` no puede añadir
+  una columna `not null` sin valor por defecto a una tabla que ya tiene filas: fallaba en silencio y
+  dejaba el esquema a medias. Con nulos, la columna aparece y las filas viejas dicen la verdad —se
+  escribieron sin versión—, que es justo la semántica que la historia pedía para las filas v1.
+- **El nombre del algoritmo se normaliza a mayúsculas al escribirlo.** CA-2 lo pide como `BFS` y el
+  catálogo lo envía como `bfs`; sin normalizar, la analítica contaría dos temas donde hay uno.
+- **Las marcas de tiempo viajan como texto ISO-8601.** El `ObjectMapper` de la aplicación no registra
+  el módulo de fechas de Java 8, misma decisión que en HU-32.
+- **La resiliencia necesitaba mover el `catch`.** Con `@Transactional` sobre `record`, el `catch`
+  quedaba dentro del límite transaccional: el fallo no saltaba al guardar sino al confirmar, ya fuera
+  del `try`, y la petición del estudiante moría con un 500. Se inyecta un `TransactionTemplate`
+  (`REQUIRES_NEW`) llamado dentro del `try`. CA-6 sólo se demuestra pasando por la petición completa,
+  por eso hay prueba de integración además de la unitaria.
+- **El evento del cliente se reporta una vez por rastro.** La clave excluye el modo de visualización
+  a propósito: conmutar 2D/3D en el último paso conserva el rastro (HU-18 · CA-2) y contarlo dos
+  veces sería el mismo recorrido duplicado.
+
 ## Hallazgos fuera de alcance
 
-- _(vacío por ahora)_
+- **El campo del chat pierde teclas mientras el panel se repinta.** Al llegar la respuesta se añade
+  el mensaje, se renueva la sesión y se repinta la cuenta atrás; quien empieza a escribir la
+  siguiente instrucción en ese instante puede perder algún carácter. Una persona a su ritmo apenas lo
+  nota, pero es real: se vio al encadenar instrucciones en los E2E, que ahora reescriben el texto
+  hasta que el campo lo contenga entero. Arreglarlo de verdad es de la HU del asistente, no de esta.
+- **`/api/algorithm/steps` exige los campos primitivos completos.** Un nodo sin `x`/`y`/`z`/`depth` o
+  una arista sin `directed` producen un 500 en vez de un 400 con el motivo. La aplicación siempre los
+  envía, así que no afecta al usuario, pero la respuesta es la equivocada para un cliente ajeno.
 
 ## Trazabilidad
 
 | CA | Implementación | Prueba backend | Prueba E2E |
 |---|---|---|---|
-| CA-1 | — | — | — |
-| CA-2 | — | — | — |
-| CA-3 | — | — | — |
-| CA-4 | — | — | — |
-| CA-5 | — | — | — |
-| CA-6 | — | — | — |
+| CA-1 | `StructureKind`, `TelemetryService.recordGeneration`, `StructureController` | `StructureKindTest`, `InteractionEventTest`, `AnalyticsInteractionTest#generacionPorChatRegistraExito` | `hu-21-ca1-estructura-por-lenguaje-natural` |
+| CA-2 | `AlgorithmController`, `AnalyticsEventController`, `analyticsService.reportAlgorithmCompleted`, `graphStore.reportCompletionIfFinished` | `AnalyticsInteractionTest#recorridoRegistraAlgoritmoYPasos`, `#finDelRecorridoLoReportaElCliente`, `#elClienteNoEscribeIdentidad` | `hu-21-ca2-ejecucion-de-algoritmo` (3 casos) |
+| CA-3 | `TelemetryService.recordFailedGeneration`, `StructureController.outcomeOf`, `GET /api/analytics/events` | `AnalyticsInteractionTest#peticionFueraDeAlcanceGuardaElPrompt`, `#caidaDelProveedorSeDistingue`, `#elDocenteRevisaLosFallidos`, `#elEstudianteNoLeeLosEventos` | `hu-21-ca3-solicitud-fuera-de-alcance` (3 casos) |
+| CA-4 | `GenerationEventRepository.groupBySessionAndStructure`, `TelemetryService.retrySequences`, `GET /api/analytics/retries` | `AnalyticsInteractionTest#tresReformulacionesSonUnaSecuencia`, `#unIntentoNoEsPatron` | `hu-21-ca4-patrones-de-reintento` (2 casos) |
+| CA-5 | `Pseudonymizer` (HU-16), `EventView` sin seudónimo | `GenerationTelemetryTest` (fila cruda), `AnalyticsInteractionTest#seudonimoPorCuenta` | `hu-21-ca5-seudonimizacion-en-origen` |
+| CA-6 | `TelemetryService.record` con `TransactionTemplate` (`REQUIRES_NEW`) dentro del `try` | `AnalyticsResilienceTest` (repositorio caído), `AnalyticsInteractionTest#eventoDesconocidoNoRompe` | `hu-21-ca6-resiliencia-del-registro` |
