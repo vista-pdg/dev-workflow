@@ -1,7 +1,7 @@
 # HU-32 — Memoria conversacional del asistente con sesión por estudiante (Redis, TTL)
 
 - **Rama:** `feat/HU-32-memoria-conversacional-del-asistente` (en `backend` y en `frontend`)
-- **Estado:** Fase 6 — integrada; PRs abiertos y en CI
+- **Estado:** Fusionada el 2026-09-08 — backend PR #9, frontend PR #9
 - **Diseño:** documento "untitled" de pen — `b9Xm6p` HU-32 · Memoria conversacional (sesión activa,
   sin sesión, memoria no disponible)
 
