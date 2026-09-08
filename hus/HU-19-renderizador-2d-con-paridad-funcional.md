@@ -5,7 +5,7 @@
 > tridimensional me resulte más difícil de leer.
 
 - **Rama:** `feat/HU-19-renderizador-2d-con-paridad-funcional` (en `backend` y en `frontend`)
-- **Estado:** Fase 1 — diseño listo; siguiente el backend
+- **Estado:** Fase 6 — integrada; PRs abiertos y en CI
 - **Estimación:** 8 puntos · Depende de HU-18 (fusionada el 2026-09-08)
 - **Trazabilidad:** RF2 y RF7 (Anexo C) · objetivo específico b · mitiga R04, R08 · pruebas
   unitarias, E2E, no funcionales (accesibilidad)
@@ -103,17 +103,65 @@ La estimación se mantiene en 8 por ese trabajo de backend que la HU no preveía
 - Listas enlazadas y tablas hash en 2D más allá del layout lineal/circular actual (no están en las
   cuatro familias de la HU).
 
+### Notas de backend y pruebas (fases 2 y 3)
+
+- `StackContract`/`QueueContract` + validadores + `StackGenerator`/`QueueGenerator` (roles
+  `bottom/top`, `front/rear` en `properties`) + `StackLayout3D`; prompt del modelo con ambos tipos;
+  el `StubLlmAdapter` de `e2e` responde «pila…»/«cola…» con los valores listados.
+- `AlgorithmStrategy` + `AlgorithmDescriptor` + `AlgorithmDispatcher` (descubre beans, ordena por
+  clave); `GET /api/algorithm/catalog`; `AlgorithmRequest` con `nodes/edges/start`.
+- `GraphBfsAlgorithm` (FIFO determinista, `properties.state` por nodo en cada instantánea, pasos
+  «Visitar»/«Descubrir vecinos»/«Recorrido completo» con los no alcanzables), `StackPopAlgorithm` y
+  `QueueDequeueAlgorithm` (dos pasos por retiro, posiciones 3D de sus layouts), `AvlInsertAlgorithm`
+  envuelve el servicio existente.
+- 20 pruebas nuevas (`StackQueueGeneratorTest` 5, `AlgorithmStrategiesTest` 10,
+  `AlgorithmCatalogTest` 5): **153 en total**, puerta JaCoCo en verde con los paquetes nuevos.
+
+### Notas de frontend (fase 4)
+
+- `core/layout2d.ts`: fuerzas deterministas (Fruchterman–Reingold con semilla fija, separación final
+  de pares y recentrado), `stack` (base anclada en el origen, crece hacia arriba: el `pop` se ve como
+  quitar el de arriba, no como desplazar la columna) y `queue`; el círculo queda para ≤ 3 nodos.
+- `core/color.ts` (`contrastRatio`, `labelColorFor`, `meetsAA`) y `core/palette.ts` (una paleta para
+  los dos adaptadores; `nodeFill` = resaltado > estado > profundidad); `NodeSphere` la usa también.
+- `SvgView`: cajas para pila/cola con etiquetas «tope/base» y «frente/final», `<title>` por arista,
+  `aria-label` por nodo, ventana mínima, **fantasma** de 320 ms para el nodo retirado.
+- `HighlightType` ampliado (`visit`, `frontier`, `done`, `pop`, `dequeue`) con colores y etiquetas en
+  overlay y panel.
+- `AlgorithmPanel` generalizado: catálogo por familia, formulario por entrada (`values` o nodo inicial
+  del grafo del lienzo), presets por clave; `graphStore` gana `catalog`, `selectedAlgorithm`,
+  `loadCatalog`, `selectAlgorithm`, `runSelectedAlgorithm`. `openAlgorithmDemo` espera al catálogo
+  antes de decidir si limpia el lienzo (BFS no lo limpia).
+- Barra lateral: «Pilas» y «Colas» con demo, demo BFS en «Grafos», subtítulo «Visualizador».
+- Vitest: 43 pruebas, cobertura del núcleo sobre el umbral.
+
+### Notas de E2E (fase 5)
+
+- 10 pruebas en `hu-19-ca1..ca6-*.cy.ts`; ayudas en `cypress/support/hu19.ts` (`nodeBoxes`,
+  `expectNoOverlaps`, `generateByChat`, `runDemo`, `goToLastStep`).
+- CA-1 usa el asistente falso para grafo, pila y cola y la demo AVL para el árbol (el stub no produce
+  árboles). CA-2 comprueba niveles equiespaciados, aristas que bajan un nivel y lado izquierdo/derecho
+  por valor. CA-3 compara `engine.frames()` y las respuestas del backend entre modos. CA-6 calcula el
+  contraste real de cada nodo y arista con `core/color.ts` desde el spec.
+
+### Integración (fase 6)
+
+- `spotless:check` + `verify` (153), Vitest, `tsc`, `build`, Cypress completo en ambos navegadores.
+
 ## Hallazgos fuera de alcance
 
-- _(vacío por ahora)_
+- El generador de estructuras del asistente falso (`e2e`) no produce árboles: los specs que necesitan
+  uno usan la demo AVL. Si una HU futura necesita árboles por chat en E2E, ampliar el stub.
+- Listas enlazadas y tablas hash en 2D siguen con el layout lineal/circular de HU-18 (fuera de las
+  cuatro familias de esta HU).
 
 ## Trazabilidad
 
 | CA | Diseño | Implementación | Prueba unitaria / backend | Prueba E2E |
 |---|---|---|---|---|
-| CA-1 | — | — | — | — |
-| CA-2 | — | — | — | — |
-| CA-3 | — | — | — | — |
-| CA-4 | — | — | — | — |
-| CA-5 | — | — | — | — |
-| CA-6 | — | — | — | — |
+| CA-1 | `oyMH9` | `Stack/QueueContract`, generadores, `layout2d` (fuerzas, stack, queue), `SvgView` | `StackQueueGeneratorTest`, `layout2d.test.ts` | `hu-19-ca1` (1) |
+| CA-2 | `lC71C` | `treeLayout` (HU-18) | `layout2d.test.ts` (BST 15) | `hu-19-ca2` (1) |
+| CA-3 | `oyMH9` | `GraphBfsAlgorithm`, `runSelectedAlgorithm` con el grafo del lienzo | `AlgorithmStrategiesTest` (BFS determinista), `AlgorithmCatalogTest` | `hu-19-ca3` (1) |
+| CA-4 | `oyMH9` | `AlgorithmDispatcher.catalog`, `GET /api/algorithm/catalog`, `AlgorithmPanel` | `AlgorithmStrategiesTest`, `AlgorithmCatalogTest` | `hu-19-ca4` (2) |
+| CA-5 | `oyMH9` | `StackPopAlgorithm` (dos pasos), fantasma en `SvgView`, base anclada | `AlgorithmStrategiesTest` (pop) | `hu-19-ca5` (2) |
+| CA-6 | `oyMH9` | `core/color.ts`, `palette.ts`, `aria-label`/`<title>` en `SvgView` | `color.test.ts` | `hu-19-ca6` (3) |
