@@ -5,11 +5,11 @@
 > produce cada cambio en la estructura de datos.
 
 - **Rama:** `feat/HU-22a-panel-de-codigo-sincronizado` (en `backend` y en `frontend`)
-- **Estado:** Fase 0 — spec
+- **Estado:** Fase 1 — diseño listo; a la espera de la fusión de HU-19 para crear ramas
 - **Estimación:** 8 puntos (primera mitad de HU-22, 13) · Depende de HU-18 y HU-19 (fusionadas)
 - **Trazabilidad:** nuevo RF6 (Anexo C) «Ejecución instrumentada de código» · objetivo específico b ·
   mitiga R08 · pruebas unitarias, E2E, usabilidad
-- **Diseño:** documento "untitled" de pen — frame `HU-22a · Panel de código` (id al crearlo)
+- **Diseño:** documento "untitled" de pen — `WFOlq` HU-22a · Panel de código sincronizado (lienzo 2D con inorden en curso, panel con línea activa y secciones plegadas para HU-22b)
 
 ## División de HU-22
 
