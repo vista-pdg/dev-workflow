@@ -5,7 +5,7 @@
 > produce cada cambio en la estructura de datos.
 
 - **Rama:** `feat/HU-22a-panel-de-codigo-sincronizado` (en `backend` y en `frontend`)
-- **Estado:** Fase 6 — integrada; PRs abiertos y en CI
+- **Estado:** Fusionada el 2026-09-08 — backend PR #6, frontend PR #7
 - **Estimación:** 8 puntos (primera mitad de HU-22, 13) · Depende de HU-18 y HU-19 (fusionadas)
 - **Trazabilidad:** nuevo RF6 (Anexo C) «Ejecución instrumentada de código» · objetivo específico b ·
   mitiga R08 · pruebas unitarias, E2E, usabilidad
