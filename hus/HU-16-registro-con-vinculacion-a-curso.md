@@ -5,7 +5,7 @@
 > segmentarse por usuario y por cohorte sin recurrir a datos identificables en los reportes.
 
 - **Rama:** `feat/HU-16-registro-con-vinculacion-a-curso` (en `backend` y en `frontend`)
-- **Estado:** Fase 2 — backend implementado y verificado a mano (CA-1..CA-4); CA-5 pendiente de prueba con LLM falso
+- **Estado:** Fase 3 — backend probado (103/103) con cobertura 95,1 % en el alcance de la HU; siguiente el frontend
 - **Estimación:** 5 puntos · Historia habilitadora, sin dependencias
 - **Trazabilidad:** extiende RF1 (Anexo C) · objetivos específicos c, d · mitiga R03 (privacidad)
 - **Diseño:** documento "untitled" de pen — `lmHaX` Select (componente), `F3NE1R` Registro con
@@ -121,16 +121,37 @@ HU-16 como en los de HU-08, para que el documento siga describiendo lo que el c�
 `primary` como **fondo** (botón, barra de acento, borde activo) no cambia: ahí el contraste lo da el
 texto blanco encima, que sí cumple.
 
+### Notas de pruebas (fase 3)
+
+- 30 pruebas nuevas, 103 en total, todas en verde. Gemini se sustituye por `FakeLlmConfig` en toda
+  la suite: nada de lo que se prueba alrededor de `/api/generate` depende de la respuesta del modelo.
+- CA-2 se comprueba dos veces a propósito: el literal en la respuesta, y por separado que la tabla
+  `users` no ganó ninguna fila. El criterio dice «no se crea ningún registro» y la respuesta sola no
+  lo demuestra.
+- CA-5 se afirma sobre la **fila cruda** leída con JDBC, no sobre la entidad: si mañana alguien
+  añadiera una columna con el correo, los getters seguirían sin exponerlo y una prueba sobre la
+  entidad seguiría en verde.
+- **Cobertura: 95,1 % (253/266 líneas)** sobre las clases que la HU toca, umbral 80 % con JaCoCo.
+  La primera versión de la regla ponía los `includes` dentro de la regla `BUNDLE`, donde filtran
+  por nombre de bundle y no por paquete: la regla no coincidía con nada y «All coverage checks have
+  been met» salía incluso con umbral 0,99. Se movió el filtro a la configuración de la ejecución y
+  **se verificó que la puerta falla con 0,99** antes de fiarse del 0,80.
+
 ## Hallazgos fuera de alcance
 
-- _(vacío por ahora)_
+- Los controladores y servicios de administración de usuarios y roles (`UserAdminController`,
+  `RoleAdminController`, `PermissionAdminController`, `UserService`, `RoleService`) están entre el 0 %
+  y el 27 % de cobertura. Son RF1 y esta HU no los toca, por eso quedan fuera de la puerta; conviene
+  cubrirlos en la HU que los retome.
+- `target/classes` conserva un `LoginResponse.class` sin fuente (borrado en HU-08). Es un residuo de
+  compilación incremental, no código; `mvn clean` lo elimina. En CI no ocurre porque parte de cero.
 
 ## Trazabilidad
 
 | CA | Diseño | Implementación | Prueba backend | Prueba E2E |
 |---|---|---|---|---|
-| CA-1 | `F3NE1R` | `Course`, `AcademicTerm`, `CourseService.requireEnrollable`, `AuthService.register` | — | — |
-| CA-2 | `r46VI` (literal exacto) | `AuthService.requireAllowedDomain` | — | — |
-| CA-3 | n/a | `SecurityConfig` (generate y steps ya no son permitAll) | — | — |
-| CA-4 | n/a | `AnalyticsController`, `SecurityConfig` (`/api/analytics/**` TEACHER) | — | — |
-| CA-5 | n/a | `GenerationEvent`, `Pseudonymizer`, `TelemetryService.recordGeneration` | — | — |
+| CA-1 | `F3NE1R` | `Course`, `AcademicTerm`, `CourseService.requireEnrollable`, `AuthService.register` | `CourseRegistrationTest` (7) | — |
+| CA-2 | `r46VI` (literal exacto) | `AuthService.requireAllowedDomain` | `CourseRegistrationTest` (2: literal + sin fila en BD) | — |
+| CA-3 | n/a | `SecurityConfig` (generate y steps ya no son permitAll) | `AnalyticsAccessTest` (3), `HttpStatusContractTest` | — |
+| CA-4 | n/a | `AnalyticsController`, `SecurityConfig` (`/api/analytics/**` TEACHER) | `AnalyticsAccessTest` (5), `HttpStatusContractTest` | — |
+| CA-5 | n/a | `GenerationEvent`, `Pseudonymizer`, `TelemetryService.recordGeneration` | `GenerationTelemetryTest` (5), `PseudonymizerTest` (6) | — |
