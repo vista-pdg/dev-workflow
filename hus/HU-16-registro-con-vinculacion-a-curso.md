@@ -88,10 +88,32 @@ Detectados contra `main` tras la entrega de HU-08.
 ## Decisión sobre CI
 
 El usuario pidió montar CI y **evaluar si conviene un repositorio de workflows reutilizables** al que
-los demás sólo llamen. La evaluación se hace en la fase 2 con los dos pipelines ya escritos, no antes:
-la pregunta real es cuánto comparten de verdad, y eso no se sabe hasta verlos. El criterio será si lo
-compartido justifica la indirección de tener que abrir un segundo repositorio para entender un fallo
-de CI.
+los demás sólo llamen. Con los dos pipelines escritos, esto es lo que comparten de verdad:
+
+| Pieza | Backend | Frontend | ¿Compartible? |
+|---|---|---|---|
+| Formato + pruebas + cobertura | Maven, Spotless, JaCoCo | npm, tsc, lint, build | No: stacks distintos, cero solapamiento |
+| **E2E de sistema completo** | necesita el frontend | necesita el backend | **Sí: es idéntico en ambos y orquesta los dos repos** |
+
+**Veredicto: término medio, con datos.** Lo específico de cada stack se queda en su repo, donde un
+fallo se lee sin abrir un segundo proyecto. El E2E —Postgres de servicio, backend en perfil `e2e`,
+frontend, Cypress en Chromium y Firefox— vive **una sola vez** en `dev-workflow/.github/workflows/e2e.yml`
+como `workflow_call`, y cada repo lo invoca con una línea. La ganancia no es sólo no duplicar: **un
+cambio de backend ahora corre el E2E del frontend en su propio PR**, cosa que ninguna prueba del
+backend podía detectar.
+
+Un repositorio genérico con *todo* el CI habría sido peor: envolvería dos pipelines sin nada en común
+y sumaría indirección sin quitar duplicación. Si aparece un tercer repo o los stacks convergen, el
+sitio para extraer más ya existe.
+
+**Requisito que solo el usuario puede cumplir:** `backend` y `frontend` son privados y el E2E hace
+*checkout* cruzado, que el `GITHUB_TOKEN` del llamador no permite. Hace falta un *fine-grained PAT*
+con `Contents: read` sobre ambos repos, guardado como secreto de organización `VISTA_REPO_TOKEN`.
+Hasta entonces el job `e2e` de CI falla en el *checkout*; los jobs de pruebas y cobertura de cada
+repo no dependen de él.
+
+El lint del frontend queda **informativo** (`continue-on-error`) mientras sigan los 11 hallazgos
+preexistentes en los componentes 3D, que ninguna HU ha tocado; se documentan abajo.
 
 ### Notas de diseño (fase 1)
 
