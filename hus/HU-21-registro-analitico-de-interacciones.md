@@ -99,14 +99,18 @@ Antecedentes: el esquema de evento incluye `id_evento`, `usuario_seudonimizado`,
 
 ## Hallazgos fuera de alcance
 
-- **El campo del chat pierde teclas mientras el panel se repinta.** Al llegar la respuesta se añade
-  el mensaje, se renueva la sesión y se repinta la cuenta atrás; quien empieza a escribir la
-  siguiente instrucción en ese instante puede perder algún carácter. Una persona a su ritmo apenas lo
-  nota, pero es real: se vio al encadenar instrucciones en los E2E, que ahora reescriben el texto
-  hasta que el campo lo contenga entero. Arreglarlo de verdad es de la HU del asistente, no de esta.
-- **`/api/algorithm/steps` exige los campos primitivos completos.** Un nodo sin `x`/`y`/`z`/`depth` o
-  una arista sin `directed` producen un 500 en vez de un 400 con el motivo. La aplicación siempre los
-  envía, así que no afecta al usuario, pero la respuesta es la equivocada para un cliente ajeno.
+Los dos se arreglaron después, en la rama `fix/errores-de-cuerpo-ilegible-y-teclas-perdidas`.
+
+- **El campo del chat perdía teclas mientras el panel se repinta.** ✅ *Resuelto.* Al llegar la
+  respuesta se añade el mensaje, se renueva la sesión y se repinta la cuenta atrás; quien empezaba a
+  escribir la siguiente instrucción en ese instante perdía caracteres, porque el campo estaba
+  gobernado por el estado de React y cada repintado lo devolvía al último valor confirmado. Ahora el
+  texto vive en el DOM y React sólo guarda si hay algo escrito, que es un booleano. Lo cubre
+  `fix-chat-conserva-lo-escrito`, y el ayudante de los E2E de esta HU volvió a escribir de una vez.
+- **`/api/algorithm/steps` exigía los campos primitivos completos.** ✅ *Resuelto.* Un nodo sin
+  `x`/`y`/`z`/`depth` o una arista sin `directed` daban un 500. Ahora un cuerpo ilegible responde 400
+  con el campo culpable señalado (`nodes[0].x`), y de paso el 500 genérico dejó de devolver el
+  mensaje de la excepción: llegaba a incluir la consulta SQL entera con sus nombres de columnas.
 
 ## Trazabilidad
 
