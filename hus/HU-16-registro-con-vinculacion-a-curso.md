@@ -5,7 +5,7 @@
 > segmentarse por usuario y por cohorte sin recurrir a datos identificables en los reportes.
 
 - **Rama:** `feat/HU-16-registro-con-vinculacion-a-curso` (en `backend` y en `frontend`)
-- **Estado:** Fase 5 — E2E 42/42 en Chrome y 42/42 en Firefox; siguiente CI e integración
+- **Estado:** Fase 7 — integración superada. Pendiente validación humana para push y PR.
 - **Estimación:** 5 puntos · Historia habilitadora, sin dependencias
 - **Trazabilidad:** extiende RF1 (Anexo C) · objetivos específicos c, d · mitiga R03 (privacidad)
 - **Diseño:** documento "untitled" de pen — `lmHaX` Select (componente), `F3NE1R` Registro con
@@ -173,6 +173,28 @@ texto blanco encima, que sí cumple.
   HU-08 porque el lint no se volvió a correr tras añadirlos.
 - Verificado en Chrome: el formulario de registro renderiza fiel a `F3NE1R` con `CEDI-G1` cargado
   desde la API.
+
+### Integración (fase 6)
+
+Base destruida y recreada desde cero; backend en perfil `e2e`.
+
+| Comprobación | Resultado |
+|---|---|
+| Seeder sobre base virgen | roles, periodo `2026-1`, curso `CEDI-G1`, 3 usuarios demo, estudiante vinculado |
+| `spotless:check` + `./mvnw verify` (paridad CI) | **103/103**, puerta JaCoCo superada |
+| Cypress Chrome / Firefox | **42/42** / **42/42** |
+| Recorrido por API de los 5 escenarios | 5/5 — incluida la fila cruda de `generation_events`: `3a48b4c3e9238ca0\|CEDI-G1\|2026-1\|graph\|3`, columnas sin `user_id` ni correo |
+
+### Definición de Terminado
+
+| Requisito | Estado |
+|---|---|
+| Unitarias en verde en CI, cobertura ≥ 80 % en módulos críticos | pipelines escritos y validados; 95,1 % local con puerta que **falla** por debajo del umbral. Primera ejecución real en CI ocurrirá al abrir los PR. |
+| Integración en endpoints afectados | 103 pruebas con Postgres real |
+| E2E estable en Chromium y Firefox | 42/42 en ambos, dos corridas cada uno |
+| Escenarios Gherkin automatizados | 5/5, además del recorrido manual con evidencia arriba |
+| Documentación técnica | `backend/README.md` reescrito (perfiles, variables, módulos, privacidad, CI); esta spec |
+| Contraste AA (WCAG 2.1) | calculado; defecto de `primary` como texto corregido en diseño y código |
 
 ### Notas E2E (fase 5)
 
