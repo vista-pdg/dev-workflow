@@ -4,7 +4,7 @@
 > historial y habilitar opciones avanzadas según mi rol (estudiante o profesor).
 
 - **Rama:** `feat/HU-08-auth-roles-sesion` (en `backend` y en `frontend`)
-- **Estado:** Fase 7 — integración superada (73/73 backend, 25/25 E2E). Pendiente validación humana para push y PR.
+- **Estado:** Fusionada — backend PR #1, frontend PR #2
 - **Diseño:** documento "untitled" de pen (`~/.pencil/documents/f32caab9-3864-49f4-afa2-89fdd0b0fe55/pencil-new.pen`):
   - `u3Viw5` Field · `sswXN` Button Primary (componentes reutilizables)
   - `PVdTh` Bienvenida — Ingresar · `rzFxK` Bienvenida — Crear cuenta · `eKfSZ` Estados

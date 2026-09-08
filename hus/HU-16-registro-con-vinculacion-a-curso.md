@@ -5,7 +5,7 @@
 > segmentarse por usuario y por cohorte sin recurrir a datos identificables en los reportes.
 
 - **Rama:** `feat/HU-16-registro-con-vinculacion-a-curso` (en `backend` y en `frontend`)
-- **Estado:** Fase 7 — integración superada. Pendiente validación humana para push y PR.
+- **Estado:** Fusionada el 2026-09-08 — backend PR #2, frontend PR #3
 - **Estimación:** 5 puntos · Historia habilitadora, sin dependencias
 - **Trazabilidad:** extiende RF1 (Anexo C) · objetivos específicos c, d · mitiga R03 (privacidad)
 - **Diseño:** documento "untitled" de pen — `lmHaX` Select (componente), `F3NE1R` Registro con
