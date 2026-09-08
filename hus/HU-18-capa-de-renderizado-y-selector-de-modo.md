@@ -5,11 +5,11 @@
 > estoy construyendo.
 
 - **Rama:** `feat/HU-18-capa-de-renderizado-y-selector-de-modo` (en `backend` y en `frontend`)
-- **Estado:** Fase 0 — spec
+- **Estado:** Fase 1 — diseño en pen listo; siguiente el backend
 - **Estimación:** 8 puntos · **Historia habilitadora** de HU-19 y HU-22 · Depende del renderizador 3D existente
 - **Trazabilidad:** nuevo RF7 (Anexo C) «Modos de representación intercambiables» · objetivo específico b ·
   mitiga R05, R08 · pruebas unitarias, integración, E2E
-- **Diseño:** documento "untitled" de pen — frame `HU-18 · Lienzo 2D y selector de modo` (se anota el id al crearlo)
+- **Diseño:** documento "untitled" de pen — `lC71C` HU-18 · Lienzo 2D y selector de modo (lienzo 2D en el paso 5, selector en sus tres estados, aviso sin WebGL)
 
 ## Criterios de aceptación
 
