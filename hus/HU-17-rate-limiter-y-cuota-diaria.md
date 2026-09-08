@@ -5,7 +5,7 @@
 > costos de consumo de la API del modelo generativo dentro de un presupuesto predecible.
 
 - **Rama:** `feat/HU-17-rate-limiter-y-cuota-diaria` (en `backend` y en `frontend`)
-- **Estado:** Fase 2 — backend implementado y verificado a mano (6/6 escenarios por API); pruebas en curso
+- **Estado:** Fase 3 — backend probado (125/125), cobertura 97.6 % en assistant/**; siguiente el frontend
 - **Estimación:** 3 puntos · Depende de HU-16 (fusionada el 2026-09-08)
 - **Trazabilidad:** nuevo RF5 (Anexo C) · objetivo específico c · mitiga R01 (presupuesto) · pruebas
   unitarias, integración; E2E porque toca interfaz
@@ -142,6 +142,21 @@ texto blanco encima. Si algún día se necesitara un botón naranja, el texto va
 - El perfil de pruebas de integración sube `assistant.rate.per-minute` a 1000: la suite de telemetría
   genera seis veces seguidas con la misma cuenta. El limitador se prueba aparte con su propio reloj.
 
+### Notas de pruebas (fase 3)
+
+- 22 pruebas nuevas, 125 en total, todas en verde. **Cobertura 97.6 % en `assistant/**`**; la puerta
+  JaCoCo (bundle filtrado a lo que tocan las HU) queda en 96.0 %, umbral 80 %.
+- Los antecedentes Gherkin («hoy he enviado 32 mensajes») se materializan escribiendo la fila de uso
+  del día, que es exactamente lo que habrían dejado 32 mensajes reales; cada prueba usa un
+  estudiante recién registrado.
+- CA-2 demuestra «ninguna llamada facturable» con un contador en el adaptador falso: el 429 no lo
+  incrementa.
+- CA-5 se prueba con un `Clock` desplazable inyectado como `@Primary` en las pruebas: agotar hoy,
+  avanzar un día, recuperar 40. Sin atajos de tiempo en la API.
+- `Retry-After` se redondea **hacia arriba**: la unitaria lo pilló devolviendo 29 donde el Gherkin
+  espera 30, y un valor truncado haría que el cliente reintentara un instante antes y recibiera otro
+  429.
+
 ## Hallazgos fuera de alcance
 
 - _(vacío por ahora)_
@@ -150,9 +165,9 @@ texto blanco encima. Si algún día se necesitara un botón naranja, el texto va
 
 | CA | Diseño | Implementación | Prueba backend | Prueba E2E |
 |---|---|---|---|---|
-| CA-1 | `B9s15Y` | `AssistantQuotaService.status/reserve`, cabeceras `X-Quota-*` en `StructureController` | — | — |
-| CA-2 | `B9s15Y` | `reserve()` antes del adaptador; `DailyQuotaExceededException` (literal), 429 | — | — |
-| CA-3 | `B9s15Y` | `RateLimiter` (ventana deslizante 60 s), `RateLimitedException` + `Retry-After` | — | — |
-| CA-4 | `B9s15Y` | `QuotaStatus.warning` (restantes ≤ ⌈límite·0,2⌉) | — | — |
-| CA-5 | `B9s15Y` | `ClockConfig` (America/Bogota), fila por día calendario, `resetsAt` | — | — |
-| CA-6 | `B9s15Y` / `WKfiT` | `Course.dailyQuota`, `CourseQuotaService`, `QuotaChange`, `PUT /api/admin/courses/{code}/quota` | — | — |
+| CA-1 | `B9s15Y` | `AssistantQuotaService.status/reserve`, cabeceras `X-Quota-*` en `StructureController` | `AssistantQuotaTest (2)` | — |
+| CA-2 | `B9s15Y` | `reserve()` antes del adaptador; `DailyQuotaExceededException` (literal), 429 | `AssistantQuotaTest (3), HttpStatusContractTest` | — |
+| CA-3 | `B9s15Y` | `RateLimiter` (ventana deslizante 60 s), `RateLimitedException` + `Retry-After` | `RateLimiterTest (7), HttpStatusContractTest` | — |
+| CA-4 | `B9s15Y` | `QuotaStatus.warning` (restantes ≤ ⌈límite·0,2⌉) | `AssistantQuotaTest (2)` | — |
+| CA-5 | `B9s15Y` | `ClockConfig` (America/Bogota), fila por día calendario, `resetsAt` | `AssistantQuotaTest (2)` | — |
+| CA-6 | `B9s15Y` / `WKfiT` | `Course.dailyQuota`, `CourseQuotaService`, `QuotaChange`, `PUT /api/admin/courses/{code}/quota` | `AssistantQuotaTest (4)` | — |
