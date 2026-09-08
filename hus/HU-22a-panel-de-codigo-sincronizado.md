@@ -5,7 +5,7 @@
 > produce cada cambio en la estructura de datos.
 
 - **Rama:** `feat/HU-22a-panel-de-codigo-sincronizado` (en `backend` y en `frontend`)
-- **Estado:** Fase 2 — backend en curso
+- **Estado:** Fase 6 — integrada; PRs abiertos y en CI
 - **Estimación:** 8 puntos (primera mitad de HU-22, 13) · Depende de HU-18 y HU-19 (fusionadas)
 - **Trazabilidad:** nuevo RF6 (Anexo C) «Ejecución instrumentada de código» · objetivo específico b ·
   mitiga R08 · pruebas unitarias, E2E, usabilidad
@@ -73,14 +73,48 @@ código visible). El panel de HU-22a se diseña con el hueco para ambos.
 ### Fuera de alcance
 - Variables, pila de llamadas y el resto de familias (HU-22b).
 
+### Notas de backend y pruebas (fases 2 y 3)
+
+- `AlgorithmStep.line` (constructor anterior conservado) y `StepsResponse.code/language`; nulos en
+  los algoritmos de HU-19, que no cambian.
+- `InorderTraversalAlgorithm` (`tree/bst/inorder`, entrada `structure`, familia árboles): usa el
+  árbol del lienzo (hijo menor a la izquierda por etiqueta numérica; por orden de arista si no) o
+  construye un BST con `values`. Un paso por línea ejecutada: entrada (1), comprobación de nulo (2),
+  retorno por nulo (3), llamada izquierda (4), visita (5), llamada derecha (6), retorno (7) y un
+  resumen final con la secuencia. Posiciones: las del lienzo si vienen; si no, `TreeLayout3D`.
+- `InorderTraversalAlgorithmTest` (5): código y líneas, visitas ordenadas, línea y nodo del mismo
+  paso, árbol del lienzo con sus posiciones, errores y degenerados. **158 pruebas**, puerta JaCoCo en
+  verde.
+
+### Notas de frontend (fase 4)
+
+- Motor: `EngineState.code`, `loadTrace(steps, code)`; se suelta en `clear` y `loadStructure`.
+- `CodePanel` (abajo a la izquierda del lienzo, dentro del overlay): numeración, línea activa desde
+  `steps[stepIndex].line` (`data-active-line`, `aria-current="step"`), contador, plegable. Vive en
+  2D y 3D porque sólo lee el motor.
+- `runSelectedAlgorithm` envía el lienzo si tiene nodos y, si no, los valores: el inorden construye
+  el BST. El panel ofrece el formulario de valores en ese caso. La demo «Árbol BST» de la barra
+  lateral abre el inorden.
+
+### Notas de E2E (fase 5)
+
+- `hu-22a-ca1` (2), `hu-22a-ca4` (2), `hu-22a-ca6` (2): la línea activa y el nodo resaltado se leen
+  del mismo paso del motor en cada «Siguiente»; el retroceso compara una instantánea completa del
+  DOM (nodos, resaltados, `aria-label`, línea, contador) entre el paso 6 y el 6 recuperado; los tres
+  contadores (panel, overlay, `engine.frames()`) coinciden y la salida final es la secuencia ordenada.
+
+### Integración (fase 6)
+
+- `verify` (158), Vitest (44), `tsc`, `build`, Cypress completo en ambos navegadores.
+
 ## Hallazgos fuera de alcance
 
-- _(vacío por ahora)_
+- Las secciones «Variables» y «Pila de llamadas» del diseño quedan plegadas y vacías hasta HU-22b.
 
 ## Trazabilidad
 
 | CA | Diseño | Implementación | Prueba unitaria / backend | Prueba E2E |
 |---|---|---|---|---|
-| CA-1 | — | — | — | — |
-| CA-4 | — | — | — | — |
-| CA-6 | — | — | — | — |
+| CA-1 | `WFOlq` | `AlgorithmStep.line` + `CodePanel` (misma fuente: el paso del motor) | `InorderTraversalAlgorithmTest` (línea y nodo del mismo paso) | `hu-22a-ca1` (2) |
+| CA-4 | `WFOlq` | `VisualizationEngine.prev` (HU-18) + panel sin estado propio | `engine.test.ts` (código en el rastro) | `hu-22a-ca4` (2) |
+| CA-6 | `WFOlq` | `StepsResponse.code`, resumen final con la secuencia | `InorderTraversalAlgorithmTest` (visitas ordenadas) | `hu-22a-ca6` (2) |
