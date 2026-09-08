@@ -5,7 +5,7 @@
 > estoy construyendo.
 
 - **Rama:** `feat/HU-18-capa-de-renderizado-y-selector-de-modo` (en `backend` y en `frontend`)
-- **Estado:** Fase 6 — integrada; PRs abiertos y en CI
+- **Estado:** Fusionada el 2026-09-08 — backend PR #4, frontend PR #5
 - **Estimación:** 8 puntos · **Historia habilitadora** de HU-19 y HU-22 · Depende del renderizador 3D existente
 - **Trazabilidad:** nuevo RF7 (Anexo C) «Modos de representación intercambiables» · objetivo específico b ·
   mitiga R05, R08 · pruebas unitarias, integración, E2E
