@@ -5,7 +5,7 @@
 > produce cada cambio en la estructura de datos.
 
 - **Rama:** `feat/HU-22b-inspector-de-variables-y-pila-de-llamadas` (en `backend` y en `frontend`)
-- **Estado:** Fase 6 — integrada; PRs abiertos y en CI
+- **Estado:** Fusionada el 2026-09-08 — backend PR #7, frontend PR #8
 - **Estimación:** 5 puntos (segunda mitad de HU-22) · Depende de HU-22a
 - **Trazabilidad:** RF6 (Anexo C) · objetivo específico b · mitiga R08 · pruebas unitarias, E2E, usabilidad
 - **Diseño:** documento "untitled" de pen — `r599Wx` HU-22b · Variables y pila de llamadas (tres paneles: inorden con pila, BFS y pop con variables)
