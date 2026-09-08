@@ -1,0 +1,118 @@
+# HU-17 — Rate limiter y cuota diaria de mensajes
+
+> Yo como administrador de la plataforma quiero que las peticiones al asistente estén sujetas a un
+> limitador de tasa y a una cuota diaria configurable de mensajes por estudiante, para mantener los
+> costos de consumo de la API del modelo generativo dentro de un presupuesto predecible.
+
+- **Rama:** `feat/HU-17-rate-limiter-y-cuota-diaria` (en `backend` y en `frontend`)
+- **Estado:** Fase 0 — preparación
+- **Estimación:** 3 puntos · Depende de HU-16 (fusionada el 2026-09-08)
+- **Trazabilidad:** nuevo RF5 (Anexo C) · objetivo específico c · mitiga R01 (presupuesto) · pruebas
+  unitarias, integración; E2E porque toca interfaz
+- **Diseño:** documento "untitled" de pen, junto a los frames de HU-08 y HU-16
+
+## Criterios de aceptación
+
+Antecedentes: cuota diaria **40** mensajes por estudiante, límite de tasa **5** mensajes por minuto,
+ventana diaria reiniciada a las **00:00 America/Bogota**.
+
+1. **CA-1 · Consumo dentro de los límites** — con 10 enviados, el 11.º se procesa y el contador dice
+   «29 mensajes restantes hoy».
+2. **CA-2 · Agotamiento de la cuota diaria** — con 40 enviados, el 41.º responde **429**, muestra
+   «Alcanzaste tu límite diario. Se restablece a medianoche.», **no se hace ninguna llamada facturable**
+   y el lienzo sigue utilizable sin el asistente.
+3. **CA-3 · Superación del límite de tasa** — 5 mensajes en 30 s y un 6.º en el mismo minuto ⇒
+   **429** con cabecera **`Retry-After`** (segundos restantes); la interfaz deshabilita el envío con
+   cuenta regresiva.
+4. **CA-4 · Aviso preventivo** — con 32 enviados, el siguiente se procesa y aparece la advertencia no
+   bloqueante «Te quedan 7 mensajes hoy».
+5. **CA-5 · Reinicio de la ventana diaria** — agotada ayer, al entrar tras las 00:00 el contador es 40
+   y se puede enviar.
+6. **CA-6 · Ajuste por el administrador** — como ADMIN cambio la cuota de `CEDI-G1` de 40 a 60; aplica
+   a todos los estudiantes del curso y el cambio queda registrado con fecha y autor.
+
+## Decisiones del usuario (2026-09-08)
+
+- **El ajuste de cuota va por interfaz**: pestaña de cursos en `AdminPage` con la cuota editable y el
+  historial de cambios visible. Añade diseño en pen y spec E2E.
+- **Los límites aplican a todos los usuarios**, no sólo a estudiantes: docente y administrador
+  consumen la misma API facturable. Quien no tiene curso usa la cuota por defecto.
+
+## Decisiones técnicas (mías, para discutir si hace falta)
+
+| Tema | Decisión | Por qué |
+|---|---|---|
+| Qué se cuenta | Sólo `POST /api/generate` | Es la única llamada que factura. `/api/algorithm/steps` no toca el modelo. |
+| Cuándo se cuenta | **Al invocar el modelo, antes de la llamada**, pase lo que pase después | Es el momento en que se factura. Contar sólo éxitos dejaría fuera llamadas cobradas; un 429 nunca llega al adaptador (CA-2). |
+| Ventana diaria | Día calendario en `America/Bogota`, contador **persistido** en `assistant_usage(user_id, usage_date, count)` | Sobrevive reinicios y es lo que protege el presupuesto. Un `Clock` inyectable permite probar el reinicio sin esperar a medianoche. |
+| Límite de tasa | Ventana deslizante de 60 s, 5 peticiones, **en memoria** por instancia | Protege de ráfagas; perderlo en un reinicio cuesta como mucho una ráfaga. Persistirlo añadiría una escritura por mensaje sin ganancia para el presupuesto. Si hubiera varias instancias, se movería a la base. |
+| `Retry-After` | Segundos hasta que la petición más antigua salga de la ventana | Es lo que el cliente necesita para la cuenta regresiva. |
+| Cuota por curso | Columna `dailyQuota` (nula = por defecto) en `Course` + tabla `quota_changes` (curso, anterior, nuevo, autor, fecha) | El autor de un cambio administrativo es un dato de auditoría, no telemetría de estudiantes: se guarda el correo del administrador. |
+| Umbral del aviso | Restantes ≤ 20 % de la cuota (8 de 40) | Con 32 enviados el siguiente deja 7 → avisa; con 10 enviados deja 29 → no avisa. Configurable. |
+| Contrato con el frontend | `GET /api/assistant/quota` → `{limit, used, remaining, resetsAt, ratePerMinute}`; cabeceras `X-Quota-Limit/-Remaining/-Reset` en `/api/generate`; 429 con `ApiError` y códigos `DAILY_QUOTA_EXCEEDED` / `RATE_LIMITED` | El contador al entrar (CA-5) necesita el endpoint; el contador tras cada mensaje sale gratis en cabeceras. |
+| Telemetría vs. cuota | Son contadores distintos y no se cruzan | El evento de HU-16 es seudónimo y sólo de éxitos; la cuota es por usuario y de intentos facturables. Mezclarlos rompería la privacidad o la contabilidad. |
+
+## Choques con el estado actual
+
+| # | Situación actual | Resolución |
+|---|---|---|
+| 1 | `StructureController` llama al adaptador sin ningún control. | Se antepone `AssistantQuotaService.reserve(user)` que lanza 429 antes de tocar el modelo. |
+| 2 | No hay `Clock` inyectable. | Se añade un bean `Clock` en zona `America/Bogota`, sustituible en pruebas. |
+| 3 | `Course` no tiene cuota; no hay auditoría. | Columna `daily_quota` nula + entidad `QuotaChange`. |
+| 4 | `AdminPage` sólo tiene Usuarios, Roles y Permisos. | Pestaña **Cursos** con cuota editable e historial. |
+| 5 | `graphStore.sendPrompt` trata todos los errores igual. | Distingue por `ApiError.code`: cuota diaria (banner literal, entrada deshabilitada), tasa (botón con cuenta regresiva). |
+| 6 | `ApiError` no expone cabeceras. | Gana `retryAfterSeconds` leído de `Retry-After`. |
+| 7 | `GlobalExceptionHandler` no conoce el 429. | Manejadores para las dos excepciones nuevas, con la cabecera en el caso de tasa. |
+| 8 | La puerta JaCoCo no incluye el módulo nuevo. | Se añade `com/vista/pdg/assistant/**`. |
+
+## Alcance
+
+### Backend
+
+- Módulo `assistant/`: `AssistantUsage` (entidad), `QuotaChange` (entidad), `AssistantQuotaService`
+  (reserva diaria + límite de tasa), `AssistantController` (`GET /api/assistant/quota`).
+- `Course.dailyQuota` y `PUT /api/admin/courses/{code}/quota`, `GET /api/admin/courses`,
+  `GET /api/admin/courses/{code}/quota-history` (ADMIN).
+- Propiedades: `assistant.quota.daily-default=40`, `assistant.rate.per-minute=5`,
+  `assistant.quota.warning-ratio=0.2`, `assistant.timezone=America/Bogota`.
+- 429 con `ApiError` y `Retry-After` en el caso de tasa.
+
+### Frontend
+
+- Contador en la cabecera del chat («N mensajes restantes hoy»), cargado al entrar y actualizado con
+  cada respuesta.
+- Aviso no bloqueante bajo el umbral; banner literal y entrada deshabilitada al agotar la cuota; botón
+  con cuenta regresiva ante el límite de tasa. El lienzo no se toca.
+- `AdminPage` → pestaña Cursos: cuota por curso editable, historial con fecha y autor.
+- Contraste AA de los colores de aviso, calculado.
+
+### Pruebas y DoD
+
+- Unitarias del limitador con `Clock` controlado (reinicio a medianoche Bogotá, ventana deslizante,
+  `Retry-After`). Integración por escenario. Cobertura ≥ 80 % en `assistant/**` y lo que se toque.
+- E2E en Chromium y Firefox. Para agotar la cuota sin 40 mensajes, el spec **baja la cuota de
+  `CEDI-G1` con el endpoint de administración** (que además ejercita CA-6) y la restaura al final.
+  El reinicio de medianoche (CA-5) se automatiza en integración con el `Clock`; no se abre ningún
+  atajo de tiempo en la API.
+
+### Fuera de alcance
+
+- Cuotas por docente o por rol distintas de la del curso; cuota global editable por interfaz (es una
+  propiedad).
+- Límite de tasa distribuido entre instancias.
+- Facturación real o consulta de costos del proveedor.
+
+## Hallazgos fuera de alcance
+
+- _(vacío por ahora)_
+
+## Trazabilidad
+
+| CA | Diseño | Implementación | Prueba backend | Prueba E2E |
+|---|---|---|---|---|
+| CA-1 | — | — | — | — |
+| CA-2 | — | — | — | — |
+| CA-3 | — | — | — | — |
+| CA-4 | — | — | — | — |
+| CA-5 | — | — | — | — |
+| CA-6 | — | — | — | — |
