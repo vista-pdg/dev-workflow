@@ -5,10 +5,11 @@
 > segmentarse por usuario y por cohorte sin recurrir a datos identificables en los reportes.
 
 - **Rama:** `feat/HU-16-registro-con-vinculacion-a-curso` (en `backend` y en `frontend`)
-- **Estado:** Fase 0 — preparación
+- **Estado:** Fase 1 — diseño terminado
 - **Estimación:** 5 puntos · Historia habilitadora, sin dependencias
 - **Trazabilidad:** extiende RF1 (Anexo C) · objetivos específicos c, d · mitiga R03 (privacidad)
-- **Diseño:** documento "untitled" de pen, junto a los frames de HU-08
+- **Diseño:** documento "untitled" de pen — `lmHaX` Select (componente), `F3NE1R` Registro con
+  vinculación a curso, `r46VI` Estados
 
 ## Criterios de aceptación
 
@@ -92,6 +93,34 @@ la pregunta real es cuánto comparten de verdad, y eso no se sabe hasta verlos. 
 compartido justifica la indirección de tener que abrir un segundo repositorio para entender un fallo
 de CI.
 
+### Notas de diseño (fase 1)
+
+- Componente `Select` nuevo, coherente con el `Field` de HU-08: mismo micro-label en mayúsculas,
+  mismo borde y misma altura, con chevron al final.
+- El curso va entre el correo y la contraseña: primero quién eres y a dónde perteneces, luego las
+  credenciales.
+- El tablero de estados fija el literal de CA-2 palabra por palabra, porque el criterio lo exige
+  textualmente y es fácil que se degrade a una paráfrasis durante la implementación.
+
+### Contraste AA (WCAG 2.1, riesgo R04)
+
+Calculado sobre la paleta real, no estimado:
+
+| Texto | Fondo | Ratio | AA normal (4.5) |
+|---|---|---|---|
+| `primary` #5454E9 | `bg` #121212 | **3.41** | **falla** |
+| `primary` #5454E9 | `shell` #000000 | **3.82** | **falla** |
+| `primary` #5454E9 | `card` #1E1E1E | **3.03** | **falla** |
+| `primary-light` #7A7AEE | `bg` #121212 | 5.22 | cumple |
+| `primary-light` #7A7AEE | `shell` #000000 | 5.85 | cumple |
+| blanco sobre `primary` (botón) | — | 5.49 | cumple |
+
+**`primary` como color de texto sobre fondo oscuro no cumple AA.** Afecta a las pestañas activas y a
+los enlaces que entregó HU-08. El diseño migra ese uso a `primary-light`, tanto en los frames de
+HU-16 como en los de HU-08, para que el documento siga describiendo lo que el código hará. El uso de
+`primary` como **fondo** (botón, barra de acento, borde activo) no cambia: ahí el contraste lo da el
+texto blanco encima, que sí cumple.
+
 ## Hallazgos fuera de alcance
 
 - _(vacío por ahora)_
@@ -100,8 +129,8 @@ de CI.
 
 | CA | Diseño | Implementación | Prueba backend | Prueba E2E |
 |---|---|---|---|---|
-| CA-1 | — | — | — | — |
-| CA-2 | — | — | — | — |
+| CA-1 | `F3NE1R` | — | — | — |
+| CA-2 | `r46VI` (literal exacto) | — | — | — |
 | CA-3 | — | — | — | — |
 | CA-4 | — | — | — | — |
 | CA-5 | — | — | — | — |
