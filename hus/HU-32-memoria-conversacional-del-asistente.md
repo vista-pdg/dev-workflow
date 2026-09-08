@@ -1,6 +1,6 @@
-# HU-23 — Memoria conversacional del asistente con sesión por estudiante (Redis, TTL)
+# HU-32 — Memoria conversacional del asistente con sesión por estudiante (Redis, TTL)
 
-> Borrador listo para Jira. El número HU-23 es provisional: ajústalo al tablero. Cuando entre a
+> Borrador listo para Jira. Numerada HU-32 en el tablero. Cuando entre a
 > sprint, esta misma página se convierte en la spec de fase 0 del flujo `hu-workflow`.
 
 ## Historia de usuario

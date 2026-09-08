@@ -55,6 +55,18 @@ jobs:
           --health-timeout 5s
           --health-retries 20
 
+      # HU-32: memoria conversacional del asistente. Sin Redis el backend arranca igual y degrada,
+      # pero entonces los escenarios de refinamiento no probarían nada.
+      redis:
+        image: redis:8-alpine
+        ports:
+          - 6379:6379
+        options: >-
+          --health-cmd "redis-cli ping"
+          --health-interval 5s
+          --health-timeout 3s
+          --health-retries 20
+
     steps:
       # El nombre de rama del llamador entra por variable de entorno y entre comillas: nunca se
       # interpola dentro del script.
