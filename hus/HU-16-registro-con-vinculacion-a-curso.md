@@ -112,6 +112,13 @@ con `Contents: read` sobre ambos repos, guardado como secreto de organización `
 Hasta entonces el job `e2e` de CI falla en el *checkout*; los jobs de pruebas y cobertura de cada
 repo no dependen de él.
 
+**Dos ajustes tras la primera corrida real** (2026-09-08, ya con el secreto): la sonda de arranque hacía
+`curl -f /api/courses`, endpoint que `main` aún no tiene, y daba por caído un backend que llevaba 4 s
+arriba — ahora cualquier código HTTP cuenta como vida. Y probar la rama de un repo contra el `main` del
+otro medía sólo el desfase entre dos PR que aterrizan juntos (los 5 specs de registro de HU-08 en
+`main` no eligen curso): el flujo resuelve ahora **ramas pareja**, el mismo nombre en el otro repo si
+existe, `main` si no.
+
 El lint del frontend queda **informativo** (`continue-on-error`) mientras sigan los 11 hallazgos
 preexistentes en los componentes 3D, que ninguna HU ha tocado; se documentan abajo.
 
