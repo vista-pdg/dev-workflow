@@ -5,10 +5,10 @@
 > produce cada cambio en la estructura de datos.
 
 - **Rama:** `feat/HU-22b-inspector-de-variables-y-pila-de-llamadas` (en `backend` y en `frontend`)
-- **Estado:** Fase 0 — spec
+- **Estado:** Fase 1 — diseño listo; a la espera de la fusión de HU-22a para crear ramas
 - **Estimación:** 5 puntos (segunda mitad de HU-22) · Depende de HU-22a
 - **Trazabilidad:** RF6 (Anexo C) · objetivo específico b · mitiga R08 · pruebas unitarias, E2E, usabilidad
-- **Diseño:** documento "untitled" de pen — frame `HU-22b · Variables y pila de llamadas` (id al crearlo)
+- **Diseño:** documento "untitled" de pen — `r599Wx` HU-22b · Variables y pila de llamadas (tres paneles: inorden con pila, BFS y pop con variables)
 
 ## Criterios de aceptación (de HU-22 que cubre esta mitad)
 
