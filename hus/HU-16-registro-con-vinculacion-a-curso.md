@@ -5,7 +5,7 @@
 > segmentarse por usuario y por cohorte sin recurrir a datos identificables en los reportes.
 
 - **Rama:** `feat/HU-16-registro-con-vinculacion-a-curso` (en `backend` y en `frontend`)
-- **Estado:** Fase 3 — backend probado (103/103) con cobertura 95,1 % en el alcance de la HU; siguiente el frontend
+- **Estado:** Fase 4 — frontend implementado y verificado en navegador; siguiente E2E multinavegador
 - **Estimación:** 5 puntos · Historia habilitadora, sin dependencias
 - **Trazabilidad:** extiende RF1 (Anexo C) · objetivos específicos c, d · mitiga R03 (privacidad)
 - **Diseño:** documento "untitled" de pen — `lmHaX` Select (componente), `F3NE1R` Registro con
@@ -137,6 +137,21 @@ texto blanco encima, que sí cumple.
   been met» salía incluso con umbral 0,99. Se movió el filtro a la configuración de la ejecución y
   **se verificó que la puerta falla con 0,99** antes de fiarse del 0,80.
 
+### Notas de frontend (fase 4)
+
+- `SelectField` replica el idioma de `Field`: micro-label en mayúsculas, mismo borde y altura,
+  chevron. Estados según el tablero `r46VI`: cargando, sin cursos, error con reintento, error por
+  campo.
+- Los cursos se piden la primera vez que el usuario abre la pestaña de registro, no al montar, y
+  desde el manejador de la pestaña y no desde un efecto (evita `setState` síncrono en `useEffect`).
+- **Contraste AA aplicado al código**: 16 usos de `text-primary` migrados a `text-primary-light`
+  (pestañas, enlaces, resaltados del sidebar, icono del panel). Los primitivos de shadcn no se tocan.
+- Lint vuelve a los 11 problemas preexistentes (`CanvasOverlay`, `NodeSphere`). Los specs de Cypress
+  necesitaban un override de ESLint para las aserciones por getter de chai; llevaban ocultos desde
+  HU-08 porque el lint no se volvió a correr tras añadirlos.
+- Verificado en Chrome: el formulario de registro renderiza fiel a `F3NE1R` con `CEDI-G1` cargado
+  desde la API.
+
 ## Hallazgos fuera de alcance
 
 - Los controladores y servicios de administración de usuarios y roles (`UserAdminController`,
@@ -150,8 +165,8 @@ texto blanco encima, que sí cumple.
 
 | CA | Diseño | Implementación | Prueba backend | Prueba E2E |
 |---|---|---|---|---|
-| CA-1 | `F3NE1R` | `Course`, `AcademicTerm`, `CourseService.requireEnrollable`, `AuthService.register` | `CourseRegistrationTest` (7) | — |
+| CA-1 | `F3NE1R` | `Course`, `AcademicTerm`, `CourseService.requireEnrollable`, `AuthService.register`, `WelcomePage.SelectField`, `courseService.ts` | `CourseRegistrationTest` (7) | — |
 | CA-2 | `r46VI` (literal exacto) | `AuthService.requireAllowedDomain` | `CourseRegistrationTest` (2: literal + sin fila en BD) | — |
-| CA-3 | n/a | `SecurityConfig` (generate y steps ya no son permitAll) | `AnalyticsAccessTest` (3), `HttpStatusContractTest` | — |
+| CA-3 | n/a | `SecurityConfig` (generate y steps ya no son permitAll), `lib/http.ts` (401 sin refresco ⇒ sesión limpia ⇒ guard) | `AnalyticsAccessTest` (3), `HttpStatusContractTest` | — |
 | CA-4 | n/a | `AnalyticsController`, `SecurityConfig` (`/api/analytics/**` TEACHER) | `AnalyticsAccessTest` (5), `HttpStatusContractTest` | — |
 | CA-5 | n/a | `GenerationEvent`, `Pseudonymizer`, `TelemetryService.recordGeneration` | `GenerationTelemetryTest` (5), `PseudonymizerTest` (6) | — |
