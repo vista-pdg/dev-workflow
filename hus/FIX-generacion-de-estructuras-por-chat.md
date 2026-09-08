@@ -55,6 +55,18 @@ las llamadas.
 - `verify`: 202 pruebas (2 omitidas: la viva), puerta JaCoCo con el normalizador, el constructor de contratos, el adaptador
   base, el despachador de layouts y `TreeLayout3D` incluidos.
 
+## Verificación en vivo (2026-09-08, Vertex AI)
+
+La cuenta de AI Studio seguía en prepago con saldo 0 aun con una clave nueva (la clave era válida:
+`countTokens` respondía; sólo `generateContent` daba 429), así que se añadió la vía **Vertex AI**
+(`GEMINI_VERTEX=true`, proyecto `project-42179253-bad9-49f0-835`, credenciales ADC) y se habilitó
+`aiplatform.googleapis.com` en ese proyecto. Con ella:
+
+- `GeminiLiveGenerationTest`: **11/11** en 16 s (árbol del reporte, AVL, BST, heap, grafo ciclo, K4,
+  lista simple, lista circular, pila, cola, tabla hash).
+- Desde el chat real: «Genera un arbol ahora con insercion de 1, 2, 3 , 5 , 6» → BST de 5 nodos
+  (1-2-3-5-6 en escalera) dibujado en 2D sin solapes.
+
 ## Hallazgos fuera de alcance
 
 - El AVL «pre-construido» (`subtype: binary` con `nodes`) dibuja lo que el modelo diga sin comprobar
