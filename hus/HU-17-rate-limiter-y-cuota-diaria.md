@@ -5,11 +5,11 @@
 > costos de consumo de la API del modelo generativo dentro de un presupuesto predecible.
 
 - **Rama:** `feat/HU-17-rate-limiter-y-cuota-diaria` (en `backend` y en `frontend`)
-- **Estado:** Fase 0 — preparación
+- **Estado:** Fase 1 — diseño terminado; backend en curso
 - **Estimación:** 3 puntos · Depende de HU-16 (fusionada el 2026-09-08)
 - **Trazabilidad:** nuevo RF5 (Anexo C) · objetivo específico c · mitiga R01 (presupuesto) · pruebas
   unitarias, integración; E2E porque toca interfaz
-- **Diseño:** documento "untitled" de pen, junto a los frames de HU-08 y HU-16
+- **Diseño:** documento "untitled" de pen — `B9s15Y` Asistente: cuota y límite de tasa (4 estados), `WKfiT` Admin: Cursos y cuota diaria
 
 ## Criterios de aceptación
 
@@ -101,6 +101,30 @@ ventana diaria reiniciada a las **00:00 America/Bogota**.
   propiedad).
 - Límite de tasa distribuido entre instancias.
 - Facturación real o consulta de costos del proveedor.
+
+### Notas de diseño (fase 1)
+
+- El panel del asistente conserva su anchura y estructura; sólo gana una línea de contador bajo el
+  título y, cuando toca, una franja entre los mensajes y el compositor. Cuatro estados en `B9s15Y`:
+  dentro de límites (CA-1), aviso amarillo no bloqueante (CA-4), cuota agotada en rojo con el literal
+  de CA-2 y compositor deshabilitado, y límite de tasa en naranja con el botón convertido en cuenta
+  regresiva (CA-3). El lienzo no aparece en los frames a propósito: no cambia.
+- La pestaña **Cursos** de `AdminPage` (`WKfiT`) sigue el idioma de las otras tres: tabla con borde,
+  cabecera en micro-label, cuota editable en la fila con «Guardar», y un panel de historial con
+  fecha, `anterior → nuevo` y autor (CA-6). La fila sin cuota propia muestra «por defecto».
+
+### Contraste AA (WCAG 2.1, riesgo R04)
+
+| Texto | Fondo | Ratio | AA (4,5) |
+|---|---|---|---|
+| `yellow` #E4EB60 (aviso) | #121212 / #000000 | 14,59 / 16,35 | cumple |
+| `orange` #E9683B (tasa) | #121212 / #000000 | 5,81 / 6,51 | cumple |
+| rojo #F08A8A (agotado) | #121212 / #000000 | 7,77 / 8,71 | cumple |
+| `muted-fg` (contador) | #121212 | 7,16 | cumple |
+| **blanco sobre `orange`** | — | **3,23** | **falla** |
+
+Consecuencia para el código: el naranja se usa como **texto sobre oscuro**, nunca como fondo con
+texto blanco encima. Si algún día se necesitara un botón naranja, el texto va en negro (6,51).
 
 ## Hallazgos fuera de alcance
 
