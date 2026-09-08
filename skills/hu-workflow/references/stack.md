@@ -63,10 +63,10 @@ Notas que afectan a casi cualquier HU:
   `ddl-auto`.
 - `User` y `Role` cargan sus relaciones con `FetchType.EAGER`, así que no hay problemas de lazy
   loading fuera de transacción, pero cuidado al añadir colecciones nuevas.
-- `SecurityConfig` deja `permitAll` en `/api/auth/**`, `/api/generate` y `/api/algorithm/steps`.
+- `SecurityConfig` deja `permitAll` sólo en `/api/auth/**` y `/api/courses`; `/api/generate` y `/api/algorithm/steps` exigen sesión desde HU-16, `/api/analytics/**` es TEACHER y `/api/admin/**` ADMIN.
 - Las entidades `Permission` existen y se administran, pero **no se aplican en ningún sitio**: no hay
   un solo `@PreAuthorize`. La única autorización real es `hasRole("ADMIN")` sobre `/api/admin/**`.
-- `spring-boot-testcontainers` y `testcontainers-junit-jupiter` están declarados y sin usar.
+- Las pruebas de integración usan Testcontainers (Postgres 17, contenedor único por suite) vía `IntegrationTestSupport`; `FakeLlmConfig` sustituye a Gemini y `MutableClockConfig` permite mover el reloj.
 
 ## Frontend — `/home/curaca/icesi/pdg/frontend`
 
@@ -78,21 +78,28 @@ React 19, Vite 8, TypeScript 6, Tailwind v4, react-three-fiber, Zustand, axios.
 | `npm run build` | `tsc -b && vite build` |
 | `npm run lint` | ESLint |
 | `npx tsc -b` | Solo typecheck |
+| `npm test` / `npm run test:coverage` | Vitest; la cobertura exige ≥ 80 % sobre `src/core` (desde HU-18) |
 
 ```
 src/
   main.tsx           router, AuthProvider, fuerza .dark
   App.tsx            shell: sidebar + canvas + paneles
-  pages/             LoginPage, AdminPage
-  components/        AppSidebar, ChatPanel, AlgorithmPanel, CanvasOverlay, GraphVis3D
-    graph/           GraphScene, NodeSphere, EdgeSegment, EmptyScene
+  core/              HU-18: motor de visualización, contrato Renderer, registro, layouts 2D (TS puro, Vitest)
+  renderers/         adaptadores three/ (3D) y svg/ (2D); appEngine.ts los registra y crea el motor
+  pages/             WelcomePage, AdminPage, AnalyticsPage
+  components/        AppSidebar, ChatPanel, AlgorithmPanel, CanvasOverlay, VisualizationCanvas
+    graph/           GraphScene, NodeSphere, EdgeSegment, EmptyScene (escena three, alimentada por props)
     ui/              primitivos shadcn: button, badge, separator, scroll-area, textarea
-  contexts/          AuthContext (localStorage: vista_token, vista_user)
-  services/          graphService, adminService
-  store/             graphStore (Zustand)
+  contexts/          AuthContext; lib/session.ts (localStorage: vista_access_token, vista_refresh_token, vista_user)
+  services/          graphService, assistantService, adminService, authService, courseService
+  store/             graphStore (Zustand): refleja el motor + estado de UI
   types/             graph.ts, auth.ts
-  lib/http.ts        axios: baseURL /api, interceptor de Bearer, timeout 30 s
+  lib/http.ts        axios: baseURL /api, Bearer, refresco de un solo vuelo, cabecera X-Visualization-Mode
 ```
+
+**El estado visualizable es del motor** (`core/engine.ts`), no del store: una HU que toque nodos,
+pasos o resaltado pasa por `engine.loadStructure/loadTrace/goTo`, y un renderizador nuevo se añade
+como adaptador (ver `src/core/README.md`). Los specs E2E pueden leer `window.__vista`.
 
 El alias `@/` apunta a `src/`.
 
@@ -101,30 +108,19 @@ Si `npx tsc -b` falla por módulos que sí están en `package.json`, `node_modul
 
 ## Cypress
 
-**No está instalado todavía.** Montaje inicial:
+Instalado (Cypress 16) desde HU-08. `cypress.config.ts` apunta a `http://localhost:5173`, reintenta
+una vez en modo `run` y usa `scrollBehavior: 'center'` (las cabeceras *sticky* cubrían el objetivo
+del clic en Chromium). Specs en `cypress/e2e/`, uno por criterio de aceptación; ayudas en
+`cypress/support/commands.ts` (`registerStudentByApi`, `loginByApi`, `storedSession`,
+`adminSetQuota`) y `cypress/support/hu18.ts` (snapshots de los adaptadores, demo AVL, sin WebGL).
 
 ```bash
-cd /home/curaca/icesi/pdg/frontend
-npm install -D cypress
-npx cypress open   # genera el andamiaje la primera vez
+npx cypress run --browser chrome
+npx cypress run --browser firefox     # la DoD exige los dos
 ```
 
-`cypress.config.ts`:
-
-```ts
-import { defineConfig } from 'cypress';
-
-export default defineConfig({
-  e2e: {
-    baseUrl: 'http://localhost:5173',
-    supportFile: 'cypress/support/e2e.ts',
-    specPattern: 'cypress/e2e/**/*.cy.ts',
-  },
-});
-```
-
-Specs en `cypress/e2e/`, uno por criterio de aceptación. Añade `cypress/videos/` y
-`cypress/screenshots/` al `.gitignore`.
+El backend debe correr con el perfil `e2e` (`StubLlmAdapter`: K3 por defecto, C_n si el prompt
+dice «n nodos»).
 
 Selecciona siempre por `data-cy`. Las clases de Tailwind cambian con cada ajuste visual y el texto
 cambia con cada corrección de copy; en ambos casos el test se caería sin que la app se hubiera roto.

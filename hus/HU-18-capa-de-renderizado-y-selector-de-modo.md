@@ -5,7 +5,7 @@
 > estoy construyendo.
 
 - **Rama:** `feat/HU-18-capa-de-renderizado-y-selector-de-modo` (en `backend` y en `frontend`)
-- **Estado:** Fase 1 — diseño en pen listo; siguiente el backend
+- **Estado:** Fase 6 — integrada; PRs abiertos y en CI
 - **Estimación:** 8 puntos · **Historia habilitadora** de HU-19 y HU-22 · Depende del renderizador 3D existente
 - **Trazabilidad:** nuevo RF7 (Anexo C) «Modos de representación intercambiables» · objetivo específico b ·
   mitiga R05, R08 · pruebas unitarias, integración, E2E
@@ -109,18 +109,64 @@ consumidor posible. La HU convierte eso en una frontera explícita y probada.
 - Panel de código, variables y pila de llamadas (HU-22).
 - Comparación de eficacia 2D vs. 3D (investigación, HU-21 y SUS).
 
+### Notas de backend y pruebas (fases 2 y 3)
+
+- `generation_events` gana `kind` (`generation` / `algorithm`; nulo en filas anteriores = generación)
+  y `visualization_mode` (`2D` / `3D` / nulo). El modo llega en `X-Visualization-Mode`; un valor
+  desconocido se guarda como nulo, nunca rechaza la petición.
+- `/api/algorithm/steps` registra un evento (seudonimizado, con curso) sólo si produjo rastro.
+- `/api/analytics/summary` añade `totalAlgorithmRuns` y `eventsByVisualizationMode`; las métricas
+  «generations…» quedan acotadas a generaciones.
+- `VisualizationModeTelemetryTest` (8) + ajuste de `AnalyticsAccessTest`: 133 pruebas, puerta JaCoCo
+  en verde (`AlgorithmController` entra en la puerta).
+- El `StubLlmAdapter` del perfil `e2e` devuelve un ciclo C_n cuando el prompt dice «n nodos»
+  (CA-3 necesita un grafo de 12 sin modelo).
+
+### Notas de frontend (fase 4)
+
+- `src/core/` (motor, contrato, registro, layouts 2D, WebGL, preferencia) con **Vitest 5**: 32
+  pruebas, cobertura 97 % líneas / 92 % ramas sobre el núcleo; umbral 80/75 en `vitest.config.ts`,
+  paso bloqueante en el CI del frontend. Documentado en `src/core/README.md`.
+- `ThreeRenderer` (refactor del 3D: `GraphScene` recibe todo por props, `userData` identifica
+  nodos y aristas en la escena para `snapshot()`), `SvgRenderer` + `SvgView` (nodos, flechas, pesos,
+  `role="img"`, ventana mínima para que estructuras pequeñas no se agranden).
+- `graphStore` refleja el motor por suscripción; `sendPrompt`, `loadAlgorithmSteps`, `setCurrentStep`,
+  `next/prevStep`, `clearAll`, `openAlgorithmDemo` delegan en él.
+- Overlay: selector segmentado `mode-2d` / `mode-3d` (`aria-pressed`, 3D deshabilitado sin WebGL),
+  aviso `webgl-fallback` cerrable, controles de cámara sólo en 3D, controles de paso visibles desde
+  el paso 0 en modo algoritmo (antes se ocultaban con el árbol vacío).
+- `lib/http.ts` añade `X-Visualization-Mode` desde una fuente que fija `appEngine.ts` (sin ciclo de
+  imports).
+
+### Notas de E2E (fase 5)
+
+- 14 pruebas nuevas en `hu-18-ca1..ca7-*.cy.ts`; suite completa **70/70 en Chromium y 70/70 en
+  Firefox**. Ayudas en `cypress/support/hu18.ts` (`snapshotOf`, `loadAvlDemo`, `withoutWebGL`).
+- CA-1 y CA-3 comparan el `snapshot()` de los adaptadores (y el DOM del SVG), no sólo el estado.
+- CA-4 tiene su evidencia principal en Vitest; el E2E comprueba que el rastro del backend y los
+  cuadros del motor son idénticos en ambos modos.
+- CA-6 anula `getContext('webgl'|'webgl2')` en `onBeforeLoad`.
+
+### Integración (fase 6)
+
+- `spotless:check` + `verify` (133 pruebas, puerta JaCoCo), Vitest con cobertura, `tsc`, `build`,
+  Cypress completo en ambos navegadores; README del frontend reescrito y `src/core/README.md` nuevo.
+
 ## Hallazgos fuera de alcance
 
-- _(vacío por ahora)_
+- La barra lateral sigue diciendo «Visualizador 3D» bajo el logo; con dos modos el subtítulo debería
+  ser neutro. Copy, no funcionalidad: se deja para HU-19 junto con el resto del lienzo 2D.
+- El `AnalyticsPage` del docente sigue siendo un cascarón; el desglose por modo ya está en la API
+  pero no se pinta (HU del panel analítico).
 
 ## Trazabilidad
 
 | CA | Diseño | Implementación | Prueba unitaria / backend | Prueba E2E |
 |---|---|---|---|---|
-| CA-1 | — | — | — | — |
-| CA-2 | — | — | — | — |
-| CA-3 | — | — | — | — |
-| CA-4 | — | — | — | — |
-| CA-5 | — | — | — | — |
-| CA-6 | — | — | — | — |
-| CA-7 | — | — | — | — |
+| CA-1 | `lC71C` | `VisualizationEngine.setMode` (clear saliente, render entrante), `ThreeRenderer`/`SvgRenderer.snapshot` | `engine.test.ts` (CA-1) | `hu-18-ca1` (2) |
+| CA-2 | `lC71C` | `setMode` no toca `trace`/`stepIndex`; controles del overlay desde el paso 0 | `engine.test.ts` (CA-2) | `hu-18-ca2` (2) |
+| CA-3 | — | `snapshot()` lee la escena de three / el DOM del SVG; `StubLlmAdapter` C_12 | `engine.test.ts` (CA-3) | `hu-18-ca3` (1) |
+| CA-4 | — | `src/core` sin React/three; `frames()`; suscripción de estados | `engine.test.ts` (3), `registry.test.ts`, `layout2d.test.ts` | `hu-18-ca4` (2) |
+| CA-5 | `lC71C` | `preferences.ts`, `appEngine.chooseMode` | `webgl-preferences.test.ts` | `hu-18-ca5` (3) |
+| CA-6 | `lC71C` | `webgl.ts`, motor con `webglAvailable=false`, aviso `webgl-fallback`, `mode-3d` deshabilitado | `webgl-preferences.test.ts`, `engine.test.ts` (WebGL) | `hu-18-ca6` (3) |
+| CA-7 | — | cabecera `X-Visualization-Mode`, `GenerationEvent.visualizationMode/kind`, `recordAlgorithm`, `eventsByVisualizationMode` | `VisualizationModeTelemetryTest` (8) | `hu-18-ca7` (1) |
