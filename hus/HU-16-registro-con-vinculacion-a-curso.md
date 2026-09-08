@@ -5,7 +5,7 @@
 > segmentarse por usuario y por cohorte sin recurrir a datos identificables en los reportes.
 
 - **Rama:** `feat/HU-16-registro-con-vinculacion-a-curso` (en `backend` y en `frontend`)
-- **Estado:** Fase 4 — frontend implementado y verificado en navegador; siguiente E2E multinavegador
+- **Estado:** Fase 5 — E2E 42/42 en Chrome y 42/42 en Firefox; siguiente CI e integración
 - **Estimación:** 5 puntos · Historia habilitadora, sin dependencias
 - **Trazabilidad:** extiende RF1 (Anexo C) · objetivos específicos c, d · mitiga R03 (privacidad)
 - **Diseño:** documento "untitled" de pen — `lmHaX` Select (componente), `F3NE1R` Registro con
@@ -152,6 +152,20 @@ texto blanco encima, que sí cumple.
 - Verificado en Chrome: el formulario de registro renderiza fiel a `F3NE1R` con `CEDI-G1` cargado
   desde la API.
 
+### Notas E2E (fase 5)
+
+- 17 specs nuevos, uno por escenario Gherkin; 42 en total con los de HU-08, **todos en verde en
+  Chrome y en Firefox**, los dos navegadores que nombra la DoD.
+- El backend corre con el perfil `e2e`, que sustituye Gemini por un `StubLlmAdapter` determinista:
+  sin clave, sin red, sin cuota. Fuera de ese perfil el bean no existe y activarlo deja una
+  advertencia en el log.
+- CA-3 se prueba como lo describe el criterio: una sesión local inválida que aún engaña al guard
+  envía una instrucción, recibe 401 y la aplicación la devuelve al inicio de sesión.
+- CA-5 desde el navegador observa el agregado por cohorte del docente (CEDI-G1 sube en uno tras
+  generar); que la fila lleve seudónimo y no correo lo demuestra `GenerationTelemetryTest` sobre la
+  fila cruda, porque ningún endpoint expone eventos individuales — y no debe hacerlo.
+- Los flujos de registro de HU-08 ahora seleccionan curso, porque el formulario lo exige.
+
 ## Hallazgos fuera de alcance
 
 - Los controladores y servicios de administración de usuarios y roles (`UserAdminController`,
@@ -165,8 +179,8 @@ texto blanco encima, que sí cumple.
 
 | CA | Diseño | Implementación | Prueba backend | Prueba E2E |
 |---|---|---|---|---|
-| CA-1 | `F3NE1R` | `Course`, `AcademicTerm`, `CourseService.requireEnrollable`, `AuthService.register`, `WelcomePage.SelectField`, `courseService.ts` | `CourseRegistrationTest` (7) | — |
-| CA-2 | `r46VI` (literal exacto) | `AuthService.requireAllowedDomain` | `CourseRegistrationTest` (2: literal + sin fila en BD) | — |
-| CA-3 | n/a | `SecurityConfig` (generate y steps ya no son permitAll), `lib/http.ts` (401 sin refresco ⇒ sesión limpia ⇒ guard) | `AnalyticsAccessTest` (3), `HttpStatusContractTest` | — |
-| CA-4 | n/a | `AnalyticsController`, `SecurityConfig` (`/api/analytics/**` TEACHER) | `AnalyticsAccessTest` (5), `HttpStatusContractTest` | — |
-| CA-5 | n/a | `GenerationEvent`, `Pseudonymizer`, `TelemetryService.recordGeneration` | `GenerationTelemetryTest` (5), `PseudonymizerTest` (6) | — |
+| CA-1 | `F3NE1R` | `Course`, `AcademicTerm`, `CourseService.requireEnrollable`, `AuthService.register`, `WelcomePage.SelectField`, `courseService.ts` | `CourseRegistrationTest` (7) | `hu-16-ca1-*` (4) |
+| CA-2 | `r46VI` (literal exacto) | `AuthService.requireAllowedDomain` | `CourseRegistrationTest` (2: literal + sin fila en BD) | `hu-16-ca2-*` (3) |
+| CA-3 | n/a | `SecurityConfig` (generate y steps ya no son permitAll), `lib/http.ts` (401 sin refresco ⇒ sesión limpia ⇒ guard) | `AnalyticsAccessTest` (3), `HttpStatusContractTest` | `hu-16-ca3-*` (3) |
+| CA-4 | n/a | `AnalyticsController`, `SecurityConfig` (`/api/analytics/**` TEACHER) | `AnalyticsAccessTest` (5), `HttpStatusContractTest` | `hu-16-ca4-*` (5) |
+| CA-5 | n/a | `GenerationEvent`, `Pseudonymizer`, `TelemetryService.recordGeneration` | `GenerationTelemetryTest` (5), `PseudonymizerTest` (6) | `hu-16-ca5-*` (2) |
