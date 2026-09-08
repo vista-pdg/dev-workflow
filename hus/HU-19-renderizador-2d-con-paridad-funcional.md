@@ -5,7 +5,7 @@
 > tridimensional me resulte más difícil de leer.
 
 - **Rama:** `feat/HU-19-renderizador-2d-con-paridad-funcional` (en `backend` y en `frontend`)
-- **Estado:** Fase 6 — integrada; PRs abiertos y en CI
+- **Estado:** Fusionada el 2026-09-08 — backend PR #5, frontend PR #6
 - **Estimación:** 8 puntos · Depende de HU-18 (fusionada el 2026-09-08)
 - **Trazabilidad:** RF2 y RF7 (Anexo C) · objetivo específico b · mitiga R04, R08 · pruebas
   unitarias, E2E, no funcionales (accesibilidad)
