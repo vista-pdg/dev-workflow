@@ -1,6 +1,7 @@
 # Stack, rutas y comandos — VISTA
 
-Referencia operativa del proyecto. Evita redescubrir la estructura en cada HU.
+Referencia operativa del proyecto. Evita redescubrir la estructura en cada HU. Las rutas son
+relativas a la carpeta raíz donde están clonados `backend/`, `frontend/` y `dev-workflow/`.
 
 ## Arranque completo
 
@@ -8,13 +9,13 @@ El backend no levanta sin Postgres y sin la API key de Gemini.
 
 ```bash
 # 1. Base de datos (Postgres 17 + pgAdmin en :5050)
-cd /home/curaca/icesi/pdg/backend && docker compose up -d
+cd backend && docker compose up -d
 
 # 2. Backend en :8080
 make run
 
 # 3. Frontend en :5173
-cd /home/curaca/icesi/pdg/frontend && npm run dev
+cd ../frontend && npm run dev
 ```
 
 `frontend/vite.config.ts` proxea `/api` a `http://localhost:8080`. **No hay configuración de CORS en
@@ -23,7 +24,7 @@ en otro origen, añadir CORS es parte de esa HU.
 
 Credenciales sembradas por `DataSeeder`: `admin@vista.com` / `admin123`.
 
-## Backend — `/home/curaca/icesi/pdg/backend`
+## Backend — `backend/`
 
 Spring Boot 4.0.6, Java 21, Maven wrapper, empaquetado **war** (Tomcat `provided`).
 
@@ -68,7 +69,7 @@ Notas que afectan a casi cualquier HU:
   un solo `@PreAuthorize`. La única autorización real es `hasRole("ADMIN")` sobre `/api/admin/**`.
 - Las pruebas de integración usan Testcontainers (Postgres 17, contenedor único por suite) vía `IntegrationTestSupport`; `FakeLlmConfig` sustituye a Gemini y `MutableClockConfig` permite mover el reloj.
 
-## Frontend — `/home/curaca/icesi/pdg/frontend`
+## Frontend — `frontend/`
 
 React 19, Vite 8, TypeScript 6, Tailwind v4, react-three-fiber, Zustand, axios.
 
@@ -131,7 +132,7 @@ Dos repos independientes, ambos con remoto en la organización `vista-pdg`, `gh`
 
 ```bash
 BR=feat/HU-XX-slug
-for r in backend frontend; do git -C /home/curaca/icesi/pdg/$r checkout -b $BR; done
+for r in backend frontend; do git -C $r checkout -b $BR; done
 ```
 
 Commits convencionales con scope: `feat(backend): ...`, `fix(frontend): ...`,
@@ -143,6 +144,8 @@ que el hook no reescriba archivos a mitad del commit.
 
 ## Fuera del alcance del código
 
-- `poc_3d/` — prototipo anterior (backend Node + TypeScript con `geminiService.ts`), reemplazado por
-  `backend/`. Tiene cambios sin commitear. No es referencia válida.
-- `pen_design/` — vacío.
+- `vista-pdg/poc_3d` — prototipo anterior (backend Node + TypeScript con `geminiService.ts`),
+  reemplazado por `backend/`. Si lo tienes clonado en la raíz, no es referencia válida.
+- `graphify-out/` — salida de graphify en la raíz (ver el README de `dev-workflow`). Sirve para
+  consultar el grafo con `graphify query`, pero no es fuente de verdad: si choca con el código,
+  gana el código.

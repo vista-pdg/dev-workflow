@@ -6,7 +6,9 @@ description: Flujo de trabajo completo para implementar una Historia de Usuario 
 # Flujo por Historia de Usuario — VISTA
 
 VISTA es un generador 3D de estructuras discretas (PdG, Universidad Icesi). El código vive en
-**dos repos git independientes** que se clonan lado a lado bajo `/home/curaca/icesi/pdg/`:
+**dos repos git independientes** que se clonan lado a lado en una misma carpeta raíz, la carpeta
+en la que se abre Claude Code (la que contiene `.claude/skills/hu-workflow`). Los comandos de esta
+skill se corren desde esa raíz:
 
 | Directorio | Repo | Stack |
 |---|---|---|
@@ -41,7 +43,7 @@ la respuesta.
 
    ```bash
    BR=feat/HU-XX-slug
-   for r in backend frontend; do git -C /home/curaca/icesi/pdg/$r checkout -b $BR; done
+   for r in backend frontend; do git -C $r checkout -b $BR; done
    ```
 
    Que las ramas existan en paralelo mantiene los dos PRs alineados y hace obvio si uno quedó vacío.
@@ -54,20 +56,23 @@ mucho más que dibujarlo.
 
 - Invoca la skill `pen-dev` (`mcp__pencil__read_skill`) y lee su `pen-schema.md` y `execute.md`.
   pen **no es CSS**: tiene su propio layout y sus propias reglas de sizing.
-- **Verifica en qué documento estás escribiendo antes de la primera mutación.** El usuario tiene
-  varios proyectos abiertos en pen, y `get_app_state` reporta el canvas *activo*, que cambia cuando
-  él cambia de ventana. Peor: las rutas `~/.pencil/documents/<uuid>/pencil-new.pen` **se reasignan**
-  —en la sesión del 2026-09-07 un mismo uuid pasó de contener el documento vacío a contener otro
-  proyecto—, así que un path memorizado de antes no es garantía de nada. Confirma el contenido con
-  una lectura barata antes de tocar nada:
+- **El diseño vive en `dev-workflow/pen/vista_design.pen`**, versionado. Nunca en
+  `~/.pencil/documents/<uuid>/`: esas rutas son locales a cada máquina y pen las **reasigna** entre
+  proyectos, así que un uuid que ayer era VISTA hoy puede ser otro documento.
+- **Verifica en qué documento estás escribiendo antes de la primera mutación.** `mcp__pencil__execute`
+  opera sobre el canvas *activo* aunque le pases otro `filePath`, y el activo cambia cada vez que la
+  persona cambia de ventana en pen. Llama a `get_app_state` y confirma que el canvas activo es
+  `dev-workflow/pen/vista_design.pen` y que sus frames raíz son los de VISTA (`HU-XX · …`):
 
   ```js
-  Get(document,(n,c)=>c.depth<=1&&Print(n.id,"|",n.type,"|",n.name))
+  Get(document,(n,c)=>c.depth<=0&&Print(n.id,"|",n.type,"|",n.name))
   ```
 
-  Escribir el diseño de VISTA dentro del `.pen` de otro cliente es un daño caro de revertir; la
-  lectura previa cuesta una llamada.
-- Pasa siempre `filePath` explícito en `mcp__pencil__execute` en vez de confiar en el canvas activo.
+  Si el activo es otro archivo, pide que abran el de VISTA y vuelve a verificar. Escribir el diseño
+  de VISTA dentro del `.pen` de otro proyecto es un daño caro de revertir; la verificación cuesta
+  una llamada.
+- Pasa igualmente `filePath` explícito en `mcp__pencil__execute`: no basta, pero documenta la
+  intención. Al terminar la fase, el `.pen` se commitea en `dev-workflow` junto con la spec de la HU.
 - Un frame de nivel superior por pantalla, nombrado `HU-XX · <Pantalla>`, con `clip: true`.
   Marca `placeholder: true` mientras lo construyes y quítalo al terminarlo.
 - **El sistema de diseño no se inventa**: es el de Icesi, ya definido en `frontend/DESIGN.md` y en
@@ -163,7 +168,7 @@ Con el visto bueno dado, y solo entonces:
 ```bash
 BR=feat/HU-XX-slug
 for r in backend frontend; do
-  git -C /home/curaca/icesi/pdg/$r push -u origin $BR
+  git -C $r push -u origin $BR
 done
 ```
 
