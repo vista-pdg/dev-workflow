@@ -2,20 +2,14 @@
 
 ## Documento de trabajo
 
-El diseño de VISTA vive en el documento **"untitled"** de pen:
+El diseño de VISTA vive versionado en este repo:
 
 ```
-/home/curaca/.pencil/documents/f32caab9-3864-49f4-afa2-89fdd0b0fe55/pencil-new.pen
+dev-workflow/pen/vista_design.pen
 ```
 
-Esa ruta la genera la app y **puede reasignarse**, así que confírmala leyendo los nodos raíz antes
-de escribir (ver fase 1 de `SKILL.md`). Los otros proyectos del usuario —`prevencion_design.pen`,
-`vision360.pen`, `reporti_prototype.pen`— no se tocan.
-
-Conviene guardar el documento dentro del repo, como ya se hace en los otros proyectos
-(`ssj/prevencion/pen/prevencion_design.pen`), para tener una ruta estable y versionada:
-`dev-workflow/pen/vista_design.pen`.
-
+Ábrelo en pen desde esa ruta y confirma que es el canvas activo antes de escribir (ver fase 1 de
+`SKILL.md`). Ningún otro `.pen` que tengas abierto se toca.
 
 Fuente de verdad: `frontend/DESIGN.md` (documento completo) y `frontend/src/index.css` (tokens
 vivos). Este archivo es el extracto que se necesita para diseñar en pen sin abrir el proyecto.

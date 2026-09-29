@@ -5,7 +5,7 @@
 
 - **Rama:** `feat/HU-08-auth-roles-sesion` (en `backend` y en `frontend`)
 - **Estado:** Fusionada — backend PR #1, frontend PR #2
-- **Diseño:** documento "untitled" de pen (`~/.pencil/documents/f32caab9-3864-49f4-afa2-89fdd0b0fe55/pencil-new.pen`):
+- **Diseño:** `pen/vista_design.pen` (antes en un documento local de pen, sin versionar):
   - `u3Viw5` Field · `sswXN` Button Primary (componentes reutilizables)
   - `PVdTh` Bienvenida — Ingresar · `rzFxK` Bienvenida — Crear cuenta · `eKfSZ` Estados
 
