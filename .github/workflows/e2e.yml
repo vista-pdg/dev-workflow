@@ -67,6 +67,18 @@ jobs:
           --health-timeout 3s
           --health-retries 20
 
+      # Local capture only: CI must never send mail through Gmail or bypass verification.
+      mailpit:
+        image: axllent/mailpit:v1.31.3
+        ports:
+          - 1025:1025
+          - 8025:8025
+        options: >-
+          --health-cmd "wget -q -O /dev/null http://localhost:8025/livez"
+          --health-interval 5s
+          --health-timeout 3s
+          --health-retries 20
+
     steps:
       # El nombre de rama del llamador entra por variable de entorno y entre comillas: nunca se
       # interpola dentro del script.
@@ -126,6 +138,16 @@ jobs:
         working-directory: backend
         env:
           SPRING_PROFILES_ACTIVE: e2e
+          MAIL_ENABLED: "true"
+          MAIL_FROM: qa@vista.invalid
+          SMTP_HOST: localhost
+          SMTP_PORT: "1025"
+          SMTP_AUTH: "false"
+          SMTP_STARTTLS: "false"
+          VERIFICATION_HASH_SECRET: ci-local-verification-key-at-least-32-characters
+          # Fixture accounts across 129+ checks; security limits retain their own backend tests.
+          VERIFICATION_HOURLY_LIMIT: "10000"
+          VERIFICATION_DAILY_LIMIT: "100000"
         run: nohup ./mvnw -B -ntp spring-boot:run > backend.log 2>&1 &
 
       - name: Dependencias del frontend
@@ -150,6 +172,8 @@ jobs:
           exit 1
 
       - name: Cypress
+        env:
+          VISTA_E2E_SOFTWARE_GL: "1"
         uses: cypress-io/github-action@v6
         with:
           working-directory: frontend

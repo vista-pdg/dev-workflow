@@ -6,15 +6,18 @@ description: Flujo de trabajo completo para implementar una Historia de Usuario 
 # Flujo por Historia de Usuario — VISTA
 
 VISTA es un generador 3D de estructuras discretas (PdG, Universidad Icesi). El código vive en
-**dos repos git independientes** que se clonan lado a lado en una misma carpeta raíz, la carpeta
-en la que se abre Claude Code (la que contiene `.claude/skills/hu-workflow`). Los comandos de esta
-skill se corren desde esa raíz:
+**cinco repos git independientes** que se clonan lado a lado en una misma carpeta raíz. Abre tu
+agente en esa raíz o en el repo afectado y carga las instrucciones compartidas de `dev-workflow`
+(ver su README y `scripts/link-agent-context.mjs`). Los comandos de esta skill se corren desde
+esa raíz; no depende de Claude Code ni de rutas particulares de una máquina:
 
 | Directorio | Repo | Stack |
 |---|---|---|
 | `backend/` | `vista-pdg/backend` | Spring Boot 4.0.6, Java 21, Maven, Postgres, JWT |
 | `frontend/` | `vista-pdg/frontend` | React 19, Vite 8, Tailwind v4, react-three-fiber |
-| `dev-workflow/` | `vista-pdg/dev-workflow` | Esta skill y las specs de HU |
+| `dev-workflow/` | `vista-pdg/dev-workflow` | Skills, diseño, specs y QA visual |
+| `terraform-backend/` | `vista-pdg/terraform-backend` | Recursos de soporte Terraform |
+| `terraform-iac/` | `vista-pdg/terraform-iac` | Recursos cloud del workload |
 
 El root **no** es un repo. Cada HU produce **una rama con el mismo nombre en ambos repos** y
 **dos PRs**, uno por repo. Lee `references/stack.md` antes de tocar código: tiene rutas, comandos
@@ -27,9 +30,9 @@ que el frontend se invente la UI; saltarse las pruebas de backend hace que el fr
 contratos que todavía van a cambiar. Cuando una fase revela que la anterior estaba mal, vuelve a
 ella — retroceder una fase es barato, descubrirlo en integración no.
 
-**Registra el avance con las herramientas de tareas** (`TaskCreate` / `TaskUpdate`), una tarea por
-fase. Las HUs duran varias sesiones y el usuario pregunta "¿en qué vamos?"; la lista de tareas es
-la respuesta.
+**Registra el avance con las herramientas de tareas de tu agente**, una tarea por fase; si no
+existen, mantén un registro breve de fases y pendientes en la spec de la HU. Las HUs duran varias
+sesiones y el usuario pregunta "¿en qué vamos?"; la lista de tareas es la respuesta.
 
 ### Fase 0 — Preparación
 
@@ -54,25 +57,13 @@ Todo lo visible se diseña en pen **antes** de escribirse en React. El diseño e
 UI: sin él, la implementación inventa espaciados, jerarquías y estados, y luego rehacerlo cuesta
 mucho más que dibujarlo.
 
-- Invoca la skill `pen-dev` (`mcp__pencil__read_skill`) y lee su `pen-schema.md` y `execute.md`.
-  pen **no es CSS**: tiene su propio layout y sus propias reglas de sizing.
-- **El diseño vive en `dev-workflow/pen/vista_design.pen`**, versionado. Nunca en
-  `~/.pencil/documents/<uuid>/`: esas rutas son locales a cada máquina y pen las **reasigna** entre
-  proyectos, así que un uuid que ayer era VISTA hoy puede ser otro documento.
-- **Verifica en qué documento estás escribiendo antes de la primera mutación.** `mcp__pencil__execute`
-  opera sobre el canvas *activo* aunque le pases otro `filePath`, y el activo cambia cada vez que la
-  persona cambia de ventana en pen. Llama a `get_app_state` y confirma que el canvas activo es
-  `dev-workflow/pen/vista_design.pen` y que sus frames raíz son los de VISTA (`HU-XX · …`):
-
-  ```js
-  Get(document,(n,c)=>c.depth<=0&&Print(n.id,"|",n.type,"|",n.name))
-  ```
-
-  Si el activo es otro archivo, pide que abran el de VISTA y vuelve a verificar. Escribir el diseño
-  de VISTA dentro del `.pen` de otro proyecto es un daño caro de revertir; la verificación cuesta
-  una llamada.
-- Pasa igualmente `filePath` explícito en `mcp__pencil__execute`: no basta, pero documenta la
-  intención. Al terminar la fase, el `.pen` se commitea en `dev-workflow` junto con la spec de la HU.
+- Sigue [el flujo de pen](../../workflows/pen-ui.md): usa el CLI interactivo configurado o el MCP
+  disponible, lee el esquema y las instrucciones vigentes, verifica el archivo/canvas y modifica
+  el diseño versionado `dev-workflow/pen/vista_design.pen`. **Toda modificación de UI**, incluso
+  una corrección pequeña durante QA, exige actualizar pen antes de implementar. Si pen no está
+  disponible, continúa la inspección pero deja pendiente la implementación visual.
+- No uses documentos locales de otro proyecto ni UUIDs de `~/.pencil/documents/`. Commitea el
+  diseño junto con la spec dentro de `dev-workflow`; el código permanece en su repo correspondiente.
 - Un frame de nivel superior por pantalla, nombrado `HU-XX · <Pantalla>`, con `clip: true`.
   Marca `placeholder: true` mientras lo construyes y quítalo al terminarlo.
 - **El sistema de diseño no se inventa**: es el de Icesi, ya definido en `frontend/DESIGN.md` y en
@@ -113,7 +104,8 @@ no es verificación.
 ### Fase 4 — Frontend
 
 Implementa el diseño de la fase 1, no una aproximación de memoria. Ten el frame de pen a la vista
-mientras escribes el componente.
+mientras escribes el componente. Usa `existing-ui-refactor` antes de modificar UI existente y
+`web-design-guidelines` para revisarla; verifica el resultado renderizado con `visual-qa`.
 
 - Reutiliza lo que ya existe: `lib/http.ts` (axios con el interceptor de JWT), `contexts/AuthContext`,
   el store de Zustand, y los primitivos en `components/ui/`. Añadir una segunda forma de hacer
@@ -124,9 +116,10 @@ mientras escribes el componente.
 
 ### Fase 5 — Cypress E2E
 
-Cypress todavía no está instalado en el repo. La primera HU que llegue aquí lo monta: instálalo como
-`devDependency`, configura `baseUrl: 'http://localhost:5173'` y deja los specs en
-`frontend/cypress/e2e/`. `references/stack.md` tiene el arranque concreto.
+Cypress 16 ya está instalado y configurado en `frontend/cypress.config.ts`, con specs en
+`frontend/cypress/e2e/`. Extiende esa suite funcional, no crees otra. `references/stack.md` tiene
+el arranque concreto. Playwright en `dev-workflow` se limita a capturas y accesibilidad; sigue
+[UI QA](../../workflows/ui-qa.md) para esos controles sin duplicar los criterios funcionales.
 
 Escribe **un spec por criterio de aceptación**, nombrado para que se lea como el criterio
 (`hu-08-registro-y-login.cy.ts`). Ese mapeo uno-a-uno es lo que después convierte el PR en evidencia
@@ -146,8 +139,9 @@ Postgres, backend y frontend — y recorre la HU como la recorrería el usuario.
 3. Vuelve a correr **las dos** suites (`make test` y Cypress) contra el sistema levantado.
 4. Recorre a mano cada criterio de aceptación y anota cuál cumple.
 
-Si hay UI nueva, verifícala en el navegador con las herramientas de Chrome DevTools MCP y captura
-pantalla: es lo que le permite al usuario validar en la fase 7 sin tener que levantar el proyecto.
+Si hay cambios de UI, aplica `visual-qa`: inspección en el navegador disponible, capturas en
+viewports relevantes, comparación con pen y el estado anterior, controles axe y revisión manual
+de accesibilidad. Reporta regresiones y bloqueos; estas evidencias permiten validar la fase 7.
 
 ### Fase 7 — Validación humana, push y PR
 

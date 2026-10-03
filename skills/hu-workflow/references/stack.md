@@ -1,11 +1,14 @@
 # Stack, rutas y comandos — VISTA
 
 Referencia operativa del proyecto. Evita redescubrir la estructura en cada HU. Las rutas son
-relativas a la carpeta raíz donde están clonados `backend/`, `frontend/` y `dev-workflow/`.
+relativas a la carpeta raíz donde están clonados `backend/`, `frontend/`, `dev-workflow/`,
+`terraform-backend/` y `terraform-iac/`. La raíz no es un monorepo ni un repo Git.
 
 ## Arranque completo
 
-El backend no levanta sin Postgres y sin la API key de Gemini.
+El arranque normal necesita Postgres y la API key de Gemini; el perfil `e2e` usa un adaptador
+falso sin clave ni llamadas al LLM. Los escenarios de memoria conversacional necesitan Redis.
+El login público puede verificarse con el frontend solo; ver [UI QA](../../../workflows/ui-qa.md).
 
 ```bash
 # 1. Base de datos (Postgres 17 + pgAdmin en :5050)
@@ -149,3 +152,12 @@ que el hook no reescriba archivos a mitad del commit.
 - `graphify-out/` — salida de graphify en la raíz (ver el README de `dev-workflow`). Sirve para
   consultar el grafo con `graphify query`, pero no es fuente de verdad: si choca con el código,
   gana el código.
+
+## Refinamiento visual compartido
+
+Las skills viven en `dev-workflow/skills/`, con descubrimiento Codex vía `.agents/skills/`.
+Consulta [UI QA](../../../workflows/ui-qa.md) para enlazar el contexto en cualquier máquina Linux
+o macOS, arrancar Playwright desde `dev-workflow`, revisar capturas deterministas y ejecutar axe.
+[Pen](../../../workflows/pen-ui.md) debe actualizarse antes de cada cambio de UI. No hay Storybook.
+Las rutas `/`, `/analytics` y `/admin` requieren sesión; `/login` es pública y tiene los primeros
+baselines. No se han generado baselines autenticados.
