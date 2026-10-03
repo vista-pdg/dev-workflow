@@ -37445,6 +37445,807 @@
       "width": 550,
       "height": 320,
       "content": "Solicitar código → confirmar seis dígitos → crear cuenta y sesión. Sin usuario ni tokens antes de verificar. Código: 10 minutos y cinco intentos; reenvío: 60 segundos. SMTP fallido: informar fallo y conservar desafío anterior. Todos los errores del formulario inicial y del código deben ser legibles en superficie lavanda: texto foreground en claro, borde destructive e icono para el error general. Foco inicial en código y regreso al campo correo; one-time-code y teclado. Móvil de 600 px con scroll. Contraseña solo en memoria; cuentas previas conservan acceso sin marcarlas verificadas."
+    },
+    {
+      "type": "frame",
+      "id": "L72SH",
+      "x": 4620,
+      "y": 1915,
+      "name": "FIX-Admin · Confirmación · oscuro",
+      "clip": true,
+      "width": 1440,
+      "height": 900,
+      "fill": "$shell",
+      "layout": "none",
+      "children": [
+        {
+          "type": "frame",
+          "id": "ro7ER",
+          "x": 24,
+          "y": 24,
+          "name": "Administración existente · contexto",
+          "width": 1392,
+          "layout": "vertical",
+          "gap": 12,
+          "children": [
+            {
+              "type": "text",
+              "id": "yLogE",
+              "name": "Título de página",
+              "fill": "$fg",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Administración",
+              "lineHeight": 1.5,
+              "fontFamily": "$font",
+              "fontSize": 20,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "GYIZn",
+              "name": "Sección de usuarios",
+              "fill": "$muted-fg",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Usuarios   ·   Roles   ·   Permisos   ·   Cursos",
+              "lineHeight": 1.5,
+              "fontFamily": "$font",
+              "fontSize": 12,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "GKsqd",
+              "name": "Objetivo en tabla",
+              "fill": "$muted-fg",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Ana de prueba · ui-admin@example.invalid",
+              "lineHeight": 1.5,
+              "fontFamily": "$font",
+              "fontSize": 12,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "rectangle",
+          "id": "L3u0i",
+          "x": 0,
+          "y": 0,
+          "name": "Fondo modal · interacción bloqueada",
+          "fill": "#00000099",
+          "width": 1440,
+          "height": 900
+        },
+        {
+          "type": "frame",
+          "id": "KgjP4",
+          "x": 496,
+          "y": 295,
+          "name": "Confirmación compartida · foco inicial Cancelar",
+          "width": 448,
+          "fill": "$card",
+          "stroke": "$border",
+          "strokeWidth": 1,
+          "layout": "vertical",
+          "gap": 16,
+          "padding": 24,
+          "children": [
+            {
+              "type": "text",
+              "id": "yYBQR",
+              "name": "Título asociado a alertdialog",
+              "fill": "$fg",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "¿Eliminar usuario?",
+              "lineHeight": 1.5,
+              "fontFamily": "$font",
+              "fontSize": 18,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "c7I1Zj",
+              "name": "Consecuencias",
+              "fill": "$muted-fg",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Se eliminará la cuenta y se cerrarán sus sesiones. Esta acción no se puede deshacer.",
+              "lineHeight": 1.5,
+              "fontFamily": "$font",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "lvESu",
+              "name": "Identidad del objetivo",
+              "width": "fill_container",
+              "fill": "$muted",
+              "layout": "vertical",
+              "gap": 4,
+              "padding": 12,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "G6Lkb1",
+                  "name": "Nombre",
+                  "fill": "$fg",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Ana de prueba",
+                  "lineHeight": 1.5,
+                  "fontFamily": "$font",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "HBdTR",
+                  "name": "Correo",
+                  "fill": "$muted-fg",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "ui-admin@example.invalid",
+                  "lineHeight": 1.5,
+                  "fontFamily": "$font",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "lDGEw",
+              "name": "Acciones · sin duplicados mientras elimina",
+              "width": "fill_container",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "r13IVc",
+                  "name": "Botón Cancelar",
+                  "width": "fill_container",
+                  "fill": "$card",
+                  "stroke": "$primary",
+                  "strokeWidth": 2,
+                  "padding": [
+                    10,
+                    8
+                  ],
+                  "justifyContent": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "q8LfI",
+                      "name": "Etiqueta Cancelar",
+                      "fill": "$fg",
+                      "content": "Cancelar",
+                      "fontFamily": "$font",
+                      "fontSize": 13,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "J1bek",
+                  "name": "Botón Eliminar usuario",
+                  "width": "fill_container",
+                  "fill": "$destructive",
+                  "stroke": "$border",
+                  "padding": [
+                    10,
+                    8
+                  ],
+                  "justifyContent": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "r3vd6W",
+                      "name": "Etiqueta Eliminar usuario",
+                      "fill": "#FFFFFF",
+                      "content": "Eliminar usuario",
+                      "fontFamily": "$font",
+                      "fontSize": 13,
+                      "fontWeight": "600"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "Jzzfn",
+          "x": 16,
+          "y": 798,
+          "name": "Contrato de interacción",
+          "width": 1408,
+          "layout": "vertical",
+          "gap": 4,
+          "children": [
+            {
+              "type": "text",
+              "id": "O5UKZN",
+              "name": "Pendiente y teclado",
+              "fill": "$muted-fg",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Eliminando…: botones bloqueados; Escape y fondo no cierran durante envío. Tab contenido; cancelar devuelve foco; éxito vuelve a la sección.",
+              "lineHeight": 1.5,
+              "fontFamily": "$font",
+              "fontSize": 11,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "l1CrA5",
+              "name": "Roles y feedback",
+              "fill": "$muted-fg",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Roles usan el mismo diálogo. Roles asignados: error 409 legible. Éxito/error anunciado; tablas desplazables, sin recortar acciones.",
+              "lineHeight": 1.5,
+              "fontFamily": "$font",
+              "fontSize": 11,
+              "fontWeight": "normal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "jUzHb",
+      "x": 4620,
+      "y": 2895,
+      "name": "FIX-Admin · Confirmación · móvil claro",
+      "clip": true,
+      "width": 390,
+      "height": 844,
+      "fill": "#FFFFFF",
+      "layout": "none",
+      "children": [
+        {
+          "type": "frame",
+          "id": "NXZhE",
+          "x": 24,
+          "y": 24,
+          "name": "Administración existente · contexto",
+          "width": 342,
+          "layout": "vertical",
+          "gap": 12,
+          "children": [
+            {
+              "type": "text",
+              "id": "xfXU8",
+              "name": "Título de página",
+              "fill": "#000000",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Administración",
+              "lineHeight": 1.5,
+              "fontFamily": "$font",
+              "fontSize": 20,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "w8HIb",
+              "name": "Sección de usuarios",
+              "fill": "#333333",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Usuarios   ·   Roles   ·   Permisos   ·   Cursos",
+              "lineHeight": 1.5,
+              "fontFamily": "$font",
+              "fontSize": 12,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "qZAAg",
+              "name": "Objetivo en tabla",
+              "fill": "#333333",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Ana de prueba · ui-admin@example.invalid",
+              "lineHeight": 1.5,
+              "fontFamily": "$font",
+              "fontSize": 12,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "rectangle",
+          "id": "vG4No",
+          "x": 0,
+          "y": 0,
+          "name": "Fondo modal · interacción bloqueada",
+          "fill": "#00000099",
+          "width": 390,
+          "height": 844
+        },
+        {
+          "type": "frame",
+          "id": "tohjY",
+          "x": 16,
+          "y": 267,
+          "name": "Confirmación compartida · foco inicial Cancelar",
+          "width": 358,
+          "fill": "#FFFFFF",
+          "stroke": "#E0E0E0",
+          "strokeWidth": 1,
+          "layout": "vertical",
+          "gap": 16,
+          "padding": 24,
+          "children": [
+            {
+              "type": "text",
+              "id": "bi3up",
+              "name": "Título asociado a alertdialog",
+              "fill": "#000000",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "¿Eliminar usuario?",
+              "lineHeight": 1.5,
+              "fontFamily": "$font",
+              "fontSize": 18,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "x0uMk",
+              "name": "Consecuencias",
+              "fill": "#333333",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Se eliminará la cuenta y se cerrarán sus sesiones. Esta acción no se puede deshacer.",
+              "lineHeight": 1.5,
+              "fontFamily": "$font",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "adawC",
+              "name": "Identidad del objetivo",
+              "width": "fill_container",
+              "fill": "#E5E5F5",
+              "layout": "vertical",
+              "gap": 4,
+              "padding": 12,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "ibWQi",
+                  "name": "Nombre",
+                  "fill": "#000000",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Ana de prueba",
+                  "lineHeight": 1.5,
+                  "fontFamily": "$font",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "U9805",
+                  "name": "Correo",
+                  "fill": "#333333",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "ui-admin@example.invalid",
+                  "lineHeight": 1.5,
+                  "fontFamily": "$font",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "n1npW",
+              "name": "Acciones · sin duplicados mientras elimina",
+              "width": "fill_container",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "lAlZB",
+                  "name": "Botón Cancelar",
+                  "width": "fill_container",
+                  "fill": "#FFFFFF",
+                  "stroke": "$primary",
+                  "strokeWidth": 2,
+                  "padding": [
+                    10,
+                    8
+                  ],
+                  "justifyContent": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "PPMZI",
+                      "name": "Etiqueta Cancelar",
+                      "fill": "#000000",
+                      "content": "Cancelar",
+                      "fontFamily": "$font",
+                      "fontSize": 13,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "zB6Ab",
+                  "name": "Botón Eliminar usuario",
+                  "width": "fill_container",
+                  "fill": "$destructive",
+                  "stroke": "#E0E0E0",
+                  "padding": [
+                    10,
+                    8
+                  ],
+                  "justifyContent": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Z5c70k",
+                      "name": "Etiqueta Eliminar usuario",
+                      "fill": "#FFFFFF",
+                      "content": "Eliminar usuario",
+                      "fontFamily": "$font",
+                      "fontSize": 13,
+                      "fontWeight": "600"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "o0xoJU",
+          "x": 16,
+          "y": 742,
+          "name": "Contrato de interacción",
+          "width": 358,
+          "layout": "vertical",
+          "gap": 4,
+          "children": [
+            {
+              "type": "text",
+              "id": "kUnNA",
+              "name": "Pendiente y teclado",
+              "fill": "#333333",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Eliminando…: botones bloqueados; Escape y fondo no cierran durante envío. Tab contenido; cancelar devuelve foco; éxito vuelve a la sección.",
+              "lineHeight": 1.5,
+              "fontFamily": "$font",
+              "fontSize": 11,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "GOD1i",
+              "name": "Roles y feedback",
+              "fill": "#333333",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Roles usan el mismo diálogo. Roles asignados: error 409 legible. Éxito/error anunciado; tablas desplazables, sin recortar acciones.",
+              "lineHeight": 1.5,
+              "fontFamily": "$font",
+              "fontSize": 11,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "Uin8F",
+          "x": 16,
+          "y": 688,
+          "name": "QA · semántica y foco tras borrado",
+          "fill": "#333333",
+          "textGrowth": "fixed-width",
+          "width": 358,
+          "content": "Texto blanco en acción roja; Activo usa verde semántico de alto contraste. Tras borrar, foco en resumen de usuarios. Tablas desplazables con foco de teclado, incluso vacías. Tabs: solo scroll horizontal. Root persiste al cerrar.",
+          "fontFamily": "$font",
+          "fontSize": 11,
+          "fontWeight": "normal"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "LeaVd",
+      "x": 4620,
+      "y": 3819,
+      "name": "FIX-Admin · Error y reintento · oscuro",
+      "clip": true,
+      "width": 768,
+      "height": 600,
+      "fill": "$shell",
+      "layout": "none",
+      "children": [
+        {
+          "type": "frame",
+          "id": "u0Otqc",
+          "x": 24,
+          "y": 24,
+          "name": "Administración existente · contexto",
+          "width": 720,
+          "layout": "vertical",
+          "gap": 12,
+          "children": [
+            {
+              "type": "text",
+              "id": "N1HyC9",
+              "name": "Título de página",
+              "fill": "$fg",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Administración",
+              "lineHeight": 1.5,
+              "fontFamily": "$font",
+              "fontSize": 20,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "x7WEN",
+              "name": "Sección de usuarios",
+              "fill": "$muted-fg",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Usuarios   ·   Roles   ·   Permisos   ·   Cursos",
+              "lineHeight": 1.5,
+              "fontFamily": "$font",
+              "fontSize": 12,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "J3lmE6",
+              "name": "Objetivo en tabla",
+              "fill": "$muted-fg",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Ana de prueba · ui-admin@example.invalid",
+              "lineHeight": 1.5,
+              "fontFamily": "$font",
+              "fontSize": 12,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "rectangle",
+          "id": "aHP3O",
+          "x": 0,
+          "y": 0,
+          "name": "Fondo modal · interacción bloqueada",
+          "fill": "#00000099",
+          "width": 768,
+          "height": 600
+        },
+        {
+          "type": "frame",
+          "id": "M8st8",
+          "x": 160,
+          "y": 115,
+          "name": "Confirmación compartida · foco inicial Cancelar",
+          "width": 448,
+          "fill": "$card",
+          "stroke": "$border",
+          "strokeWidth": 1,
+          "layout": "vertical",
+          "gap": 16,
+          "padding": 24,
+          "children": [
+            {
+              "type": "text",
+              "id": "xD4Ad",
+              "name": "Título asociado a alertdialog",
+              "fill": "$fg",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "¿Eliminar usuario?",
+              "lineHeight": 1.5,
+              "fontFamily": "$font",
+              "fontSize": 18,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "COUGW",
+              "name": "Consecuencias",
+              "fill": "$muted-fg",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Se eliminará la cuenta y se cerrarán sus sesiones. Esta acción no se puede deshacer.",
+              "lineHeight": 1.5,
+              "fontFamily": "$font",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "E7alkm",
+              "name": "Identidad del objetivo",
+              "width": "fill_container",
+              "fill": "$muted",
+              "layout": "vertical",
+              "gap": 4,
+              "padding": 12,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "JAruQ",
+                  "name": "Nombre",
+                  "fill": "$fg",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Ana de prueba",
+                  "lineHeight": 1.5,
+                  "fontFamily": "$font",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "KV3kA",
+                  "name": "Correo",
+                  "fill": "$muted-fg",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "ui-admin@example.invalid",
+                  "lineHeight": 1.5,
+                  "fontFamily": "$font",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "DKzUt",
+              "name": "Error inline · alert · conserva objetivo",
+              "width": "fill_container",
+              "fill": "#341F1F",
+              "stroke": "$destructive",
+              "strokeWidth": {
+                "left": 2
+              },
+              "layout": "vertical",
+              "padding": 12,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "pJTZO",
+                  "name": "Error y siguiente paso",
+                  "fill": "$fg",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "No se pudo eliminar el usuario. Revisa la conexión e inténtalo de nuevo.",
+                  "lineHeight": 1.5,
+                  "fontFamily": "$font",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "E7v6p3",
+              "name": "Acciones · sin duplicados mientras elimina",
+              "width": "fill_container",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "WPEZi",
+                  "name": "Botón Cancelar",
+                  "width": "fill_container",
+                  "fill": "$card",
+                  "stroke": "$primary",
+                  "strokeWidth": 2,
+                  "padding": [
+                    10,
+                    8
+                  ],
+                  "justifyContent": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Ouo4Q",
+                      "name": "Etiqueta Cancelar",
+                      "fill": "$fg",
+                      "content": "Cancelar",
+                      "fontFamily": "$font",
+                      "fontSize": 13,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "mpEj7",
+                  "name": "Botón Eliminar usuario",
+                  "width": "fill_container",
+                  "fill": "$destructive",
+                  "stroke": "$border",
+                  "padding": [
+                    10,
+                    8
+                  ],
+                  "justifyContent": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "fqCXD",
+                      "name": "Etiqueta Eliminar usuario",
+                      "fill": "#FFFFFF",
+                      "content": "Eliminar usuario",
+                      "fontFamily": "$font",
+                      "fontSize": 13,
+                      "fontWeight": "600"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "qOpJL",
+          "x": 16,
+          "y": 498,
+          "name": "Contrato de interacción",
+          "width": 736,
+          "layout": "vertical",
+          "gap": 4,
+          "children": [
+            {
+              "type": "text",
+              "id": "X93fVt",
+              "name": "Pendiente y teclado",
+              "fill": "$muted-fg",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Eliminando…: botones bloqueados; Escape y fondo no cierran durante envío. Tab contenido; cancelar devuelve foco; éxito vuelve a la sección.",
+              "lineHeight": 1.5,
+              "fontFamily": "$font",
+              "fontSize": 11,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "d5jXW2",
+              "name": "Roles y feedback",
+              "fill": "$muted-fg",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Roles usan el mismo diálogo. Roles asignados: error 409 legible. Éxito/error anunciado; tablas desplazables, sin recortar acciones.",
+              "lineHeight": 1.5,
+              "fontFamily": "$font",
+              "fontSize": 11,
+              "fontWeight": "normal"
+            }
+          ]
+        }
+      ]
     }
   ],
   "variables": {

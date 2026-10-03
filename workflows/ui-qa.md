@@ -119,6 +119,24 @@ It uploads reports on success or failure and does not deploy or change the desig
 For every actual UI change: inspect → update pen → implement the smallest coherent change →
 render and inspect → review diffs/axe/manual checks → report evidence and regressions.
 
+## Administration feedback
+
+Use frontend's `components/ui/confirmation-dialog.tsx` for destructive confirmations,
+`components/ui/alert.tsx` for operation feedback, and `components/ui/modal.tsx` for forms.
+Keep field validation next to its input. Do not use native alert/confirm/prompt; ESLint enforces
+this across product source, including window/globalThis calls. Use existing semantic tokens.
+Keep controlled dialog roots mounted so focus returns on close; after deleting a row, return
+focus to its section summary. Pending requests disable actions/dismissal; errors retain the
+target and allow retry. Only remove a row after the server confirms deletion.
+
+`tests/ui/admin-feedback.spec.mjs` uses intercepted, deterministic data without credentials.
+It covers both themes at all three viewports, cancel/Escape/focus, pending/failure/retry,
+success announcements, long email addresses, short mobile height, forms, and axe.
+One desktop confirmation baseline is kept; error screenshots are inspection attachments.
+Functional deletion stays in frontend Cypress `admin-deletion.cy.ts` against an isolated
+backend/Postgres: account with rotated sessions, cancellation, persistence after reload,
+session invalidation, role-in-use conflict, and authorization. Never delete real users as QA.
+
 ## Learning flow
 
 `tests/ui/learning-flow.spec.mjs` exercises shared context, the five-step interface guide, focus
