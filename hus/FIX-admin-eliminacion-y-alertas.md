@@ -50,7 +50,20 @@ Los roles son el único otro uso de confirmación nativa en la aplicación.
   la cuenta por API administrativa para aislar su criterio de la entrega de correos.
   Repetición final pasa: Cypress Chrome 9/9 (administración, correo y cuotas); Playwright
   administración 18/18 con formularios compartidos, axe y retorno de foco.
-- 7 Publicación: autorizada expresamente por el usuario; pendiente de controles en verde.
+- 7 Publicación: completa el 2026-10-03 por push a main y CI/CD existente. Commits de una
+  línea sin coautoría: backend `8800711`, frontend `8b7f5e9`, diseño/QA `279737d`.
+  [Backend CI/CD](https://github.com/vista-pdg/backend/actions/runs/37122479071) y
+  [frontend CI/CD](https://github.com/vista-pdg/frontend/actions/runs/37122483203) terminan
+  correctamente: calidad, 132/132 E2E en Chrome y 132/132 en Firefox por pipeline,
+  construcción, despliegue y smoke tests. Firefox pasa también en los runners aislados.
+  Cloud Run Ready=True y 100 % de tráfico en `vista-backend-00006-7cp` y
+  `vista-frontend-00006-znh`; los digests coinciden con las etiquetas de los commits:
+  backend `sha256:955a382348e5cadbcc3466ead5b4fe199407078691fe6233d8d6a87ffcc3066f`,
+  frontend `sha256:cb0d847b1abb8528bee5ed34fed91c482ee4385f49a273af59b62cfe656cb992`.
+  Verificación publicada: `/login` y `/api/courses` responden 200; acceso administrativo,
+  listado, apertura del diálogo, foco inicial en Cancelar, ausencia de alerta nativa,
+  cancelación y retorno de foco comprobados en navegador. Las cinco cuentas existentes
+  se conservan: no se ejecuta borrado de cuentas reales en producción.
 
 ## Fuera de alcance
 
