@@ -243,3 +243,30 @@ los timers/animation frames que necesita axe. Si una máquina saturada produce c
 del tutorial, reproduce aislado y ejecuta la suite con `--workers=1`; no omitas la aserción.
 Cypress usa el backend real y lee código en Mailpit local con `--env mailpitUrl=...`.
 Activación Gmail, límites y secretos: [guía backend](../../backend/docs/email-verification.md).
+
+
+## Grafos y etiquetas 3D
+
+Diseño: `oyMH9` (catálogo ampliado) y `HQLI2` (panel móvil, estados y orientación de etiquetas)
+en `pen/vista_design.pen`. Se conservan los componentes, tokens y el reproductor existentes.
+
+`tests/ui/graph-algorithms.spec.mjs` usa fixtures locales sin credenciales. Comprueba los seis
+algoritmos, el estado sin grafo, el selector de origen (ausente para Floyd/Kruskal), errores,
+foco, contraste con axe y overflow en escritorio/tableta/móvil. Adjunta capturas en ambos
+temas sin reemplazar baselines. La prueba 3D de escritorio inspecciona las cinco etiquetas
+reales de Three/Troika y compara su orientación con la cámara desde delante, lateral,
+detrás y arriba; adjunta una captura por ángulo.
+
+```bash
+VISTA_UI_BASE_URL=http://127.0.0.1:5173 npx playwright test tests/ui/graph-algorithms.spec.mjs --workers=1
+```
+
+La cobertura funcional vive en `frontend/cypress/e2e/graph-algorithms.cy.ts`: usa el backend
+real con una base aislada y la cuenta estudiante del seeder; fija únicamente el grafo del
+lienzo. Ejecuta BFS, DFS, Dijkstra, Floyd, Prim y Kruskal, valida resultados y conserva el
+paso y rastro al conmutar 2D/3D. Para WebGL por software, usar Chrome; Electron ignora los
+argumentos de lanzamiento configurados en este proyecto.
+
+```bash
+VISTA_E2E_SOFTWARE_GL=1 npx cypress run --browser chrome --spec cypress/e2e/graph-algorithms.cy.ts
+```

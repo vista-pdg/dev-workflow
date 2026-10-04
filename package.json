@@ -7,9 +7,9 @@
   },
   "scripts": {
     "agents:link": "node scripts/link-agent-context.mjs",
-    "test:ui": "playwright test tests/ui/visual.spec.mjs tests/ui/learning-flow.spec.mjs tests/ui/auth-ui.spec.mjs",
-    "test:ui:update": "playwright test tests/ui/visual.spec.mjs tests/ui/learning-flow.spec.mjs tests/ui/auth-ui.spec.mjs --update-snapshots",
-    "test:a11y": "playwright test tests/ui/accessibility.spec.mjs tests/ui/learning-flow.spec.mjs tests/ui/auth-ui.spec.mjs"
+    "test:ui": "playwright test tests/ui/visual.spec.mjs tests/ui/learning-flow.spec.mjs tests/ui/auth-ui.spec.mjs tests/ui/graph-algorithms.spec.mjs",
+    "test:ui:update": "playwright test tests/ui/visual.spec.mjs tests/ui/learning-flow.spec.mjs tests/ui/auth-ui.spec.mjs tests/ui/graph-algorithms.spec.mjs --update-snapshots",
+    "test:a11y": "playwright test tests/ui/accessibility.spec.mjs tests/ui/learning-flow.spec.mjs tests/ui/auth-ui.spec.mjs tests/ui/graph-algorithms.spec.mjs"
   },
   "devDependencies": {
     "@axe-core/playwright": "4.13.0",
