@@ -40,7 +40,7 @@ local `feat/graph-algorithms-readable-3d`; el usuario pidió ampliar el alcance 
 | Frontend | Build/typecheck y lint aprobados; 57 unitarias, líneas del núcleo 95.52 % |
 | Cypress | Nuevas 33 entradas aprobadas en Chrome; regresión Chrome 169/171 iniciales; ambos specs afectados aprobaron 4/4 en repetición. Firefox: 171/171 aprobadas, exit 0 |
 | Integración / QA | Playwright completo 73 aprobadas, 4 omitidas, 1 timeout de administración; caso afectado aprobado aislado. Nuevas vistas: 6/6 y axe aprobados |
-| Publicación | Pendiente: el usuario pidió esta extensión antes de subir |
+| Publicación | Aprobación explícita recibida; main local integrada y rama remota publicada; checks de PR en curso |
 
 ## Implementación por criterio
 
@@ -115,5 +115,21 @@ así que ese proceso queda activo; no se modificaron políticas del sistema ni n
 resuelve ramas parejas automáticamente, por lo que no fue necesario cambiar pipelines.
 
 Los contenedores y servidores temporales de QA se retiraron. Las descripciones de PR quedaron
-preparadas localmente con el alcance completo; no se envió nada a GitHub. Pendiente únicamente
-validación humana de fase 7 antes de push/PR.
+preparadas localmente con el alcance completo; no se envió nada a GitHub. La fase 7 fue autorizada explícitamente por el usuario después de revisar esta evidencia.
+
+
+## Publicación autorizada
+
+El usuario autorizó integrar en `main` local y publicar los cambios aprobados. Las cuatro ramas
+`main` locales incorporaron los commits validados por fast-forward, conservando `frontend/bun.lock`
+sin commit. Se publicaron las ramas parejas y se crearon estos PRs:
+
+- [Backend #12](https://github.com/vista-pdg/backend/pull/12)
+- [Frontend #12](https://github.com/vista-pdg/frontend/pull/12)
+- [Dev-workflow #1](https://github.com/vista-pdg/dev-workflow/pull/1)
+- [Terraform-iac #1](https://github.com/vista-pdg/terraform-iac/pull/1)
+
+Antes de fusionar se revisan los checks de GitHub. El backend local fue reiniciado porque aún
+servía 10 entradas; la instancia nueva confirmó 43. Frontend local devuelve HTTP 200 en
+`http://127.0.0.1:5173`, con el proxy habitual al backend local en 8080 y configuración de desarrollo
+existente, sin usar las fixtures del perfil e2e.

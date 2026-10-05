@@ -40,7 +40,7 @@ dev-workflow y terraform-iac. No se asigna un número HU sin referencia del tabl
 | 4 · Frontend | Build, lint y 52 pruebas aprobadas; cobertura de líneas del núcleo 95.71 % |
 | 5 · Cypress | Chrome: 138 aprobadas; Firefox: 136/138 iniciales y ambos specs afectados aprobados al repetir (4/4) |
 | 6 · Integración y QA | Suite Playwright completa: 68 aprobadas, cuatro omisiones por viewport; capturas revisadas |
-| 7 · Validación humana | Pendiente de aprobación explícita antes de push/PR; commits locales y descripciones preparados |
+| 7 · Validación humana | Aprobación recibida para main local y publicación; PRs enlazados en la spec de algoritmos básicos |
 
 ## Fuera del alcance
 
@@ -87,4 +87,4 @@ con exit 0 y ese aviso de teardown no afecta al resultado de las pruebas.
 El usuario pidió ampliar las operaciones de las demás estructuras y agregar ordenamiento.
 La rama conserva esta mejora y suma [algoritmos básicos](MEJORA-algoritmos-basicos.md), que registra
 el alcance final de 43 entradas y su evidencia de integración. Los resultados anteriores
-corresponden a la validación inicial; los actuales se consolidan en esa spec. No se ha publicado.
+corresponden a la validación inicial; los actuales se consolidan en esa spec. El usuario autorizó su publicación y los PRs se registran en esa spec.
