@@ -147,6 +147,74 @@ test('code views remain readable and accessible in both themes', async ({ page }
   await expect(page.locator('[data-cy=code-line-12]')).toHaveAttribute('data-active', 'true');
 });
 
+test('movable code panel rendered states, native gestures and accessibility', async ({ page }, testInfo) => {
+  await openFixture(page);
+  await selectStructure(page, 'stack');
+  await page.locator('[data-cy=algorithm-toggle]').click();
+  await page.locator('[data-cy=algo-item-stack-simple-pop]').click();
+  await page.locator('[data-cy=algo-values]').fill('3, 42');
+  await page.locator('[data-cy=algo-generate]').click();
+  await page.locator('[data-cy=algorithm-panel]').getByRole('button', { name: 'Cerrar panel', exact: true }).click();
+  const panel = page.locator('[data-cy=code-panel]');
+  await expect(panel).toBeVisible();
+  if (testInfo.project.name === 'mobile') await page.locator('[data-cy=code-toggle]').click();
+  await page.locator('[data-cy=code-view-java]').click();
+  await page.locator('[data-cy=step-next]').click();
+
+  async function nativeDrag(handle, dx, dy) {
+    const rect = await page.locator(`[data-cy=${handle}]`).boundingBox();
+    await page.mouse.move(rect.x + rect.width / 2, rect.y + rect.height / 2);
+    await page.mouse.down();
+    await page.mouse.move(rect.x + rect.width / 2 + dx, rect.y + rect.height / 2 + dy, { steps: 8 });
+    await page.mouse.up();
+  }
+  await nativeDrag('code-resize', testInfo.project.name === 'mobile' ? -32 : 160, 80);
+  await nativeDrag('code-move', testInfo.project.name === 'mobile' ? 16 : 120, -64);
+  if (testInfo.project.name === 'mobile') {
+    const cdp = await page.context().newCDPSession(page);
+    await cdp.send('Emulation.setTouchEmulationEnabled', { enabled: true, maxTouchPoints: 1 });
+    const handle = await page.locator('[data-cy=code-move]').boundingBox();
+    const touch = { x: handle.x + 24, y: handle.y + 20, id: 1 };
+    await cdp.send('Input.dispatchTouchEvent', { type: 'touchStart', touchPoints: [touch] });
+    await cdp.send('Input.dispatchTouchEvent', { type: 'touchMove', touchPoints: [{ ...touch, y: touch.y - 32 }] });
+    await cdp.send('Input.dispatchTouchEvent', { type: 'touchEnd', touchPoints: [] });
+    await cdp.detach();
+  }
+  for (const theme of ['dark', 'light']) {
+    if (theme === 'light') await setLightTheme(page);
+    await checkAccessibility(page, testInfo);
+    await expect.poll(() => panel.evaluate(el => {
+      const rect = el.getBoundingClientRect();
+      const parent = el.parentElement.getBoundingClientRect();
+      return rect.left >= parent.left && rect.right <= parent.right && rect.top >= parent.top && rect.bottom <= parent.bottom - 100;
+    })).toBe(true);
+    const screenshot = testInfo.outputPath(`code-moved-${theme}.png`);
+    await page.screenshot({ path: screenshot, animations: 'disabled' });
+    await testInfo.attach(`code-moved-${theme}`, { path: screenshot, contentType: 'image/png' });
+  }
+  await page.locator('[data-cy=code-move]').focus();
+  await page.keyboard.press('Enter');
+  await expect(page.locator('[data-cy=code-layout-controls]')).toBeVisible();
+  await checkAccessibility(page, testInfo);
+  const controlsScreenshot = testInfo.outputPath('code-click-controls.png');
+  await page.screenshot({ path: controlsScreenshot, animations: 'disabled' });
+  await testInfo.attach('code-click-controls', { path: controlsScreenshot, contentType: 'image/png' });
+  await page.locator('[data-cy=code-layout-reset]').click();
+  await expect(page.locator('[data-cy=code-layout-reset]')).toBeFocused();
+  await page.locator('[data-cy=code-toggle]').click();
+  await checkAccessibility(page, testInfo);
+  await page.locator('[data-cy=code-toggle]').click();
+  await page.locator('[data-cy=code-move]').focus();
+  await page.keyboard.press('Shift+ArrowRight');
+  await expect(page.locator('[data-cy=code-step-counter]')).toHaveText('2 / 3');
+  await page.locator('[data-cy=code-resize]').focus();
+  await page.keyboard.press('Shift+ArrowDown');
+  await expect(page.locator('[data-cy=code-resize]')).toBeFocused();
+  await page.setViewportSize({ width: 390, height: 600 });
+  await checkAccessibility(page, testInfo);
+  await expect.poll(() => page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+});
+
 
 test('one navigation, exclusive tree/heap selection and original ICESI branding', async ({ page }, testInfo) => {
   await openFixture(page);
