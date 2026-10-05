@@ -270,3 +270,29 @@ argumentos de lanzamiento configurados en este proyecto.
 ```bash
 VISTA_E2E_SOFTWARE_GL=1 npx cypress run --browser chrome --spec cypress/e2e/graph-algorithms.cy.ts
 ```
+
+
+## Algoritmos básicos y ordenamiento
+
+Diseño: `DLcXw` en `pen/vista_design.pen`, paneles de 320 px con contexto BST, lista/ordenamiento y
+estados de formulario. `tests/ui/basic-algorithms.spec.mjs` usa un catálogo fixture de 43 entradas
+capturado del backend aislado, sin credenciales. Cubre familias contextuales, lienzo vacío,
+validación escalar/lista, foco por teclado, carga/fallo/reintento de catálogo y envío pendiente.
+Corre axe y controles de overflow en los tres viewports y ambos temas; adjunta capturas sin
+sustituir baselines existentes. Espera el color final del input tras cambiar tema antes de axe,
+pues la transición CSS puede mostrar colores intermedios aunque el tema ya haya cambiado.
+
+```bash
+VISTA_UI_BASE_URL=http://127.0.0.1:5174 npx playwright test tests/ui/basic-algorithms.spec.mjs --workers=1
+```
+
+La verificación funcional permanece en Cypress, un spec por CA-1–CA-4:
+`basic-trees.cy.ts`, `basic-heap-linear.cy.ts`, `basic-list-hash.cy.ts`, `basic-sorting.cy.ts`.
+Todos usan API real, cuenta sembrada y servicios locales aislados. Comprueban los resultados de
+las 33 entradas nuevas, no solo respuestas HTTP. El helper compartido fija las escenas de entrada
+y valida rastro/paso al alternar 2D/3D; los seis ordenamientos deben seguir horizontales y ordenados.
+
+```bash
+VISTA_E2E_SOFTWARE_GL=1 npx cypress run --browser chrome --config baseUrl=http://127.0.0.1:5174 --env mailpitUrl=http://127.0.0.1:58025
+# Repetir secuencialmente con --browser firefox; no compartir una base mutada entre dos runs simultáneos.
+```

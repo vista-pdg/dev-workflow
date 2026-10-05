@@ -80,3 +80,11 @@ Los dos specs completos pasaron al repetirlos, sin cambiar el código ni la conf
 La cobertura funcional de los 138 escenarios quedó comprobada entre ambas ejecuciones.
 Cypress también informa `kill EACCES` al cerrar Firefox en esta máquina; la repetición terminó
 con exit 0 y ese aviso de teardown no afecta al resultado de las pruebas.
+
+
+## Extensión solicitada antes de publicación
+
+El usuario pidió ampliar las operaciones de las demás estructuras y agregar ordenamiento.
+La rama conserva esta mejora y suma [algoritmos básicos](MEJORA-algoritmos-basicos.md), que registra
+el alcance final de 43 entradas y su evidencia de integración. Los resultados anteriores
+corresponden a la validación inicial; los actuales se consolidan en esa spec. No se ha publicado.

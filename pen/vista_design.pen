@@ -39568,6 +39568,904 @@
           ]
         }
       ]
+    },
+    {
+      "type": "frame",
+      "id": "DLcXw",
+      "x": 32110,
+      "y": 0,
+      "name": "MEJORA · Algoritmos básicos · búsqueda y ordenamiento",
+      "clip": true,
+      "width": 1120,
+      "fill": "$bg",
+      "layout": "vertical",
+      "gap": 24,
+      "padding": 24,
+      "children": [
+        {
+          "type": "text",
+          "id": "F9xDTT",
+          "name": "Título",
+          "fill": "$fg",
+          "content": "Algoritmos básicos · mismo panel, todas las estructuras",
+          "fontFamily": "$font",
+          "fontSize": 20,
+          "fontWeight": "600"
+        },
+        {
+          "type": "frame",
+          "id": "QPFrL",
+          "name": "Catálogo contextual y formularios",
+          "width": "fill_container",
+          "gap": 24,
+          "children": [
+            {
+              "type": "frame",
+              "id": "kRJOV",
+              "name": "Búsqueda · escritorio",
+              "width": 320,
+              "fill": "$shell",
+              "stroke": "$border",
+              "strokeWidth": 1,
+              "layout": "vertical",
+              "gap": 12,
+              "padding": 12,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "Xr33Y",
+                  "name": "Encabezado Búsqueda · escritorio",
+                  "fill": "$fg",
+                  "content": "Algoritmos",
+                  "fontFamily": "$font",
+                  "fontSize": 13,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "frame",
+                  "id": "inh3T",
+                  "name": "ÁRBOLES · BST",
+                  "width": "fill_container",
+                  "fill": "#1E1E1E66",
+                  "stroke": "$border",
+                  "strokeWidth": 1,
+                  "padding": [
+                    8,
+                    10
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "kiQiG",
+                      "name": "Etiqueta ÁRBOLES · BST",
+                      "fill": "$fg",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "ÁRBOLES · BST",
+                      "fontFamily": "$font",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "Ayb3V",
+                  "name": "Inserción · Construir un BST",
+                  "width": "fill_container",
+                  "fill": "#1E1E1E66",
+                  "stroke": "$border",
+                  "strokeWidth": 1,
+                  "padding": [
+                    8,
+                    10
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "y5A8B",
+                      "name": "Etiqueta Inserción · Construir un BST",
+                      "fill": "$fg",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Inserción · Construir un BST",
+                      "fontFamily": "$font",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "ugMWz",
+                  "name": "Inorden · Recorrido recursivo",
+                  "width": "fill_container",
+                  "fill": "#1E1E1E66",
+                  "stroke": "$border",
+                  "strokeWidth": 1,
+                  "padding": [
+                    8,
+                    10
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "LFpKy",
+                      "name": "Etiqueta Inorden · Recorrido recursivo",
+                      "fill": "$fg",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Inorden · Recorrido recursivo",
+                      "fontFamily": "$font",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "X5BLD",
+                  "name": "Preorden · Raíz, izquierda, derecha",
+                  "width": "fill_container",
+                  "fill": "#1E1E1E66",
+                  "stroke": "$border",
+                  "strokeWidth": 1,
+                  "padding": [
+                    8,
+                    10
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Gcy0y",
+                      "name": "Etiqueta Preorden · Raíz, izquierda, derecha",
+                      "fill": "$fg",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Preorden · Raíz, izquierda, derecha",
+                      "fontFamily": "$font",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "AnRAn",
+                  "name": "Postorden · Izquierda, derecha, raíz",
+                  "width": "fill_container",
+                  "fill": "#1E1E1E66",
+                  "stroke": "$border",
+                  "strokeWidth": 1,
+                  "padding": [
+                    8,
+                    10
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "K4IOf",
+                      "name": "Etiqueta Postorden · Izquierda, derecha, raíz",
+                      "fill": "$fg",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Postorden · Izquierda, derecha, raíz",
+                      "fontFamily": "$font",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "MxkWG",
+                  "name": "Por niveles · Recorrido en anchura",
+                  "width": "fill_container",
+                  "fill": "#1E1E1E66",
+                  "stroke": "$border",
+                  "strokeWidth": 1,
+                  "padding": [
+                    8,
+                    10
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "rH13s",
+                      "name": "Etiqueta Por niveles · Recorrido en anchura",
+                      "fill": "$fg",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Por niveles · Recorrido en anchura",
+                      "fontFamily": "$font",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "s9g52C",
+                  "name": "Búsqueda · Encontrar una clave",
+                  "width": "fill_container",
+                  "fill": "#5454E926",
+                  "stroke": "$border",
+                  "strokeWidth": 1,
+                  "padding": [
+                    8,
+                    10
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "jpDFf",
+                      "name": "Etiqueta Búsqueda · Encontrar una clave",
+                      "fill": "$fg",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Búsqueda · Encontrar una clave",
+                      "fontFamily": "$font",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "Q5ydJ",
+                  "name": "Se procesa el árbol del lienzo (7 nodos).",
+                  "fill": "$fg",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Se procesa el árbol del lienzo (7 nodos).",
+                  "fontFamily": "$font",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "pE67g",
+                  "name": "VALOR A BUSCAR",
+                  "fill": "$fg",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "VALOR A BUSCAR",
+                  "fontFamily": "$font",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "BpwHp",
+                  "name": "15",
+                  "fill": "$fg",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "15",
+                  "fontFamily": "$font",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "t1tzKL",
+                  "name": "Enter o Ejecutar paso a paso",
+                  "fill": "$yellow",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Enter o Ejecutar paso a paso",
+                  "fontFamily": "$font",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "ltvlu",
+              "name": "Ordenamiento · panel 320 en móvil 390",
+              "width": 320,
+              "fill": "$shell",
+              "stroke": "$border",
+              "strokeWidth": 1,
+              "layout": "vertical",
+              "gap": 12,
+              "padding": 12,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "r6gn2",
+                  "name": "Encabezado Ordenamiento · móvil",
+                  "fill": "$fg",
+                  "content": "Algoritmos",
+                  "fontFamily": "$font",
+                  "fontSize": 13,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "frame",
+                  "id": "pdtkn",
+                  "name": "LISTAS ENLAZADAS",
+                  "width": "fill_container",
+                  "fill": "#1E1E1E66",
+                  "stroke": "$border",
+                  "strokeWidth": 1,
+                  "padding": [
+                    7,
+                    10
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "B06Rtn",
+                      "name": "Etiqueta LISTAS ENLAZADAS",
+                      "fill": "$fg",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "LISTAS ENLAZADAS",
+                      "fontFamily": "$font",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "Z6qPHa",
+                  "name": "Recorrido · Seguir enlaces",
+                  "width": "fill_container",
+                  "fill": "#1E1E1E66",
+                  "stroke": "$border",
+                  "strokeWidth": 1,
+                  "padding": [
+                    7,
+                    10
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "K0zcbk",
+                      "name": "Etiqueta Recorrido · Seguir enlaces",
+                      "fill": "$fg",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Recorrido · Seguir enlaces",
+                      "fontFamily": "$font",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "cGmFi",
+                  "name": "Búsqueda · Primera coincidencia",
+                  "width": "fill_container",
+                  "fill": "#1E1E1E66",
+                  "stroke": "$border",
+                  "strokeWidth": 1,
+                  "padding": [
+                    7,
+                    10
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "g6IIYN",
+                      "name": "Etiqueta Búsqueda · Primera coincidencia",
+                      "fill": "$fg",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Búsqueda · Primera coincidencia",
+                      "fontFamily": "$font",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "Ba7Xp",
+                  "name": "Añadir al final",
+                  "width": "fill_container",
+                  "fill": "#1E1E1E66",
+                  "stroke": "$border",
+                  "strokeWidth": 1,
+                  "padding": [
+                    7,
+                    10
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "JsC0L",
+                      "name": "Etiqueta Añadir al final",
+                      "fill": "$fg",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Añadir al final",
+                      "fontFamily": "$font",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "r5FUo",
+                  "name": "Eliminar primera coincidencia",
+                  "width": "fill_container",
+                  "fill": "#1E1E1E66",
+                  "stroke": "$border",
+                  "strokeWidth": 1,
+                  "padding": [
+                    7,
+                    10
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "RxHTf",
+                      "name": "Etiqueta Eliminar primera coincidencia",
+                      "fill": "$fg",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Eliminar primera coincidencia",
+                      "fontFamily": "$font",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "WnUiL",
+                  "name": "Invertir enlaces",
+                  "width": "fill_container",
+                  "fill": "#1E1E1E66",
+                  "stroke": "$border",
+                  "strokeWidth": 1,
+                  "padding": [
+                    7,
+                    10
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "s2xVL",
+                      "name": "Etiqueta Invertir enlaces",
+                      "fill": "$fg",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Invertir enlaces",
+                      "fontFamily": "$font",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "dILqa",
+                  "name": "ORDENAMIENTO",
+                  "width": "fill_container",
+                  "fill": "#1E1E1E66",
+                  "stroke": "$border",
+                  "strokeWidth": 1,
+                  "padding": [
+                    7,
+                    10
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "bxk7h",
+                      "name": "Etiqueta ORDENAMIENTO",
+                      "fill": "$fg",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "ORDENAMIENTO",
+                      "fontFamily": "$font",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "VKxiC",
+                  "name": "Burbuja · Comparar vecinos",
+                  "width": "fill_container",
+                  "fill": "#1E1E1E66",
+                  "stroke": "$border",
+                  "strokeWidth": 1,
+                  "padding": [
+                    7,
+                    10
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "T1byS",
+                      "name": "Etiqueta Burbuja · Comparar vecinos",
+                      "fill": "$fg",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Burbuja · Comparar vecinos",
+                      "fontFamily": "$font",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "wGztE",
+                  "name": "Selección · Elegir el mínimo",
+                  "width": "fill_container",
+                  "fill": "#1E1E1E66",
+                  "stroke": "$border",
+                  "strokeWidth": 1,
+                  "padding": [
+                    7,
+                    10
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "AVswb",
+                      "name": "Etiqueta Selección · Elegir el mínimo",
+                      "fill": "$fg",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Selección · Elegir el mínimo",
+                      "fontFamily": "$font",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "PofdP",
+                  "name": "Inserción · Prefijo ordenado",
+                  "width": "fill_container",
+                  "fill": "#1E1E1E66",
+                  "stroke": "$border",
+                  "strokeWidth": 1,
+                  "padding": [
+                    7,
+                    10
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "mmaTK",
+                      "name": "Etiqueta Inserción · Prefijo ordenado",
+                      "fill": "$fg",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Inserción · Prefijo ordenado",
+                      "fontFamily": "$font",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "NRRbX",
+                  "name": "Merge sort · Dividir y mezclar",
+                  "width": "fill_container",
+                  "fill": "#5454E926",
+                  "stroke": "$border",
+                  "strokeWidth": 1,
+                  "padding": [
+                    7,
+                    10
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "WznyU",
+                      "name": "Etiqueta Merge sort · Dividir y mezclar",
+                      "fill": "$fg",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Merge sort · Dividir y mezclar",
+                      "fontFamily": "$font",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "MCjcT",
+                  "name": "Quicksort · Partición por pivote",
+                  "width": "fill_container",
+                  "fill": "#1E1E1E66",
+                  "stroke": "$border",
+                  "strokeWidth": 1,
+                  "padding": [
+                    7,
+                    10
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "B8jFf9",
+                      "name": "Etiqueta Quicksort · Partición por pivote",
+                      "fill": "$fg",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Quicksort · Partición por pivote",
+                      "fontFamily": "$font",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "aLXNe",
+                  "name": "Heapsort · Heap máximo",
+                  "width": "fill_container",
+                  "fill": "#1E1E1E66",
+                  "stroke": "$border",
+                  "strokeWidth": 1,
+                  "padding": [
+                    7,
+                    10
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "jVFU0",
+                      "name": "Etiqueta Heapsort · Heap máximo",
+                      "fill": "$fg",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Heapsort · Heap máximo",
+                      "fontFamily": "$font",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "m4Su8l",
+                  "name": "VALORES",
+                  "fill": "$fg",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "VALORES",
+                  "fontFamily": "$font",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "AWR54",
+                  "name": "8, 3, 5, 3, -1",
+                  "fill": "$fg",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "8, 3, 5, 3, -1",
+                  "fontFamily": "$font",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "Yw4Cp",
+                  "name": "Hasta 32 enteros · menor a mayor",
+                  "fill": "$fg",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Hasta 32 enteros · menor a mayor",
+                  "fontFamily": "$font",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "SoNxm",
+                  "name": "Ejecutar paso a paso",
+                  "fill": "$yellow",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Ejecutar paso a paso",
+                  "fontFamily": "$font",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "rxUqO",
+              "name": "Estados y lectura del rastro",
+              "width": 320,
+              "fill": "$shell",
+              "stroke": "$border",
+              "strokeWidth": 1,
+              "layout": "vertical",
+              "gap": 12,
+              "padding": 12,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "Xgeiw",
+                  "name": "Encabezado Estados y lectura del rastro",
+                  "fill": "$fg",
+                  "content": "Algoritmos",
+                  "fontFamily": "$font",
+                  "fontSize": 13,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "HgMSS",
+                  "name": "VACÍO",
+                  "fill": "$yellow",
+                  "content": "VACÍO",
+                  "fontFamily": "$font",
+                  "fontSize": 10,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "vtKRT",
+                  "name": "VACÍO detalle",
+                  "fill": "$fg",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Genera una estructura del contexto actual. Las demos de construcción aceptan valores.",
+                  "fontFamily": "$font",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "Hn6Y8",
+                  "name": "CARGANDO",
+                  "fill": "$yellow",
+                  "content": "CARGANDO",
+                  "fontFamily": "$font",
+                  "fontSize": 10,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "vm8Iv",
+                  "name": "CARGANDO detalle",
+                  "fill": "$fg",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Cargando catálogo… / Generando…; ejecución bloqueada.",
+                  "fontFamily": "$font",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "CAwO8",
+                  "name": "VALIDACIÓN",
+                  "fill": "$yellow",
+                  "content": "VALIDACIÓN",
+                  "fontFamily": "$font",
+                  "fontSize": 10,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "n4c92U",
+                  "name": "VALIDACIÓN detalle",
+                  "fill": "$fg",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Ingresa un entero de 32 bits. Hasta 32 valores para ordenar. Error junto al campo; foco visible.",
+                  "fontFamily": "$font",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "Bcmtt",
+                  "name": "RESULTADO",
+                  "fill": "$yellow",
+                  "content": "RESULTADO",
+                  "fontFamily": "$font",
+                  "fontSize": 10,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "p0y8wz",
+                  "name": "RESULTADO detalle",
+                  "fill": "$fg",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Pasos, pseudocódigo, variables y salida. Se conserva el rastro al cambiar 2D/3D.",
+                  "fontFamily": "$font",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "gSeAX",
+                  "name": "TECLADO",
+                  "fill": "$yellow",
+                  "content": "TECLADO",
+                  "fontFamily": "$font",
+                  "fontSize": 10,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "eqRWv",
+                  "name": "TECLADO detalle",
+                  "fill": "$fg",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Tab alcanza el campo y Ejecutar. Enter ejecuta una sola vez.",
+                  "fontFamily": "$font",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "BskOP",
+                  "name": "OTRAS FAMILIAS",
+                  "fill": "$yellow",
+                  "content": "OTRAS FAMILIAS",
+                  "fontFamily": "$font",
+                  "fontSize": 10,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "fAfpz",
+                  "name": "OTRAS FAMILIAS detalle",
+                  "fill": "$fg",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Heaps: construir, insertar, máximo y extraer. Pilas/colas: construir y consultar. Hash: colisión, búsqueda, insertar y eliminar.",
+                  "fontFamily": "$font",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "q69ISx",
+                  "name": "Catálogo sin conexión",
+                  "fill": "$fg",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "CATÁLOGO SIN CONEXIÓN · error visible y botón Reintentar catálogo. La validación marca el campo y devuelve el foco.",
+                  "fontFamily": "$font",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "ClkUk",
+                  "name": "Secuencia horizontal",
+                  "fill": "$fg",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "SECUENCIA · nodos en fila, índices y valores legibles. Cada intercambio cambia posiciones conservando IDs. Etiqueta INTERCAMBIO para ordenamiento/heap/listas; ROTACIÓN para AVL.",
+                  "fontFamily": "$font",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "variables": {

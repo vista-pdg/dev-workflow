@@ -339,7 +339,8 @@ test('tour remains usable while the catalog loads or fails', async ({ page }, te
     await assertTourPlacement(page, '[data-cy=algo-catalog]');
     await checkAccessibility(page, testInfo);
   } finally { release(); }
-  await expect(page.locator('[data-cy=algo-catalog]')).toContainText('No hay algoritmos disponibles');
+  await expect(page.locator('[data-cy=algo-catalog-error]')).toContainText('Catálogo no disponible en fixture');
+  await expect(page.locator('[data-cy=algo-retry]')).toBeVisible();
   await assertTourPlacement(page, '[data-cy=algo-catalog]');
   await page.keyboard.press('Escape');
   await expect(page.locator('[data-cy=tutorial-open]')).toBeFocused();
