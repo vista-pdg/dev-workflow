@@ -5897,7 +5897,9 @@
               "id": "PzUfa",
               "name": "Title",
               "fill": "$fg",
-              "content": "Lienzo 2D por familias · resaltados de BFS y pop · panel de algoritmos por catálogo",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Algoritmos de grafos · seis recorridos y optimizaciones",
               "fontFamily": "$font",
               "fontSize": 20,
               "fontWeight": "700"
@@ -6967,7 +6969,214 @@
                                   "id": "BPBiC",
                                   "name": "d",
                                   "fill": "$muted-fg",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
                                   "content": "Sobre el grafo del lienzo, desde un nodo inicial",
+                                  "fontFamily": "$font",
+                                  "fontSize": 10,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "N5OC8",
+                              "name": "DFS · Recorrido en profundidad",
+                              "width": "fill_container",
+                              "fill": "#1E1E1E66",
+                              "stroke": "$border",
+                              "strokeWidth": 1,
+                              "layout": "vertical",
+                              "gap": 1,
+                              "padding": [
+                                7,
+                                10
+                              ],
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "T08ks",
+                                  "name": "l",
+                                  "fill": "$fg",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "DFS · Recorrido en profundidad",
+                                  "fontFamily": "$font",
+                                  "fontSize": 12,
+                                  "fontWeight": "500"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "y57lw",
+                                  "name": "d",
+                                  "fill": "$muted-fg",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "Explora cada rama antes de retroceder",
+                                  "fontFamily": "$font",
+                                  "fontSize": 10,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "B2jdtj",
+                              "name": "Dijkstra · Caminos mínimos",
+                              "width": "fill_container",
+                              "fill": "#1E1E1E66",
+                              "stroke": "$border",
+                              "strokeWidth": 1,
+                              "layout": "vertical",
+                              "gap": 1,
+                              "padding": [
+                                7,
+                                10
+                              ],
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "y62o5p",
+                                  "name": "l",
+                                  "fill": "$fg",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "Dijkstra · Caminos mínimos",
+                                  "fontFamily": "$font",
+                                  "fontSize": 12,
+                                  "fontWeight": "500"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "yfmj9",
+                                  "name": "d",
+                                  "fill": "$muted-fg",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "Distancias desde un origen; pesos no negativos",
+                                  "fontFamily": "$font",
+                                  "fontSize": 10,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "Cgn1k",
+                              "name": "Floyd–Warshall · Todos los pares",
+                              "width": "fill_container",
+                              "fill": "#1E1E1E66",
+                              "stroke": "$border",
+                              "strokeWidth": 1,
+                              "layout": "vertical",
+                              "gap": 1,
+                              "padding": [
+                                7,
+                                10
+                              ],
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "u0WoOn",
+                                  "name": "l",
+                                  "fill": "$fg",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "Floyd–Warshall · Todos los pares",
+                                  "fontFamily": "$font",
+                                  "fontSize": 12,
+                                  "fontWeight": "500"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "e4ZpjU",
+                                  "name": "d",
+                                  "fill": "$muted-fg",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "Distancias entre todos los nodos; sin origen",
+                                  "fontFamily": "$font",
+                                  "fontSize": 10,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "lDQAk",
+                              "name": "Prim · Bosque de expansión mínima",
+                              "width": "fill_container",
+                              "fill": "#1E1E1E66",
+                              "stroke": "$border",
+                              "strokeWidth": 1,
+                              "layout": "vertical",
+                              "gap": 1,
+                              "padding": [
+                                7,
+                                10
+                              ],
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "X33QkF",
+                                  "name": "l",
+                                  "fill": "$fg",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "Prim · Bosque de expansión mínima",
+                                  "fontFamily": "$font",
+                                  "fontSize": 12,
+                                  "fontWeight": "500"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "eBQca",
+                                  "name": "d",
+                                  "fill": "$muted-fg",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "Grafo no dirigido; crece desde un nodo",
+                                  "fontFamily": "$font",
+                                  "fontSize": 10,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "Uo9jp",
+                              "name": "Kruskal · Bosque de expansión mínima",
+                              "width": "fill_container",
+                              "fill": "#1E1E1E66",
+                              "stroke": "$border",
+                              "strokeWidth": 1,
+                              "layout": "vertical",
+                              "gap": 1,
+                              "padding": [
+                                7,
+                                10
+                              ],
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "XDcKn",
+                                  "name": "l",
+                                  "fill": "$fg",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "Kruskal · Bosque de expansión mínima",
+                                  "fontFamily": "$font",
+                                  "fontSize": 12,
+                                  "fontWeight": "500"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "obtfK",
+                                  "name": "d",
+                                  "fill": "$muted-fg",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "Grafo no dirigido; ordena aristas por peso",
                                   "fontFamily": "$font",
                                   "fontSize": 10,
                                   "fontWeight": "normal"
@@ -7245,7 +7454,7 @@
                               "fill": "$muted-fg",
                               "textGrowth": "fixed-width",
                               "width": "fill_container",
-                              "content": "Si no hay grafo en el lienzo, el botón queda deshabilitado y el panel sugiere generar uno desde el chat.",
+                              "content": "Sin grafo: generar desde el chat. Floyd y Kruskal no piden origen. Pesos ausentes = 1. Prim y Kruskal requieren grafo no dirigido. Dijkstra no acepta negativos. Floyd detecta ciclos negativos. Errores junto al botón; foco visible y ejecución bloqueada mientras carga.",
                               "lineHeight": 1.5,
                               "fontFamily": "$font",
                               "fontSize": 10,
@@ -38242,6 +38451,2017 @@
               "fontFamily": "$font",
               "fontSize": 11,
               "fontWeight": "normal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "HQLI2",
+      "x": 30910,
+      "y": 0,
+      "name": "MEJORA · Grafos y etiquetas 3D · estados y móvil",
+      "clip": true,
+      "width": 1120,
+      "fill": "$bg",
+      "layout": "vertical",
+      "gap": 24,
+      "padding": 24,
+      "children": [
+        {
+          "type": "text",
+          "id": "RKeYa",
+          "name": "Título",
+          "fill": "$fg",
+          "content": "Grafos · catálogo y etiquetas legibles al orbitar",
+          "fontFamily": "$font",
+          "fontSize": 20,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "frame",
+          "id": "bGJD8",
+          "name": "Paneles responsive",
+          "width": "fill_container",
+          "gap": 24,
+          "children": [
+            {
+              "type": "frame",
+              "id": "DkNNY",
+              "name": "Escritorio · panel de 320",
+              "width": 320,
+              "fill": "$shell",
+              "stroke": "$border",
+              "strokeWidth": 1,
+              "layout": "vertical",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "wXpoh",
+                  "name": "Panel Header",
+                  "width": "fill_container",
+                  "fill": "#E4EB6014",
+                  "stroke": "$border",
+                  "strokeWidth": {
+                    "bottom": 1
+                  },
+                  "gap": 8,
+                  "padding": [
+                    12,
+                    16
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon",
+                      "id": "rRzLN",
+                      "name": "Flask",
+                      "width": 16,
+                      "height": 16,
+                      "icon": "flask-conical",
+                      "library": "lucide",
+                      "fill": "$yellow"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "ZkY6s",
+                      "name": "Texts",
+                      "layout": "vertical",
+                      "gap": 2,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "SuHA6",
+                          "name": "T",
+                          "fill": "$fg",
+                          "content": "Algoritmos",
+                          "fontFamily": "$font",
+                          "fontSize": 13,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "b5CRYR",
+                          "name": "S",
+                          "fill": "$yellow",
+                          "content": "CATÁLOGO · 4 FAMILIAS",
+                          "fontFamily": "$font",
+                          "fontSize": 10,
+                          "fontWeight": "normal",
+                          "letterSpacing": 1.5
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "c9z5O1",
+                  "name": "Body",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "padding": 12,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "D2pJvH",
+                      "name": "Family Grafos",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 4,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "WmDRL",
+                          "name": "Fam",
+                          "fill": "$muted-fg",
+                          "content": "GRAFOS",
+                          "fontFamily": "$font",
+                          "fontSize": 9,
+                          "fontWeight": "700",
+                          "letterSpacing": 1.5
+                        },
+                        {
+                          "type": "frame",
+                          "id": "Kgh1D",
+                          "name": "Item BFS · Recorrido en anchura",
+                          "width": "fill_container",
+                          "fill": "#5454E926",
+                          "stroke": "#5454E966",
+                          "strokeWidth": 1,
+                          "layout": "vertical",
+                          "gap": 1,
+                          "padding": [
+                            7,
+                            10
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "aTP4a",
+                              "name": "l",
+                              "fill": "$primary-light",
+                              "content": "BFS · Recorrido en anchura",
+                              "fontFamily": "$font",
+                              "fontSize": 12,
+                              "fontWeight": "500"
+                            },
+                            {
+                              "type": "text",
+                              "id": "nNy9o",
+                              "name": "d",
+                              "fill": "$muted-fg",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "Sobre el grafo del lienzo, desde un nodo inicial",
+                              "fontFamily": "$font",
+                              "fontSize": 10,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "gCnFV",
+                          "name": "DFS · Recorrido en profundidad",
+                          "width": "fill_container",
+                          "fill": "#1E1E1E66",
+                          "stroke": "$border",
+                          "strokeWidth": 1,
+                          "layout": "vertical",
+                          "gap": 1,
+                          "padding": [
+                            7,
+                            10
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "ca3JD",
+                              "name": "l",
+                              "fill": "$fg",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "DFS · Recorrido en profundidad",
+                              "fontFamily": "$font",
+                              "fontSize": 12,
+                              "fontWeight": "500"
+                            },
+                            {
+                              "type": "text",
+                              "id": "kjAth",
+                              "name": "d",
+                              "fill": "$muted-fg",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "Explora cada rama antes de retroceder",
+                              "fontFamily": "$font",
+                              "fontSize": 10,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "G3rUm0",
+                          "name": "Dijkstra · Caminos mínimos",
+                          "width": "fill_container",
+                          "fill": "#1E1E1E66",
+                          "stroke": "$border",
+                          "strokeWidth": 1,
+                          "layout": "vertical",
+                          "gap": 1,
+                          "padding": [
+                            7,
+                            10
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "C07z1",
+                              "name": "l",
+                              "fill": "$fg",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "Dijkstra · Caminos mínimos",
+                              "fontFamily": "$font",
+                              "fontSize": 12,
+                              "fontWeight": "500"
+                            },
+                            {
+                              "type": "text",
+                              "id": "NNT5o",
+                              "name": "d",
+                              "fill": "$muted-fg",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "Distancias desde un origen; pesos no negativos",
+                              "fontFamily": "$font",
+                              "fontSize": 10,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "J39x8",
+                          "name": "Floyd–Warshall · Todos los pares",
+                          "width": "fill_container",
+                          "fill": "#1E1E1E66",
+                          "stroke": "$border",
+                          "strokeWidth": 1,
+                          "layout": "vertical",
+                          "gap": 1,
+                          "padding": [
+                            7,
+                            10
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "EkV8K",
+                              "name": "l",
+                              "fill": "$fg",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "Floyd–Warshall · Todos los pares",
+                              "fontFamily": "$font",
+                              "fontSize": 12,
+                              "fontWeight": "500"
+                            },
+                            {
+                              "type": "text",
+                              "id": "yYkOK",
+                              "name": "d",
+                              "fill": "$muted-fg",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "Distancias entre todos los nodos; sin origen",
+                              "fontFamily": "$font",
+                              "fontSize": 10,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "Q6eF3g",
+                          "name": "Prim · Bosque de expansión mínima",
+                          "width": "fill_container",
+                          "fill": "#1E1E1E66",
+                          "stroke": "$border",
+                          "strokeWidth": 1,
+                          "layout": "vertical",
+                          "gap": 1,
+                          "padding": [
+                            7,
+                            10
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "WnLaf",
+                              "name": "l",
+                              "fill": "$fg",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "Prim · Bosque de expansión mínima",
+                              "fontFamily": "$font",
+                              "fontSize": 12,
+                              "fontWeight": "500"
+                            },
+                            {
+                              "type": "text",
+                              "id": "pEFL2",
+                              "name": "d",
+                              "fill": "$muted-fg",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "Grafo no dirigido; crece desde un nodo",
+                              "fontFamily": "$font",
+                              "fontSize": 10,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "eZNLI",
+                          "name": "Kruskal · Bosque de expansión mínima",
+                          "width": "fill_container",
+                          "fill": "#1E1E1E66",
+                          "stroke": "$border",
+                          "strokeWidth": 1,
+                          "layout": "vertical",
+                          "gap": 1,
+                          "padding": [
+                            7,
+                            10
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "Z16gU",
+                              "name": "l",
+                              "fill": "$fg",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "Kruskal · Bosque de expansión mínima",
+                              "fontFamily": "$font",
+                              "fontSize": 12,
+                              "fontWeight": "500"
+                            },
+                            {
+                              "type": "text",
+                              "id": "T0ZJr",
+                              "name": "d",
+                              "fill": "$muted-fg",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "Grafo no dirigido; ordena aristas por peso",
+                              "fontFamily": "$font",
+                              "fontSize": 10,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "HS5vO",
+                      "name": "Family Árboles",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 4,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "t5D4bD",
+                          "name": "Fam",
+                          "fill": "$muted-fg",
+                          "content": "ÁRBOLES",
+                          "fontFamily": "$font",
+                          "fontSize": 9,
+                          "fontWeight": "700",
+                          "letterSpacing": 1.5
+                        },
+                        {
+                          "type": "frame",
+                          "id": "BHkxG",
+                          "name": "Item AVL · Inserción",
+                          "width": "fill_container",
+                          "fill": "#1E1E1E66",
+                          "stroke": "$border",
+                          "strokeWidth": 1,
+                          "layout": "vertical",
+                          "gap": 1,
+                          "padding": [
+                            7,
+                            10
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "a9PQQ",
+                              "name": "l",
+                              "fill": "$fg",
+                              "content": "AVL · Inserción",
+                              "fontFamily": "$font",
+                              "fontSize": 12,
+                              "fontWeight": "500"
+                            },
+                            {
+                              "type": "text",
+                              "id": "hyO5C",
+                              "name": "d",
+                              "fill": "$muted-fg",
+                              "content": "Rotaciones simples y dobles",
+                              "fontFamily": "$font",
+                              "fontSize": 10,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "f4SUtI",
+                      "name": "Family Pilas",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 4,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "aq2xh",
+                          "name": "Fam",
+                          "fill": "$muted-fg",
+                          "content": "PILAS",
+                          "fontFamily": "$font",
+                          "fontSize": 9,
+                          "fontWeight": "700",
+                          "letterSpacing": 1.5
+                        },
+                        {
+                          "type": "frame",
+                          "id": "rQ9Gt",
+                          "name": "Item Pop · Retiro del tope",
+                          "width": "fill_container",
+                          "fill": "#1E1E1E66",
+                          "stroke": "$border",
+                          "strokeWidth": 1,
+                          "layout": "vertical",
+                          "gap": 1,
+                          "padding": [
+                            7,
+                            10
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "CMgzb",
+                              "name": "l",
+                              "fill": "$fg",
+                              "content": "Pop · Retiro del tope",
+                              "fontFamily": "$font",
+                              "fontSize": 12,
+                              "fontWeight": "500"
+                            },
+                            {
+                              "type": "text",
+                              "id": "OuO0S",
+                              "name": "d",
+                              "fill": "$muted-fg",
+                              "content": "Dos pasos por elemento",
+                              "fontFamily": "$font",
+                              "fontSize": 10,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "DOXOI",
+                      "name": "Family Colas",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 4,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "N4YRc3",
+                          "name": "Fam",
+                          "fill": "$muted-fg",
+                          "content": "COLAS",
+                          "fontFamily": "$font",
+                          "fontSize": 9,
+                          "fontWeight": "700",
+                          "letterSpacing": 1.5
+                        },
+                        {
+                          "type": "frame",
+                          "id": "A6ioDZ",
+                          "name": "Item Dequeue · Retiro del frente",
+                          "width": "fill_container",
+                          "fill": "#1E1E1E66",
+                          "stroke": "$border",
+                          "strokeWidth": 1,
+                          "layout": "vertical",
+                          "gap": 1,
+                          "padding": [
+                            7,
+                            10
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "HWjZI",
+                              "name": "l",
+                              "fill": "$fg",
+                              "content": "Dequeue · Retiro del frente",
+                              "fontFamily": "$font",
+                              "fontSize": 12,
+                              "fontWeight": "500"
+                            },
+                            {
+                              "type": "text",
+                              "id": "Vxt0N",
+                              "name": "d",
+                              "fill": "$muted-fg",
+                              "content": "Dos pasos por elemento",
+                              "fontFamily": "$font",
+                              "fontSize": 10,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "dLHOw",
+                      "name": "Form",
+                      "width": "fill_container",
+                      "stroke": "$border",
+                      "strokeWidth": {
+                        "top": 1
+                      },
+                      "layout": "vertical",
+                      "gap": 6,
+                      "padding": [
+                        8,
+                        0,
+                        0,
+                        0
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "DqgLq",
+                          "name": "lbl",
+                          "fill": "$muted-fg",
+                          "content": "NODO INICIAL",
+                          "fontFamily": "$font",
+                          "fontSize": 9,
+                          "fontWeight": "700",
+                          "letterSpacing": 1.5
+                        },
+                        {
+                          "type": "frame",
+                          "id": "KmI9w",
+                          "name": "Select",
+                          "width": "fill_container",
+                          "fill": "#1E1E1E99",
+                          "stroke": "#5454E94D",
+                          "strokeWidth": 1,
+                          "padding": [
+                            7,
+                            10
+                          ],
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "W2IBt",
+                              "name": "v",
+                              "fill": "$fg",
+                              "content": "A",
+                              "fontFamily": "$font",
+                              "fontSize": 13,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "icon",
+                              "id": "wmukr",
+                              "name": "chev",
+                              "width": 14,
+                              "height": 14,
+                              "icon": "chevron-down",
+                              "library": "lucide",
+                              "fill": "$muted-fg"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "Wh6Cx",
+                          "name": "Run",
+                          "width": "fill_container",
+                          "height": 32,
+                          "fill": "$yellow",
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "AWjaX",
+                              "name": "b",
+                              "fill": "#000000",
+                              "content": "Ejecutar paso a paso",
+                              "fontFamily": "$font",
+                              "fontSize": 12,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "wyeGc",
+                          "name": "hint",
+                          "fill": "$muted-fg",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Sin grafo: generar desde el chat. Floyd y Kruskal no piden origen. Pesos ausentes = 1. Prim y Kruskal requieren grafo no dirigido. Dijkstra no acepta negativos. Floyd detecta ciclos negativos. Errores junto al botón; foco visible y ejecución bloqueada mientras carga.",
+                          "lineHeight": 1.5,
+                          "fontFamily": "$font",
+                          "fontSize": 10,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "MJDdj",
+              "name": "Móvil · 390 px",
+              "width": 390,
+              "fill": "$shell",
+              "layout": "vertical",
+              "gap": 12,
+              "padding": 16,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "yPl7z",
+                  "name": "Viewport móvil",
+                  "fill": "$fg",
+                  "content": "390 × 844 · panel desplazable",
+                  "fontFamily": "$font",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "HRTQh",
+                  "name": "Catálogo móvil",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 4,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "fNKUZ",
+                      "name": "Fam",
+                      "fill": "$muted-fg",
+                      "content": "GRAFOS",
+                      "fontFamily": "$font",
+                      "fontSize": 9,
+                      "fontWeight": "700",
+                      "letterSpacing": 1.5
+                    },
+                    {
+                      "type": "frame",
+                      "id": "lMtUM",
+                      "name": "Item BFS · Recorrido en anchura",
+                      "width": "fill_container",
+                      "fill": "#5454E926",
+                      "stroke": "#5454E966",
+                      "strokeWidth": 1,
+                      "layout": "vertical",
+                      "gap": 1,
+                      "padding": [
+                        7,
+                        10
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "s2Vh1",
+                          "name": "l",
+                          "fill": "$primary-light",
+                          "content": "BFS · Recorrido en anchura",
+                          "fontFamily": "$font",
+                          "fontSize": 12,
+                          "fontWeight": "500"
+                        },
+                        {
+                          "type": "text",
+                          "id": "M6qhC",
+                          "name": "d",
+                          "fill": "$muted-fg",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Sobre el grafo del lienzo, desde un nodo inicial",
+                          "fontFamily": "$font",
+                          "fontSize": 10,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "NJtSa",
+                      "name": "DFS · Recorrido en profundidad",
+                      "width": "fill_container",
+                      "fill": "#1E1E1E66",
+                      "stroke": "$border",
+                      "strokeWidth": 1,
+                      "layout": "vertical",
+                      "gap": 1,
+                      "padding": [
+                        7,
+                        10
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "vkrhA",
+                          "name": "l",
+                          "fill": "$fg",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "DFS · Recorrido en profundidad",
+                          "fontFamily": "$font",
+                          "fontSize": 12,
+                          "fontWeight": "500"
+                        },
+                        {
+                          "type": "text",
+                          "id": "RQ5ew",
+                          "name": "d",
+                          "fill": "$muted-fg",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Explora cada rama antes de retroceder",
+                          "fontFamily": "$font",
+                          "fontSize": 10,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "ZWRZl",
+                      "name": "Dijkstra · Caminos mínimos",
+                      "width": "fill_container",
+                      "fill": "#1E1E1E66",
+                      "stroke": "$border",
+                      "strokeWidth": 1,
+                      "layout": "vertical",
+                      "gap": 1,
+                      "padding": [
+                        7,
+                        10
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "YQGZ0",
+                          "name": "l",
+                          "fill": "$fg",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Dijkstra · Caminos mínimos",
+                          "fontFamily": "$font",
+                          "fontSize": 12,
+                          "fontWeight": "500"
+                        },
+                        {
+                          "type": "text",
+                          "id": "CCfJR",
+                          "name": "d",
+                          "fill": "$muted-fg",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Distancias desde un origen; pesos no negativos",
+                          "fontFamily": "$font",
+                          "fontSize": 10,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "NIfW0",
+                      "name": "Floyd–Warshall · Todos los pares",
+                      "width": "fill_container",
+                      "fill": "#1E1E1E66",
+                      "stroke": "$border",
+                      "strokeWidth": 1,
+                      "layout": "vertical",
+                      "gap": 1,
+                      "padding": [
+                        7,
+                        10
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "tOduE",
+                          "name": "l",
+                          "fill": "$fg",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Floyd–Warshall · Todos los pares",
+                          "fontFamily": "$font",
+                          "fontSize": 12,
+                          "fontWeight": "500"
+                        },
+                        {
+                          "type": "text",
+                          "id": "A7AUQ5",
+                          "name": "d",
+                          "fill": "$muted-fg",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Distancias entre todos los nodos; sin origen",
+                          "fontFamily": "$font",
+                          "fontSize": 10,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "RM4vT",
+                      "name": "Prim · Bosque de expansión mínima",
+                      "width": "fill_container",
+                      "fill": "#1E1E1E66",
+                      "stroke": "$border",
+                      "strokeWidth": 1,
+                      "layout": "vertical",
+                      "gap": 1,
+                      "padding": [
+                        7,
+                        10
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "Z7IPQ8",
+                          "name": "l",
+                          "fill": "$fg",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Prim · Bosque de expansión mínima",
+                          "fontFamily": "$font",
+                          "fontSize": 12,
+                          "fontWeight": "500"
+                        },
+                        {
+                          "type": "text",
+                          "id": "t1N9kD",
+                          "name": "d",
+                          "fill": "$muted-fg",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Grafo no dirigido; crece desde un nodo",
+                          "fontFamily": "$font",
+                          "fontSize": 10,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "G38LSE",
+                      "name": "Kruskal · Bosque de expansión mínima",
+                      "width": "fill_container",
+                      "fill": "#1E1E1E66",
+                      "stroke": "$border",
+                      "strokeWidth": 1,
+                      "layout": "vertical",
+                      "gap": 1,
+                      "padding": [
+                        7,
+                        10
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "GjKL9",
+                          "name": "l",
+                          "fill": "$fg",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Kruskal · Bosque de expansión mínima",
+                          "fontFamily": "$font",
+                          "fontSize": 12,
+                          "fontWeight": "500"
+                        },
+                        {
+                          "type": "text",
+                          "id": "i2t8vk",
+                          "name": "d",
+                          "fill": "$muted-fg",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Grafo no dirigido; ordena aristas por peso",
+                          "fontFamily": "$font",
+                          "fontSize": 10,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "SWf7j",
+                  "name": "Sin origen",
+                  "fill": "$muted-fg",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Floyd y Kruskal usan todo el grafo. Se procesa el grafo del lienzo (6 nodos).",
+                  "fontFamily": "$font",
+                  "fontSize": 11,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "w0u587",
+                  "name": "Ejecutar · foco visible",
+                  "width": "fill_container",
+                  "height": 32,
+                  "fill": "$yellow",
+                  "stroke": "$primary",
+                  "strokeWidth": 2,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "h1Yt3r",
+                      "name": "b",
+                      "fill": "#000000",
+                      "content": "Ejecutar paso a paso",
+                      "fontFamily": "$font",
+                      "fontSize": 12,
+                      "fontWeight": "600"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "FoIfk",
+              "name": "Estados del panel",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 16,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "zibfg",
+                  "name": "VACÍO",
+                  "fill": "$muted-fg",
+                  "content": "VACÍO",
+                  "fontFamily": "$font",
+                  "fontSize": 10,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "JzhpW",
+                  "name": "VACÍO detalle",
+                  "fill": "$fg",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Genera un grafo desde el chat. Ejecutar deshabilitado.",
+                  "fontFamily": "$font",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "EeJpo",
+                  "name": "CARGANDO",
+                  "fill": "$yellow",
+                  "content": "CARGANDO",
+                  "fontFamily": "$font",
+                  "fontSize": 10,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "cUvUy",
+                  "name": "CARGANDO detalle",
+                  "fill": "$fg",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Generando… · botón deshabilitado",
+                  "fontFamily": "$font",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "a5kiUJ",
+                  "name": "ERROR",
+                  "fill": "#FF8888",
+                  "content": "ERROR",
+                  "fontFamily": "$font",
+                  "fontSize": 10,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "ef962",
+                  "name": "ERROR detalle",
+                  "fill": "$fg",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Dijkstra requiere pesos no negativos. Corregir el grafo o elegir Floyd.",
+                  "fontFamily": "$font",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "y7nLMR",
+                  "name": "RESULTADO",
+                  "fill": "$secondary",
+                  "content": "RESULTADO",
+                  "fontFamily": "$font",
+                  "fontSize": 10,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "D3J4eu",
+                  "name": "RESULTADO detalle",
+                  "fill": "$fg",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Paso actual, pseudocódigo y variables. Prim y Kruskal explican las aristas elegidas y su costo.",
+                  "fontFamily": "$font",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "YYS77",
+          "name": "Contrato visual 3D",
+          "width": "fill_container",
+          "fill": "#020617",
+          "layout": "vertical",
+          "gap": 12,
+          "padding": 20,
+          "children": [
+            {
+              "type": "text",
+              "id": "gWKQ7",
+              "name": "Etiquetas orientadas hacia cámara",
+              "fill": "#FFFFFF",
+              "content": "10          20          5",
+              "fontFamily": "$font",
+              "fontSize": 24,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "y7zJ4i",
+              "name": "Rotación en todos los ejes",
+              "fill": "$muted-fg",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Vista frontal, lateral, posterior y elevada: los números de nodos y pesos conservan su lectura horizontal. La cámara gira; las etiquetas miran a la cámara. Se mantiene el contorno oscuro y la posición junto al elemento.",
+              "fontFamily": "$font",
+              "fontSize": 12,
+              "fontWeight": "normal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "DLcXw",
+      "x": 32110,
+      "y": 0,
+      "name": "MEJORA · Algoritmos básicos · búsqueda y ordenamiento",
+      "clip": true,
+      "width": 1120,
+      "fill": "$bg",
+      "layout": "vertical",
+      "gap": 24,
+      "padding": 24,
+      "children": [
+        {
+          "type": "text",
+          "id": "F9xDTT",
+          "name": "Título",
+          "fill": "$fg",
+          "content": "Algoritmos básicos · mismo panel, todas las estructuras",
+          "fontFamily": "$font",
+          "fontSize": 20,
+          "fontWeight": "600"
+        },
+        {
+          "type": "frame",
+          "id": "QPFrL",
+          "name": "Catálogo contextual y formularios",
+          "width": "fill_container",
+          "gap": 24,
+          "children": [
+            {
+              "type": "frame",
+              "id": "kRJOV",
+              "name": "Búsqueda · escritorio",
+              "width": 320,
+              "fill": "$shell",
+              "stroke": "$border",
+              "strokeWidth": 1,
+              "layout": "vertical",
+              "gap": 12,
+              "padding": 12,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "Xr33Y",
+                  "name": "Encabezado Búsqueda · escritorio",
+                  "fill": "$fg",
+                  "content": "Algoritmos",
+                  "fontFamily": "$font",
+                  "fontSize": 13,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "frame",
+                  "id": "inh3T",
+                  "name": "ÁRBOLES · BST",
+                  "width": "fill_container",
+                  "fill": "#1E1E1E66",
+                  "stroke": "$border",
+                  "strokeWidth": 1,
+                  "padding": [
+                    8,
+                    10
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "kiQiG",
+                      "name": "Etiqueta ÁRBOLES · BST",
+                      "fill": "$fg",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "ÁRBOLES · BST",
+                      "fontFamily": "$font",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "Ayb3V",
+                  "name": "Inserción · Construir un BST",
+                  "width": "fill_container",
+                  "fill": "#1E1E1E66",
+                  "stroke": "$border",
+                  "strokeWidth": 1,
+                  "padding": [
+                    8,
+                    10
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "y5A8B",
+                      "name": "Etiqueta Inserción · Construir un BST",
+                      "fill": "$fg",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Inserción · Construir un BST",
+                      "fontFamily": "$font",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "ugMWz",
+                  "name": "Inorden · Recorrido recursivo",
+                  "width": "fill_container",
+                  "fill": "#1E1E1E66",
+                  "stroke": "$border",
+                  "strokeWidth": 1,
+                  "padding": [
+                    8,
+                    10
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "LFpKy",
+                      "name": "Etiqueta Inorden · Recorrido recursivo",
+                      "fill": "$fg",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Inorden · Recorrido recursivo",
+                      "fontFamily": "$font",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "X5BLD",
+                  "name": "Preorden · Raíz, izquierda, derecha",
+                  "width": "fill_container",
+                  "fill": "#1E1E1E66",
+                  "stroke": "$border",
+                  "strokeWidth": 1,
+                  "padding": [
+                    8,
+                    10
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Gcy0y",
+                      "name": "Etiqueta Preorden · Raíz, izquierda, derecha",
+                      "fill": "$fg",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Preorden · Raíz, izquierda, derecha",
+                      "fontFamily": "$font",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "AnRAn",
+                  "name": "Postorden · Izquierda, derecha, raíz",
+                  "width": "fill_container",
+                  "fill": "#1E1E1E66",
+                  "stroke": "$border",
+                  "strokeWidth": 1,
+                  "padding": [
+                    8,
+                    10
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "K4IOf",
+                      "name": "Etiqueta Postorden · Izquierda, derecha, raíz",
+                      "fill": "$fg",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Postorden · Izquierda, derecha, raíz",
+                      "fontFamily": "$font",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "MxkWG",
+                  "name": "Por niveles · Recorrido en anchura",
+                  "width": "fill_container",
+                  "fill": "#1E1E1E66",
+                  "stroke": "$border",
+                  "strokeWidth": 1,
+                  "padding": [
+                    8,
+                    10
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "rH13s",
+                      "name": "Etiqueta Por niveles · Recorrido en anchura",
+                      "fill": "$fg",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Por niveles · Recorrido en anchura",
+                      "fontFamily": "$font",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "s9g52C",
+                  "name": "Búsqueda · Encontrar una clave",
+                  "width": "fill_container",
+                  "fill": "#5454E926",
+                  "stroke": "$border",
+                  "strokeWidth": 1,
+                  "padding": [
+                    8,
+                    10
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "jpDFf",
+                      "name": "Etiqueta Búsqueda · Encontrar una clave",
+                      "fill": "$fg",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Búsqueda · Encontrar una clave",
+                      "fontFamily": "$font",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "Q5ydJ",
+                  "name": "Se procesa el árbol del lienzo (7 nodos).",
+                  "fill": "$fg",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Se procesa el árbol del lienzo (7 nodos).",
+                  "fontFamily": "$font",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "pE67g",
+                  "name": "VALOR A BUSCAR",
+                  "fill": "$fg",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "VALOR A BUSCAR",
+                  "fontFamily": "$font",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "BpwHp",
+                  "name": "15",
+                  "fill": "$fg",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "15",
+                  "fontFamily": "$font",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "t1tzKL",
+                  "name": "Enter o Ejecutar paso a paso",
+                  "fill": "$yellow",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Enter o Ejecutar paso a paso",
+                  "fontFamily": "$font",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "ltvlu",
+              "name": "Ordenamiento · panel 320 en móvil 390",
+              "width": 320,
+              "fill": "$shell",
+              "stroke": "$border",
+              "strokeWidth": 1,
+              "layout": "vertical",
+              "gap": 12,
+              "padding": 12,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "r6gn2",
+                  "name": "Encabezado Ordenamiento · móvil",
+                  "fill": "$fg",
+                  "content": "Algoritmos",
+                  "fontFamily": "$font",
+                  "fontSize": 13,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "frame",
+                  "id": "pdtkn",
+                  "name": "LISTAS ENLAZADAS",
+                  "width": "fill_container",
+                  "fill": "#1E1E1E66",
+                  "stroke": "$border",
+                  "strokeWidth": 1,
+                  "padding": [
+                    7,
+                    10
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "B06Rtn",
+                      "name": "Etiqueta LISTAS ENLAZADAS",
+                      "fill": "$fg",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "LISTAS ENLAZADAS",
+                      "fontFamily": "$font",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "Z6qPHa",
+                  "name": "Recorrido · Seguir enlaces",
+                  "width": "fill_container",
+                  "fill": "#1E1E1E66",
+                  "stroke": "$border",
+                  "strokeWidth": 1,
+                  "padding": [
+                    7,
+                    10
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "K0zcbk",
+                      "name": "Etiqueta Recorrido · Seguir enlaces",
+                      "fill": "$fg",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Recorrido · Seguir enlaces",
+                      "fontFamily": "$font",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "cGmFi",
+                  "name": "Búsqueda · Primera coincidencia",
+                  "width": "fill_container",
+                  "fill": "#1E1E1E66",
+                  "stroke": "$border",
+                  "strokeWidth": 1,
+                  "padding": [
+                    7,
+                    10
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "g6IIYN",
+                      "name": "Etiqueta Búsqueda · Primera coincidencia",
+                      "fill": "$fg",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Búsqueda · Primera coincidencia",
+                      "fontFamily": "$font",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "Ba7Xp",
+                  "name": "Añadir al final",
+                  "width": "fill_container",
+                  "fill": "#1E1E1E66",
+                  "stroke": "$border",
+                  "strokeWidth": 1,
+                  "padding": [
+                    7,
+                    10
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "JsC0L",
+                      "name": "Etiqueta Añadir al final",
+                      "fill": "$fg",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Añadir al final",
+                      "fontFamily": "$font",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "r5FUo",
+                  "name": "Eliminar primera coincidencia",
+                  "width": "fill_container",
+                  "fill": "#1E1E1E66",
+                  "stroke": "$border",
+                  "strokeWidth": 1,
+                  "padding": [
+                    7,
+                    10
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "RxHTf",
+                      "name": "Etiqueta Eliminar primera coincidencia",
+                      "fill": "$fg",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Eliminar primera coincidencia",
+                      "fontFamily": "$font",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "WnUiL",
+                  "name": "Invertir enlaces",
+                  "width": "fill_container",
+                  "fill": "#1E1E1E66",
+                  "stroke": "$border",
+                  "strokeWidth": 1,
+                  "padding": [
+                    7,
+                    10
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "s2xVL",
+                      "name": "Etiqueta Invertir enlaces",
+                      "fill": "$fg",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Invertir enlaces",
+                      "fontFamily": "$font",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "dILqa",
+                  "name": "ORDENAMIENTO",
+                  "width": "fill_container",
+                  "fill": "#1E1E1E66",
+                  "stroke": "$border",
+                  "strokeWidth": 1,
+                  "padding": [
+                    7,
+                    10
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "bxk7h",
+                      "name": "Etiqueta ORDENAMIENTO",
+                      "fill": "$fg",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "ORDENAMIENTO",
+                      "fontFamily": "$font",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "VKxiC",
+                  "name": "Burbuja · Comparar vecinos",
+                  "width": "fill_container",
+                  "fill": "#1E1E1E66",
+                  "stroke": "$border",
+                  "strokeWidth": 1,
+                  "padding": [
+                    7,
+                    10
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "T1byS",
+                      "name": "Etiqueta Burbuja · Comparar vecinos",
+                      "fill": "$fg",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Burbuja · Comparar vecinos",
+                      "fontFamily": "$font",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "wGztE",
+                  "name": "Selección · Elegir el mínimo",
+                  "width": "fill_container",
+                  "fill": "#1E1E1E66",
+                  "stroke": "$border",
+                  "strokeWidth": 1,
+                  "padding": [
+                    7,
+                    10
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "AVswb",
+                      "name": "Etiqueta Selección · Elegir el mínimo",
+                      "fill": "$fg",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Selección · Elegir el mínimo",
+                      "fontFamily": "$font",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "PofdP",
+                  "name": "Inserción · Prefijo ordenado",
+                  "width": "fill_container",
+                  "fill": "#1E1E1E66",
+                  "stroke": "$border",
+                  "strokeWidth": 1,
+                  "padding": [
+                    7,
+                    10
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "mmaTK",
+                      "name": "Etiqueta Inserción · Prefijo ordenado",
+                      "fill": "$fg",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Inserción · Prefijo ordenado",
+                      "fontFamily": "$font",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "NRRbX",
+                  "name": "Merge sort · Dividir y mezclar",
+                  "width": "fill_container",
+                  "fill": "#5454E926",
+                  "stroke": "$border",
+                  "strokeWidth": 1,
+                  "padding": [
+                    7,
+                    10
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "WznyU",
+                      "name": "Etiqueta Merge sort · Dividir y mezclar",
+                      "fill": "$fg",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Merge sort · Dividir y mezclar",
+                      "fontFamily": "$font",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "MCjcT",
+                  "name": "Quicksort · Partición por pivote",
+                  "width": "fill_container",
+                  "fill": "#1E1E1E66",
+                  "stroke": "$border",
+                  "strokeWidth": 1,
+                  "padding": [
+                    7,
+                    10
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "B8jFf9",
+                      "name": "Etiqueta Quicksort · Partición por pivote",
+                      "fill": "$fg",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Quicksort · Partición por pivote",
+                      "fontFamily": "$font",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "aLXNe",
+                  "name": "Heapsort · Heap máximo",
+                  "width": "fill_container",
+                  "fill": "#1E1E1E66",
+                  "stroke": "$border",
+                  "strokeWidth": 1,
+                  "padding": [
+                    7,
+                    10
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "jVFU0",
+                      "name": "Etiqueta Heapsort · Heap máximo",
+                      "fill": "$fg",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Heapsort · Heap máximo",
+                      "fontFamily": "$font",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "m4Su8l",
+                  "name": "VALORES",
+                  "fill": "$fg",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "VALORES",
+                  "fontFamily": "$font",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "AWR54",
+                  "name": "8, 3, 5, 3, -1",
+                  "fill": "$fg",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "8, 3, 5, 3, -1",
+                  "fontFamily": "$font",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "Yw4Cp",
+                  "name": "Hasta 32 enteros · menor a mayor",
+                  "fill": "$fg",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Hasta 32 enteros · menor a mayor",
+                  "fontFamily": "$font",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "SoNxm",
+                  "name": "Ejecutar paso a paso",
+                  "fill": "$yellow",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Ejecutar paso a paso",
+                  "fontFamily": "$font",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "rxUqO",
+              "name": "Estados y lectura del rastro",
+              "width": 320,
+              "fill": "$shell",
+              "stroke": "$border",
+              "strokeWidth": 1,
+              "layout": "vertical",
+              "gap": 12,
+              "padding": 12,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "Xgeiw",
+                  "name": "Encabezado Estados y lectura del rastro",
+                  "fill": "$fg",
+                  "content": "Algoritmos",
+                  "fontFamily": "$font",
+                  "fontSize": 13,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "HgMSS",
+                  "name": "VACÍO",
+                  "fill": "$yellow",
+                  "content": "VACÍO",
+                  "fontFamily": "$font",
+                  "fontSize": 10,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "vtKRT",
+                  "name": "VACÍO detalle",
+                  "fill": "$fg",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Genera una estructura del contexto actual. Las demos de construcción aceptan valores.",
+                  "fontFamily": "$font",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "Hn6Y8",
+                  "name": "CARGANDO",
+                  "fill": "$yellow",
+                  "content": "CARGANDO",
+                  "fontFamily": "$font",
+                  "fontSize": 10,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "vm8Iv",
+                  "name": "CARGANDO detalle",
+                  "fill": "$fg",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Cargando catálogo… / Generando…; ejecución bloqueada.",
+                  "fontFamily": "$font",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "CAwO8",
+                  "name": "VALIDACIÓN",
+                  "fill": "$yellow",
+                  "content": "VALIDACIÓN",
+                  "fontFamily": "$font",
+                  "fontSize": 10,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "n4c92U",
+                  "name": "VALIDACIÓN detalle",
+                  "fill": "$fg",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Ingresa un entero de 32 bits. Hasta 32 valores para ordenar. Error junto al campo; foco visible.",
+                  "fontFamily": "$font",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "Bcmtt",
+                  "name": "RESULTADO",
+                  "fill": "$yellow",
+                  "content": "RESULTADO",
+                  "fontFamily": "$font",
+                  "fontSize": 10,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "p0y8wz",
+                  "name": "RESULTADO detalle",
+                  "fill": "$fg",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Pasos, pseudocódigo, variables y salida. Se conserva el rastro al cambiar 2D/3D.",
+                  "fontFamily": "$font",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "gSeAX",
+                  "name": "TECLADO",
+                  "fill": "$yellow",
+                  "content": "TECLADO",
+                  "fontFamily": "$font",
+                  "fontSize": 10,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "eqRWv",
+                  "name": "TECLADO detalle",
+                  "fill": "$fg",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Tab alcanza el campo y Ejecutar. Enter ejecuta una sola vez.",
+                  "fontFamily": "$font",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "BskOP",
+                  "name": "OTRAS FAMILIAS",
+                  "fill": "$yellow",
+                  "content": "OTRAS FAMILIAS",
+                  "fontFamily": "$font",
+                  "fontSize": 10,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "fAfpz",
+                  "name": "OTRAS FAMILIAS detalle",
+                  "fill": "$fg",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Heaps: construir, insertar, máximo y extraer. Pilas/colas: construir y consultar. Hash: colisión, búsqueda, insertar y eliminar.",
+                  "fontFamily": "$font",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "q69ISx",
+                  "name": "Catálogo sin conexión",
+                  "fill": "$fg",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "CATÁLOGO SIN CONEXIÓN · error visible y botón Reintentar catálogo. La validación marca el campo y devuelve el foco.",
+                  "fontFamily": "$font",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "ClkUk",
+                  "name": "Secuencia horizontal",
+                  "fill": "$fg",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "SECUENCIA · nodos en fila, índices y valores legibles. Cada intercambio cambia posiciones conservando IDs. Etiqueta INTERCAMBIO para ordenamiento/heap/listas; ROTACIÓN para AVL.",
+                  "fontFamily": "$font",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                }
+              ]
             }
           ]
         }

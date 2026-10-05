@@ -243,3 +243,56 @@ los timers/animation frames que necesita axe. Si una máquina saturada produce c
 del tutorial, reproduce aislado y ejecuta la suite con `--workers=1`; no omitas la aserción.
 Cypress usa el backend real y lee código en Mailpit local con `--env mailpitUrl=...`.
 Activación Gmail, límites y secretos: [guía backend](../../backend/docs/email-verification.md).
+
+
+## Grafos y etiquetas 3D
+
+Diseño: `oyMH9` (catálogo ampliado) y `HQLI2` (panel móvil, estados y orientación de etiquetas)
+en `pen/vista_design.pen`. Se conservan los componentes, tokens y el reproductor existentes.
+
+`tests/ui/graph-algorithms.spec.mjs` usa fixtures locales sin credenciales. Comprueba los seis
+algoritmos, el estado sin grafo, el selector de origen (ausente para Floyd/Kruskal), errores,
+foco, contraste con axe y overflow en escritorio/tableta/móvil. Adjunta capturas en ambos
+temas sin reemplazar baselines. La prueba 3D de escritorio inspecciona las cinco etiquetas
+reales de Three/Troika y compara su orientación con la cámara desde delante, lateral,
+detrás y arriba; adjunta una captura por ángulo.
+
+```bash
+VISTA_UI_BASE_URL=http://127.0.0.1:5173 npx playwright test tests/ui/graph-algorithms.spec.mjs --workers=1
+```
+
+La cobertura funcional vive en `frontend/cypress/e2e/graph-algorithms.cy.ts`: usa el backend
+real con una base aislada y la cuenta estudiante del seeder; fija únicamente el grafo del
+lienzo. Ejecuta BFS, DFS, Dijkstra, Floyd, Prim y Kruskal, valida resultados y conserva el
+paso y rastro al conmutar 2D/3D. Para WebGL por software, usar Chrome; Electron ignora los
+argumentos de lanzamiento configurados en este proyecto.
+
+```bash
+VISTA_E2E_SOFTWARE_GL=1 npx cypress run --browser chrome --spec cypress/e2e/graph-algorithms.cy.ts
+```
+
+
+## Algoritmos básicos y ordenamiento
+
+Diseño: `DLcXw` en `pen/vista_design.pen`, paneles de 320 px con contexto BST, lista/ordenamiento y
+estados de formulario. `tests/ui/basic-algorithms.spec.mjs` usa un catálogo fixture de 43 entradas
+capturado del backend aislado, sin credenciales. Cubre familias contextuales, lienzo vacío,
+validación escalar/lista, foco por teclado, carga/fallo/reintento de catálogo y envío pendiente.
+Corre axe y controles de overflow en los tres viewports y ambos temas; adjunta capturas sin
+sustituir baselines existentes. Espera el color final del input tras cambiar tema antes de axe,
+pues la transición CSS puede mostrar colores intermedios aunque el tema ya haya cambiado.
+
+```bash
+VISTA_UI_BASE_URL=http://127.0.0.1:5174 npx playwright test tests/ui/basic-algorithms.spec.mjs --workers=1
+```
+
+La verificación funcional permanece en Cypress, un spec por CA-1–CA-4:
+`basic-trees.cy.ts`, `basic-heap-linear.cy.ts`, `basic-list-hash.cy.ts`, `basic-sorting.cy.ts`.
+Todos usan API real, cuenta sembrada y servicios locales aislados. Comprueban los resultados de
+las 33 entradas nuevas, no solo respuestas HTTP. El helper compartido fija las escenas de entrada
+y valida rastro/paso al alternar 2D/3D; los seis ordenamientos deben seguir horizontales y ordenados.
+
+```bash
+VISTA_E2E_SOFTWARE_GL=1 npx cypress run --browser chrome --config baseUrl=http://127.0.0.1:5174 --env mailpitUrl=http://127.0.0.1:58025
+# Repetir secuencialmente con --browser firefox; no compartir una base mutada entre dos runs simultáneos.
+```
