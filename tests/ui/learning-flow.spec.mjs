@@ -94,7 +94,13 @@ test('context, tutorial focus and light theme at relevant viewports', async ({ p
   await page.locator('[data-cy=chat-panel]').getByRole('button', { name: 'Cerrar chat', exact: true }).click();
   const widths = await page.evaluate(() => [document.documentElement.scrollWidth, innerWidth]);
   expect(widths[0]).toBeLessThanOrEqual(widths[1]);
-  if (testInfo.project.name === 'desktop') await expect(page).toHaveScreenshot('learning-flow-light.png');
+  if (testInfo.project.name === 'desktop') {
+    // The baseline is the idle, collapsed navigation. End hover/focus from the tour explicitly
+    // instead of making the screenshot depend on the previous click's pointer position.
+    await page.locator('[data-cy=work-context]').click();
+    await expect(page.locator('[data-cy=app-sidebar]')).toHaveAttribute('data-expanded', 'false');
+    await expect(page).toHaveScreenshot('learning-flow-light.png');
+  }
 });
 
 test('public login light theme persists', async ({ page }, testInfo) => {
@@ -213,6 +219,26 @@ test('movable code panel rendered states, native gestures and accessibility', as
   await page.setViewportSize({ width: 390, height: 600 });
   await checkAccessibility(page, testInfo);
   await expect.poll(() => page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+  if (testInfo.project.name === 'desktop') {
+    // Half the desktop CSS viewport checks the reflow produced by browser zoom at 200%.
+    // It does not claim a native browser toolbar or pinch-zoom interaction.
+    for (const viewport of [{ width: 639, height: 600 }, { width: 640, height: 600 }, { width: 720, height: 450 }]) {
+      await page.setViewportSize(viewport);
+      await page.locator('[data-cy=code-layout-reset]').click();
+      await checkAccessibility(page, testInfo);
+      await expect.poll(() => page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+      await expect.poll(() => panel.evaluate(el => {
+        const rect = el.getBoundingClientRect();
+        const parent = el.parentElement.getBoundingClientRect();
+        const player = document.querySelector('[data-cy=step-next]').getBoundingClientRect();
+        return rect.left >= parent.left && rect.right <= parent.right && rect.top >= parent.top && rect.bottom < player.top;
+      })).toBe(true);
+      await expect(page.locator('[data-cy=code-resize]')).toBeVisible();
+      const screenshot = testInfo.outputPath(`code-reflow-${viewport.width}.png`);
+      await page.screenshot({ path: screenshot, animations: 'disabled' });
+      await testInfo.attach(`code-reflow-${viewport.width}`, { path: screenshot, contentType: 'image/png' });
+    }
+  }
 });
 
 

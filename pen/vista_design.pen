@@ -42094,7 +42094,7 @@
           "fill": "$muted-fg",
           "textGrowth": "fixed-width",
           "width": "fill_container",
-          "content": "Inicial y restaurado: abajo a la izquierda. Reservar 112 px inferiores para el reproductor; en lienzos muy cortos priorizar su acceso y la cabecera antes del alto mínimo del panel. Recalcular al abrir paneles, cambiar viewport o tutorial. Cabecera fija, lectura flexible con scroll interno. Tacto sólo en controles; código seleccionable. Escape restaura el gesto; contraer, Java y 2D/3D conservan geometría.",
+          "content": "Inicial/restaurado: abajo a la izquierda. Reservar 112 px inferiores para el reproductor y 96 px superiores (144 móvil) para Limpiar/contexto. En 720 × 450 reducir alto a 178 px, sin subir sobre Limpiar. Sólo en lienzos excepcionalmente cortos reducir la reserva superior para mantener cabecera, esquina y algo de lectura (112 px). Recalcular con laterales/viewport/tutorial. Código seleccionable; idioma, pasos y 2D/3D conservan geometría.",
           "lineHeight": 1.5,
           "fontFamily": "$font",
           "fontSize": 13,

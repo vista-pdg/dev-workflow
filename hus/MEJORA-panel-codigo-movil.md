@@ -31,7 +31,7 @@ Solicitud: «Permite que el cuadrado de donde se ve el código sea móvil y pued
 | 4. Frontend | Completa: panel, hook y geometría; build/typecheck/lint correctos |
 | 5. Cypress | Completa: cinco specs, API real; Chrome y Firefox 11/11 |
 | 6. Integración y QA visual | Completa: servicios aislados reales, 27/27 QA, capturas/axe y gestos nativos |
-| 7. Main y publicación | Solicitadas expresamente para esta mejora; proceder tras validar y presentar evidencias |
+| 7. Main y publicación | En curso: frontend PR #13; diseño/QA PR #2; pendiente CI del commit final y despliegue |
 
 La autorización de integración para esta mejora viene de la solicitud actual de dejarla en `main`, en el contexto de los despliegues por PR y CI/CD de esta conversación. No se reutiliza solamente la aprobación de una mejora anterior.
 
@@ -52,8 +52,8 @@ Resultados locales (2026-10-05):
 Backend make test: Tests run: 328, Failures: 0, Errors: 0, Skipped: 2
 BUILD SUCCESS (34.589 s)
 Frontend: npm run build / typecheck / lint: exit 0
-Vitest: 8 test files passed, 62 tests passed; core lines 95.52%
-Cypress Chrome: All specs passed! 11 tests, 11 passing (29 s)
+Vitest: 8 test files passed, 63 tests passed; core lines 95.52%
+Cypress Chrome: All specs passed! 11 tests, 11 passing (23 s)
 Cypress Firefox: All specs passed! 11 tests, 11 passing (27 s), exit 0
 Playwright learning-flow: 27 passed (1.2 m), exit 0
 ```
@@ -62,6 +62,11 @@ Se probó el frontend contra Spring Boot `e2e`, Postgres, Redis y Mailpit aislad
 
 Firefox imprimió `kill EACCES` al cerrar su contexto; Cypress confirmó que no afecta el exit code (0). La suite funcional se repetirá en Chrome/Firefox por el CI existente antes de integrar.
 
-QA encontró y corrigió una regresión real: un arrastre táctil que no genera clic dejaba una bandera que consumía el primer Enter posterior. Las activaciones de teclado/tecnología asistiva (`detail=0`) ahora limpian esa bandera; hay regresión Cypress y QA nativa. La primera ejecución visual completa tuvo una diferencia del sidebar temporalmente expandido; expected/actual/diff se inspeccionaron y la repetición aislada pasó sin cambiar baselines. La repetición completa secuencial cerró QA: 27/27, sin modificar baselines.
+QA encontró y corrigió una regresión real: un arrastre táctil que no genera clic dejaba una bandera que consumía el primer Enter posterior. Las activaciones de teclado/tecnología asistiva (`detail=0`) ahora limpian esa bandera; hay regresión Cypress y QA nativa. La primera ejecución visual completa tuvo una diferencia del sidebar temporalmente expandido; expected/actual/diff se inspeccionaron y la repetición aislada pasó sin cambiar baselines. La repetición completa secuencial cerró QA: 27/27, sin modificar baselines. Al ampliar QA con reflow/breakpoints, reapareció la expansión temporal: la prueba ahora termina explícitamente hover/foco en el lienzo y comprueba la navegación contraída antes de comparar. No cambia el comportamiento del producto ni la baseline.
 
 No hay cambios de backend ni infraestructura. No se crean commits o PR vacíos. La geometría se conserva mientras vive el panel, sin persistencia entre sesiones. `bun.lock` del usuario queda excluido.
+
+
+QA adicional: reflow de escritorio a 720 × 450 CSS px (equivalente al espacio de 1440 × 900 con zoom al 200 %, sin afirmar interacción con toolbar del navegador), y tamaños 639/640 × 600 a ambos lados del breakpoint. Axe encontró una obstrucción de «Limpiar» a baja altura: se actualizó Pen antes de corregir el límite superior. Ahora se preserva la reserva de contexto/toolbar antes que la altura nominal de 220 px, con scroll en el cuerpo. La unidad nueva verifica top 96 px y alto 178 px en ese caso. Sólo los lienzos excepcionalmente cortos del tutorial reducen la reserva superior para conservar cabecera/esquina/lectura y reproductor.
+
+Última revalidación local después de corregir la reserva superior: build/typecheck/lint exit 0, Vitest 63/63, Cypress Chrome 11/11 (23 s), Firefox 11/11 (27 s, exit 0) y Playwright learning-flow 27/27 (1.2 m), incluidos reflow y breakpoints. PR de código: https://github.com/vista-pdg/frontend/pull/13. PR de diseño/QA: https://github.com/vista-pdg/dev-workflow/pull/2. CI del código final: https://github.com/vista-pdg/frontend/actions/runs/37366651262.
