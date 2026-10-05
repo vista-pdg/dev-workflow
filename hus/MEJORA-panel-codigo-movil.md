@@ -31,7 +31,7 @@ Solicitud: «Permite que el cuadrado de donde se ve el código sea móvil y pued
 | 4. Frontend | Completa: panel, hook y geometría; build/typecheck/lint correctos |
 | 5. Cypress | Completa: cinco specs, API real; Chrome y Firefox 11/11 |
 | 6. Integración y QA visual | Completa: servicios aislados reales, 27/27 QA, capturas/axe y gestos nativos |
-| 7. Main y publicación | En curso: frontend PR #13; diseño/QA PR #2; pendiente CI del commit final y despliegue |
+| 7. Main y publicación | Main local completo; PR #13 y #2 abiertos. CI y despliegue pendientes por incidente externo de runners |
 
 La autorización de integración para esta mejora viene de la solicitud actual de dejarla en `main`, en el contexto de los despliegues por PR y CI/CD de esta conversación. No se reutiliza solamente la aprobación de una mejora anterior.
 
@@ -70,3 +70,20 @@ No hay cambios de backend ni infraestructura. No se crean commits o PR vacíos. 
 QA adicional: reflow de escritorio a 720 × 450 CSS px (equivalente al espacio de 1440 × 900 con zoom al 200 %, sin afirmar interacción con toolbar del navegador), y tamaños 639/640 × 600 a ambos lados del breakpoint. Axe encontró una obstrucción de «Limpiar» a baja altura: se actualizó Pen antes de corregir el límite superior. Ahora se preserva la reserva de contexto/toolbar antes que la altura nominal de 220 px, con scroll en el cuerpo. La unidad nueva verifica top 96 px y alto 178 px en ese caso. Sólo los lienzos excepcionalmente cortos del tutorial reducen la reserva superior para conservar cabecera/esquina/lectura y reproductor.
 
 Última revalidación local después de corregir la reserva superior: build/typecheck/lint exit 0, Vitest 63/63, Cypress Chrome 11/11 (23 s), Firefox 11/11 (27 s, exit 0) y Playwright learning-flow 27/27 (1.2 m), incluidos reflow y breakpoints. PR de código: https://github.com/vista-pdg/frontend/pull/13. PR de diseño/QA: https://github.com/vista-pdg/dev-workflow/pull/2. CI del código final: https://github.com/vista-pdg/frontend/actions/runs/37366651262.
+
+
+## Suite completa y estado de integración
+
+Tras demoras del CI se ejecutó toda la suite funcional local con servicios reales aislados:
+
+```text
+Cypress Chrome: All specs passed! 59 specs, 179 tests, 179 passing (4m38s), exit 0
+Cypress Firefox: 59 specs, 179 tests, 177 passing, 1 failing in beforeEach, 1 skipped (5m20s), exit 1
+Firefox recheck hu-32-ca4-caducidad-y-renovacion.cy.ts: All specs passed! 2 tests, 2 passing (5s), exit 0
+```
+
+El fallo completo de Firefox fue `VERIFICATION_MAIL_UNAVAILABLE` (HTTP 503) al preparar una cuenta en Mailpit local; ambos casos de caducidad/renovación pasaron al repetir ese spec con API real. Las pruebas del panel y los otros 177 casos pasaron en la ejecución completa. No se omiten fallos ni se cambia código ajeno al alcance para obtener un resultado verde. La advertencia local de cierre Firefox `kill EACCES` continúa; no afecta el resultado de los casos ni el exit 0 de la repetición.
+
+CI final: https://github.com/vista-pdg/frontend/actions/runs/37366651262. El primer intento terminó sin ejecutar código: `The job was not acquired by Runner of type hosted even after multiple attempts`, tras 15 minutos en cola (2026-10-05 20:01–20:16 UTC). Se reintentó el mismo commit a las 20:17 UTC; pendiente de runner. GitHub confirma un incidente de asignación de runners desde las 19:11 UTC: https://www.githubstatus.com/api/v2/summary.json (incidente `3q1yb5m7ltvb`). No se amplían timeouts ni se alteran CI/CD, protección de ramas o configuración del repositorio para sortearlo.
+
+Todos los repositorios están en `main` local. Frontend incluye `54b553a` y conserva el cambio previo del usuario en `bun.lock`; diseño/QA incluye `9cd1dc0` y esta actualización. Los PR siguen abiertos hasta obtener CI real en verde, fusionar normalmente, sincronizar main local y comprobar el nuevo despliegue en `vista.kuros.work`. No se afirma publicación o despliegue completado: Cloud Run aún sirve `vista-frontend-00007-ql8` y el bundle `/assets/index-CE7mdepc.js` del cambio anterior.
