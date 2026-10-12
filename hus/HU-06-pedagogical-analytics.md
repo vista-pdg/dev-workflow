@@ -1,9 +1,9 @@
 # HU-06 · Tablero de analítica pedagógica
 
-Estado: PR publicados y CI en revisión. El 12 de octubre el usuario autorizó
-publicar PR y fusionar backend/frontend si sus pruebas pasan; también pidió subir el diseño pen.
-CI se verifica durante la publicación. La HU no se declara cerrada en backlog ni se inventa
-una sesión de usabilidad con docentes. Ver evidencia final al cierre de este documento.
+Estado: backend y frontend fusionados en main tras aprobar CI. QA visual general aprobado;
+diseño pen publicado con las evidencias. El 12 de octubre el usuario autorizó los PR y merges
+condicionados a las pruebas y pidió subir el pen guardado. La revisión de usabilidad con
+docentes sigue pendiente; no se declara la HU cerrada en backlog. Ver evidencia final abajo.
 
 ## Historia y trazabilidad
 
@@ -129,14 +129,14 @@ dificultad, cambiar curso/periodo e interpretar correctamente la supresión; reg
 
 ## Definición de terminado
 
-- [ ] Unitarias e integración verdes en CI; cobertura >= 80 % en módulos críticos afectados.
+- [x] Unitarias e integración verdes en CI; cobertura >= 80 % en módulos críticos afectados.
 - [x] Cada criterio cubierto con automatización o verificación manual documentada.
 - [x] E2E HU-06 en Chromium y Firefox (ocho escenarios, con integración real).
 - [x] Permisos y supresión comprobados en JSON, CSV y retiro de rutas individuales anteriores.
 - [x] Diseño versionado previo a UI; QA visual, foco, reflow y axe WCAG 2.1 sin violaciones detectadas.
 - [ ] Validación de usabilidad con docente/administrador; no se sustituye por la revisión del agente.
 - [x] Documentación técnica y contratos de telemetría/analítica actualizados.
-- [ ] Validación humana antes de push y PR según hu-workflow, fase 7.
+- [x] Autorización humana expresa de publicación y merge recibida el 12 de octubre según hu-workflow, fase 7.
 
 ## Registro de fases · 11 de octubre de 2026
 
@@ -404,3 +404,20 @@ PR publicados: [backend #13](https://github.com/vista-pdg/backend/pull/13),
 - El pen publicado coincide con el archivo guardado: blob Git
   `7106d9701d33cc0fa263fc4475c73c74e16833f9`, 1.738.589 bytes.
 - La revisión de usabilidad con docentes y el cierre del backlog permanecen pendientes.
+
+### Resultado final de integración
+
+- Backend #13 fusionado en `edd87c09d2379074e0fad1904950ff638b1b1162` y frontend #14
+  en `2b03fcca0b7663de8edf2c032e0b309074329cf2`; ambos árboles coinciden con los commits
+  de los PR validados. Copias locales actualizadas a main sin eliminar archivos del usuario.
+- Cypress completo: 184/184 en cada navegador. Frontend: 95 unitarias aprobadas,
+  cobertura de líneas 96,75 % en módulos medidos.
+- [QA visual final aprobado](https://github.com/vista-pdg/dev-workflow/actions/runs/38297533481):
+  107 casos pasan, incluidos los 30 de HU-06; cuatro omisiones intencionales de casos
+  específicos de móvil/escritorio. Frontend `fd0b1c8`, pruebas `e4238c1`.
+- La [comparación remota contra main anterior](https://github.com/vista-pdg/dev-workflow/actions/runs/38297557032)
+  reprodujo el fallo de foco del tutorial en los tres viewports. El ajuste de sincronización
+  del helper resolvió la suite completa conservando las aserciones. Esta anotación final
+  solo modifica documentación; no altera el código ni las pruebas validadas.
+- Los merges iniciaron CI/CD de main; los resultados anteriores acreditan los PR, no un
+  despliegue completado. No se modifica el backlog ni se sustituye la revisión de usabilidad.
