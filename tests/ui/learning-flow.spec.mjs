@@ -64,6 +64,10 @@ async function selectStructure(page, key) {
 async function setLightTheme(page) {
   await page.locator('[data-cy=theme-toggle]').click();
   await page.locator('[data-cy=theme-light]').click();
+  // Selecting a theme restores focus on the next animation frame. Finish that
+  // interaction before opening a modal that takes ownership of keyboard focus.
+  await expect(page.locator('[data-cy=theme-menu]')).toHaveCount(0);
+  await expect(page.locator('[data-cy=theme-toggle]')).toBeFocused();
 }
 
 test('context, tutorial focus and light theme at relevant viewports', async ({ page }, testInfo) => {

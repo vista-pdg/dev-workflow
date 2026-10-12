@@ -1,0 +1,56 @@
+[INFO] Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 11.86 s -- in com.vista.pdg.auth.RefreshTokenRotationTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.532 s -- in com.vista.pdg.auth.UserDeletionTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.219 s -- in com.vista.pdg.auth.RoleMigrationTest
+[INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.487 s -- in com.vista.pdg.auth.AuthRegistrationTest
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.350 s -- in com.vista.pdg.auth.RoleAuthorizationTest
+[INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.589 s -- in com.vista.pdg.auth.HttpStatusContractTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.218 s -- in com.vista.pdg.auth.RoleDeletionTest
+[INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.459 s -- in com.vista.pdg.auth.AuthLoginTest
+[INFO] Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.423 s -- in com.vista.pdg.auth.EmailVerificationTest
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.428 s -- in com.vista.pdg.telemetry.AnalyticsAccessTest
+[INFO] Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.961 s -- in com.vista.pdg.telemetry.AnalyticsInteractionTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.847 s -- in com.vista.pdg.telemetry.AnalyticsResilienceTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.243 s -- in com.vista.pdg.telemetry.PedagogicalAnalyticsServiceTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.252 s -- in com.vista.pdg.telemetry.PedagogicalAnalyticsHttpTest
+[INFO] Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.533 s -- in com.vista.pdg.telemetry.InteractionEventTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.538 s -- in com.vista.pdg.telemetry.GenerationTelemetryTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.012 s -- in com.vista.pdg.telemetry.PseudonymizerTest
+[INFO] Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.943 s -- in com.vista.pdg.telemetry.PedagogicalAnalyticsTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s -- in com.vista.pdg.telemetry.StructureKindTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.266 s -- in com.vista.pdg.telemetry.TeachingAssignmentServiceTest
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.574 s -- in com.vista.pdg.telemetry.VisualizationModeTelemetryTest
+[INFO] Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 s -- in com.vista.pdg.telemetry.AnalyticsDisclosureTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.505 s -- in com.vista.pdg.assistant.AssistantMemoryHttpTest
+[INFO] Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.283 s -- in com.vista.pdg.assistant.AssistantQuotaTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s -- in com.vista.pdg.assistant.AssistantScopeServiceTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s -- in com.vista.pdg.assistant.AssistantSessionDegradationTest
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.007 s -- in com.vista.pdg.assistant.AssistantSessionTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s -- in com.vista.pdg.assistant.RateLimiterTest
+[INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.211 s -- in com.vista.pdg.academic.CourseRegistrationTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.023 s -- in com.vista.pdg.service.llm.StubRefinementTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s -- in com.vista.pdg.service.llm.ConversationContextTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.039 s -- in com.vista.pdg.service.llm.LlmAdapterRetryTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s -- in com.vista.pdg.service.generator.impl.StackQueueGeneratorTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s -- in com.vista.pdg.service.generator.impl.graph.GraphGeneratorTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s -- in com.vista.pdg.service.generator.impl.graph.TreeGeneratorTest
+[INFO] Tests run: 16, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.094 s -- in com.vista.pdg.service.GenerationPipelineTest
+[INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.014 s -- in com.vista.pdg.service.algorithm.GraphAlgorithmsTest
+[INFO] Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.098 s -- in com.vista.pdg.service.algorithm.SortingAlgorithmsTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.819 s -- in com.vista.pdg.service.algorithm.CodeRepresentationsTest
+[INFO] Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.026 s -- in com.vista.pdg.service.algorithm.BasicStructureAlgorithmsTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s -- in com.vista.pdg.service.algorithm.InstrumentedTracesTest
+[INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 s -- in com.vista.pdg.service.algorithm.AlgorithmStrategiesTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s -- in com.vista.pdg.service.algorithm.InorderTraversalAlgorithmTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.376 s -- in com.vista.pdg.service.algorithm.AlgorithmCatalogTest
+[INFO] Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.017 s -- in com.vista.pdg.service.sdd.impl.ContractNormalizerTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s -- in com.vista.pdg.service.sdd.impl.validator.TreeContractValidatorTest
+[INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 s -- in com.vista.pdg.service.sdd.impl.validator.GraphContractValidatorTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s -- in com.vista.pdg.service.layout.TreeLayout3DTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.260 s -- in com.vista.pdg.exception.MalformedRequestTest
+[INFO] Tests run: 369, Failures: 0, Errors: 0, Skipped: 2
+[INFO] Analyzed bundle 'pdg' with 231 classes
+[INFO] Analyzed bundle 'pdg' with 142 classes
+[INFO] All coverage checks have been met.
+[INFO] BUILD SUCCESS
+[INFO] Total time:  47.082 s
+[INFO] Finished at: 2026-10-11T18:54:54-05:00

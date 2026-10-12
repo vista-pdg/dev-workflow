@@ -1,0 +1,5 @@
+com/vista/pdg/telemetry/service/AnalyticsCsv: lines 54/55 (98.2%), branches 15/17 (88.2%)
+com/vista/pdg/telemetry/service/AnalyticsDisclosure: lines 57/57 (100.0%), branches 29/30 (96.7%)
+com/vista/pdg/telemetry/service/PedagogicalAnalyticsService: lines 14/14 (100.0%), branches 6/6 (100.0%)
+com/vista/pdg/academic/service/TeachingAssignmentService: lines 46/46 (100.0%), branches 23/24 (95.8%)
+com/vista/pdg/telemetry/service/AnalyticsFilter: lines 17/17 (100.0%), branches 9/12 (75.0%)

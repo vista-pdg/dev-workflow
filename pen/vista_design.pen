@@ -1,5 +1,5 @@
 {
-  "version": "2.20",
+  "version": "2.21",
   "children": [
     {
       "type": "frame",
@@ -42099,6 +42099,2157 @@
           "fontFamily": "$font",
           "fontSize": 13,
           "fontWeight": "normal"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "ajLiE",
+      "x": 33330,
+      "y": 0,
+      "name": "HU-06 · Analítica pedagógica · estructuras oscuro",
+      "clip": true,
+      "width": 1440,
+      "fill": "$shell",
+      "layout": "vertical",
+      "gap": 28,
+      "padding": [
+        24,
+        144,
+        48,
+        144
+      ],
+      "children": [
+        {
+          "type": "frame",
+          "id": "JTg62",
+          "name": "Cabecera existente VISTA",
+          "width": "fill_container",
+          "gap": 24,
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "GeSqj",
+              "name": "Marca",
+              "fill": "$fg",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "VISTA / Panel analítico",
+              "lineHeight": 1.5,
+              "fontFamily": "$font",
+              "fontSize": 16,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "CzlBP",
+              "name": "Navegación",
+              "fill": "$muted-fg",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Administración · Ir al visualizador · Cerrar sesión",
+              "lineHeight": 1.5,
+              "fontFamily": "$font",
+              "fontSize": 12,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "I04A4",
+          "name": "Título",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 12,
+          "children": [
+            {
+              "type": "text",
+              "id": "Q3B6b",
+              "name": "Título",
+              "fill": "$fg",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Analítica pedagógica",
+              "lineHeight": 1.5,
+              "fontFamily": "$font",
+              "fontSize": 26,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "V0L3E",
+              "name": "Propósito",
+              "fill": "$muted-fg",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Identifica los temas que necesitan refuerzo en tu cohorte.",
+              "lineHeight": 1.5,
+              "fontFamily": "$font",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "lvx3M",
+          "name": "Filtros",
+          "width": "fill_container",
+          "gap": 16,
+          "alignItems": "end",
+          "children": [
+            {
+              "type": "frame",
+              "id": "cJV9L",
+              "name": "Curso",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "Z3YluV",
+                  "name": "Curso etiqueta",
+                  "fill": "$muted-fg",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Curso",
+                  "lineHeight": 1.5,
+                  "fontFamily": "$font",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "aAauC",
+                  "name": "Curso campo",
+                  "width": "fill_container",
+                  "stroke": "$border",
+                  "strokeWidth": 1,
+                  "layout": "vertical",
+                  "gap": 12,
+                  "padding": 12,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "ZYnQZ",
+                      "name": "Curso valor",
+                      "fill": "$fg",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "CEDI-G1 · Estructuras discretas",
+                      "lineHeight": 1.5,
+                      "fontFamily": "$font",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "uCO8D",
+              "name": "Desde",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "UQZZp",
+                  "name": "Desde etiqueta",
+                  "fill": "$muted-fg",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Desde",
+                  "lineHeight": 1.5,
+                  "fontFamily": "$font",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "j5B31",
+                  "name": "Desde campo",
+                  "width": "fill_container",
+                  "stroke": "$border",
+                  "strokeWidth": 1,
+                  "layout": "vertical",
+                  "gap": 12,
+                  "padding": 12,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "SMK0u",
+                      "name": "Desde valor",
+                      "fill": "$fg",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "01/04/2026",
+                      "lineHeight": 1.5,
+                      "fontFamily": "$font",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "K0Cu4",
+              "name": "Hasta",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "O9Pj6u",
+                  "name": "Hasta etiqueta",
+                  "fill": "$muted-fg",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Hasta",
+                  "lineHeight": 1.5,
+                  "fontFamily": "$font",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "esoGH",
+                  "name": "Hasta campo",
+                  "width": "fill_container",
+                  "stroke": "$border",
+                  "strokeWidth": 1,
+                  "layout": "vertical",
+                  "gap": 12,
+                  "padding": 12,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "paSLV",
+                      "name": "Hasta valor",
+                      "fill": "$fg",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "30/04/2026",
+                      "lineHeight": 1.5,
+                      "fontFamily": "$font",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "bQwbR",
+              "name": "Aplicar filtros",
+              "width": 145,
+              "fill": "$primary",
+              "layout": "vertical",
+              "gap": 12,
+              "padding": 12,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "jUs59",
+                  "name": "Aplicar",
+                  "fill": "$fg",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Aplicar filtros",
+                  "lineHeight": 1.5,
+                  "fontFamily": "$font",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "YvRvT",
+          "name": "Zona y privacidad",
+          "fill": "$muted-fg",
+          "textGrowth": "fixed-width",
+          "width": "fill_container",
+          "content": "Fechas inclusivas · Hora de Bogotá. Solo se muestran métricas de grupos con al menos 5 estudiantes.",
+          "lineHeight": 1.5,
+          "fontFamily": "$font",
+          "fontSize": 12,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "frame",
+          "id": "TK0b7",
+          "name": "Periodo aplicado y CSV",
+          "width": "fill_container",
+          "gap": 12,
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "qz5zB",
+              "name": "Periodo aplicado",
+              "fill": "$fg",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "CEDI-G1 · 2026-1 · 01/04/2026 – 30/04/2026",
+              "lineHeight": 1.5,
+              "fontFamily": "$font",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "tSdHm",
+              "name": "Exportar CSV",
+              "width": 160,
+              "stroke": "$border",
+              "strokeWidth": 1,
+              "layout": "vertical",
+              "gap": 12,
+              "padding": 12,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "xj1Em",
+                  "name": "Exportar",
+                  "fill": "$fg",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Exportar CSV",
+                  "lineHeight": 1.5,
+                  "fontFamily": "$font",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "Jpell",
+          "name": "Vistas",
+          "width": "fill_container",
+          "stroke": "$border",
+          "strokeWidth": {
+            "bottom": 1
+          },
+          "children": [
+            {
+              "type": "frame",
+              "id": "BJT6z",
+              "name": "Estructuras vista",
+              "width": 170,
+              "stroke": "$primary",
+              "strokeWidth": {
+                "bottom": 3
+              },
+              "layout": "vertical",
+              "gap": 12,
+              "padding": 16,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "JNJ4c",
+                  "name": "Estructuras etiqueta",
+                  "fill": "$fg",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Estructuras",
+                  "lineHeight": 1.5,
+                  "fontFamily": "$font",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "W9xWfF",
+              "name": "Algoritmos vista",
+              "width": 170,
+              "stroke": "$border",
+              "layout": "vertical",
+              "gap": 12,
+              "padding": 16,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "JlG3X",
+                  "name": "Algoritmos etiqueta",
+                  "fill": "$muted-fg",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Algoritmos",
+                  "lineHeight": 1.5,
+                  "fontFamily": "$font",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "Y7Gwxv",
+              "name": "Reintentos vista",
+              "width": 170,
+              "stroke": "$border",
+              "layout": "vertical",
+              "gap": 12,
+              "padding": 16,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "fvL0t",
+                  "name": "Reintentos etiqueta",
+                  "fill": "$muted-fg",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Reintentos",
+                  "lineHeight": 1.5,
+                  "fontFamily": "$font",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "Tx4xg",
+          "name": "Ranking de estructuras",
+          "width": "fill_container",
+          "stroke": "$border",
+          "strokeWidth": 1,
+          "layout": "vertical",
+          "children": [
+            {
+              "type": "frame",
+              "id": "sJxmK",
+              "name": "Estructura fila",
+              "width": "fill_container",
+              "stroke": "$border",
+              "strokeWidth": {
+                "bottom": 1
+              },
+              "gap": 12,
+              "padding": 16,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "EDF9e",
+                  "name": "Estructura nombre",
+                  "fill": "$fg",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Estructura",
+                  "lineHeight": 1.5,
+                  "fontFamily": "$font",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "FGXx1",
+                  "name": "Estructura frecuencia",
+                  "fill": "$fg",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Solicitudes",
+                  "lineHeight": 1.5,
+                  "fontFamily": "$font",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "RR1rs",
+                  "name": "Estructura porcentaje",
+                  "fill": "$fg",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "% del total",
+                  "lineHeight": 1.5,
+                  "fontFamily": "$font",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "W2zI3",
+              "name": "Árbol AVL fila",
+              "width": "fill_container",
+              "stroke": "$border",
+              "strokeWidth": {
+                "bottom": 1
+              },
+              "gap": 12,
+              "padding": 16,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "hfwHX",
+                  "name": "Árbol AVL nombre",
+                  "fill": "$fg",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Árbol AVL",
+                  "lineHeight": 1.5,
+                  "fontFamily": "$font",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "hTO5v",
+                  "name": "Árbol AVL frecuencia",
+                  "fill": "$fg",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "120",
+                  "lineHeight": 1.5,
+                  "fontFamily": "$font",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "mRtFe",
+                  "name": "Árbol AVL porcentaje",
+                  "fill": "$fg",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "60 %",
+                  "lineHeight": 1.5,
+                  "fontFamily": "$font",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "udckk",
+              "name": "Pila fila",
+              "width": "fill_container",
+              "stroke": "$border",
+              "strokeWidth": {
+                "bottom": 1
+              },
+              "gap": 12,
+              "padding": 16,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "uT05V",
+                  "name": "Pila nombre",
+                  "fill": "$fg",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Pila",
+                  "lineHeight": 1.5,
+                  "fontFamily": "$font",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "sPD94",
+                  "name": "Pila frecuencia",
+                  "fill": "$fg",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "80",
+                  "lineHeight": 1.5,
+                  "fontFamily": "$font",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "CaBDK",
+                  "name": "Pila porcentaje",
+                  "fill": "$fg",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "40 %",
+                  "lineHeight": 1.5,
+                  "fontFamily": "$font",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "p73iTW",
+          "name": "Total",
+          "fill": "$fg",
+          "textGrowth": "fixed-width",
+          "width": "fill_container",
+          "content": "200 solicitudes en el periodo",
+          "lineHeight": 1.5,
+          "fontFamily": "$font",
+          "fontSize": 14,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "text",
+          "id": "EW2tV",
+          "name": "Anonimato",
+          "fill": "$muted-fg",
+          "textGrowth": "fixed-width",
+          "width": "fill_container",
+          "content": "Reporte agregado. No permite consultar ni filtrar el desempeño individual.",
+          "lineHeight": 1.5,
+          "fontFamily": "$font",
+          "fontSize": 12,
+          "fontWeight": "normal"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "E0mja",
+      "x": 34870,
+      "y": 0,
+      "name": "HU-06 · Analítica pedagógica · algoritmos",
+      "clip": true,
+      "width": 1440,
+      "fill": "$shell",
+      "layout": "vertical",
+      "gap": 28,
+      "padding": [
+        24,
+        144,
+        48,
+        144
+      ],
+      "children": [
+        {
+          "type": "frame",
+          "id": "jZhlE",
+          "name": "Cabecera existente VISTA",
+          "width": "fill_container",
+          "gap": 24,
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "JRhBr",
+              "name": "Marca",
+              "fill": "$fg",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "VISTA / Panel analítico",
+              "lineHeight": 1.5,
+              "fontFamily": "$font",
+              "fontSize": 16,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "m79rqC",
+              "name": "Navegación",
+              "fill": "$muted-fg",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Administración · Ir al visualizador · Cerrar sesión",
+              "lineHeight": 1.5,
+              "fontFamily": "$font",
+              "fontSize": 12,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "FiTNl",
+          "name": "Título",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 12,
+          "children": [
+            {
+              "type": "text",
+              "id": "oXZMe",
+              "name": "Título",
+              "fill": "$fg",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Analítica pedagógica",
+              "lineHeight": 1.5,
+              "fontFamily": "$font",
+              "fontSize": 26,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "C3DJq",
+              "name": "Propósito",
+              "fill": "$muted-fg",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Identifica los temas que necesitan refuerzo en tu cohorte.",
+              "lineHeight": 1.5,
+              "fontFamily": "$font",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "lkXU9",
+          "name": "Filtros",
+          "width": "fill_container",
+          "gap": 16,
+          "alignItems": "end",
+          "children": [
+            {
+              "type": "frame",
+              "id": "J6jZy",
+              "name": "Curso",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "aKItI",
+                  "name": "Curso etiqueta",
+                  "fill": "$muted-fg",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Curso",
+                  "lineHeight": 1.5,
+                  "fontFamily": "$font",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "nZcky",
+                  "name": "Curso campo",
+                  "width": "fill_container",
+                  "stroke": "$border",
+                  "strokeWidth": 1,
+                  "layout": "vertical",
+                  "gap": 12,
+                  "padding": 12,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "b8237",
+                      "name": "Curso valor",
+                      "fill": "$fg",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "CEDI-G1 · Estructuras discretas",
+                      "lineHeight": 1.5,
+                      "fontFamily": "$font",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "lPnAs",
+              "name": "Desde",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "K1oa7Y",
+                  "name": "Desde etiqueta",
+                  "fill": "$muted-fg",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Desde",
+                  "lineHeight": 1.5,
+                  "fontFamily": "$font",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "NYVAf",
+                  "name": "Desde campo",
+                  "width": "fill_container",
+                  "stroke": "$border",
+                  "strokeWidth": 1,
+                  "layout": "vertical",
+                  "gap": 12,
+                  "padding": 12,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "T6Jai",
+                      "name": "Desde valor",
+                      "fill": "$fg",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "01/04/2026",
+                      "lineHeight": 1.5,
+                      "fontFamily": "$font",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "G6WwY",
+              "name": "Hasta",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "pKAKs",
+                  "name": "Hasta etiqueta",
+                  "fill": "$muted-fg",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Hasta",
+                  "lineHeight": 1.5,
+                  "fontFamily": "$font",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "azqtb",
+                  "name": "Hasta campo",
+                  "width": "fill_container",
+                  "stroke": "$border",
+                  "strokeWidth": 1,
+                  "layout": "vertical",
+                  "gap": 12,
+                  "padding": 12,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "E4s9S",
+                      "name": "Hasta valor",
+                      "fill": "$fg",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "30/04/2026",
+                      "lineHeight": 1.5,
+                      "fontFamily": "$font",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "zW8Zg",
+              "name": "Aplicar filtros",
+              "width": 145,
+              "fill": "$primary",
+              "layout": "vertical",
+              "gap": 12,
+              "padding": 12,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "nwRFU",
+                  "name": "Aplicar",
+                  "fill": "$fg",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Aplicar filtros",
+                  "lineHeight": 1.5,
+                  "fontFamily": "$font",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "jORIB",
+          "name": "Zona y privacidad",
+          "fill": "$muted-fg",
+          "textGrowth": "fixed-width",
+          "width": "fill_container",
+          "content": "Fechas inclusivas · Hora de Bogotá. Solo se muestran métricas de grupos con al menos 5 estudiantes.",
+          "lineHeight": 1.5,
+          "fontFamily": "$font",
+          "fontSize": 12,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "frame",
+          "id": "KNeDt",
+          "name": "Periodo aplicado y CSV",
+          "width": "fill_container",
+          "gap": 12,
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "iVTs2",
+              "name": "Periodo aplicado",
+              "fill": "$fg",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "CEDI-G1 · 2026-1 · 01/04/2026 – 30/04/2026",
+              "lineHeight": 1.5,
+              "fontFamily": "$font",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "ue36o",
+              "name": "Exportar CSV",
+              "width": 160,
+              "stroke": "$border",
+              "strokeWidth": 1,
+              "layout": "vertical",
+              "gap": 12,
+              "padding": 12,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "ymsAH",
+                  "name": "Exportar",
+                  "fill": "$fg",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Exportar CSV",
+                  "lineHeight": 1.5,
+                  "fontFamily": "$font",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "wWcJ2",
+          "name": "Vistas",
+          "width": "fill_container",
+          "stroke": "$border",
+          "strokeWidth": {
+            "bottom": 1
+          },
+          "children": [
+            {
+              "type": "frame",
+              "id": "fBuIu",
+              "name": "Estructuras vista",
+              "width": 170,
+              "stroke": "$primary",
+              "layout": "vertical",
+              "gap": 12,
+              "padding": 16,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "Emr8A",
+                  "name": "Estructuras etiqueta",
+                  "fill": "$muted-fg",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Estructuras",
+                  "lineHeight": 1.5,
+                  "fontFamily": "$font",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "VE39b",
+              "name": "Algoritmos vista",
+              "width": 170,
+              "stroke": "$primary",
+              "strokeWidth": {
+                "bottom": 3
+              },
+              "layout": "vertical",
+              "gap": 12,
+              "padding": 16,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "HcdPO",
+                  "name": "Algoritmos etiqueta",
+                  "fill": "$fg",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Algoritmos",
+                  "lineHeight": 1.5,
+                  "fontFamily": "$font",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "x2477H",
+              "name": "Reintentos vista",
+              "width": 170,
+              "stroke": "$border",
+              "layout": "vertical",
+              "gap": 12,
+              "padding": 16,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "rAprS",
+                  "name": "Reintentos etiqueta",
+                  "fill": "$muted-fg",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Reintentos",
+                  "lineHeight": 1.5,
+                  "fontFamily": "$font",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "KS2Mj",
+          "name": "Ranking de estructuras",
+          "width": "fill_container",
+          "stroke": "$border",
+          "strokeWidth": 1,
+          "layout": "vertical",
+          "children": [
+            {
+              "type": "frame",
+              "id": "z3YctD",
+              "name": "Estructura fila",
+              "width": "fill_container",
+              "stroke": "$border",
+              "strokeWidth": {
+                "bottom": 1
+              },
+              "gap": 12,
+              "padding": 16,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "lrjhc",
+                  "name": "Estructura nombre",
+                  "fill": "$fg",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Algoritmo",
+                  "lineHeight": 1.5,
+                  "fontFamily": "$font",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "DNYe2",
+                  "name": "Estructura frecuencia",
+                  "fill": "$fg",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Ejecuciones",
+                  "lineHeight": 1.5,
+                  "fontFamily": "$font",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "zDPEc",
+                  "name": "Estructura porcentaje",
+                  "fill": "$fg",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Promedio de pasos completados",
+                  "lineHeight": 1.5,
+                  "fontFamily": "$font",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "DegJP",
+              "name": "Árbol AVL fila",
+              "width": "fill_container",
+              "stroke": "$border",
+              "strokeWidth": {
+                "bottom": 1
+              },
+              "gap": 12,
+              "padding": 16,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "cNTJH",
+                  "name": "Árbol AVL nombre",
+                  "fill": "$fg",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "BFS",
+                  "lineHeight": 1.5,
+                  "fontFamily": "$font",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "Jads8",
+                  "name": "Árbol AVL frecuencia",
+                  "fill": "$fg",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "80",
+                  "lineHeight": 1.5,
+                  "fontFamily": "$font",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "S6StH",
+                  "name": "Árbol AVL porcentaje",
+                  "fill": "$fg",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "6,5",
+                  "lineHeight": 1.5,
+                  "fontFamily": "$font",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "Q5pXxL",
+              "name": "Pila fila",
+              "width": "fill_container",
+              "stroke": "$border",
+              "strokeWidth": {
+                "bottom": 1
+              },
+              "gap": 12,
+              "padding": 16,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "CtjtG",
+                  "name": "Pila nombre",
+                  "fill": "$fg",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "DFS",
+                  "lineHeight": 1.5,
+                  "fontFamily": "$font",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "Zm6XU",
+                  "name": "Pila frecuencia",
+                  "fill": "$fg",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "40",
+                  "lineHeight": 1.5,
+                  "fontFamily": "$font",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "jgHhy",
+                  "name": "Pila porcentaje",
+                  "fill": "$fg",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Sin medición histórica completa",
+                  "lineHeight": 1.5,
+                  "fontFamily": "$font",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "yC65y",
+          "name": "Total",
+          "fill": "$fg",
+          "textGrowth": "fixed-width",
+          "width": "fill_container",
+          "content": "Las ejecuciones históricas sin seguimiento no se interpretan como cero pasos.",
+          "lineHeight": 1.5,
+          "fontFamily": "$font",
+          "fontSize": 14,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "text",
+          "id": "S0mdMx",
+          "name": "Anonimato",
+          "fill": "$muted-fg",
+          "textGrowth": "fixed-width",
+          "width": "fill_container",
+          "content": "Reporte agregado. No permite consultar ni filtrar el desempeño individual.",
+          "lineHeight": 1.5,
+          "fontFamily": "$font",
+          "fontSize": 12,
+          "fontWeight": "normal"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "BUEgE",
+      "x": 36410,
+      "y": 0,
+      "name": "HU-06 · Analítica pedagógica · reintentos móvil claro",
+      "clip": true,
+      "width": 390,
+      "fill": "#ffffff",
+      "layout": "vertical",
+      "gap": 20,
+      "padding": 20,
+      "children": [
+        {
+          "type": "text",
+          "id": "dcz6n",
+          "name": "Marca",
+          "fill": "#000000",
+          "textGrowth": "fixed-width",
+          "width": "fill_container",
+          "content": "VISTA / Panel analítico",
+          "lineHeight": 1.5,
+          "fontFamily": "$font",
+          "fontSize": 14,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "text",
+          "id": "A2F7lF",
+          "name": "Enlaces móviles",
+          "fill": "#333333",
+          "textGrowth": "fixed-width",
+          "width": "fill_container",
+          "content": "Ir al visualizador · Cerrar sesión",
+          "lineHeight": 1.5,
+          "fontFamily": "$font",
+          "fontSize": 12,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "text",
+          "id": "r4G08",
+          "name": "Título",
+          "fill": "#000000",
+          "textGrowth": "fixed-width",
+          "width": "fill_container",
+          "content": "Analítica pedagógica",
+          "lineHeight": 1.5,
+          "fontFamily": "$font",
+          "fontSize": 24,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "frame",
+          "id": "XMhgk",
+          "name": "Curso",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 8,
+          "children": [
+            {
+              "type": "text",
+              "id": "GwLYV",
+              "name": "Curso etiqueta",
+              "fill": "#333333",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Curso",
+              "lineHeight": 1.5,
+              "fontFamily": "$font",
+              "fontSize": 12,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "O0XIIx",
+              "name": "Curso control",
+              "width": "fill_container",
+              "stroke": "#e0e0e0",
+              "strokeWidth": 1,
+              "layout": "vertical",
+              "gap": 8,
+              "padding": 12,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "MWpA7",
+                  "name": "Curso valor",
+                  "fill": "#000000",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "CEDI-G1 · Estructuras discretas",
+                  "lineHeight": 1.5,
+                  "fontFamily": "$font",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "fYIQy",
+          "name": "Desde",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 8,
+          "children": [
+            {
+              "type": "text",
+              "id": "CPXrL",
+              "name": "Desde etiqueta",
+              "fill": "#333333",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Desde",
+              "lineHeight": 1.5,
+              "fontFamily": "$font",
+              "fontSize": 12,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "t38YHa",
+              "name": "Desde control",
+              "width": "fill_container",
+              "stroke": "#e0e0e0",
+              "strokeWidth": 1,
+              "layout": "vertical",
+              "gap": 8,
+              "padding": 12,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "YWIAD",
+                  "name": "Desde valor",
+                  "fill": "#000000",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "01/04/2026",
+                  "lineHeight": 1.5,
+                  "fontFamily": "$font",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "ckUbO",
+          "name": "Hasta",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 8,
+          "children": [
+            {
+              "type": "text",
+              "id": "EOAut",
+              "name": "Hasta etiqueta",
+              "fill": "#333333",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Hasta",
+              "lineHeight": 1.5,
+              "fontFamily": "$font",
+              "fontSize": 12,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "wExzI",
+              "name": "Hasta control",
+              "width": "fill_container",
+              "stroke": "#e0e0e0",
+              "strokeWidth": 1,
+              "layout": "vertical",
+              "gap": 8,
+              "padding": 12,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "o8DlU",
+                  "name": "Hasta valor",
+                  "fill": "#000000",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "30/04/2026",
+                  "lineHeight": 1.5,
+                  "fontFamily": "$font",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "rCaCP",
+          "name": "Aplicar filtros",
+          "width": "fill_container",
+          "fill": "#5454e9",
+          "layout": "vertical",
+          "gap": 8,
+          "padding": 12,
+          "children": [
+            {
+              "type": "text",
+              "id": "kuv5W",
+              "name": "Aplicar",
+              "fill": "#ffffff",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Aplicar filtros",
+              "lineHeight": 1.5,
+              "fontFamily": "$font",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "NUHPA",
+          "name": "Aviso de privacidad",
+          "fill": "#333333",
+          "textGrowth": "fixed-width",
+          "width": "fill_container",
+          "content": "Fechas inclusivas · Hora de Bogotá. Mínimo 5 estudiantes por segmento.",
+          "lineHeight": 1.5,
+          "fontFamily": "$font",
+          "fontSize": 12,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "text",
+          "id": "d2RkH",
+          "name": "Periodo aplicado",
+          "fill": "#000000",
+          "textGrowth": "fixed-width",
+          "width": "fill_container",
+          "content": "CEDI-G1 · 2026-1\n01/04/2026 – 30/04/2026",
+          "lineHeight": 1.5,
+          "fontFamily": "$font",
+          "fontSize": 14,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "frame",
+          "id": "Tv4Af",
+          "name": "Exportar CSV",
+          "width": "fill_container",
+          "stroke": "#e0e0e0",
+          "strokeWidth": 1,
+          "layout": "vertical",
+          "gap": 8,
+          "padding": 12,
+          "children": [
+            {
+              "type": "text",
+              "id": "rzbPn",
+              "name": "Exportar",
+              "fill": "#000000",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Exportar CSV",
+              "lineHeight": 1.5,
+              "fontFamily": "$font",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "IZKrr",
+          "name": "Vistas",
+          "fill": "#000000",
+          "textGrowth": "fixed-width",
+          "width": "fill_container",
+          "content": "Estructuras    Algoritmos    Reintentos",
+          "lineHeight": 1.5,
+          "fontFamily": "$font",
+          "fontSize": 13,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "text",
+          "id": "d8Pd4",
+          "name": "Regla de reintento",
+          "fill": "#333333",
+          "textGrowth": "fixed-width",
+          "width": "fill_container",
+          "content": "Sesiones con al menos 3 solicitudes en 120 s. Se destacan tasas superiores al 30 %.",
+          "lineHeight": 1.5,
+          "fontFamily": "$font",
+          "fontSize": 12,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "frame",
+          "id": "lRwsz",
+          "name": "Árbol AVL · refuerzo sugerido",
+          "width": "fill_container",
+          "fill": "#E9683B0D",
+          "stroke": "#b44d29",
+          "strokeWidth": {
+            "left": 3
+          },
+          "layout": "vertical",
+          "gap": 8,
+          "padding": 16,
+          "children": [
+            {
+              "type": "text",
+              "id": "mMQQE",
+              "name": "Estructura",
+              "fill": "#000000",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Árbol AVL",
+              "lineHeight": 1.5,
+              "fontFamily": "$font",
+              "fontSize": 16,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "eu7ES",
+              "name": "Destacado",
+              "fill": "#b44d29",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Supera el umbral",
+              "lineHeight": 1.5,
+              "fontFamily": "$font",
+              "fontSize": 13,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "y0RwYC",
+              "name": "Sesiones",
+              "fill": "#000000",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Sesiones: 20 · Con reintentos: 10",
+              "lineHeight": 1.5,
+              "fontFamily": "$font",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "cw4WZ",
+              "name": "Tasa",
+              "fill": "#000000",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Tasa de reintento: 50 %",
+              "lineHeight": 1.5,
+              "fontFamily": "$font",
+              "fontSize": 16,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "UaULB",
+          "name": "Pila · segmento protegido",
+          "width": "fill_container",
+          "stroke": "#e0e0e0",
+          "strokeWidth": 1,
+          "layout": "vertical",
+          "gap": 8,
+          "padding": 16,
+          "children": [
+            {
+              "type": "text",
+              "id": "cE9ht",
+              "name": "Pila",
+              "fill": "#000000",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Pila",
+              "lineHeight": 1.5,
+              "fontFamily": "$font",
+              "fontSize": 16,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "Z6f2q",
+              "name": "Supresión",
+              "fill": "#333333",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Datos insuficientes para garantizar el anonimato",
+              "lineHeight": 1.5,
+              "fontFamily": "$font",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "UoDN4",
+      "x": 36900,
+      "y": 0,
+      "name": "HU-06 · Estados, permisos y navegación",
+      "clip": true,
+      "width": 920,
+      "fill": "$shell",
+      "layout": "vertical",
+      "gap": 24,
+      "padding": 32,
+      "children": [
+        {
+          "type": "text",
+          "id": "CqwcA",
+          "name": "Título",
+          "fill": "$fg",
+          "textGrowth": "fixed-width",
+          "width": "fill_container",
+          "content": "Analítica pedagógica · estados",
+          "lineHeight": 1.5,
+          "fontFamily": "$font",
+          "fontSize": 24,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "frame",
+          "id": "D7CGd",
+          "name": "Cargando cursos",
+          "width": "fill_container",
+          "stroke": "$border",
+          "strokeWidth": 1,
+          "layout": "vertical",
+          "gap": 8,
+          "padding": 16,
+          "children": [
+            {
+              "type": "text",
+              "id": "YfwIk",
+              "name": "Cargando cursos título",
+              "fill": "$fg",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Cargando cursos",
+              "lineHeight": 1.5,
+              "fontFamily": "$font",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "kIBiF",
+              "name": "Cargando cursos contenido",
+              "fill": "$muted-fg",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Cargando cursos… · Controles y exportación deshabilitados.",
+              "lineHeight": 1.5,
+              "fontFamily": "$font",
+              "fontSize": 13,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "ramNo",
+          "name": "Sin cursos asignados",
+          "width": "fill_container",
+          "stroke": "$border",
+          "strokeWidth": 1,
+          "layout": "vertical",
+          "gap": 8,
+          "padding": 16,
+          "children": [
+            {
+              "type": "text",
+              "id": "T8xjiG",
+              "name": "Sin cursos asignados título",
+              "fill": "$fg",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Sin cursos asignados",
+              "lineHeight": 1.5,
+              "fontFamily": "$font",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "qz1KA",
+              "name": "Sin cursos asignados contenido",
+              "fill": "$muted-fg",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "No tienes cursos disponibles para consultar. Solicita la asignación de tu curso al administrador.",
+              "lineHeight": 1.5,
+              "fontFamily": "$font",
+              "fontSize": 13,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "RIxSs",
+          "name": "Cargando reporte",
+          "width": "fill_container",
+          "stroke": "$border",
+          "strokeWidth": 1,
+          "layout": "vertical",
+          "gap": 8,
+          "padding": 16,
+          "children": [
+            {
+              "type": "text",
+              "id": "I1nQda",
+              "name": "Cargando reporte título",
+              "fill": "$fg",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Cargando reporte",
+              "lineHeight": 1.5,
+              "fontFamily": "$font",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "OIJtC",
+              "name": "Cargando reporte contenido",
+              "fill": "$muted-fg",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Calculando métricas… · Retirar el reporte anterior mientras se recalcula.",
+              "lineHeight": 1.5,
+              "fontFamily": "$font",
+              "fontSize": 13,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "cUcJi",
+          "name": "Sin eventos",
+          "width": "fill_container",
+          "stroke": "$border",
+          "strokeWidth": 1,
+          "layout": "vertical",
+          "gap": 8,
+          "padding": 16,
+          "children": [
+            {
+              "type": "text",
+              "id": "Ujkpz",
+              "name": "Sin eventos título",
+              "fill": "$fg",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Sin eventos",
+              "lineHeight": 1.5,
+              "fontFamily": "$font",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "qXRc3",
+              "name": "Sin eventos contenido",
+              "fill": "$muted-fg",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "No hay eventos para esta vista en el curso y periodo seleccionados.",
+              "lineHeight": 1.5,
+              "fontFamily": "$font",
+              "fontSize": 13,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "TXkRY",
+          "name": "Supresión por privacidad",
+          "width": "fill_container",
+          "stroke": "$border",
+          "strokeWidth": 1,
+          "layout": "vertical",
+          "gap": 8,
+          "padding": 16,
+          "children": [
+            {
+              "type": "text",
+              "id": "WPD0l",
+              "name": "Supresión por privacidad título",
+              "fill": "$fg",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Supresión por privacidad",
+              "lineHeight": 1.5,
+              "fontFamily": "$font",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "CzEIc",
+              "name": "Supresión por privacidad contenido",
+              "fill": "$muted-fg",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Datos insuficientes para garantizar el anonimato · Sin frecuencia, tasa, barra ni posición numérica. Si un segmento está oculto, tampoco se publica el total ni los porcentajes.",
+              "lineHeight": 1.5,
+              "fontFamily": "$font",
+              "fontSize": 13,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "TBjgM",
+          "name": "Error de carga",
+          "width": "fill_container",
+          "stroke": "$border",
+          "strokeWidth": 1,
+          "layout": "vertical",
+          "gap": 8,
+          "padding": 16,
+          "children": [
+            {
+              "type": "text",
+              "id": "jUMAG",
+              "name": "Error de carga título",
+              "fill": "$fg",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Error de carga",
+              "lineHeight": 1.5,
+              "fontFamily": "$font",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "rX9eZ",
+              "name": "Error de carga contenido",
+              "fill": "$muted-fg",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "No se pudo cargar el reporte. Intenta de nuevo. · Botón Reintentar. No conservar métricas anteriores.",
+              "lineHeight": 1.5,
+              "fontFamily": "$font",
+              "fontSize": 13,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "lkUVC",
+          "name": "Permiso revocado",
+          "width": "fill_container",
+          "stroke": "$border",
+          "strokeWidth": 1,
+          "layout": "vertical",
+          "gap": 8,
+          "padding": 16,
+          "children": [
+            {
+              "type": "text",
+              "id": "YSW7J",
+              "name": "Permiso revocado título",
+              "fill": "$fg",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Permiso revocado",
+              "lineHeight": 1.5,
+              "fontFamily": "$font",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "pXjbt",
+              "name": "Permiso revocado contenido",
+              "fill": "$muted-fg",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "No tienes acceso a este curso. · Retirar métricas; el servidor también rechaza la exportación.",
+              "lineHeight": 1.5,
+              "fontFamily": "$font",
+              "fontSize": 13,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "X5D7d3",
+          "name": "Validación de fechas",
+          "width": "fill_container",
+          "stroke": "$border",
+          "strokeWidth": 1,
+          "layout": "vertical",
+          "gap": 8,
+          "padding": 16,
+          "children": [
+            {
+              "type": "text",
+              "id": "qPRcc",
+              "name": "Validación de fechas título",
+              "fill": "$fg",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Validación de fechas",
+              "lineHeight": 1.5,
+              "fontFamily": "$font",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "vb8gZ",
+              "name": "Validación de fechas contenido",
+              "fill": "$muted-fg",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "La fecha final debe ser igual o posterior a la inicial. · Mensaje junto al campo Hasta y foco allí al enviar.",
+              "lineHeight": 1.5,
+              "fontFamily": "$font",
+              "fontSize": 13,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "xQtRh",
+          "name": "Exportación en curso / error",
+          "width": "fill_container",
+          "stroke": "$border",
+          "strokeWidth": 1,
+          "layout": "vertical",
+          "gap": 8,
+          "padding": 16,
+          "children": [
+            {
+              "type": "text",
+              "id": "UFzoc",
+              "name": "Exportación en curso / error título",
+              "fill": "$fg",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Exportación en curso / error",
+              "lineHeight": 1.5,
+              "fontFamily": "$font",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "mtGkK",
+              "name": "Exportación en curso / error contenido",
+              "fill": "$muted-fg",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Exportando… / No se pudo exportar el reporte. Intenta de nuevo. · CSV ligado al periodo aplicado, deshabilitado con filtros pendientes o sin reporte.",
+              "lineHeight": 1.5,
+              "fontFamily": "$font",
+              "fontSize": 13,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "LaPYM",
+          "name": "Filtros pendientes",
+          "width": "fill_container",
+          "stroke": "$border",
+          "strokeWidth": 1,
+          "layout": "vertical",
+          "gap": 8,
+          "padding": 16,
+          "children": [
+            {
+              "type": "text",
+              "id": "rzyCA",
+              "name": "Filtros pendientes título",
+              "fill": "$fg",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Filtros pendientes",
+              "lineHeight": 1.5,
+              "fontFamily": "$font",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "GZPKP",
+              "name": "Filtros pendientes contenido",
+              "fill": "$muted-fg",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Tienes filtros sin aplicar. Aplica los filtros para actualizar el reporte. · Etiqueta del reporte conserva el periodo anterior.",
+              "lineHeight": 1.5,
+              "fontFamily": "$font",
+              "fontSize": 13,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "j11UYB",
+          "name": "Teclado y responsive",
+          "width": "fill_container",
+          "stroke": "$border",
+          "strokeWidth": 1,
+          "layout": "vertical",
+          "gap": 8,
+          "padding": 16,
+          "children": [
+            {
+              "type": "text",
+              "id": "wOyhP",
+              "name": "Teclado y responsive título",
+              "fill": "$fg",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Teclado y responsive",
+              "lineHeight": 1.5,
+              "fontFamily": "$font",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "nojqQ",
+              "name": "Teclado y responsive contenido",
+              "fill": "$muted-fg",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Foco visible morado de 2 px. Controles de 44 px, etiquetas siempre visibles. Filas se apilan como fichas con etiquetas en móvil. Cambiar vista usa botones con estado seleccionado.",
+              "lineHeight": 1.5,
+              "fontFamily": "$font",
+              "fontSize": 13,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "EFIJH",
+          "name": "Navegación por rol",
+          "width": "fill_container",
+          "stroke": "$border",
+          "strokeWidth": 1,
+          "layout": "vertical",
+          "gap": 8,
+          "padding": 16,
+          "children": [
+            {
+              "type": "text",
+              "id": "GCCob",
+              "name": "Navegación por rol título",
+              "fill": "$fg",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Navegación por rol",
+              "lineHeight": 1.5,
+              "fontFamily": "$font",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "s1DsU9",
+              "name": "Navegación por rol contenido",
+              "fill": "$muted-fg",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Docente y administrador acceden a Analítica desde la barra lateral. Admin también tiene enlace desde Administración; estudiante no tiene acceso ni controles individuales.",
+              "lineHeight": 1.5,
+              "fontFamily": "$font",
+              "fontSize": 13,
+              "fontWeight": "normal"
+            }
+          ]
         }
       ]
     }

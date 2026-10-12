@@ -1,0 +1,13 @@
+Re-extracting code files in . (no LLM needed)...
+[graphify watch] 29 file(s) not classified (no supported extension or shebang), skipped: .dockerignore, .env.example, .gitattributes, .gitignore, App.css, App.module.css (+23 more)
+  warning: parallel extraction unavailable ([Errno 1] Operation not permitted); falling back to sequential.
+  AST extraction: 100/205 uncached files (48%)
+  AST extraction: 200/205 uncached files (97%)
+  AST extraction: 205/205 uncached files (100%)
+  warning: 71 code file(s) yielded no symbols (0.14 MB) — a data file, or source this extractor models no symbols for: backend/pom.xml, dev-workflow/tests/ui/accessibility.spec.mjs, dev-workflow/tests/ui/visual.spec.mjs, frontend/cypress/e2e/admin-deletion.cy.ts, frontend/cypress/e2e/basic-heap-linear.cy.ts (+66 more)
+[graphify watch] community set changed since labeling (176 saved labels, 193 communities now; renamed 96 community(ies) by their hub). Run `graphify label` to refresh names with the LLM.
+[graphify] backed up curated graph (5 files) -> 2026-10-11/
+[graphify watch] Rebuilt: 3960 nodes, 11307 edges, 193 communities
+[graphify watch] graph.json, graph.html and GRAPH_REPORT.md updated in graphify-out
+Code graph updated. For doc/paper/image changes run /graphify --update in your AI assistant.
+Tip: set GEMINI_API_KEY or GOOGLE_API_KEY to use Gemini for semantic extraction.

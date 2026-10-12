@@ -1,0 +1,32 @@
+16:59:14.041 [main] INFO org.hibernate.validator.internal.util.Version -- HV000001: Hibernate Validator 9.0.1.Final
+16:59:14.501 [main] INFO org.springframework.mock.web.MockServletContext -- Initializing Spring TestDispatcherServlet ''
+16:59:14.502 [main] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Initializing Servlet ''
+16:59:14.505 [main] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Completed initialization in 3 ms
+16:59:14.716 [main] INFO org.springframework.mock.web.MockServletContext -- Initializing Spring TestDispatcherServlet ''
+16:59:14.717 [main] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Initializing Servlet ''
+16:59:14.717 [main] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Completed initialization in 0 ms
+16:59:14.757 [main] INFO org.springframework.mock.web.MockServletContext -- Initializing Spring TestDispatcherServlet ''
+16:59:14.757 [main] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Initializing Servlet ''
+16:59:14.757 [main] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Completed initialization in 0 ms
+16:59:14.785 [main] INFO org.springframework.mock.web.MockServletContext -- Initializing Spring TestDispatcherServlet ''
+16:59:14.785 [main] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Initializing Servlet ''
+16:59:14.785 [main] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Completed initialization in 0 ms
+16:59:14.888 [main] INFO org.springframework.mock.web.MockServletContext -- Initializing Spring TestDispatcherServlet ''
+16:59:14.888 [main] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Initializing Servlet ''
+16:59:14.888 [main] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Completed initialization in 0 ms
+
+Test run finished after 2393 ms
+[         2 containers found      ]
+[         0 containers skipped    ]
+[         2 containers started    ]
+[         0 containers aborted    ]
+[         2 containers successful ]
+[         0 containers failed     ]
+[         5 tests found           ]
+[         0 tests skipped         ]
+[         5 tests started         ]
+[         0 tests aborted         ]
+[         5 tests successful      ]
+[         0 tests failed          ]
+
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended

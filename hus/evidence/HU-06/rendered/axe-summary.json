@@ -1,0 +1,442 @@
+[
+  {
+    "test": "analítica · tres vistas y foco · dark",
+    "viewport": "desktop",
+    "outcome": "expected",
+    "axe": [
+      {
+        "violations": [],
+        "passes": 29,
+        "incompleteRules": []
+      },
+      {
+        "violations": [],
+        "passes": 29,
+        "incompleteRules": []
+      },
+      {
+        "violations": [],
+        "passes": 29,
+        "incompleteRules": []
+      }
+    ]
+  },
+  {
+    "test": "analítica · suppressed · dark",
+    "viewport": "desktop",
+    "outcome": "expected",
+    "axe": [
+      {
+        "violations": [],
+        "passes": 27,
+        "incompleteRules": []
+      }
+    ]
+  },
+  {
+    "test": "analítica · empty · dark",
+    "viewport": "desktop",
+    "outcome": "expected",
+    "axe": [
+      {
+        "violations": [],
+        "passes": 25,
+        "incompleteRules": []
+      }
+    ]
+  },
+  {
+    "test": "analítica · error · dark",
+    "viewport": "desktop",
+    "outcome": "expected",
+    "axe": [
+      {
+        "violations": [],
+        "passes": 25,
+        "incompleteRules": []
+      }
+    ]
+  },
+  {
+    "test": "analítica · no-courses · dark",
+    "viewport": "desktop",
+    "outcome": "expected",
+    "axe": [
+      {
+        "violations": [],
+        "passes": 18,
+        "incompleteRules": []
+      }
+    ]
+  },
+  {
+    "test": "analítica · tres vistas y foco · light",
+    "viewport": "desktop",
+    "outcome": "expected",
+    "axe": [
+      {
+        "violations": [],
+        "passes": 29,
+        "incompleteRules": []
+      },
+      {
+        "violations": [],
+        "passes": 29,
+        "incompleteRules": []
+      },
+      {
+        "violations": [],
+        "passes": 29,
+        "incompleteRules": []
+      }
+    ]
+  },
+  {
+    "test": "analítica · suppressed · light",
+    "viewport": "desktop",
+    "outcome": "expected",
+    "axe": [
+      {
+        "violations": [],
+        "passes": 27,
+        "incompleteRules": []
+      }
+    ]
+  },
+  {
+    "test": "analítica · empty · light",
+    "viewport": "desktop",
+    "outcome": "expected",
+    "axe": [
+      {
+        "violations": [],
+        "passes": 25,
+        "incompleteRules": []
+      }
+    ]
+  },
+  {
+    "test": "analítica · error · light",
+    "viewport": "desktop",
+    "outcome": "expected",
+    "axe": [
+      {
+        "violations": [],
+        "passes": 25,
+        "incompleteRules": []
+      }
+    ]
+  },
+  {
+    "test": "analítica · no-courses · light",
+    "viewport": "desktop",
+    "outcome": "expected",
+    "axe": [
+      {
+        "violations": [],
+        "passes": 18,
+        "incompleteRules": []
+      }
+    ]
+  },
+  {
+    "test": "analítica · tres vistas y foco · dark",
+    "viewport": "tablet",
+    "outcome": "expected",
+    "axe": [
+      {
+        "violations": [],
+        "passes": 29,
+        "incompleteRules": []
+      },
+      {
+        "violations": [],
+        "passes": 29,
+        "incompleteRules": []
+      },
+      {
+        "violations": [],
+        "passes": 29,
+        "incompleteRules": []
+      }
+    ]
+  },
+  {
+    "test": "analítica · suppressed · dark",
+    "viewport": "tablet",
+    "outcome": "expected",
+    "axe": [
+      {
+        "violations": [],
+        "passes": 27,
+        "incompleteRules": []
+      }
+    ]
+  },
+  {
+    "test": "analítica · empty · dark",
+    "viewport": "tablet",
+    "outcome": "expected",
+    "axe": [
+      {
+        "violations": [],
+        "passes": 25,
+        "incompleteRules": []
+      }
+    ]
+  },
+  {
+    "test": "analítica · error · dark",
+    "viewport": "tablet",
+    "outcome": "expected",
+    "axe": [
+      {
+        "violations": [],
+        "passes": 25,
+        "incompleteRules": []
+      }
+    ]
+  },
+  {
+    "test": "analítica · no-courses · dark",
+    "viewport": "tablet",
+    "outcome": "expected",
+    "axe": [
+      {
+        "violations": [],
+        "passes": 18,
+        "incompleteRules": []
+      }
+    ]
+  },
+  {
+    "test": "analítica · tres vistas y foco · light",
+    "viewport": "tablet",
+    "outcome": "expected",
+    "axe": [
+      {
+        "violations": [],
+        "passes": 29,
+        "incompleteRules": []
+      },
+      {
+        "violations": [],
+        "passes": 29,
+        "incompleteRules": []
+      },
+      {
+        "violations": [],
+        "passes": 29,
+        "incompleteRules": []
+      }
+    ]
+  },
+  {
+    "test": "analítica · suppressed · light",
+    "viewport": "tablet",
+    "outcome": "expected",
+    "axe": [
+      {
+        "violations": [],
+        "passes": 27,
+        "incompleteRules": []
+      }
+    ]
+  },
+  {
+    "test": "analítica · empty · light",
+    "viewport": "tablet",
+    "outcome": "expected",
+    "axe": [
+      {
+        "violations": [],
+        "passes": 25,
+        "incompleteRules": []
+      }
+    ]
+  },
+  {
+    "test": "analítica · error · light",
+    "viewport": "tablet",
+    "outcome": "expected",
+    "axe": [
+      {
+        "violations": [],
+        "passes": 25,
+        "incompleteRules": []
+      }
+    ]
+  },
+  {
+    "test": "analítica · no-courses · light",
+    "viewport": "tablet",
+    "outcome": "expected",
+    "axe": [
+      {
+        "violations": [],
+        "passes": 18,
+        "incompleteRules": []
+      }
+    ]
+  },
+  {
+    "test": "analítica · tres vistas y foco · dark",
+    "viewport": "mobile",
+    "outcome": "expected",
+    "axe": [
+      {
+        "violations": [],
+        "passes": 30,
+        "incompleteRules": []
+      },
+      {
+        "violations": [],
+        "passes": 30,
+        "incompleteRules": []
+      },
+      {
+        "violations": [],
+        "passes": 30,
+        "incompleteRules": []
+      },
+      {
+        "violations": [],
+        "passes": 30,
+        "incompleteRules": []
+      },
+      {
+        "violations": [],
+        "passes": 30,
+        "incompleteRules": []
+      }
+    ]
+  },
+  {
+    "test": "analítica · suppressed · dark",
+    "viewport": "mobile",
+    "outcome": "expected",
+    "axe": [
+      {
+        "violations": [],
+        "passes": 28,
+        "incompleteRules": []
+      }
+    ]
+  },
+  {
+    "test": "analítica · empty · dark",
+    "viewport": "mobile",
+    "outcome": "expected",
+    "axe": [
+      {
+        "violations": [],
+        "passes": 26,
+        "incompleteRules": []
+      }
+    ]
+  },
+  {
+    "test": "analítica · error · dark",
+    "viewport": "mobile",
+    "outcome": "expected",
+    "axe": [
+      {
+        "violations": [],
+        "passes": 26,
+        "incompleteRules": []
+      }
+    ]
+  },
+  {
+    "test": "analítica · no-courses · dark",
+    "viewport": "mobile",
+    "outcome": "expected",
+    "axe": [
+      {
+        "violations": [],
+        "passes": 18,
+        "incompleteRules": []
+      }
+    ]
+  },
+  {
+    "test": "analítica · tres vistas y foco · light",
+    "viewport": "mobile",
+    "outcome": "expected",
+    "axe": [
+      {
+        "violations": [],
+        "passes": 30,
+        "incompleteRules": []
+      },
+      {
+        "violations": [],
+        "passes": 30,
+        "incompleteRules": []
+      },
+      {
+        "violations": [],
+        "passes": 30,
+        "incompleteRules": []
+      },
+      {
+        "violations": [],
+        "passes": 30,
+        "incompleteRules": []
+      },
+      {
+        "violations": [],
+        "passes": 30,
+        "incompleteRules": []
+      }
+    ]
+  },
+  {
+    "test": "analítica · suppressed · light",
+    "viewport": "mobile",
+    "outcome": "expected",
+    "axe": [
+      {
+        "violations": [],
+        "passes": 28,
+        "incompleteRules": []
+      }
+    ]
+  },
+  {
+    "test": "analítica · empty · light",
+    "viewport": "mobile",
+    "outcome": "expected",
+    "axe": [
+      {
+        "violations": [],
+        "passes": 26,
+        "incompleteRules": []
+      }
+    ]
+  },
+  {
+    "test": "analítica · error · light",
+    "viewport": "mobile",
+    "outcome": "expected",
+    "axe": [
+      {
+        "violations": [],
+        "passes": 26,
+        "incompleteRules": []
+      }
+    ]
+  },
+  {
+    "test": "analítica · no-courses · light",
+    "viewport": "mobile",
+    "outcome": "expected",
+    "axe": [
+      {
+        "violations": [],
+        "passes": 18,
+        "incompleteRules": []
+      }
+    ]
+  }
+]
