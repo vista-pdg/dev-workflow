@@ -1,6 +1,6 @@
 # HU-06 · Tablero de analítica pedagógica
 
-Estado: implementación e integración local verificadas. El 12 de octubre el usuario autorizó
+Estado: PR publicados y CI en revisión. El 12 de octubre el usuario autorizó
 publicar PR y fusionar backend/frontend si sus pruebas pasan; también pidió subir el diseño pen.
 CI se verifica durante la publicación. La HU no se declara cerrada en backlog ni se inventa
 una sesión de usabilidad con docentes. Ver evidencia final al cierre de este documento.
@@ -377,3 +377,7 @@ Pendiente para cerrar la HU: revisión de usabilidad con docente/administrador y
 CI. El 12 de octubre de 2026 se recibió autorización expresa para publicar y fusionar los
 PR de backend/frontend si pasan las pruebas, y para subir el pen guardado junto con esta
 evidencia en dev-workflow. No se ha solicitado cerrar el backlog.
+
+PR publicados: [backend #13](https://github.com/vista-pdg/backend/pull/13),
+[frontend #14](https://github.com/vista-pdg/frontend/pull/14) y
+[diseño/evidencias #3](https://github.com/vista-pdg/dev-workflow/pull/3).
