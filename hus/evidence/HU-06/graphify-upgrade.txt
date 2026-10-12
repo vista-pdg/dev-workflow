@@ -1,0 +1,12 @@
+Downloading graphifyy (1.5MiB)
+Downloading numpy (15.9MiB)
+ Downloaded graphifyy
+ Downloaded numpy
+Updated graphifyy v0.9.67 -> v0.9.86
+ - graphifyy==0.9.67
+ + graphifyy==0.9.86
+ - numpy==2.5.3
+ + numpy==2.5.4
+ - tree-sitter-swift==0.7.3
+ + tree-sitter-swift==0.7.4
+Installed 2 executables: graphify, graphify-mcp

@@ -1,0 +1,8 @@
+cypress/e2e/graph-algorithms.cy.ts(21,33): error TS2339: Property '__vista' does not exist on type 'AUTWindow'.
+cypress/e2e/graph-algorithms.cy.ts(47,26): error TS2339: Property '__vista' does not exist on type 'AUTWindow'.
+cypress/e2e/graph-algorithms.cy.ts(55,35): error TS2339: Property '__vista' does not exist on type 'AUTWindow'.
+cypress/e2e/graph-algorithms.cy.ts(56,20): error TS2339: Property '__vista' does not exist on type 'AUTWindow'.
+cypress/support/basicAlgorithms.ts(68,39): error TS2339: Property '__vista' does not exist on type 'AUTWindow'.
+cypress/support/basicAlgorithms.ts(90,22): error TS2339: Property '__vista' does not exist on type 'AUTWindow'.
+cypress/support/basicAlgorithms.ts(93,58): error TS2339: Property '__vista' does not exist on type 'AUTWindow'.
+cypress/support/basicAlgorithms.ts(93,117): error TS2339: Property '__vista' does not exist on type 'AUTWindow'.

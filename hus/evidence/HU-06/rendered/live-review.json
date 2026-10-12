@@ -1,0 +1,20 @@
+{
+  "reportStatus": 200,
+  "anonymous": true,
+  "views": [
+    {
+      "view": "structures",
+      "text": "Ranking de estructuras\nGrafo no dirigido\nSolicitudes\n45\n% del total\nDatos insuficientes para garantizar el anonimato\nÁrbol AVL\nDatos insuficientes para garantizar el anonimato\ndesconocida\nDatos insuficientes para garantizar el anonimato\nPila\nDatos insuficientes para garantizar el anonimato\nTotal del periodo:\nDatos insuficientes para garantizar el anonimato\n\nEl total y los porcentajes también se ocultan para proteger los segmentos con datos insuficientes."
+    },
+    {
+      "view": "algorithms",
+      "text": "Ranking de algoritmos\nPOP\nEjecuciones\n10\nPromedio de pasos completados\n7\nBFS\nEjecuciones\n5\nPromedio de pasos completados\n7,2\nINSERT\nDatos insuficientes para garantizar el anonimato"
+    },
+    {
+      "view": "retries",
+      "text": "Ranking de reintentos\n\nSesiones con al menos 3 solicitudes en 120 s. Se destacan tasas superiores al 30 %.\n\nGrafo no dirigido\n\nSupera el umbral\n\nSesiones\n23\nCon reintentos\n10\nTasa de reintento\n43,48 %\nÁrbol AVL\nDatos insuficientes para garantizar el anonimato\ndesconocida\nDatos insuficientes para garantizar el anonimato\nPila\nDatos insuficientes para garantizar el anonimato"
+    }
+  ],
+  "errors": [],
+  "noOverflow": true
+}

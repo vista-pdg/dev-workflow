@@ -1,0 +1,522 @@
+
+================================================================================
+
+  (Run Starting)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Cypress:        16.0.0                                                                         │
+  │ Browser:        Firefox 157 (headless)                                                         │
+  │ Node Version:   v22.21.1 (/home/curaca/.nvm/versions/node/v22.21.1/bin/node)                   │
+  │ Specs:          17 found (hu-06-ca1-ranking-estructuras.cy.ts, hu-06-ca2-ranking-algoritmos.cy │
+  │                 .ts, hu-06-ca3-tasa-reintento.cy.ts, hu-06-ca4-cohorte-periodo.cy.ts, hu-06-ca │
+  │                 5-umbral-anonimato.cy.ts, hu-06-ca6-sin-individuos.cy.ts, hu-06-ca7-exportacio │
+  │                 n.cy.ts, hu-06-integrac...)                                                    │
+  │ Searched:       cypress/e2e/hu-06-*.cy.ts, cypress/e2e/hu-16-ca4-*.cy.ts, cypress/e2e/hu-16-ca │
+  │                 5-*.cy.ts, cypress/e2e/hu-18-ca7-*.cy.ts, cypress/e2e/hu-21-*.cy.ts            │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+
+  Running:  hu-06-ca1-ranking-estructuras.cy.ts                                            (1 of 17)
+
+
+  ✓ muestra el orden, las frecuencias y los porcentajes recibidos (1500ms)
+
+  1 passing (2s)
+
+
+  (Results)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Tests:        1                                                                                │
+  │ Passing:      1                                                                                │
+  │ Failing:      0                                                                                │
+  │ Pending:      0                                                                                │
+  │ Skipped:      0                                                                                │
+  │ Screenshots:  0                                                                                │
+  │ Video:        false                                                                            │
+  │ Duration:     1 second                                                                         │
+  │ Spec Ran:     hu-06-ca1-ranking-estructuras.cy.ts                                              │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+
+  Running:  hu-06-ca2-ranking-algoritmos.cy.ts                                             (2 of 17)
+
+
+  ✓ cambia de vista y presenta ejecuciones y pasos completados (1454ms)
+
+  1 passing (1s)
+
+
+  (Results)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Tests:        1                                                                                │
+  │ Passing:      1                                                                                │
+  │ Failing:      0                                                                                │
+  │ Pending:      0                                                                                │
+  │ Skipped:      0                                                                                │
+  │ Screenshots:  0                                                                                │
+  │ Video:        false                                                                            │
+  │ Duration:     1 second                                                                         │
+  │ Spec Ran:     hu-06-ca2-ranking-algoritmos.cy.ts                                               │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+
+  Running:  hu-06-ca3-tasa-reintento.cy.ts                                                 (3 of 17)
+
+
+  ✓ destaca la dificultad con texto además de color (1399ms)
+
+  1 passing (1s)
+
+
+  (Results)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Tests:        1                                                                                │
+  │ Passing:      1                                                                                │
+  │ Failing:      0                                                                                │
+  │ Pending:      0                                                                                │
+  │ Skipped:      0                                                                                │
+  │ Screenshots:  0                                                                                │
+  │ Video:        false                                                                            │
+  │ Duration:     1 second                                                                         │
+  │ Spec Ran:     hu-06-ca3-tasa-reintento.cy.ts                                                   │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+
+  Running:  hu-06-ca4-cohorte-periodo.cy.ts                                                (4 of 17)
+
+
+  ✓ recalcula con los filtros aplicados y deshabilita exportación mientras están pendientes (1939ms)
+
+  1 passing (2s)
+
+
+  (Results)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Tests:        1                                                                                │
+  │ Passing:      1                                                                                │
+  │ Failing:      0                                                                                │
+  │ Pending:      0                                                                                │
+  │ Skipped:      0                                                                                │
+  │ Screenshots:  0                                                                                │
+  │ Video:        false                                                                            │
+  │ Duration:     1 second                                                                         │
+  │ Spec Ran:     hu-06-ca4-cohorte-periodo.cy.ts                                                  │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+
+  Running:  hu-06-ca5-umbral-anonimato.cy.ts                                               (5 of 17)
+
+
+  ✓ oculta todas las métricas de los segmentos suprimidos (1563ms)
+
+  1 passing (2s)
+
+
+  (Results)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Tests:        1                                                                                │
+  │ Passing:      1                                                                                │
+  │ Failing:      0                                                                                │
+  │ Pending:      0                                                                                │
+  │ Skipped:      0                                                                                │
+  │ Screenshots:  0                                                                                │
+  │ Video:        false                                                                            │
+  │ Duration:     1 second                                                                         │
+  │ Spec Ran:     hu-06-ca5-umbral-anonimato.cy.ts                                                 │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+
+  Running:  hu-06-ca6-sin-individuos.cy.ts                                                 (6 of 17)
+
+
+  ✓ no ofrece controles de filtrado ni acceso por estudiante en ninguna vista (1587ms)
+
+  1 passing (2s)
+
+
+  (Results)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Tests:        1                                                                                │
+  │ Passing:      1                                                                                │
+  │ Failing:      0                                                                                │
+  │ Pending:      0                                                                                │
+  │ Skipped:      0                                                                                │
+  │ Screenshots:  0                                                                                │
+  │ Video:        false                                                                            │
+  │ Duration:     1 second                                                                         │
+  │ Spec Ran:     hu-06-ca6-sin-individuos.cy.ts                                                   │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+
+  Running:  hu-06-ca7-exportacion.cy.ts                                                    (7 of 17)
+
+
+  ✓ descarga el CSV del servidor conservando curso, fechas y supresión (1923ms)
+
+  1 passing (2s)
+
+
+  (Results)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Tests:        1                                                                                │
+  │ Passing:      1                                                                                │
+  │ Failing:      0                                                                                │
+  │ Pending:      0                                                                                │
+  │ Skipped:      0                                                                                │
+  │ Screenshots:  0                                                                                │
+  │ Video:        false                                                                            │
+  │ Duration:     1 second                                                                         │
+  │ Spec Ran:     hu-06-ca7-exportacion.cy.ts                                                      │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+
+  Running:  hu-06-integracion-real.cy.ts                                                   (8 of 17)
+
+
+  HU-06 · Integración real de telemetría, autorización y tablero
+    ✓ agrega cinco estudiantes, muestra el reporte autorizado y descarga el CSV real (6310ms)
+
+
+  1 passing (6s)
+
+
+  (Results)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Tests:        1                                                                                │
+  │ Passing:      1                                                                                │
+  │ Failing:      0                                                                                │
+  │ Pending:      0                                                                                │
+  │ Skipped:      0                                                                                │
+  │ Screenshots:  0                                                                                │
+  │ Video:        false                                                                            │
+  │ Duration:     6 seconds                                                                        │
+  │ Spec Ran:     hu-06-integracion-real.cy.ts                                                     │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+
+  Running:  hu-16-ca4-segregacion-de-roles.cy.ts                                           (9 of 17)
+
+
+  HU-16 · CA-4 Segregacion de roles en el panel analitico
+    ✓ el estudiante recibe 403 y ninguna metrica en la respuesta (102ms)
+    ✓ el estudiante que escribe la ruta del panel es devuelto al lienzo (1294ms)
+    ✓ el docente puede consultar sus cursos autorizados (87ms)
+    ✓ HU-06 permite al administrador consultar los cursos (86ms)
+    ✓ sin sesion la analitica responde 401 (15ms)
+
+
+  5 passing (2s)
+
+
+  (Results)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Tests:        5                                                                                │
+  │ Passing:      5                                                                                │
+  │ Failing:      0                                                                                │
+  │ Pending:      0                                                                                │
+  │ Skipped:      0                                                                                │
+  │ Screenshots:  0                                                                                │
+  │ Video:        false                                                                            │
+  │ Duration:     1 second                                                                         │
+  │ Spec Ran:     hu-16-ca4-segregacion-de-roles.cy.ts                                             │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+
+  Running:  hu-16-ca5-trazabilidad-seudonimizada.cy.ts                                    (10 of 17)
+
+
+  HU-16 · CA-5 Trazabilidad y frontera pública de privacidad
+    ✓ el estudiante demo está vinculado a CEDI-G1 (80ms)
+    ✓ generar sigue funcionando y el resumen global individualizable está retirado (2503ms)
+
+
+  2 passing (3s)
+
+
+  (Results)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Tests:        2                                                                                │
+  │ Passing:      2                                                                                │
+  │ Failing:      0                                                                                │
+  │ Pending:      0                                                                                │
+  │ Skipped:      0                                                                                │
+  │ Screenshots:  0                                                                                │
+  │ Video:        false                                                                            │
+  │ Duration:     2 seconds                                                                        │
+  │ Spec Ran:     hu-16-ca5-trazabilidad-seudonimizada.cy.ts                                       │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+
+  Running:  hu-18-ca7-registro-del-modo.cy.ts                                             (11 of 17)
+
+
+  HU-18 · CA-7 Registro del modo utilizado
+    ✓ cada ejecución viaja con la cabecera del modo activo sin abrir lecturas individuales (2986ms)
+
+
+  1 passing (3s)
+
+
+  (Results)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Tests:        1                                                                                │
+  │ Passing:      1                                                                                │
+  │ Failing:      0                                                                                │
+  │ Pending:      0                                                                                │
+  │ Skipped:      0                                                                                │
+  │ Screenshots:  0                                                                                │
+  │ Video:        false                                                                            │
+  │ Duration:     3 seconds                                                                        │
+  │ Spec Ran:     hu-18-ca7-registro-del-modo.cy.ts                                                │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+
+  Running:  hu-21-ca1-estructura-por-lenguaje-natural.cy.ts                               (12 of 17)
+
+
+  HU-21 · CA-1 Generación y privacidad del registro
+    ✓ genera crea un grafo no dirigido con 6 nodos sin publicar un evento individual al docente (2183ms)
+    ✓ genera crea una pila con 3, 42, 8, 17 sin publicar un evento individual al docente (1341ms)
+
+
+  2 passing (4s)
+
+
+  (Results)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Tests:        2                                                                                │
+  │ Passing:      2                                                                                │
+  │ Failing:      0                                                                                │
+  │ Pending:      0                                                                                │
+  │ Skipped:      0                                                                                │
+  │ Screenshots:  0                                                                                │
+  │ Video:        false                                                                            │
+  │ Duration:     3 seconds                                                                        │
+  │ Spec Ran:     hu-21-ca1-estructura-por-lenguaje-natural.cy.ts                                  │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+
+  Running:  hu-21-ca2-ejecucion-de-algoritmo.cy.ts                                        (13 of 17)
+
+
+  HU-21 · CA-2 / HU-06 · Pasos correlacionados por ejecución
+    ✓ reporta progreso con la correlación del servidor y no duplica un replay (4181ms)
+
+
+  1 passing (4s)
+
+
+  (Results)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Tests:        1                                                                                │
+  │ Passing:      1                                                                                │
+  │ Failing:      0                                                                                │
+  │ Pending:      0                                                                                │
+  │ Skipped:      0                                                                                │
+  │ Screenshots:  0                                                                                │
+  │ Video:        false                                                                            │
+  │ Duration:     4 seconds                                                                        │
+  │ Spec Ran:     hu-21-ca2-ejecucion-de-algoritmo.cy.ts                                           │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+
+  Running:  hu-21-ca3-solicitud-fuera-de-alcance.cy.ts                                    (14 of 17)
+
+
+  HU-21 · CA-3 Rechazo y privacidad del prompt
+    ✓ informa el rechazo y no publica el prompt ni la sesión al docente (2349ms)
+    ✓ el estudiante tampoco lee los eventos (797ms)
+
+
+  2 passing (3s)
+
+
+  (Results)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Tests:        2                                                                                │
+  │ Passing:      2                                                                                │
+  │ Failing:      0                                                                                │
+  │ Pending:      0                                                                                │
+  │ Skipped:      0                                                                                │
+  │ Screenshots:  0                                                                                │
+  │ Video:        false                                                                            │
+  │ Duration:     3 seconds                                                                        │
+  │ Spec Ran:     hu-21-ca3-solicitud-fuera-de-alcance.cy.ts                                       │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+
+  Running:  hu-21-ca4-patrones-de-reintento.cy.ts                                         (15 of 17)
+
+
+  HU-21 · CA-4 Reintentos sin acceso a sesiones individuales
+    ✓ permite reformular sin publicar la sesión de un estudiante (2580ms)
+    ✓ un único intento tampoco habilita la lectura individual (1354ms)
+
+
+  2 passing (4s)
+
+
+  (Results)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Tests:        2                                                                                │
+  │ Passing:      2                                                                                │
+  │ Failing:      0                                                                                │
+  │ Pending:      0                                                                                │
+  │ Skipped:      0                                                                                │
+  │ Screenshots:  0                                                                                │
+  │ Video:        false                                                                            │
+  │ Duration:     3 seconds                                                                        │
+  │ Spec Ran:     hu-21-ca4-patrones-de-reintento.cy.ts                                            │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+
+  Running:  hu-21-ca5-seudonimizacion-en-origen.cy.ts                                     (16 of 17)
+
+
+  HU-21 · CA-5 Privacidad de las lecturas públicas
+    ✓ los endpoints antiguos no publican identidades, sesiones ni conteos individuales (2263ms)
+
+
+  1 passing (2s)
+
+
+  (Results)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Tests:        1                                                                                │
+  │ Passing:      1                                                                                │
+  │ Failing:      0                                                                                │
+  │ Pending:      0                                                                                │
+  │ Skipped:      0                                                                                │
+  │ Screenshots:  0                                                                                │
+  │ Video:        false                                                                            │
+  │ Duration:     2 seconds                                                                        │
+  │ Spec Ran:     hu-21-ca5-seudonimizacion-en-origen.cy.ts                                        │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+
+  Running:  hu-21-ca6-resiliencia-del-registro.cy.ts                                      (17 of 17)
+
+
+  HU-21 · CA-6 Resiliencia del registro analítico
+    ✓ si la escritura del evento falla, el recorrido sigue visible y utilizable (3968ms)
+
+
+  1 passing (4s)
+
+
+  (Results)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Tests:        1                                                                                │
+  │ Passing:      1                                                                                │
+  │ Failing:      0                                                                                │
+  │ Pending:      0                                                                                │
+  │ Skipped:      0                                                                                │
+  │ Screenshots:  0                                                                                │
+  │ Video:        false                                                                            │
+  │ Duration:     4 seconds                                                                        │
+  │ Spec Ran:     hu-21-ca6-resiliencia-del-registro.cy.ts                                         │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+================================================================================
+
+  (Run Finished)
+
+
+       Spec                                              Tests  Passing  Failing  Pending  Skipped
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ ✔  hu-06-ca1-ranking-estructuras.cy.ts      00:01        1        1        -        -        - │
+  ├────────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ ✔  hu-06-ca2-ranking-algoritmos.cy.ts       00:01        1        1        -        -        - │
+  ├────────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ ✔  hu-06-ca3-tasa-reintento.cy.ts           00:01        1        1        -        -        - │
+  ├────────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ ✔  hu-06-ca4-cohorte-periodo.cy.ts          00:01        1        1        -        -        - │
+  ├────────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ ✔  hu-06-ca5-umbral-anonimato.cy.ts         00:01        1        1        -        -        - │
+  ├────────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ ✔  hu-06-ca6-sin-individuos.cy.ts           00:01        1        1        -        -        - │
+  ├────────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ ✔  hu-06-ca7-exportacion.cy.ts              00:01        1        1        -        -        - │
+  ├────────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ ✔  hu-06-integracion-real.cy.ts             00:06        1        1        -        -        - │
+  ├────────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ ✔  hu-16-ca4-segregacion-de-roles.cy.t      00:01        5        5        -        -        - │
+  │    s                                                                                           │
+  ├────────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ ✔  hu-16-ca5-trazabilidad-seudonimizad      00:02        2        2        -        -        - │
+  │    a.cy.ts                                                                                     │
+  ├────────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ ✔  hu-18-ca7-registro-del-modo.cy.ts        00:03        1        1        -        -        - │
+  ├────────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ ✔  hu-21-ca1-estructura-por-lenguaje-n      00:03        2        2        -        -        - │
+  │    atural.cy.ts                                                                                │
+  ├────────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ ✔  hu-21-ca2-ejecucion-de-algoritmo.cy      00:04        1        1        -        -        - │
+  │    .ts                                                                                         │
+  ├────────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ ✔  hu-21-ca3-solicitud-fuera-de-alcanc      00:03        2        2        -        -        - │
+  │    e.cy.ts                                                                                     │
+  ├────────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ ✔  hu-21-ca4-patrones-de-reintento.cy.      00:03        2        2        -        -        - │
+  │    ts                                                                                          │
+  ├────────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ ✔  hu-21-ca5-seudonimizacion-en-origen      00:02        1        1        -        -        - │
+  │    .cy.ts                                                                                      │
+  ├────────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ ✔  hu-21-ca6-resiliencia-del-registro.      00:04        1        1        -        -        - │
+  │    cy.ts                                                                                       │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+    ✔  All specs passed!                        00:46       25       25        -        -        -
+

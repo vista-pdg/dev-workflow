@@ -1,0 +1,39 @@
+
+> frontend@0.0.0 test:coverage
+> vitest run --coverage
+
+(!) Your Vite config uses features that are unsupported by `configLoader: 'native'`, which is planned to become the default in a future major version of Vite:
+  - `__dirname` (vitest.config.ts:10:41). Use `import.meta.dirname` instead
+Set `VITE_CONFIG_NATIVE_IGNORE_WARNING=true` to suppress this warning.
+
+ RUN  v5.0.0 /home/curaca/icesi/pdg/frontend
+      Coverage enabled with v8
+
+
+ Test Files  14 passed (14)
+      Tests  95 passed (95)
+   Start at  18:01:39
+   Duration  1.17s (transform 40%, import 24%, environment 15%, tests 15%, worker 7%)
+
+ % Coverage report from v8
+-------------------|---------|----------|---------|---------|-------------------
+File               | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s
+-------------------|---------|----------|---------|---------|-------------------
+All files          |   95.56 |    91.75 |   97.24 |   96.75 |
+ components        |     100 |    95.23 |     100 |     100 |
+  ...csRanking.tsx |     100 |    95.23 |     100 |     100 | 35,44
+ core              |   95.03 |    90.74 |   96.77 |   95.52 |
+  engine.ts        |    98.3 |      100 |      95 |     100 |
+  layout2d.ts      |    94.4 |    88.35 |   98.14 |   94.78 | ...53,329-330,380
+  preferences.ts   |      70 |    66.66 |   66.66 |      70 | 9-12
+  webgl.ts         |     100 |    88.88 |     100 |     100 | 20
+ pages             |   95.45 |    90.62 |   96.66 |     100 |
+  ...yticsPage.tsx |   95.45 |    90.62 |   96.66 |     100 | ...14,144,149,152
+-------------------|---------|----------|---------|---------|-------------------
+
+=============================== Coverage summary ===============================
+Statements   : 95.56% ( 539/564 )
+Branches     : 91.75% ( 345/376 )
+Functions    : 97.24% ( 141/145 )
+Lines        : 96.75% ( 447/462 )
+================================================================================

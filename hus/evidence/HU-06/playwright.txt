@@ -1,0 +1,41 @@
+
+Running 30 tests using 1 worker
+
+(node:2459630) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 [desktop] › tests/ui/analytics.spec.mjs:49:3 › analítica · tres vistas y foco · dark (3.9s)
+  ✓   2 [desktop] › tests/ui/analytics.spec.mjs:72:5 › analítica · suppressed · dark (2.4s)
+  ✓   3 [desktop] › tests/ui/analytics.spec.mjs:72:5 › analítica · empty · dark (2.3s)
+  ✓   4 [desktop] › tests/ui/analytics.spec.mjs:72:5 › analítica · error · dark (2.3s)
+  ✓   5 [desktop] › tests/ui/analytics.spec.mjs:72:5 › analítica · no-courses · dark (2.0s)
+  ✓   6 [desktop] › tests/ui/analytics.spec.mjs:49:3 › analítica · tres vistas y foco · light (3.6s)
+  ✓   7 [desktop] › tests/ui/analytics.spec.mjs:72:5 › analítica · suppressed · light (2.3s)
+  ✓   8 [desktop] › tests/ui/analytics.spec.mjs:72:5 › analítica · empty · light (2.3s)
+  ✓   9 [desktop] › tests/ui/analytics.spec.mjs:72:5 › analítica · error · light (2.4s)
+  ✓  10 [desktop] › tests/ui/analytics.spec.mjs:72:5 › analítica · no-courses · light (2.0s)
+(node:2465406) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  11 [tablet] › tests/ui/analytics.spec.mjs:49:3 › analítica · tres vistas y foco · dark (3.7s)
+  ✓  12 [tablet] › tests/ui/analytics.spec.mjs:72:5 › analítica · suppressed · dark (2.3s)
+  ✓  13 [tablet] › tests/ui/analytics.spec.mjs:72:5 › analítica · empty · dark (2.2s)
+  ✓  14 [tablet] › tests/ui/analytics.spec.mjs:72:5 › analítica · error · dark (2.2s)
+  ✓  15 [tablet] › tests/ui/analytics.spec.mjs:72:5 › analítica · no-courses · dark (2.0s)
+  ✓  16 [tablet] › tests/ui/analytics.spec.mjs:49:3 › analítica · tres vistas y foco · light (3.7s)
+  ✓  17 [tablet] › tests/ui/analytics.spec.mjs:72:5 › analítica · suppressed · light (2.2s)
+  ✓  18 [tablet] › tests/ui/analytics.spec.mjs:72:5 › analítica · empty · light (2.2s)
+  ✓  19 [tablet] › tests/ui/analytics.spec.mjs:72:5 › analítica · error · light (2.2s)
+  ✓  20 [tablet] › tests/ui/analytics.spec.mjs:72:5 › analítica · no-courses · light (2.1s)
+(node:2469616) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  21 [mobile] › tests/ui/analytics.spec.mjs:49:3 › analítica · tres vistas y foco · dark (5.0s)
+  ✓  22 [mobile] › tests/ui/analytics.spec.mjs:72:5 › analítica · suppressed · dark (2.4s)
+  ✓  23 [mobile] › tests/ui/analytics.spec.mjs:72:5 › analítica · empty · dark (2.6s)
+  ✓  24 [mobile] › tests/ui/analytics.spec.mjs:72:5 › analítica · error · dark (2.7s)
+  ✓  25 [mobile] › tests/ui/analytics.spec.mjs:72:5 › analítica · no-courses · dark (2.2s)
+  ✓  26 [mobile] › tests/ui/analytics.spec.mjs:49:3 › analítica · tres vistas y foco · light (5.1s)
+  ✓  27 [mobile] › tests/ui/analytics.spec.mjs:72:5 › analítica · suppressed · light (2.3s)
+  ✓  28 [mobile] › tests/ui/analytics.spec.mjs:72:5 › analítica · empty · light (2.3s)
+  ✓  29 [mobile] › tests/ui/analytics.spec.mjs:72:5 › analítica · error · light (2.2s)
+  ✓  30 [mobile] › tests/ui/analytics.spec.mjs:72:5 › analítica · no-courses · light (2.0s)
+
+  30 passed (1.4m)

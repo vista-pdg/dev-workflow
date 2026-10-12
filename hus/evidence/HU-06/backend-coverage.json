@@ -1,0 +1,68 @@
+[
+  {
+    "class": "com/vista/pdg/telemetry/controller/PedagogicalAnalyticsController",
+    "coveredLines": 18,
+    "missedLines": 0,
+    "percent": 100.0
+  },
+  {
+    "class": "com/vista/pdg/telemetry/repository/PedagogicalAnalyticsRepository",
+    "coveredLines": 27,
+    "missedLines": 1,
+    "percent": 96.43
+  },
+  {
+    "class": "com/vista/pdg/telemetry/repository/PedagogicalAnalyticsRepository$AlgorithmCount",
+    "coveredLines": 1,
+    "missedLines": 0,
+    "percent": 100.0
+  },
+  {
+    "class": "com/vista/pdg/telemetry/repository/PedagogicalAnalyticsRepository$StructureCount",
+    "coveredLines": 1,
+    "missedLines": 0,
+    "percent": 100.0
+  },
+  {
+    "class": "com/vista/pdg/telemetry/repository/PedagogicalAnalyticsRepository$RetryCount",
+    "coveredLines": 1,
+    "missedLines": 0,
+    "percent": 100.0
+  },
+  {
+    "class": "com/vista/pdg/academic/service/TeachingAssignmentService$Teacher",
+    "coveredLines": 1,
+    "missedLines": 0,
+    "percent": 100.0
+  },
+  {
+    "class": "com/vista/pdg/academic/service/TeachingAssignmentService",
+    "coveredLines": 46,
+    "missedLines": 0,
+    "percent": 100.0
+  },
+  {
+    "class": "com/vista/pdg/telemetry/service/AnalyticsCsv",
+    "coveredLines": 54,
+    "missedLines": 1,
+    "percent": 98.18
+  },
+  {
+    "class": "com/vista/pdg/telemetry/service/AnalyticsDisclosure",
+    "coveredLines": 57,
+    "missedLines": 0,
+    "percent": 100.0
+  },
+  {
+    "class": "com/vista/pdg/telemetry/service/PedagogicalAnalyticsService",
+    "coveredLines": 14,
+    "missedLines": 0,
+    "percent": 100.0
+  },
+  {
+    "class": "com/vista/pdg/telemetry/service/AnalyticsFilter",
+    "coveredLines": 17,
+    "missedLines": 0,
+    "percent": 100.0
+  }
+]
