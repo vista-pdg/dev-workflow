@@ -44252,6 +44252,450 @@
           ]
         }
       ]
+    },
+    {
+      "type": "frame",
+      "id": "jja2t",
+      "x": 8660,
+      "y": 1250,
+      "name": "HU-33 · Gestión de cursos — escritorio",
+      "clip": true,
+      "width": 1440,
+      "height": 900,
+      "fill": "$shell",
+      "layout": "vertical",
+      "gap": 20,
+      "padding": [
+        56,
+        64
+      ],
+      "children": [
+        {
+          "type": "text",
+          "id": "k84JtV",
+          "name": "Título",
+          "fill": "$fg",
+          "content": "Cursos y grupos",
+          "fontFamily": "$font",
+          "fontSize": 24,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "text",
+          "id": "xZuM6",
+          "name": "Descripción",
+          "fill": "$muted-fg",
+          "content": "Crea grupos y administra los docentes y estudiantes vinculados. Las métricas siguen el curso seleccionado.",
+          "fontFamily": "$font",
+          "fontSize": 13,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "frame",
+          "id": "llp8a",
+          "name": "Nuevo curso",
+          "width": "fill_container",
+          "height": 160,
+          "fill": "$bg",
+          "stroke": "$border",
+          "strokeWidth": 1,
+          "layout": "vertical",
+          "gap": 10,
+          "padding": [
+            14,
+            20
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "NFhQc",
+              "name": "Crear encabezado",
+              "fill": "$primary-light",
+              "content": "NUEVO CURSO",
+              "fontFamily": "$font",
+              "fontSize": 12,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "nTq2h",
+              "name": "Crear campos",
+              "fill": "$fg",
+              "content": "Código  [CEDI-G3]       Nombre  [Computación y Estructuras Discretas I]       Periodo  [2026-1 activo]",
+              "fontFamily": "$font",
+              "fontSize": 13,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "kByBC",
+              "name": "Crear botón",
+              "fill": "$primary-light",
+              "content": "[ Crear curso ]",
+              "fontFamily": "$font",
+              "fontSize": 13,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "siN4R",
+          "name": "Cursos existentes",
+          "width": "fill_container",
+          "height": 132,
+          "fill": "$bg",
+          "stroke": "$border",
+          "strokeWidth": 1,
+          "layout": "vertical",
+          "gap": 10,
+          "padding": [
+            14,
+            20
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "XfzqO",
+              "name": "Tabla encabezado",
+              "fill": "$muted-fg",
+              "content": "CÓDIGO                 NOMBRE                                                PERIODO            CUOTA                GESTIÓN",
+              "fontFamily": "$font",
+              "fontSize": 11,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "U3ZBn2",
+              "name": "Curso 1",
+              "fill": "$fg",
+              "content": "CEDI-G1                 Computación y Estructuras Discretas I      2026-1               40 msg/día         [ Gestionar ]",
+              "fontFamily": "$font",
+              "fontSize": 13,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "Oogs5",
+              "name": "Curso 2",
+              "fill": "$fg",
+              "content": "CEDI-G2                 Computación y Estructuras Discretas I      2026-1               40 msg/día         [ Gestionar ]",
+              "fontFamily": "$font",
+              "fontSize": 13,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "VFQJO",
+          "name": "Asignaciones de CEDI-G1",
+          "width": "fill_container",
+          "height": 200,
+          "fill": "$bg",
+          "stroke": "$border",
+          "strokeWidth": 1,
+          "layout": "vertical",
+          "gap": 10,
+          "padding": [
+            14,
+            20
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "yIPBW",
+              "name": "Grupo título",
+              "fill": "$fg",
+              "content": "CEDI-G1 · Docentes responsables y matrícula",
+              "fontFamily": "$font",
+              "fontSize": 17,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "B5IwI",
+              "name": "Docentes lista",
+              "fill": "$fg",
+              "content": "DOCENTES       María Pérez · docente@icesi.edu.co   [ Retirar ]       [ Seleccionar docente activo ]   [ Asignar ]",
+              "fontFamily": "$font",
+              "fontSize": 13,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "wzQ71",
+              "name": "Estudiantes lista",
+              "fill": "$fg",
+              "content": "ESTUDIANTES   Ana Ramírez · ana@u.icesi.edu.co    [ Cambiar curso ]   [ Quitar matrícula ]",
+              "fontFamily": "$font",
+              "fontSize": 13,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "suKmh",
+              "name": "Estudiantes acción",
+              "fill": "$primary-light",
+              "content": "[ Buscar estudiante registrado ]   [ Vincular estudiante ]",
+              "fontFamily": "$font",
+              "fontSize": 13,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "m3HgJl",
+          "name": "Estados",
+          "fill": "$muted-fg",
+          "content": "Estados: cargando · sin docentes/estudiantes · validación de código duplicado · error de guardado · confirmación de cambio",
+          "fontFamily": "$font",
+          "fontSize": 12,
+          "fontWeight": "normal"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "A1vRP",
+      "x": 10180,
+      "y": 1250,
+      "name": "HU-33 · Gestión de cursos — móvil",
+      "clip": true,
+      "width": 390,
+      "height": 844,
+      "fill": "$shell",
+      "layout": "vertical",
+      "gap": 16,
+      "padding": [
+        24,
+        16
+      ],
+      "children": [
+        {
+          "type": "text",
+          "id": "DKiUJ",
+          "name": "Título móvil",
+          "fill": "$fg",
+          "content": "Cursos y grupos",
+          "fontFamily": "$font",
+          "fontSize": 20,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "text",
+          "id": "N91OqX",
+          "name": "Descripción móvil",
+          "fill": "$muted-fg",
+          "textGrowth": "fixed-width",
+          "width": 340,
+          "content": "Administra grupos, docentes y estudiantes.",
+          "fontFamily": "$font",
+          "fontSize": 12,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "frame",
+          "id": "RF277",
+          "name": "Crear curso móvil",
+          "width": "fill_container",
+          "height": 175,
+          "fill": "$bg",
+          "stroke": "$border",
+          "strokeWidth": 1,
+          "layout": "vertical",
+          "gap": 8,
+          "padding": [
+            12,
+            14
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "mvm5W",
+              "name": "Encabezado crear móvil",
+              "fill": "$primary-light",
+              "content": "NUEVO CURSO",
+              "fontFamily": "$font",
+              "fontSize": 11,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "ykEqL",
+              "name": "Campos crear móvil",
+              "fill": "$fg",
+              "textGrowth": "fixed-width",
+              "width": 310,
+              "content": "Código  [CEDI-G3]\nNombre  [Estructuras Discretas I]\nPeriodo  [2026-1 activo]",
+              "fontFamily": "$font",
+              "fontSize": 12,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "tgFHJ",
+              "name": "Acción crear móvil",
+              "fill": "$primary-light",
+              "content": "[ Crear curso ]",
+              "fontFamily": "$font",
+              "fontSize": 13,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "Aj7J4",
+          "name": "Cursos móvil",
+          "width": "fill_container",
+          "height": 110,
+          "fill": "$bg",
+          "stroke": "$border",
+          "strokeWidth": 1,
+          "layout": "vertical",
+          "gap": 8,
+          "padding": [
+            12,
+            14
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "OBt0U",
+              "name": "Grupo móvil",
+              "fill": "$fg",
+              "content": "CEDI-G1 · 2026-1     [ Gestionar ]",
+              "fontFamily": "$font",
+              "fontSize": 13,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "kW9KT",
+              "name": "Otro grupo móvil",
+              "fill": "$fg",
+              "content": "CEDI-G2 · 2026-1     [ Gestionar ]",
+              "fontFamily": "$font",
+              "fontSize": 13,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "QbJEk",
+          "name": "Docentes móvil",
+          "width": "fill_container",
+          "height": 130,
+          "fill": "$bg",
+          "stroke": "$border",
+          "strokeWidth": 1,
+          "layout": "vertical",
+          "gap": 8,
+          "padding": [
+            12,
+            14
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "lwEWv",
+              "name": "Docentes título móvil",
+              "fill": "$primary-light",
+              "content": "DOCENTES DE CEDI-G1",
+              "fontFamily": "$font",
+              "fontSize": 11,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "GHa3D",
+              "name": "Docente móvil",
+              "fill": "$fg",
+              "content": "María Pérez     [ Retirar ]",
+              "fontFamily": "$font",
+              "fontSize": 13,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "v5dsn",
+              "name": "Añadir docente móvil",
+              "fill": "$fg",
+              "textGrowth": "fixed-width",
+              "width": 310,
+              "content": "[ Seleccionar docente ] [ Asignar ]",
+              "fontFamily": "$font",
+              "fontSize": 12,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "ti9fp",
+          "name": "Matrícula móvil",
+          "width": "fill_container",
+          "height": 150,
+          "fill": "$bg",
+          "stroke": "$border",
+          "strokeWidth": 1,
+          "layout": "vertical",
+          "gap": 8,
+          "padding": [
+            12,
+            14
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "ZnY8r",
+              "name": "Matrícula título móvil",
+              "fill": "$primary-light",
+              "content": "ESTUDIANTES DE CEDI-G1",
+              "fontFamily": "$font",
+              "fontSize": 11,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "a0NEWB",
+              "name": "Estudiante móvil",
+              "fill": "$fg",
+              "content": "Ana Ramírez",
+              "fontFamily": "$font",
+              "fontSize": 13,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "cM7Bb",
+              "name": "Estudiante acciones móvil",
+              "fill": "$fg",
+              "textGrowth": "fixed-width",
+              "width": 310,
+              "content": "[ Cambiar curso ] [ Quitar matrícula ]",
+              "fontFamily": "$font",
+              "fontSize": 12,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "C9hQQ",
+              "name": "Agregar estudiante móvil",
+              "fill": "$primary-light",
+              "textGrowth": "fixed-width",
+              "width": 310,
+              "content": "[ Buscar estudiante ] [ Vincular ]",
+              "fontFamily": "$font",
+              "fontSize": 12,
+              "fontWeight": "normal"
+            }
+          ]
+        }
+      ]
     }
   ],
   "variables": {
