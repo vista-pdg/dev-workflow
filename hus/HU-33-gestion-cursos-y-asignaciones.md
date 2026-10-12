@@ -1,6 +1,6 @@
 # HU-33 · Gestión de cursos, matrículas y docentes
 
-Estado: implementada y validada localmente; ramas locales `feat/HU-33-gestion-cursos-y-asignaciones` en backend, frontend y dev-workflow. Pendiente de validación humana antes de publicar.
+Estado: implementada y publicada para revisión; rama `feat/HU-33-gestion-cursos-y-asignaciones` en backend, frontend y dev-workflow. PR abiertos: [backend #14](https://github.com/vista-pdg/backend/pull/14), [frontend #15](https://github.com/vista-pdg/frontend/pull/15) y [dev-workflow #4](https://github.com/vista-pdg/dev-workflow/pull/4). Sin fusionar.
 
 ## Necesidad
 
@@ -43,7 +43,7 @@ Como administrador quiero crear grupos de curso, vincular estudiantes registrado
 | 4 · Frontend | `CourseManagementSection` en Administración → Cursos; contratos tipados y documentación. `npm run build`, `npm run lint` y 99 pruebas unitarias pasan. El componente tiene 84,24 % de sentencias y 91,74 % de líneas. |
 | 5 · Cypress | `hu-33-gestion-cursos-y-asignaciones.cy.ts`: 3/3 escenarios pasan en Chrome 154 y Firefox 157 con backend real. |
 | 6 · Integración y QA | Playwright+axe: 6/6 casos de escritorio, tableta y móvil, claro y oscuro; sin violaciones serias/críticas; sin desbordamiento horizontal. Capturas en el reporte local de Playwright. |
-| 7 · Publicación | Requiere autorización expresa para esta nueva HU según `skills/hu-workflow/SKILL.md`. |
+| 7 · Publicación | Autorizada por el usuario con condición de mantener cobertura; tres ramas remotas y PR abiertos. Backend y frontend: todos los checks CI verdes. QA visual remoto: 113 pruebas correctas, 4 omitidas en la repetición. |
 
 ## Evidencia por criterio
 
@@ -67,3 +67,9 @@ Como administrador quiero crear grupos de curso, vincular estudiantes registrado
 ## Fuera de alcance
 
 No hay CRUD de periodos académicos, eliminación de cursos, matrículas simultáneas ni exportación de estudiantes. La exportación CSV agregada y el umbral de anonimato siguen en HU-06. Los cursos de prueba creados en la base local se conservan porque esta HU no introduce eliminación de cursos; el estudiante demo se restituye a `CEDI-G1` al terminar Cypress.
+
+## CI publicada
+
+- [Backend CI](https://github.com/vista-pdg/backend/actions/runs/38320606154): Spotless, 374 pruebas, JaCoCo y Cypress completo en Chrome y Firefox pasan.
+- [Frontend CI](https://github.com/vista-pdg/frontend/actions/runs/38320611771): typecheck, 99 pruebas, build, lint y Cypress completo en ambos navegadores pasan. Cobertura remota: 95,79 % líneas, 93,23 % sentencias, 87,58 % ramas; `CourseManagementSection` conserva 91,74 % de líneas.
+- [QA visual y axe](https://github.com/vista-pdg/dev-workflow/actions/runs/38322019871): 113 pruebas correctas, 4 omitidas. La primera ejecución intermitente falló en el foco del tutorial existente; la repetición completa pasó sin modificar código de producto. La ejecución de referencia sobre `main` también pasó.
