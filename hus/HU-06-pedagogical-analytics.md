@@ -381,3 +381,26 @@ evidencia en dev-workflow. No se ha solicitado cerrar el backlog.
 PR publicados: [backend #13](https://github.com/vista-pdg/backend/pull/13),
 [frontend #14](https://github.com/vista-pdg/frontend/pull/14) y
 [diseño/evidencias #3](https://github.com/vista-pdg/dev-workflow/pull/3).
+
+## Revisión de CI para integración · 12 de octubre de 2026
+
+- Backend `d40187d`: [CI aprobada, intento 2](https://github.com/vista-pdg/backend/actions/runs/38295461109/attempts/2).
+  Maven: 369 pruebas, 0 fallos, 2 pruebas Gemini live omitidas; puerta de cobertura aprobada.
+  Cypress completo aprobado en Chrome y Firefox. El checkout del frontend emparejado fue
+  `fd0b1c87e1c9a4ce80b8d9b5e376db4d13bfe306`.
+- Frontend `fd0b1c8`: [CI aprobada](https://github.com/vista-pdg/frontend/actions/runs/38295954888),
+  incluidos typecheck, cobertura, build, lint y Cypress completo en ambos navegadores.
+- La regresión HU-08 se actualizó a la autorización de ADMIN que exige HU-06 y al tablero
+  implementado; conserva la redirección inicial y las restricciones de estudiante/anónimo.
+- QA visual: los 30 casos de analítica pasaron en las dos ejecuciones completas.
+  La suite general detectó un fallo intermitente de foco al abrir el tutorial inmediatamente
+  después de cambiar de tema: [primera ejecución](https://github.com/vista-pdg/dev-workflow/actions/runs/38295771622)
+  y [segunda ejecución](https://github.com/vista-pdg/dev-workflow/actions/runs/38296627876).
+  Los componentes Tutorial y ThemeToggle no cambian en esta HU. La prueba aislada pasó nueve
+  repeticiones locales en la rama y nueve sobre main. Se sincronizó el helper del test con el
+  cierre del menú y la restauración de foco existente antes de iniciar la siguiente interacción;
+  se conserva la comprobación estricta del foco del tutorial y no se añaden pausas fijas,
+  reintentos ni cambios de snapshots. La suite completa debe validarse de nuevo tras este ajuste.
+- El pen publicado coincide con el archivo guardado: blob Git
+  `7106d9701d33cc0fa263fc4475c73c74e16833f9`, 1.738.589 bytes.
+- La revisión de usabilidad con docentes y el cierre del backlog permanecen pendientes.
