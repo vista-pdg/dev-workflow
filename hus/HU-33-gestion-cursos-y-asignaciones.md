@@ -1,6 +1,6 @@
 # HU-33 · Gestión de cursos, matrículas y docentes
 
-Estado: implementada y publicada para revisión; rama `feat/HU-33-gestion-cursos-y-asignaciones` en backend, frontend y dev-workflow. PR abiertos: [backend #14](https://github.com/vista-pdg/backend/pull/14), [frontend #15](https://github.com/vista-pdg/frontend/pull/15) y [dev-workflow #4](https://github.com/vista-pdg/dev-workflow/pull/4). Sin fusionar.
+Estado: implementada y validada; rama `feat/HU-33-gestion-cursos-y-asignaciones` en backend, frontend y dev-workflow. PR de integración: [backend #14](https://github.com/vista-pdg/backend/pull/14), [frontend #15](https://github.com/vista-pdg/frontend/pull/15) y [dev-workflow #4](https://github.com/vista-pdg/dev-workflow/pull/4). Los dos primeros se fusionaron tras pasar CI; el estado final de cada PR se consulta en GitHub.
 
 ## Necesidad
 
@@ -43,7 +43,7 @@ Como administrador quiero crear grupos de curso, vincular estudiantes registrado
 | 4 · Frontend | `CourseManagementSection` en Administración → Cursos; contratos tipados y documentación. `npm run build`, `npm run lint` y 99 pruebas unitarias pasan. El componente tiene 84,24 % de sentencias y 91,74 % de líneas. |
 | 5 · Cypress | `hu-33-gestion-cursos-y-asignaciones.cy.ts`: 3/3 escenarios pasan en Chrome 154 y Firefox 157 con backend real. |
 | 6 · Integración y QA | Playwright+axe: 6/6 casos de escritorio, tableta y móvil, claro y oscuro; sin violaciones serias/críticas; sin desbordamiento horizontal. Capturas en el reporte local de Playwright. |
-| 7 · Publicación | Autorizada por el usuario con condición de mantener cobertura; tres ramas remotas y PR abiertos. Backend y frontend: todos los checks CI verdes. QA visual remoto: 113 pruebas correctas, 4 omitidas en la repetición. |
+| 7 · Publicación | Autorizada por el usuario con condición de mantener cobertura; tres ramas remotas y PR creados. Backend y frontend: todos los checks CI verdes antes de fusionar. QA visual remoto: 113 pruebas correctas, 4 omitidas en la repetición. |
 
 ## Evidencia por criterio
 
