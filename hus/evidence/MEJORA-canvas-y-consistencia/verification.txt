@@ -1,0 +1,34 @@
+Backend · JAVA_HOME=Java 21 make test
+Tests run: 386, Failures: 0, Errors: 0, Skipped: 2
+BUILD SUCCESS
+Las 2 omitidas son GeminiLiveGenerationTest, que requiere habilitar llamadas reales.
+
+Frontend · Node 24.8
+npm run lint: exit 0
+npm test: 16 files passed, 105 tests passed
+npm run build: exit 0 (tsc -b + vite build)
+Aviso existente de bundle >500 kB; no hay errores de compilación.
+
+Playwright · Chromium · fixtures deterministas y axe
+analytics.spec.mjs + course-management.spec.mjs: 36 passed
+learning-flow.spec.mjs: 30 passed
+Captura final de admin/analítica: 6 passed
+Sin actualización de baselines.
+
+Cypress · API real temporal · Chrome
+6 criterios nuevos + basic-* + ui-learning-flow: 45 passed
+
+Cypress · Chrome · regresiones adicionales
+canvas-* + graph-algorithms + ui-code-panel-* + ui-code-representations: 21 passed
+Son 62 casos distintos de Chrome en total (4 casos se repitieron entre los dos runs).
+
+Cypress · Firefox · mismos casos nuevos y regresiones
+All specs passed: 62 tests, 62 passing, 0 failing, exit 0.
+Nota del entorno: al cerrar el navegador, Cypress informó kill EACCES en clear data context;
+el propio runner confirmó que no afecta exit 0. Los casos terminaron antes de ese mensaje.
+
+Verificaciones posteriores al último ajuste:
+- CodeRepresentationsTest + CanvasAlgorithmSourceTest: 14 tests, 0 failures/errors.
+  Incluye compilación Java 17 del listado AVL con la raíz del canvas como argumento.
+- learning-flow: origen/ocultar/restaurar/guía con rastro existente: 6 passed.
+- git diff --check limpio en los tres repos.
