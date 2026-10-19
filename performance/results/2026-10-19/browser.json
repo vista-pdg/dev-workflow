@@ -1,0 +1,71 @@
+{
+  "capturedAt": "2026-10-19T18:29:12.959Z",
+  "host": "https://vista.kuros.work",
+  "viewport": "1440x900",
+  "loginToAppMs": 812.6697080000004,
+  "loginTiming": {
+    "navigation": {
+      "name": "https://vista.kuros.work/login",
+      "entryType": "navigation",
+      "startTime": 0,
+      "duration": 2654.400000002235,
+      "navigationId": 7985,
+      "initiatorType": "navigation",
+      "deliveryType": "",
+      "nextHopProtocol": "h2",
+      "renderBlockingStatus": "non-blocking",
+      "contentType": "text/html",
+      "contentEncoding": "",
+      "workerStart": 0,
+      "workerRouterEvaluationStart": 0,
+      "workerCacheLookupStart": 0,
+      "workerMatchedSourceType": "",
+      "workerFinalSourceType": "",
+      "redirectStart": 0,
+      "redirectEnd": 0,
+      "fetchStart": 0.10000000149011612,
+      "domainLookupStart": 881.5,
+      "domainLookupEnd": 881.5,
+      "connectStart": 881.5,
+      "secureConnectionStart": 881.5,
+      "connectEnd": 881.5,
+      "requestStart": 881.6000000014901,
+      "responseStart": 1071.199999999255,
+      "firstInterimResponseStart": 0,
+      "finalResponseHeadersStart": 1071.199999999255,
+      "responseEnd": 1072.1000000014901,
+      "transferSize": 801,
+      "encodedBodySize": 501,
+      "decodedBodySize": 501,
+      "responseStatus": 200,
+      "serverTiming": [],
+      "unloadEventStart": 0,
+      "unloadEventEnd": 0,
+      "domInteractive": 1078.800000000745,
+      "domContentLoadedEventStart": 2653.5,
+      "domContentLoadedEventEnd": 2653.5,
+      "domComplete": 2654.400000002235,
+      "loadEventStart": 2654.400000002235,
+      "loadEventEnd": 2654.400000002235,
+      "type": "navigate",
+      "redirectCount": 0,
+      "activationStart": 0,
+      "criticalCHRestart": 0,
+      "notRestoredReasons": null,
+      "confidence": {
+        "randomizedTriggerRate": 0.4994798,
+        "value": "high"
+      }
+    },
+    "paints": [],
+    "lcp": null,
+    "longTasks": [
+      {
+        "start": 1601.9000000022352,
+        "duration": 1052
+      }
+    ]
+  },
+  "jsErrors": [],
+  "note": "Single desktop Chromium sample, empty canvas, no CPU/network throttling. Does not certify 40 client GPUs or 3D FPS."
+}

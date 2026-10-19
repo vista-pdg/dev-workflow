@@ -1,0 +1,94 @@
+{
+  "name": "projects/vista-pdg/sites/vista-pdg/customDomains/vista.kuros.work",
+  "createTime": "2026-10-19T19:41:24.531860986Z",
+  "updateTime": "2026-10-19T19:41:24.531861078Z",
+  "etag": "W/\"1792438884\"",
+  "hostState": "HOST_MISMATCH",
+  "ownershipState": "OWNERSHIP_MISSING",
+  "requiredDnsUpdates": {
+    "discovered": [
+      {
+        "domainName": "vista.kuros.work",
+        "records": [
+          {
+            "domainName": "vista.kuros.work",
+            "type": "CNAME",
+            "rdata": "ghs.googlehosted.com",
+            "requiredAction": "REMOVE"
+          }
+        ]
+      },
+      {
+        "domainName": "ghs.googlehosted.com",
+        "records": [
+          {
+            "domainName": "ghs.googlehosted.com",
+            "type": "A",
+            "rdata": "173.194.64.121"
+          },
+          {
+            "domainName": "ghs.googlehosted.com",
+            "type": "AAAA",
+            "rdata": "2607:f8b0:4001:c6a::79"
+          }
+        ]
+      }
+    ],
+    "desired": [
+      {
+        "domainName": "vista.kuros.work",
+        "records": [
+          {
+            "domainName": "vista.kuros.work",
+            "type": "CNAME",
+            "rdata": "vista-pdg.web.app",
+            "requiredAction": "ADD"
+          }
+        ]
+      }
+    ],
+    "checkTime": "2026-10-19T19:56:27.178925544Z"
+  },
+  "certPreference": "PROJECT_GROUPED",
+  "cert": {
+    "type": "TEMPORARY",
+    "state": "CERT_VALIDATING",
+    "verification": {
+      "dns": {
+        "discovered": [
+          {
+            "domainName": "_acme-challenge.vista.kuros.work",
+            "records": [
+              {
+                "domainName": "_acme-challenge.vista.kuros.work",
+                "type": "TXT",
+                "rdata": "k6Rmx2kbRWp8RM16ASt5SsYhQ5RMVeXjVvYQgFz-Kz4"
+              }
+            ]
+          }
+        ],
+        "desired": [
+          {
+            "domainName": "_acme-challenge.vista.kuros.work",
+            "records": [
+              {
+                "domainName": "_acme-challenge.vista.kuros.work",
+                "type": "TXT",
+                "rdata": "k6Rmx2kbRWp8RM16ASt5SsYhQ5RMVeXjVvYQgFz-Kz4",
+                "requiredAction": "ADD"
+              }
+            ]
+          }
+        ],
+        "checkTime": "2026-10-19T19:56:29.343346541Z"
+      },
+      "http": {
+        "path": "/.well-known/acme-challenge/hB6of3VUaWYpSEtFBGueT8BV1cydajGj918L1NYory90xmBUY4y6x8IIojwgAf2-",
+        "desired": "hB6of3VUaWYpSEtFBGueT8BV1cydajGj918L1NYory90xmBUY4y6x8IIojwgAf2-.M0-GObbb5ePi63ASQsPKBrDqfgayGnOWpyrEF0nHqug",
+        "discovered": "<!doctype html>\n<html lang=\"es\">\n  <head>\n    <meta charset=\"UTF-8\" />\n    <link rel=\"icon\" type=\"image/svg+xml\" href=\"/brand/icon-icesi-color.svg\" />\n    <meta name=\"viewport\" content=\"width=devic...",
+        "lastCheckTime": "2026-10-19T19:56:29.343346541Z"
+      }
+    }
+  },
+  "_checkedAt": "2026-10-19T19:56:39.700066+00:00"
+}

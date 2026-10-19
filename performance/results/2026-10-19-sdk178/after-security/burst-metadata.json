@@ -1,0 +1,16 @@
+{
+  "mode": "burst",
+  "host": "https://vista-frontend-sbt7d3iyka-uc.a.run.app",
+  "start": "2026-10-19T19:40:28.376835+00:00",
+  "end": "2026-10-19T19:41:09.847419+00:00",
+  "users": 40,
+  "ready": 40,
+  "finished": 40,
+  "generations": 40,
+  "generationFailures": 0,
+  "maxInflightGenerations": 40,
+  "statusCounts": {
+    "200": 400,
+    "204": 80
+  }
+}

@@ -13,7 +13,7 @@ esa raíz; no depende de Claude Code ni de rutas particulares de una máquina:
 
 | Directorio | Repo | Stack |
 |---|---|---|
-| `backend/` | `vista-pdg/backend` | Spring Boot 4.0.6, Java 21, Maven, Postgres, JWT |
+| `backend/` | `vista-pdg/backend` | Spring Boot 4.0.8, Java 21, Maven, Postgres, JWT |
 | `frontend/` | `vista-pdg/frontend` | React 19, Vite 8, Tailwind v4, react-three-fiber |
 | `dev-workflow/` | `vista-pdg/dev-workflow` | Skills, diseño, specs y QA visual |
 | `terraform-backend/` | `vista-pdg/terraform-backend` | Recursos de soporte Terraform |

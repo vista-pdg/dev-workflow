@@ -1,0 +1,2345 @@
+{
+  "run.googleapis.com/request_count": [
+    {
+      "labels": {
+        "response_code": "200",
+        "response_code_class": "2xx",
+        "route": ""
+      },
+      "resource": {
+        "service_name": "vista-backend",
+        "revision_name": "vista-backend-00009-275",
+        "configuration_name": "vista-backend",
+        "project_id": "vista-pdg",
+        "location": "us-central1"
+      },
+      "maxSampleValue": 421.0,
+      "points": [
+        {
+          "at": "2026-10-19T18:35:00Z",
+          "value": 266.0
+        },
+        {
+          "at": "2026-10-19T18:34:00Z",
+          "value": 128.0
+        },
+        {
+          "at": "2026-10-19T18:33:00Z",
+          "value": 280.0
+        },
+        {
+          "at": "2026-10-19T18:32:00Z",
+          "value": 296.0
+        },
+        {
+          "at": "2026-10-19T18:31:00Z",
+          "value": 312.0
+        },
+        {
+          "at": "2026-10-19T18:30:00Z",
+          "value": 149.0
+        },
+        {
+          "at": "2026-10-19T18:29:00Z",
+          "value": 421.0
+        },
+        {
+          "at": "2026-10-19T18:28:00Z",
+          "value": 40.0
+        },
+        {
+          "at": "2026-10-19T18:27:00Z",
+          "value": 72.0
+        }
+      ]
+    },
+    {
+      "labels": {
+        "response_code": "201",
+        "route": "",
+        "response_code_class": "2xx"
+      },
+      "resource": {
+        "service_name": "vista-backend",
+        "location": "us-central1",
+        "configuration_name": "vista-backend",
+        "project_id": "vista-pdg",
+        "revision_name": "vista-backend-00009-275"
+      },
+      "maxSampleValue": 1.0,
+      "points": [
+        {
+          "at": "2026-10-19T18:35:00Z",
+          "value": 0.0
+        },
+        {
+          "at": "2026-10-19T18:34:00Z",
+          "value": 0.0
+        },
+        {
+          "at": "2026-10-19T18:33:00Z",
+          "value": 0.0
+        },
+        {
+          "at": "2026-10-19T18:32:00Z",
+          "value": 0.0
+        },
+        {
+          "at": "2026-10-19T18:31:00Z",
+          "value": 0.0
+        },
+        {
+          "at": "2026-10-19T18:30:00Z",
+          "value": 0.0
+        },
+        {
+          "at": "2026-10-19T18:29:00Z",
+          "value": 0.0
+        },
+        {
+          "at": "2026-10-19T18:28:00Z",
+          "value": 0.0
+        },
+        {
+          "at": "2026-10-19T18:27:00Z",
+          "value": 1.0
+        }
+      ]
+    },
+    {
+      "labels": {
+        "response_code_class": "2xx",
+        "route": "",
+        "response_code": "202"
+      },
+      "resource": {
+        "service_name": "vista-backend",
+        "project_id": "vista-pdg",
+        "configuration_name": "vista-backend",
+        "location": "us-central1",
+        "revision_name": "vista-backend-00009-275"
+      },
+      "maxSampleValue": 1.0,
+      "points": [
+        {
+          "at": "2026-10-19T18:35:00Z",
+          "value": 1.0
+        }
+      ]
+    },
+    {
+      "labels": {
+        "route": "",
+        "response_code": "204",
+        "response_code_class": "2xx"
+      },
+      "resource": {
+        "project_id": "vista-pdg",
+        "configuration_name": "vista-backend",
+        "service_name": "vista-backend",
+        "location": "us-central1",
+        "revision_name": "vista-backend-00009-275"
+      },
+      "maxSampleValue": 80.0,
+      "points": [
+        {
+          "at": "2026-10-19T18:35:00Z",
+          "value": 80.0
+        },
+        {
+          "at": "2026-10-19T18:34:00Z",
+          "value": 75.0
+        },
+        {
+          "at": "2026-10-19T18:33:00Z",
+          "value": 5.0
+        },
+        {
+          "at": "2026-10-19T18:32:00Z",
+          "value": 80.0
+        },
+        {
+          "at": "2026-10-19T18:31:00Z",
+          "value": 3.0
+        },
+        {
+          "at": "2026-10-19T18:30:00Z",
+          "value": 76.0
+        },
+        {
+          "at": "2026-10-19T18:29:00Z",
+          "value": 0.0
+        },
+        {
+          "at": "2026-10-19T18:28:00Z",
+          "value": 3.0
+        },
+        {
+          "at": "2026-10-19T18:27:00Z",
+          "value": 0.0
+        }
+      ]
+    },
+    {
+      "labels": {
+        "response_code": "401",
+        "route": "",
+        "response_code_class": "4xx"
+      },
+      "resource": {
+        "revision_name": "vista-backend-00009-275",
+        "configuration_name": "vista-backend",
+        "location": "us-central1",
+        "project_id": "vista-pdg",
+        "service_name": "vista-backend"
+      },
+      "maxSampleValue": 3.0,
+      "points": [
+        {
+          "at": "2026-10-19T18:35:00Z",
+          "value": 2.0
+        },
+        {
+          "at": "2026-10-19T18:34:00Z",
+          "value": 3.0
+        },
+        {
+          "at": "2026-10-19T18:33:00Z",
+          "value": 0.0
+        },
+        {
+          "at": "2026-10-19T18:32:00Z",
+          "value": 0.0
+        },
+        {
+          "at": "2026-10-19T18:31:00Z",
+          "value": 0.0
+        },
+        {
+          "at": "2026-10-19T18:30:00Z",
+          "value": 0.0
+        },
+        {
+          "at": "2026-10-19T18:29:00Z",
+          "value": 0.0
+        },
+        {
+          "at": "2026-10-19T18:28:00Z",
+          "value": 0.0
+        },
+        {
+          "at": "2026-10-19T18:27:00Z",
+          "value": 0.0
+        }
+      ]
+    },
+    {
+      "labels": {
+        "response_code": "200",
+        "response_code_class": "2xx",
+        "route": ""
+      },
+      "resource": {
+        "revision_name": "vista-frontend-00010-2vc",
+        "location": "us-central1",
+        "project_id": "vista-pdg",
+        "service_name": "vista-frontend",
+        "configuration_name": "vista-frontend"
+      },
+      "maxSampleValue": 502.0,
+      "points": [
+        {
+          "at": "2026-10-19T18:35:00Z",
+          "value": 371.0
+        },
+        {
+          "at": "2026-10-19T18:34:00Z",
+          "value": 143.0
+        },
+        {
+          "at": "2026-10-19T18:33:00Z",
+          "value": 401.0
+        },
+        {
+          "at": "2026-10-19T18:32:00Z",
+          "value": 298.0
+        },
+        {
+          "at": "2026-10-19T18:31:00Z",
+          "value": 429.0
+        },
+        {
+          "at": "2026-10-19T18:30:00Z",
+          "value": 161.0
+        },
+        {
+          "at": "2026-10-19T18:29:00Z",
+          "value": 502.0
+        },
+        {
+          "at": "2026-10-19T18:28:00Z",
+          "value": 63.0
+        },
+        {
+          "at": "2026-10-19T18:27:00Z",
+          "value": 72.0
+        }
+      ]
+    },
+    {
+      "labels": {
+        "response_code": "201",
+        "route": "",
+        "response_code_class": "2xx"
+      },
+      "resource": {
+        "configuration_name": "vista-frontend",
+        "revision_name": "vista-frontend-00010-2vc",
+        "project_id": "vista-pdg",
+        "location": "us-central1",
+        "service_name": "vista-frontend"
+      },
+      "maxSampleValue": 1.0,
+      "points": [
+        {
+          "at": "2026-10-19T18:35:00Z",
+          "value": 0.0
+        },
+        {
+          "at": "2026-10-19T18:34:00Z",
+          "value": 0.0
+        },
+        {
+          "at": "2026-10-19T18:33:00Z",
+          "value": 0.0
+        },
+        {
+          "at": "2026-10-19T18:32:00Z",
+          "value": 0.0
+        },
+        {
+          "at": "2026-10-19T18:31:00Z",
+          "value": 0.0
+        },
+        {
+          "at": "2026-10-19T18:30:00Z",
+          "value": 0.0
+        },
+        {
+          "at": "2026-10-19T18:29:00Z",
+          "value": 0.0
+        },
+        {
+          "at": "2026-10-19T18:28:00Z",
+          "value": 0.0
+        },
+        {
+          "at": "2026-10-19T18:27:00Z",
+          "value": 1.0
+        }
+      ]
+    },
+    {
+      "labels": {
+        "route": "",
+        "response_code": "202",
+        "response_code_class": "2xx"
+      },
+      "resource": {
+        "location": "us-central1",
+        "service_name": "vista-frontend",
+        "project_id": "vista-pdg",
+        "configuration_name": "vista-frontend",
+        "revision_name": "vista-frontend-00010-2vc"
+      },
+      "maxSampleValue": 1.0,
+      "points": [
+        {
+          "at": "2026-10-19T18:35:00Z",
+          "value": 1.0
+        }
+      ]
+    },
+    {
+      "labels": {
+        "response_code_class": "2xx",
+        "response_code": "204",
+        "route": ""
+      },
+      "resource": {
+        "location": "us-central1",
+        "configuration_name": "vista-frontend",
+        "project_id": "vista-pdg",
+        "revision_name": "vista-frontend-00010-2vc",
+        "service_name": "vista-frontend"
+      },
+      "maxSampleValue": 81.0,
+      "points": [
+        {
+          "at": "2026-10-19T18:35:00Z",
+          "value": 81.0
+        },
+        {
+          "at": "2026-10-19T18:34:00Z",
+          "value": 75.0
+        },
+        {
+          "at": "2026-10-19T18:33:00Z",
+          "value": 5.0
+        },
+        {
+          "at": "2026-10-19T18:32:00Z",
+          "value": 80.0
+        },
+        {
+          "at": "2026-10-19T18:31:00Z",
+          "value": 3.0
+        },
+        {
+          "at": "2026-10-19T18:30:00Z",
+          "value": 76.0
+        },
+        {
+          "at": "2026-10-19T18:29:00Z",
+          "value": 0.0
+        },
+        {
+          "at": "2026-10-19T18:28:00Z",
+          "value": 2.0
+        },
+        {
+          "at": "2026-10-19T18:27:00Z",
+          "value": 1.0
+        }
+      ]
+    },
+    {
+      "labels": {
+        "response_code": "304",
+        "response_code_class": "3xx",
+        "route": ""
+      },
+      "resource": {
+        "service_name": "vista-frontend",
+        "revision_name": "vista-frontend-00010-2vc",
+        "location": "us-central1",
+        "project_id": "vista-pdg",
+        "configuration_name": "vista-frontend"
+      },
+      "maxSampleValue": 0.0,
+      "points": [
+        {
+          "at": "2026-10-19T18:35:00Z",
+          "value": 0.0
+        },
+        {
+          "at": "2026-10-19T18:34:00Z",
+          "value": 0.0
+        },
+        {
+          "at": "2026-10-19T18:33:00Z",
+          "value": 0.0
+        },
+        {
+          "at": "2026-10-19T18:32:00Z",
+          "value": 0.0
+        },
+        {
+          "at": "2026-10-19T18:31:00Z",
+          "value": 0.0
+        },
+        {
+          "at": "2026-10-19T18:30:00Z",
+          "value": 0.0
+        },
+        {
+          "at": "2026-10-19T18:29:00Z",
+          "value": 0.0
+        },
+        {
+          "at": "2026-10-19T18:28:00Z",
+          "value": 0.0
+        },
+        {
+          "at": "2026-10-19T18:27:00Z",
+          "value": 0.0
+        }
+      ]
+    },
+    {
+      "labels": {
+        "response_code": "401",
+        "route": "",
+        "response_code_class": "4xx"
+      },
+      "resource": {
+        "project_id": "vista-pdg",
+        "location": "us-central1",
+        "service_name": "vista-frontend",
+        "revision_name": "vista-frontend-00010-2vc",
+        "configuration_name": "vista-frontend"
+      },
+      "maxSampleValue": 3.0,
+      "points": [
+        {
+          "at": "2026-10-19T18:35:00Z",
+          "value": 2.0
+        },
+        {
+          "at": "2026-10-19T18:34:00Z",
+          "value": 3.0
+        },
+        {
+          "at": "2026-10-19T18:33:00Z",
+          "value": 0.0
+        },
+        {
+          "at": "2026-10-19T18:32:00Z",
+          "value": 0.0
+        },
+        {
+          "at": "2026-10-19T18:31:00Z",
+          "value": 0.0
+        },
+        {
+          "at": "2026-10-19T18:30:00Z",
+          "value": 0.0
+        },
+        {
+          "at": "2026-10-19T18:29:00Z",
+          "value": 0.0
+        },
+        {
+          "at": "2026-10-19T18:28:00Z",
+          "value": 0.0
+        },
+        {
+          "at": "2026-10-19T18:27:00Z",
+          "value": 0.0
+        }
+      ]
+    }
+  ],
+  "run.googleapis.com/request_latencies": [
+    {
+      "labels": {
+        "route": "",
+        "response_code": "200",
+        "response_code_class": "2xx"
+      },
+      "resource": {
+        "service_name": "vista-backend",
+        "revision_name": "vista-backend-00009-275",
+        "location": "us-central1",
+        "configuration_name": "vista-backend",
+        "project_id": "vista-pdg"
+      },
+      "maxSampleValue": 1102.9173496813914,
+      "points": [
+        {
+          "at": "2026-10-19T18:36:00Z",
+          "value": 35.69843678208857
+        },
+        {
+          "at": "2026-10-19T18:35:00Z",
+          "value": 1102.9173496813914
+        },
+        {
+          "at": "2026-10-19T18:34:00Z",
+          "value": 251.70952980204834
+        },
+        {
+          "at": "2026-10-19T18:33:00Z",
+          "value": 122.28044832233488
+        },
+        {
+          "at": "2026-10-19T18:32:00Z",
+          "value": 9.11423467937891
+        },
+        {
+          "at": "2026-10-19T18:31:00Z",
+          "value": 21.64968383857787
+        },
+        {
+          "at": "2026-10-19T18:30:00Z",
+          "value": 8.791435843674883
+        },
+        {
+          "at": "2026-10-19T18:29:00Z",
+          "value": 16.566680646370024
+        },
+        {
+          "at": "2026-10-19T18:28:00Z",
+          "value": 94.8835346654287
+        },
+        {
+          "at": "2026-10-19T18:27:00Z",
+          "value": 56.70497234328354
+        }
+      ]
+    },
+    {
+      "labels": {
+        "response_code_class": "2xx",
+        "route": "",
+        "response_code": "201"
+      },
+      "resource": {
+        "revision_name": "vista-backend-00009-275",
+        "location": "us-central1",
+        "project_id": "vista-pdg",
+        "configuration_name": "vista-backend",
+        "service_name": "vista-backend"
+      },
+      "maxSampleValue": 184.76971,
+      "points": [
+        {
+          "at": "2026-10-19T18:36:00Z",
+          "value": 184.76971
+        },
+        {
+          "at": "2026-10-19T18:27:00Z",
+          "value": 18.116248
+        }
+      ]
+    },
+    {
+      "labels": {
+        "route": "",
+        "response_code": "202",
+        "response_code_class": "2xx"
+      },
+      "resource": {
+        "location": "us-central1",
+        "configuration_name": "vista-backend",
+        "project_id": "vista-pdg",
+        "service_name": "vista-backend",
+        "revision_name": "vista-backend-00009-275"
+      },
+      "maxSampleValue": 1030.912519,
+      "points": [
+        {
+          "at": "2026-10-19T18:35:00Z",
+          "value": 1030.912519
+        }
+      ]
+    },
+    {
+      "labels": {
+        "route": "",
+        "response_code": "204",
+        "response_code_class": "2xx"
+      },
+      "resource": {
+        "service_name": "vista-backend",
+        "configuration_name": "vista-backend",
+        "location": "us-central1",
+        "project_id": "vista-pdg",
+        "revision_name": "vista-backend-00009-275"
+      },
+      "maxSampleValue": 22.03331434999999,
+      "points": [
+        {
+          "at": "2026-10-19T18:36:00Z",
+          "value": 11.365535309523802
+        },
+        {
+          "at": "2026-10-19T18:35:00Z",
+          "value": 6.524262587499993
+        },
+        {
+          "at": "2026-10-19T18:34:00Z",
+          "value": 6.817646758915831
+        },
+        {
+          "at": "2026-10-19T18:33:00Z",
+          "value": 16.262414000000035
+        },
+        {
+          "at": "2026-10-19T18:32:00Z",
+          "value": 22.03331434999999
+        },
+        {
+          "at": "2026-10-19T18:31:00Z",
+          "value": 8.665299958170097
+        },
+        {
+          "at": "2026-10-19T18:30:00Z",
+          "value": 16.713363946666664
+        },
+        {
+          "at": "2026-10-19T18:28:00Z",
+          "value": 13.547370388622628
+        }
+      ]
+    },
+    {
+      "labels": {
+        "route": "",
+        "response_code": "401",
+        "response_code_class": "4xx"
+      },
+      "resource": {
+        "revision_name": "vista-backend-00009-275",
+        "location": "us-central1",
+        "configuration_name": "vista-backend",
+        "service_name": "vista-backend",
+        "project_id": "vista-pdg"
+      },
+      "maxSampleValue": 9.478188000000017,
+      "points": [
+        {
+          "at": "2026-10-19T18:35:00Z",
+          "value": 3.6630490882076336
+        },
+        {
+          "at": "2026-10-19T18:34:00Z",
+          "value": 9.478188000000017
+        }
+      ]
+    },
+    {
+      "labels": {
+        "response_code": "200",
+        "response_code_class": "2xx",
+        "route": ""
+      },
+      "resource": {
+        "location": "us-central1",
+        "configuration_name": "vista-frontend",
+        "revision_name": "vista-frontend-00010-2vc",
+        "service_name": "vista-frontend",
+        "project_id": "vista-pdg"
+      },
+      "maxSampleValue": 791.2805804463836,
+      "points": [
+        {
+          "at": "2026-10-19T18:36:00Z",
+          "value": 90.64097758433196
+        },
+        {
+          "at": "2026-10-19T18:35:00Z",
+          "value": 791.2805804463836
+        },
+        {
+          "at": "2026-10-19T18:34:00Z",
+          "value": 267.2390364845395
+        },
+        {
+          "at": "2026-10-19T18:33:00Z",
+          "value": 98.97493916749983
+        },
+        {
+          "at": "2026-10-19T18:32:00Z",
+          "value": 23.62470582596795
+        },
+        {
+          "at": "2026-10-19T18:31:00Z",
+          "value": 30.697617937680622
+        },
+        {
+          "at": "2026-10-19T18:30:00Z",
+          "value": 23.279452821553253
+        },
+        {
+          "at": "2026-10-19T18:29:00Z",
+          "value": 28.292396456336988
+        },
+        {
+          "at": "2026-10-19T18:28:00Z",
+          "value": 92.45068364266824
+        },
+        {
+          "at": "2026-10-19T18:27:00Z",
+          "value": 72.99994236065633
+        }
+      ]
+    },
+    {
+      "labels": {
+        "route": "",
+        "response_code_class": "2xx",
+        "response_code": "201"
+      },
+      "resource": {
+        "project_id": "vista-pdg",
+        "configuration_name": "vista-frontend",
+        "location": "us-central1",
+        "revision_name": "vista-frontend-00010-2vc",
+        "service_name": "vista-frontend"
+      },
+      "maxSampleValue": 198.944904,
+      "points": [
+        {
+          "at": "2026-10-19T18:36:00Z",
+          "value": 198.944904
+        },
+        {
+          "at": "2026-10-19T18:27:00Z",
+          "value": 34.193982000000005
+        }
+      ]
+    },
+    {
+      "labels": {
+        "response_code": "202",
+        "route": "",
+        "response_code_class": "2xx"
+      },
+      "resource": {
+        "revision_name": "vista-frontend-00010-2vc",
+        "location": "us-central1",
+        "service_name": "vista-frontend",
+        "project_id": "vista-pdg",
+        "configuration_name": "vista-frontend"
+      },
+      "maxSampleValue": 1046.147441,
+      "points": [
+        {
+          "at": "2026-10-19T18:35:00Z",
+          "value": 1046.147441
+        }
+      ]
+    },
+    {
+      "labels": {
+        "response_code_class": "2xx",
+        "response_code": "204",
+        "route": ""
+      },
+      "resource": {
+        "configuration_name": "vista-frontend",
+        "project_id": "vista-pdg",
+        "location": "us-central1",
+        "revision_name": "vista-frontend-00010-2vc",
+        "service_name": "vista-frontend"
+      },
+      "maxSampleValue": 56.193751675,
+      "points": [
+        {
+          "at": "2026-10-19T18:36:00Z",
+          "value": 25.290138525069224
+        },
+        {
+          "at": "2026-10-19T18:35:00Z",
+          "value": 19.382504375000007
+        },
+        {
+          "at": "2026-10-19T18:34:00Z",
+          "value": 20.74462997266964
+        },
+        {
+          "at": "2026-10-19T18:32:00Z",
+          "value": 56.193751675
+        },
+        {
+          "at": "2026-10-19T18:31:00Z",
+          "value": 23.216788114341284
+        },
+        {
+          "at": "2026-10-19T18:30:00Z",
+          "value": 31.707231226666686
+        },
+        {
+          "at": "2026-10-19T18:28:00Z",
+          "value": 28.894239333333328
+        }
+      ]
+    },
+    {
+      "labels": {
+        "route": "",
+        "response_code": "304",
+        "response_code_class": "3xx"
+      },
+      "resource": {
+        "service_name": "vista-frontend",
+        "revision_name": "vista-frontend-00010-2vc",
+        "location": "us-central1",
+        "configuration_name": "vista-frontend",
+        "project_id": "vista-pdg"
+      },
+      "maxSampleValue": null,
+      "points": []
+    },
+    {
+      "labels": {
+        "response_code": "401",
+        "response_code_class": "4xx",
+        "route": ""
+      },
+      "resource": {
+        "project_id": "vista-pdg",
+        "revision_name": "vista-frontend-00010-2vc",
+        "location": "us-central1",
+        "configuration_name": "vista-frontend",
+        "service_name": "vista-frontend"
+      },
+      "maxSampleValue": 30.907728500000076,
+      "points": [
+        {
+          "at": "2026-10-19T18:35:00Z",
+          "value": 23.029709220101946
+        },
+        {
+          "at": "2026-10-19T18:34:00Z",
+          "value": 30.907728500000076
+        }
+      ]
+    }
+  ],
+  "run.googleapis.com/container/cpu/utilizations": [
+    {
+      "labels": {},
+      "resource": {
+        "service_name": "vista-backend",
+        "project_id": "vista-pdg",
+        "revision_name": "vista-backend-00009-275",
+        "configuration_name": "vista-backend",
+        "location": "us-central1"
+      },
+      "maxSampleValue": 0.06980312000331379,
+      "points": [
+        {
+          "at": "2026-10-19T18:35:00Z",
+          "value": 0.06115441092742724
+        },
+        {
+          "at": "2026-10-19T18:34:00Z",
+          "value": 0.02911863268590087
+        },
+        {
+          "at": "2026-10-19T18:33:00Z",
+          "value": 0.06980312000331379
+        },
+        {
+          "at": "2026-10-19T18:32:00Z",
+          "value": 0.06910184280429432
+        },
+        {
+          "at": "2026-10-19T18:31:00Z",
+          "value": 0.01438072072662977
+        },
+        {
+          "at": "2026-10-19T18:30:00Z",
+          "value": 0.0541396174667767
+        },
+        {
+          "at": "2026-10-19T18:29:00Z",
+          "value": 0.061672351538520076
+        },
+        {
+          "at": "2026-10-19T18:28:00Z",
+          "value": 0.046532423355943486
+        },
+        {
+          "at": "2026-10-19T18:27:00Z",
+          "value": 0.026182105522422672
+        }
+      ]
+    },
+    {
+      "labels": {},
+      "resource": {
+        "service_name": "vista-frontend",
+        "revision_name": "vista-frontend-00010-2vc",
+        "configuration_name": "vista-frontend",
+        "project_id": "vista-pdg",
+        "location": "us-central1"
+      },
+      "maxSampleValue": 0.05023503594644754,
+      "points": [
+        {
+          "at": "2026-10-19T18:35:00Z",
+          "value": 0.047517395386595385
+        },
+        {
+          "at": "2026-10-19T18:34:00Z",
+          "value": 0.016274312013097703
+        },
+        {
+          "at": "2026-10-19T18:33:00Z",
+          "value": 0.04445114341068468
+        },
+        {
+          "at": "2026-10-19T18:32:00Z",
+          "value": 0.032839912860237574
+        },
+        {
+          "at": "2026-10-19T18:31:00Z",
+          "value": 0.03994685680253643
+        },
+        {
+          "at": "2026-10-19T18:30:00Z",
+          "value": 0.021094672641799983
+        },
+        {
+          "at": "2026-10-19T18:29:00Z",
+          "value": 0.05023503594644754
+        },
+        {
+          "at": "2026-10-19T18:28:00Z",
+          "value": 0.005094936508160897
+        },
+        {
+          "at": "2026-10-19T18:27:00Z",
+          "value": 0.0061831059305083105
+        }
+      ]
+    }
+  ],
+  "run.googleapis.com/container/memory/utilizations": [
+    {
+      "labels": {},
+      "resource": {
+        "configuration_name": "vista-backend",
+        "service_name": "vista-backend",
+        "revision_name": "vista-backend-00009-275",
+        "project_id": "vista-pdg",
+        "location": "us-central1"
+      },
+      "maxSampleValue": 0.35334608289930536,
+      "points": [
+        {
+          "at": "2026-10-19T18:35:00Z",
+          "value": 0.35334608289930536
+        },
+        {
+          "at": "2026-10-19T18:34:00Z",
+          "value": 0.35040283203125
+        },
+        {
+          "at": "2026-10-19T18:33:00Z",
+          "value": 0.34446885850694464
+        },
+        {
+          "at": "2026-10-19T18:32:00Z",
+          "value": 0.3346184624565991
+        },
+        {
+          "at": "2026-10-19T18:31:00Z",
+          "value": 0.33003743489583304
+        },
+        {
+          "at": "2026-10-19T18:30:00Z",
+          "value": 0.3424275716145839
+        },
+        {
+          "at": "2026-10-19T18:29:00Z",
+          "value": 0.3240729437934018
+        },
+        {
+          "at": "2026-10-19T18:28:00Z",
+          "value": 0.31062147352430625
+        },
+        {
+          "at": "2026-10-19T18:27:00Z",
+          "value": 0.2991299099392357
+        }
+      ]
+    },
+    {
+      "labels": {},
+      "resource": {
+        "location": "us-central1",
+        "service_name": "vista-frontend",
+        "project_id": "vista-pdg",
+        "configuration_name": "vista-frontend",
+        "revision_name": "vista-frontend-00010-2vc"
+      },
+      "maxSampleValue": 0.11419677734375044,
+      "points": [
+        {
+          "at": "2026-10-19T18:35:00Z",
+          "value": 0.114166259765625
+        },
+        {
+          "at": "2026-10-19T18:34:00Z",
+          "value": 0.11370849609375
+        },
+        {
+          "at": "2026-10-19T18:33:00Z",
+          "value": 0.11419677734375044
+        },
+        {
+          "at": "2026-10-19T18:32:00Z",
+          "value": 0.11418151855468706
+        },
+        {
+          "at": "2026-10-19T18:31:00Z",
+          "value": 0.1136322021484375
+        },
+        {
+          "at": "2026-10-19T18:30:00Z",
+          "value": 0.1086578369140625
+        },
+        {
+          "at": "2026-10-19T18:29:00Z",
+          "value": 0.1085968017578125
+        },
+        {
+          "at": "2026-10-19T18:28:00Z",
+          "value": 0.10858154296875044
+        },
+        {
+          "at": "2026-10-19T18:27:00Z",
+          "value": 0.10847473144531206
+        }
+      ]
+    }
+  ],
+  "run.googleapis.com/container/instance_count": [
+    {
+      "labels": {
+        "state": "active"
+      },
+      "resource": {
+        "revision_name": "vista-backend-00009-275",
+        "service_name": "vista-backend",
+        "location": "us-central1",
+        "configuration_name": "vista-backend",
+        "project_id": "vista-pdg"
+      },
+      "maxSampleValue": 1.0,
+      "points": [
+        {
+          "at": "2026-10-19T18:35:00Z",
+          "value": 1.0
+        },
+        {
+          "at": "2026-10-19T18:34:00Z",
+          "value": 1.0
+        },
+        {
+          "at": "2026-10-19T18:33:00Z",
+          "value": 1.0
+        },
+        {
+          "at": "2026-10-19T18:32:00Z",
+          "value": 1.0
+        },
+        {
+          "at": "2026-10-19T18:31:00Z",
+          "value": 1.0
+        },
+        {
+          "at": "2026-10-19T18:30:00Z",
+          "value": 1.0
+        },
+        {
+          "at": "2026-10-19T18:29:00Z",
+          "value": 1.0
+        },
+        {
+          "at": "2026-10-19T18:28:00Z",
+          "value": 1.0
+        },
+        {
+          "at": "2026-10-19T18:27:00Z",
+          "value": 1.0
+        }
+      ]
+    },
+    {
+      "labels": {
+        "state": "idle"
+      },
+      "resource": {
+        "location": "us-central1",
+        "configuration_name": "vista-backend",
+        "revision_name": "vista-backend-00009-275",
+        "service_name": "vista-backend",
+        "project_id": "vista-pdg"
+      },
+      "maxSampleValue": 0.0,
+      "points": [
+        {
+          "at": "2026-10-19T18:35:00Z",
+          "value": 0.0
+        },
+        {
+          "at": "2026-10-19T18:34:00Z",
+          "value": 0.0
+        },
+        {
+          "at": "2026-10-19T18:33:00Z",
+          "value": 0.0
+        },
+        {
+          "at": "2026-10-19T18:32:00Z",
+          "value": 0.0
+        },
+        {
+          "at": "2026-10-19T18:31:00Z",
+          "value": 0.0
+        },
+        {
+          "at": "2026-10-19T18:30:00Z",
+          "value": 0.0
+        },
+        {
+          "at": "2026-10-19T18:29:00Z",
+          "value": 0.0
+        },
+        {
+          "at": "2026-10-19T18:28:00Z",
+          "value": 0.0
+        },
+        {
+          "at": "2026-10-19T18:27:00Z",
+          "value": 0.0
+        }
+      ]
+    },
+    {
+      "labels": {
+        "state": "active"
+      },
+      "resource": {
+        "project_id": "vista-pdg",
+        "location": "us-central1",
+        "service_name": "vista-frontend",
+        "configuration_name": "vista-frontend",
+        "revision_name": "vista-frontend-00010-2vc"
+      },
+      "maxSampleValue": 1.0,
+      "points": [
+        {
+          "at": "2026-10-19T18:35:00Z",
+          "value": 1.0
+        },
+        {
+          "at": "2026-10-19T18:34:00Z",
+          "value": 1.0
+        },
+        {
+          "at": "2026-10-19T18:33:00Z",
+          "value": 1.0
+        },
+        {
+          "at": "2026-10-19T18:32:00Z",
+          "value": 1.0
+        },
+        {
+          "at": "2026-10-19T18:31:00Z",
+          "value": 1.0
+        },
+        {
+          "at": "2026-10-19T18:30:00Z",
+          "value": 1.0
+        },
+        {
+          "at": "2026-10-19T18:29:00Z",
+          "value": 1.0
+        },
+        {
+          "at": "2026-10-19T18:28:00Z",
+          "value": 1.0
+        },
+        {
+          "at": "2026-10-19T18:27:00Z",
+          "value": 1.0
+        }
+      ]
+    },
+    {
+      "labels": {
+        "state": "idle"
+      },
+      "resource": {
+        "service_name": "vista-frontend",
+        "project_id": "vista-pdg",
+        "revision_name": "vista-frontend-00010-2vc",
+        "configuration_name": "vista-frontend",
+        "location": "us-central1"
+      },
+      "maxSampleValue": 0.0,
+      "points": [
+        {
+          "at": "2026-10-19T18:35:00Z",
+          "value": 0.0
+        },
+        {
+          "at": "2026-10-19T18:34:00Z",
+          "value": 0.0
+        },
+        {
+          "at": "2026-10-19T18:33:00Z",
+          "value": 0.0
+        },
+        {
+          "at": "2026-10-19T18:32:00Z",
+          "value": 0.0
+        },
+        {
+          "at": "2026-10-19T18:31:00Z",
+          "value": 0.0
+        },
+        {
+          "at": "2026-10-19T18:30:00Z",
+          "value": 0.0
+        },
+        {
+          "at": "2026-10-19T18:29:00Z",
+          "value": 0.0
+        },
+        {
+          "at": "2026-10-19T18:28:00Z",
+          "value": 0.0
+        },
+        {
+          "at": "2026-10-19T18:27:00Z",
+          "value": 0.0
+        }
+      ]
+    }
+  ],
+  "run.googleapis.com/container/max_request_concurrencies": [
+    {
+      "labels": {
+        "state": "active"
+      },
+      "resource": {
+        "location": "us-central1",
+        "configuration_name": "vista-backend",
+        "project_id": "vista-pdg",
+        "service_name": "vista-backend",
+        "revision_name": "vista-backend-00009-275"
+      },
+      "maxSampleValue": 40.0,
+      "points": [
+        {
+          "at": "2026-10-19T18:35:00Z",
+          "value": 40.0
+        },
+        {
+          "at": "2026-10-19T18:34:00Z",
+          "value": 5.999999999999993
+        },
+        {
+          "at": "2026-10-19T18:33:00Z",
+          "value": 23.0
+        },
+        {
+          "at": "2026-10-19T18:32:00Z",
+          "value": 4.0
+        },
+        {
+          "at": "2026-10-19T18:31:00Z",
+          "value": 0.9999999999999964
+        },
+        {
+          "at": "2026-10-19T18:30:00Z",
+          "value": 12.999999999999996
+        },
+        {
+          "at": "2026-10-19T18:29:00Z",
+          "value": 3.0
+        },
+        {
+          "at": "2026-10-19T18:28:00Z",
+          "value": 1.0
+        },
+        {
+          "at": "2026-10-19T18:27:00Z",
+          "value": 1.0
+        }
+      ]
+    },
+    {
+      "labels": {
+        "state": "idle"
+      },
+      "resource": {
+        "location": "us-central1",
+        "project_id": "vista-pdg",
+        "revision_name": "vista-backend-00009-275",
+        "service_name": "vista-backend",
+        "configuration_name": "vista-backend"
+      },
+      "maxSampleValue": null,
+      "points": []
+    },
+    {
+      "labels": {
+        "state": "active"
+      },
+      "resource": {
+        "project_id": "vista-pdg",
+        "revision_name": "vista-frontend-00010-2vc",
+        "configuration_name": "vista-frontend",
+        "service_name": "vista-frontend",
+        "location": "us-central1"
+      },
+      "maxSampleValue": 40.000000000000014,
+      "points": [
+        {
+          "at": "2026-10-19T18:35:00Z",
+          "value": 39.999999999999986
+        },
+        {
+          "at": "2026-10-19T18:34:00Z",
+          "value": 6.0
+        },
+        {
+          "at": "2026-10-19T18:33:00Z",
+          "value": 6.0
+        },
+        {
+          "at": "2026-10-19T18:32:00Z",
+          "value": 40.000000000000014
+        },
+        {
+          "at": "2026-10-19T18:31:00Z",
+          "value": 4.0
+        },
+        {
+          "at": "2026-10-19T18:30:00Z",
+          "value": 14.0
+        },
+        {
+          "at": "2026-10-19T18:29:00Z",
+          "value": 4.0
+        },
+        {
+          "at": "2026-10-19T18:28:00Z",
+          "value": 1.0
+        },
+        {
+          "at": "2026-10-19T18:27:00Z",
+          "value": 1.0
+        }
+      ]
+    },
+    {
+      "labels": {
+        "state": "idle"
+      },
+      "resource": {
+        "revision_name": "vista-frontend-00010-2vc",
+        "configuration_name": "vista-frontend",
+        "project_id": "vista-pdg",
+        "location": "us-central1",
+        "service_name": "vista-frontend"
+      },
+      "maxSampleValue": null,
+      "points": []
+    }
+  ],
+  "cloudsql.googleapis.com/database/cpu/utilization": [
+    {
+      "labels": {},
+      "resource": {
+        "database_id": "vista-pdg:vista-pg",
+        "project_id": "vista-pdg",
+        "region": "us-central"
+      },
+      "maxSampleValue": 0.12195447488920763,
+      "points": [
+        {
+          "at": "2026-10-19T18:35:00Z",
+          "value": 0.08849711548694661
+        },
+        {
+          "at": "2026-10-19T18:34:00Z",
+          "value": 0.11802125595847125
+        },
+        {
+          "at": "2026-10-19T18:33:00Z",
+          "value": 0.12195447488920763
+        },
+        {
+          "at": "2026-10-19T18:32:00Z",
+          "value": 0.10037924961434327
+        },
+        {
+          "at": "2026-10-19T18:31:00Z",
+          "value": 0.09581402873573097
+        },
+        {
+          "at": "2026-10-19T18:30:00Z",
+          "value": 0.09055019543836049
+        },
+        {
+          "at": "2026-10-19T18:29:00Z",
+          "value": 0.11843223191402406
+        },
+        {
+          "at": "2026-10-19T18:28:00Z",
+          "value": 0.1185875999687293
+        },
+        {
+          "at": "2026-10-19T18:27:00Z",
+          "value": 0.08618691478695836
+        }
+      ]
+    }
+  ],
+  "cloudsql.googleapis.com/database/memory/utilization": [
+    {
+      "labels": {},
+      "resource": {
+        "database_id": "vista-pdg:vista-pg",
+        "project_id": "vista-pdg",
+        "region": "us-central"
+      },
+      "maxSampleValue": 1.0,
+      "points": [
+        {
+          "at": "2026-10-19T18:35:00Z",
+          "value": 1.0
+        },
+        {
+          "at": "2026-10-19T18:34:00Z",
+          "value": 1.0
+        },
+        {
+          "at": "2026-10-19T18:33:00Z",
+          "value": 1.0
+        },
+        {
+          "at": "2026-10-19T18:32:00Z",
+          "value": 1.0
+        },
+        {
+          "at": "2026-10-19T18:31:00Z",
+          "value": 1.0
+        },
+        {
+          "at": "2026-10-19T18:30:00Z",
+          "value": 1.0
+        },
+        {
+          "at": "2026-10-19T18:29:00Z",
+          "value": 1.0
+        },
+        {
+          "at": "2026-10-19T18:28:00Z",
+          "value": 1.0
+        },
+        {
+          "at": "2026-10-19T18:27:00Z",
+          "value": 1.0
+        }
+      ]
+    }
+  ],
+  "cloudsql.googleapis.com/database/memory/components": [
+    {
+      "labels": {
+        "component": "Cache"
+      },
+      "resource": {
+        "database_id": "vista-pdg:vista-pg",
+        "region": "us-central",
+        "project_id": "vista-pdg"
+      },
+      "maxSampleValue": 5.821336610486892,
+      "points": [
+        {
+          "at": "2026-10-19T18:34:00Z",
+          "value": 5.821336610486892
+        },
+        {
+          "at": "2026-10-19T18:33:00Z",
+          "value": 5.789150280898877
+        },
+        {
+          "at": "2026-10-19T18:32:00Z",
+          "value": 5.6852762172284645
+        },
+        {
+          "at": "2026-10-19T18:31:00Z",
+          "value": 5.639922752808989
+        },
+        {
+          "at": "2026-10-19T18:30:00Z",
+          "value": 5.612125468164794
+        },
+        {
+          "at": "2026-10-19T18:29:00Z",
+          "value": 5.585791198501872
+        },
+        {
+          "at": "2026-10-19T18:28:00Z",
+          "value": 5.530196629213483
+        },
+        {
+          "at": "2026-10-19T18:27:00Z",
+          "value": 5.459971910112359
+        }
+      ]
+    },
+    {
+      "labels": {
+        "component": "Free"
+      },
+      "resource": {
+        "project_id": "vista-pdg",
+        "database_id": "vista-pdg:vista-pg",
+        "region": "us-central"
+      },
+      "maxSampleValue": 85.54394897003745,
+      "points": [
+        {
+          "at": "2026-10-19T18:34:00Z",
+          "value": 85.43056530898876
+        },
+        {
+          "at": "2026-10-19T18:33:00Z",
+          "value": 85.30767205056179
+        },
+        {
+          "at": "2026-10-19T18:32:00Z",
+          "value": 84.86437851123596
+        },
+        {
+          "at": "2026-10-19T18:31:00Z",
+          "value": 85.04213483146067
+        },
+        {
+          "at": "2026-10-19T18:30:00Z",
+          "value": 85.21989115168539
+        },
+        {
+          "at": "2026-10-19T18:29:00Z",
+          "value": 85.54394897003745
+        },
+        {
+          "at": "2026-10-19T18:28:00Z",
+          "value": 85.36107209737828
+        },
+        {
+          "at": "2026-10-19T18:27:00Z",
+          "value": 85.49493796816479
+        }
+      ]
+    },
+    {
+      "labels": {
+        "component": "Usage"
+      },
+      "resource": {
+        "project_id": "vista-pdg",
+        "database_id": "vista-pdg:vista-pg",
+        "region": "us-central"
+      },
+      "maxSampleValue": 9.45034527153558,
+      "points": [
+        {
+          "at": "2026-10-19T18:34:00Z",
+          "value": 8.748098080524345
+        },
+        {
+          "at": "2026-10-19T18:33:00Z",
+          "value": 8.903177668539326
+        },
+        {
+          "at": "2026-10-19T18:32:00Z",
+          "value": 9.45034527153558
+        },
+        {
+          "at": "2026-10-19T18:31:00Z",
+          "value": 9.317942415730338
+        },
+        {
+          "at": "2026-10-19T18:30:00Z",
+          "value": 9.167983380149813
+        },
+        {
+          "at": "2026-10-19T18:29:00Z",
+          "value": 8.870259831460674
+        },
+        {
+          "at": "2026-10-19T18:28:00Z",
+          "value": 9.108731273408239
+        },
+        {
+          "at": "2026-10-19T18:27:00Z",
+          "value": 9.045090121722847
+        }
+      ]
+    }
+  ],
+  "cloudsql.googleapis.com/database/memory/usage": [
+    {
+      "labels": {},
+      "resource": {
+        "database_id": "vista-pdg:vista-pg",
+        "region": "us-central",
+        "project_id": "vista-pdg"
+      },
+      "maxSampleValue": 643825664.0,
+      "points": [
+        {
+          "at": "2026-10-19T18:34:00Z",
+          "value": 643825664.0
+        },
+        {
+          "at": "2026-10-19T18:33:00Z",
+          "value": 643825664.0
+        },
+        {
+          "at": "2026-10-19T18:32:00Z",
+          "value": 643825664.0
+        },
+        {
+          "at": "2026-10-19T18:31:00Z",
+          "value": 643825664.0
+        },
+        {
+          "at": "2026-10-19T18:30:00Z",
+          "value": 643825664.0
+        },
+        {
+          "at": "2026-10-19T18:29:00Z",
+          "value": 643825664.0
+        },
+        {
+          "at": "2026-10-19T18:28:00Z",
+          "value": 643825664.0
+        },
+        {
+          "at": "2026-10-19T18:27:00Z",
+          "value": 643825664.0
+        }
+      ]
+    }
+  ],
+  "cloudsql.googleapis.com/database/memory/total_usage": [
+    {
+      "labels": {},
+      "resource": {
+        "region": "us-central",
+        "project_id": "vista-pdg",
+        "database_id": "vista-pdg:vista-pg"
+      },
+      "maxSampleValue": 84750336.0,
+      "points": [
+        {
+          "at": "2026-10-19T18:35:00Z",
+          "value": 84705280.0
+        },
+        {
+          "at": "2026-10-19T18:34:00Z",
+          "value": 81580032.0
+        },
+        {
+          "at": "2026-10-19T18:33:00Z",
+          "value": 82268160.0
+        },
+        {
+          "at": "2026-10-19T18:32:00Z",
+          "value": 84750336.0
+        },
+        {
+          "at": "2026-10-19T18:31:00Z",
+          "value": 83755008.0
+        },
+        {
+          "at": "2026-10-19T18:30:00Z",
+          "value": 82759680.0
+        },
+        {
+          "at": "2026-10-19T18:29:00Z",
+          "value": 80945152.0
+        },
+        {
+          "at": "2026-10-19T18:28:00Z",
+          "value": 81969152.0
+        },
+        {
+          "at": "2026-10-19T18:27:00Z",
+          "value": 81219584.0
+        }
+      ]
+    }
+  ],
+  "cloudsql.googleapis.com/database/memory/quota": [
+    {
+      "labels": {},
+      "resource": {
+        "database_id": "vista-pdg:vista-pg",
+        "project_id": "vista-pdg",
+        "region": "us-central"
+      },
+      "maxSampleValue": 643825664.0,
+      "points": [
+        {
+          "at": "2026-10-19T18:35:00Z",
+          "value": 643825664.0
+        },
+        {
+          "at": "2026-10-19T18:34:00Z",
+          "value": 643825664.0
+        },
+        {
+          "at": "2026-10-19T18:33:00Z",
+          "value": 643825664.0
+        },
+        {
+          "at": "2026-10-19T18:32:00Z",
+          "value": 643825664.0
+        },
+        {
+          "at": "2026-10-19T18:31:00Z",
+          "value": 643825664.0
+        },
+        {
+          "at": "2026-10-19T18:30:00Z",
+          "value": 643825664.0
+        },
+        {
+          "at": "2026-10-19T18:29:00Z",
+          "value": 643825664.0
+        },
+        {
+          "at": "2026-10-19T18:28:00Z",
+          "value": 643825664.0
+        },
+        {
+          "at": "2026-10-19T18:27:00Z",
+          "value": 643825664.0
+        }
+      ]
+    }
+  ],
+  "cloudsql.googleapis.com/database/postgresql/num_backends": [
+    {
+      "labels": {
+        "database": "cloudsqladmin"
+      },
+      "resource": {
+        "database_id": "vista-pdg:vista-pg",
+        "project_id": "vista-pdg",
+        "region": "us-central"
+      },
+      "maxSampleValue": 2.0,
+      "points": [
+        {
+          "at": "2026-10-19T18:35:00Z",
+          "value": 2.0
+        },
+        {
+          "at": "2026-10-19T18:34:00Z",
+          "value": 2.0
+        },
+        {
+          "at": "2026-10-19T18:33:00Z",
+          "value": 2.0
+        },
+        {
+          "at": "2026-10-19T18:32:00Z",
+          "value": 2.0
+        },
+        {
+          "at": "2026-10-19T18:31:00Z",
+          "value": 2.0
+        },
+        {
+          "at": "2026-10-19T18:30:00Z",
+          "value": 2.0
+        },
+        {
+          "at": "2026-10-19T18:29:00Z",
+          "value": 2.0
+        },
+        {
+          "at": "2026-10-19T18:28:00Z",
+          "value": 2.0
+        },
+        {
+          "at": "2026-10-19T18:27:00Z",
+          "value": 2.0
+        }
+      ]
+    },
+    {
+      "labels": {
+        "database": "postgres"
+      },
+      "resource": {
+        "database_id": "vista-pdg:vista-pg",
+        "region": "us-central",
+        "project_id": "vista-pdg"
+      },
+      "maxSampleValue": 0.0,
+      "points": [
+        {
+          "at": "2026-10-19T18:35:00Z",
+          "value": 0.0
+        },
+        {
+          "at": "2026-10-19T18:34:00Z",
+          "value": 0.0
+        },
+        {
+          "at": "2026-10-19T18:33:00Z",
+          "value": 0.0
+        },
+        {
+          "at": "2026-10-19T18:32:00Z",
+          "value": 0.0
+        },
+        {
+          "at": "2026-10-19T18:31:00Z",
+          "value": 0.0
+        },
+        {
+          "at": "2026-10-19T18:30:00Z",
+          "value": 0.0
+        },
+        {
+          "at": "2026-10-19T18:29:00Z",
+          "value": 0.0
+        },
+        {
+          "at": "2026-10-19T18:28:00Z",
+          "value": 0.0
+        },
+        {
+          "at": "2026-10-19T18:27:00Z",
+          "value": 0.0
+        }
+      ]
+    },
+    {
+      "labels": {
+        "database": "template1"
+      },
+      "resource": {
+        "database_id": "vista-pdg:vista-pg",
+        "region": "us-central",
+        "project_id": "vista-pdg"
+      },
+      "maxSampleValue": 0.0,
+      "points": [
+        {
+          "at": "2026-10-19T18:35:00Z",
+          "value": 0.0
+        },
+        {
+          "at": "2026-10-19T18:34:00Z",
+          "value": 0.0
+        },
+        {
+          "at": "2026-10-19T18:33:00Z",
+          "value": 0.0
+        },
+        {
+          "at": "2026-10-19T18:32:00Z",
+          "value": 0.0
+        },
+        {
+          "at": "2026-10-19T18:31:00Z",
+          "value": 0.0
+        },
+        {
+          "at": "2026-10-19T18:30:00Z",
+          "value": 0.0
+        },
+        {
+          "at": "2026-10-19T18:29:00Z",
+          "value": 0.0
+        },
+        {
+          "at": "2026-10-19T18:28:00Z",
+          "value": 0.0
+        },
+        {
+          "at": "2026-10-19T18:27:00Z",
+          "value": 0.0
+        }
+      ]
+    },
+    {
+      "labels": {
+        "database": "vista_pdg"
+      },
+      "resource": {
+        "project_id": "vista-pdg",
+        "database_id": "vista-pdg:vista-pg",
+        "region": "us-central"
+      },
+      "maxSampleValue": 5.0,
+      "points": [
+        {
+          "at": "2026-10-19T18:35:00Z",
+          "value": 5.0
+        },
+        {
+          "at": "2026-10-19T18:34:00Z",
+          "value": 5.0
+        },
+        {
+          "at": "2026-10-19T18:33:00Z",
+          "value": 5.0
+        },
+        {
+          "at": "2026-10-19T18:32:00Z",
+          "value": 5.0
+        },
+        {
+          "at": "2026-10-19T18:31:00Z",
+          "value": 5.0
+        },
+        {
+          "at": "2026-10-19T18:30:00Z",
+          "value": 5.0
+        },
+        {
+          "at": "2026-10-19T18:29:00Z",
+          "value": 5.0
+        },
+        {
+          "at": "2026-10-19T18:28:00Z",
+          "value": 5.0
+        },
+        {
+          "at": "2026-10-19T18:27:00Z",
+          "value": 5.0
+        }
+      ]
+    }
+  ],
+  "cloudsql.googleapis.com/database/network/connections": [],
+  "aiplatform.googleapis.com/publisher/online_serving/consumed_token_throughput": [
+    {
+      "labels": {
+        "shared_request_type": "standard",
+        "request_type": "shared"
+      },
+      "resource": {
+        "model_user_id": "gemini-3.5-flash-lite",
+        "project_id": "vista-pdg",
+        "publisher": "google",
+        "location": "global",
+        "model_version_id": ""
+      },
+      "maxSampleValue": 105517.0,
+      "points": [
+        {
+          "at": "2026-10-19T18:35:13Z",
+          "value": 102193.0
+        },
+        {
+          "at": "2026-10-19T18:34:13Z",
+          "value": 100032.0
+        },
+        {
+          "at": "2026-10-19T18:33:13Z",
+          "value": 105517.0
+        },
+        {
+          "at": "2026-10-19T18:28:13Z",
+          "value": 2568.0
+        }
+      ]
+    }
+  ],
+  "aiplatform.googleapis.com/publisher/online_serving/dedicated_token_limit": [],
+  "aiplatform.googleapis.com/publisher/online_serving/dedicated_token_project_max_limit": [],
+  "aiplatform.googleapis.com/publisher/online_serving/first_token_latencies": [],
+  "aiplatform.googleapis.com/publisher/online_serving/model_invocation_count": [
+    {
+      "labels": {
+        "source": "global",
+        "input_token_size": "INPUT_TOKEN_BUCKETIZED_SIZE_2K_TO_5K",
+        "shared_request_type": "standard",
+        "output_token_size": "OUTPUT_TOKEN_BUCKETIZED_SIZE_0_TO_25",
+        "method": "GenerateContent",
+        "response_code": "200",
+        "request_type": "shared"
+      },
+      "resource": {
+        "model_version_id": "",
+        "project_id": "vista-pdg",
+        "model_user_id": "gemini-3.5-flash-lite",
+        "publisher": "google",
+        "location": "global"
+      },
+      "maxSampleValue": 13.0,
+      "points": [
+        {
+          "at": "2026-10-19T18:35:27Z",
+          "value": 13.0
+        },
+        {
+          "at": "2026-10-19T18:34:27Z",
+          "value": 8.0
+        },
+        {
+          "at": "2026-10-19T18:33:27Z",
+          "value": 11.0
+        },
+        {
+          "at": "2026-10-19T18:32:27Z",
+          "value": 4.0
+        }
+      ]
+    },
+    {
+      "labels": {
+        "request_type": "shared",
+        "response_code": "200",
+        "source": "global",
+        "input_token_size": "INPUT_TOKEN_BUCKETIZED_SIZE_2K_TO_5K",
+        "output_token_size": "OUTPUT_TOKEN_BUCKETIZED_SIZE_25_TO_50",
+        "method": "GenerateContent",
+        "shared_request_type": "standard"
+      },
+      "resource": {
+        "location": "global",
+        "project_id": "vista-pdg",
+        "model_version_id": "",
+        "model_user_id": "gemini-3.5-flash-lite",
+        "publisher": "google"
+      },
+      "maxSampleValue": 21.0,
+      "points": [
+        {
+          "at": "2026-10-19T18:35:35Z",
+          "value": 20.0
+        },
+        {
+          "at": "2026-10-19T18:34:35Z",
+          "value": 3.0
+        },
+        {
+          "at": "2026-10-19T18:33:35Z",
+          "value": 21.0
+        },
+        {
+          "at": "2026-10-19T18:32:35Z",
+          "value": 17.0
+        },
+        {
+          "at": "2026-10-19T18:27:35Z",
+          "value": 1.0
+        }
+      ]
+    },
+    {
+      "labels": {
+        "shared_request_type": "standard",
+        "method": "GenerateContent",
+        "output_token_size": "OUTPUT_TOKEN_BUCKETIZED_SIZE_50_TO_100",
+        "response_code": "200",
+        "source": "global",
+        "request_type": "shared",
+        "input_token_size": "INPUT_TOKEN_BUCKETIZED_SIZE_2K_TO_5K"
+      },
+      "resource": {
+        "publisher": "google",
+        "project_id": "vista-pdg",
+        "location": "global",
+        "model_user_id": "gemini-3.5-flash-lite",
+        "model_version_id": ""
+      },
+      "maxSampleValue": 9.0,
+      "points": [
+        {
+          "at": "2026-10-19T18:35:23Z",
+          "value": 7.0
+        },
+        {
+          "at": "2026-10-19T18:34:23Z",
+          "value": 6.0
+        },
+        {
+          "at": "2026-10-19T18:33:23Z",
+          "value": 9.0
+        },
+        {
+          "at": "2026-10-19T18:32:23Z",
+          "value": 1.0
+        }
+      ]
+    }
+  ],
+  "aiplatform.googleapis.com/publisher/online_serving/model_invocation_latencies": [
+    {
+      "labels": {
+        "output_token_size": "OUTPUT_TOKEN_BUCKETIZED_SIZE_0_TO_25",
+        "request_type": "shared",
+        "input_token_size": "INPUT_TOKEN_BUCKETIZED_SIZE_2K_TO_5K",
+        "source": "global",
+        "latency_type": "total",
+        "shared_request_type": "standard"
+      },
+      "resource": {
+        "project_id": "vista-pdg",
+        "model_version_id": "",
+        "model_user_id": "gemini-3.5-flash-lite",
+        "location": "global",
+        "publisher": "google"
+      },
+      "maxSampleValue": 702.7311214615385,
+      "points": [
+        {
+          "at": "2026-10-19T18:34:54Z",
+          "value": 702.7311214615385
+        },
+        {
+          "at": "2026-10-19T18:33:54Z",
+          "value": 579.2363161538462
+        },
+        {
+          "at": "2026-10-19T18:32:54Z",
+          "value": 612.8979111000001
+        }
+      ]
+    },
+    {
+      "labels": {
+        "latency_type": "total",
+        "request_type": "shared",
+        "input_token_size": "INPUT_TOKEN_BUCKETIZED_SIZE_2K_TO_5K",
+        "output_token_size": "OUTPUT_TOKEN_BUCKETIZED_SIZE_25_TO_50",
+        "source": "global",
+        "shared_request_type": "standard"
+      },
+      "resource": {
+        "model_version_id": "",
+        "project_id": "vista-pdg",
+        "publisher": "google",
+        "location": "global",
+        "model_user_id": "gemini-3.5-flash-lite"
+      },
+      "maxSampleValue": 811.610914,
+      "points": [
+        {
+          "at": "2026-10-19T18:35:49Z",
+          "value": 811.610914
+        },
+        {
+          "at": "2026-10-19T18:34:49Z",
+          "value": 740.5402665624999
+        },
+        {
+          "at": "2026-10-19T18:33:49Z",
+          "value": 662.5346742631577
+        },
+        {
+          "at": "2026-10-19T18:32:49Z",
+          "value": 639.3678012727272
+        },
+        {
+          "at": "2026-10-19T18:27:49Z",
+          "value": 573.037256
+        }
+      ]
+    },
+    {
+      "labels": {
+        "output_token_size": "OUTPUT_TOKEN_BUCKETIZED_SIZE_50_TO_100",
+        "input_token_size": "INPUT_TOKEN_BUCKETIZED_SIZE_2K_TO_5K",
+        "latency_type": "total",
+        "shared_request_type": "standard",
+        "request_type": "shared",
+        "source": "global"
+      },
+      "resource": {
+        "publisher": "google",
+        "location": "global",
+        "model_user_id": "gemini-3.5-flash-lite",
+        "model_version_id": "",
+        "project_id": "vista-pdg"
+      },
+      "maxSampleValue": 785.3160923333334,
+      "points": [
+        {
+          "at": "2026-10-19T18:35:32Z",
+          "value": 734.1037995714287
+        },
+        {
+          "at": "2026-10-19T18:34:32Z",
+          "value": 722.4014418333333
+        },
+        {
+          "at": "2026-10-19T18:33:32Z",
+          "value": 785.3160923333334
+        },
+        {
+          "at": "2026-10-19T18:32:32Z",
+          "value": 772.65104175
+        }
+      ]
+    }
+  ],
+  "aiplatform.googleapis.com/publisher/online_serving/token_count": [
+    {
+      "labels": {
+        "type": "input",
+        "shared_request_type": "standard",
+        "source": "global",
+        "request_type": "shared"
+      },
+      "resource": {
+        "project_id": "vista-pdg",
+        "publisher": "google",
+        "model_user_id": "gemini-3.5-flash-lite",
+        "model_version_id": "",
+        "location": "global"
+      },
+      "maxSampleValue": 88414.0,
+      "points": [
+        {
+          "at": "2026-10-19T18:35:10Z",
+          "value": 88414.0
+        },
+        {
+          "at": "2026-10-19T18:34:10Z",
+          "value": 88407.0
+        },
+        {
+          "at": "2026-10-19T18:33:10Z",
+          "value": 88414.0
+        },
+        {
+          "at": "2026-10-19T18:28:10Z",
+          "value": 2217.0
+        }
+      ]
+    },
+    {
+      "labels": {
+        "type": "output",
+        "shared_request_type": "standard",
+        "request_type": "shared",
+        "source": "global"
+      },
+      "resource": {
+        "model_user_id": "gemini-3.5-flash-lite",
+        "publisher": "google",
+        "model_version_id": "",
+        "location": "global",
+        "project_id": "vista-pdg"
+      },
+      "maxSampleValue": 1531.0,
+      "points": [
+        {
+          "at": "2026-10-19T18:35:28Z",
+          "value": 1531.0
+        },
+        {
+          "at": "2026-10-19T18:34:28Z",
+          "value": 1099.0
+        },
+        {
+          "at": "2026-10-19T18:33:28Z",
+          "value": 1474.0
+        },
+        {
+          "at": "2026-10-19T18:32:28Z",
+          "value": 619.0
+        },
+        {
+          "at": "2026-10-19T18:28:28Z",
+          "value": 39.0
+        }
+      ]
+    }
+  ],
+  "aiplatform.googleapis.com/publisher/online_serving/tokens": []
+}

@@ -1,0 +1,12 @@
+{
+  "input": 2146691,
+  "output": 37434,
+  "invocationsByStatus": {
+    "499": 1,
+    "200": 971
+  },
+  "estimatedUsd": 0.737592,
+  "windowStart": "2026-10-19T19:00:00Z",
+  "windowEnd": "2026-10-19T19:48:00Z",
+  "note": "Project/model aggregate; minute buckets/publication lag; not billing or exact Locust attribution"
+}

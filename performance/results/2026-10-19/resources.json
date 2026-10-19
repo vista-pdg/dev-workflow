@@ -1,0 +1,99 @@
+{
+  "vista-frontend": {
+    "spec": {
+      "template": {
+        "metadata": {
+          "annotations": {
+            "autoscaling.knative.dev/maxScale": "3",
+            "autoscaling.knative.dev/minScale": "0",
+            "run.googleapis.com/client-name": "gcloud",
+            "run.googleapis.com/client-version": "568.0.0",
+            "run.googleapis.com/cpu-throttling": "true",
+            "run.googleapis.com/network-interfaces": "[{\"network\":\"projects/vista-pdg/global/networks/vista-vpc\",\"subnetwork\":\"projects/vista-pdg/regions/us-central1/subnetworks/vista-run-us-central1\"}]",
+            "run.googleapis.com/sessionAffinity": "false",
+            "run.googleapis.com/startup-cpu-boost": "true",
+            "run.googleapis.com/vpc-access-egress": "all-traffic"
+          }
+        },
+        "spec": {
+          "containerConcurrency": 200,
+          "containers": [
+            {
+              "resources": {
+                "limits": {
+                  "cpu": "1",
+                  "memory": "256Mi"
+                }
+              }
+            }
+          ],
+          "timeoutSeconds": 130
+        }
+      }
+    },
+    "status": {
+      "latestReadyRevisionName": "vista-frontend-00010-2vc",
+      "traffic": [
+        {
+          "latestRevision": true,
+          "percent": 100,
+          "revisionName": "vista-frontend-00010-2vc"
+        }
+      ]
+    }
+  },
+  "vista-backend": {
+    "spec": {
+      "template": {
+        "metadata": {
+          "annotations": {
+            "autoscaling.knative.dev/maxScale": "3",
+            "autoscaling.knative.dev/minScale": "0",
+            "run.googleapis.com/client-name": "gcloud",
+            "run.googleapis.com/client-version": "568.0.0",
+            "run.googleapis.com/container-dependencies": "{\"backend\":[\"redis\"]}",
+            "run.googleapis.com/cpu-throttling": "true",
+            "run.googleapis.com/execution-environment": "gen2",
+            "run.googleapis.com/network-interfaces": "[{\"network\":\"projects/vista-pdg/global/networks/vista-vpc\",\"subnetwork\":\"projects/vista-pdg/regions/us-central1/subnetworks/vista-run-us-central1\"}]",
+            "run.googleapis.com/sessionAffinity": "true",
+            "run.googleapis.com/startup-cpu-boost": "true",
+            "run.googleapis.com/vpc-access-egress": "private-ranges-only"
+          }
+        },
+        "spec": {
+          "containerConcurrency": 40,
+          "containers": [
+            {
+              "resources": {
+                "limits": {
+                  "cpu": "1",
+                  "memory": "1Gi"
+                }
+              }
+            }
+          ],
+          "timeoutSeconds": 120
+        }
+      }
+    },
+    "status": {
+      "latestReadyRevisionName": "vista-backend-00009-275",
+      "traffic": [
+        {
+          "latestRevision": true,
+          "percent": 100,
+          "revisionName": "vista-backend-00009-275"
+        }
+      ]
+    }
+  },
+  "vista-pg": {
+    "name": "vista-pg",
+    "region": "us-central1",
+    "settings": {
+      "dataDiskSizeGb": "10",
+      "tier": "db-f1-micro"
+    },
+    "state": "RUNNABLE"
+  }
+}

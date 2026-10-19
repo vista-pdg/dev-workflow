@@ -24,6 +24,7 @@ async function openAnalytics(page, theme, mode = 'available') {
     } });
   });
   await page.goto('/analytics');
+  await expect(page.locator('[data-cy=analytics-page]')).toBeVisible();
   await expect(page.locator('[data-cy=analytics-courses-loading]')).toHaveCount(0);
   await expect(page.locator('[data-cy=analytics-loading]')).toHaveCount(0);
   await page.evaluate(() => document.fonts.ready);

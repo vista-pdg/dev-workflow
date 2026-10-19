@@ -1,0 +1,24 @@
+{
+  "target": "https://vista.kuros.work",
+  "students": 40,
+  "generationCap": 125,
+  "phases": [
+    "smoke",
+    "baseline",
+    "mixed",
+    "burst"
+  ],
+  "createdAt": "2026-10-19T18:26:54.188085+00:00",
+  "completed": true,
+  "actualGenerations": 121,
+  "cloudRunDirectRequests": 1875,
+  "cloudRunDirectFailures": 0,
+  "customDomainRequests": 782,
+  "customDomainTransportFailures": 9,
+  "actualConcurrentGenerationRequests": 40,
+  "temporaryAccountsRemoved": 40,
+  "temporaryEventsRemoved": 534,
+  "temporaryUsageRowsRemoved": 40,
+  "temporaryCourseRemoved": true,
+  "temporaryMaintenanceJobRemoved": true
+}

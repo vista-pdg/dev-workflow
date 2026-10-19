@@ -1,0 +1,23 @@
+[
+  {
+    "ip": "173.194.212.121",
+    "iteration": 1,
+    "exit": 28,
+    "httpTime": "000,4.002564",
+    "error": "curl: (28) Failed to connect to vista.kuros.work port 443 after 4002 ms: Timeout was reached\n"
+  },
+  {
+    "ip": "173.194.212.121",
+    "iteration": 2,
+    "exit": 28,
+    "httpTime": "000,4.001720",
+    "error": "curl: (28) Failed to connect to vista.kuros.work port 443 after 4001 ms: Timeout was reached\n"
+  },
+  {
+    "ip": "173.194.212.121",
+    "iteration": 3,
+    "exit": 0,
+    "httpTime": "200,0.550409",
+    "error": ""
+  }
+]

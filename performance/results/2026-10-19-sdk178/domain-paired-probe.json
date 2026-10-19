@@ -1,0 +1,349 @@
+{
+  "method": "20 paired fresh HTTP/TLS connections, same origin, connect/read timeout 5s; static HTML only; overlaps soak",
+  "dns": {
+    "vista.kuros.work": [
+      "142.251.107.121",
+      "2607:f8b0:400c:c00::79"
+    ],
+    "vista-frontend-sbt7d3iyka-uc.a.run.app": [
+      "2600:1900:4240:200::",
+      "2600:1900:4241:200::",
+      "2600:1900:4242:200::",
+      "2600:1900:4243:200::",
+      "2600:1900:4244:200::",
+      "2600:1900:4245:200::",
+      "2600:1901:81d4:200::",
+      "2600:1901:81d5:200::",
+      "34.143.72.2",
+      "34.143.73.2",
+      "34.143.74.2",
+      "34.143.75.2",
+      "34.143.76.2",
+      "34.143.77.2",
+      "34.143.78.2",
+      "34.143.79.2"
+    ]
+  },
+  "samples": [
+    {
+      "host": "vista.kuros.work",
+      "at": "2026-10-19T19:22:27.363836+00:00",
+      "status": 200,
+      "bytes": 501,
+      "ttfbMs": 541.98,
+      "totalMs": 544.84
+    },
+    {
+      "host": "vista-frontend-sbt7d3iyka-uc.a.run.app",
+      "at": "2026-10-19T19:22:27.364092+00:00",
+      "status": 200,
+      "bytes": 501,
+      "ttfbMs": 241.52,
+      "totalMs": 243.71
+    },
+    {
+      "host": "vista.kuros.work",
+      "at": "2026-10-19T19:22:28.908882+00:00",
+      "status": 200,
+      "bytes": 501,
+      "ttfbMs": 665.73,
+      "totalMs": 667.25
+    },
+    {
+      "host": "vista-frontend-sbt7d3iyka-uc.a.run.app",
+      "at": "2026-10-19T19:22:28.909007+00:00",
+      "status": 200,
+      "bytes": 501,
+      "ttfbMs": 300.93,
+      "totalMs": 303.11
+    },
+    {
+      "host": "vista.kuros.work",
+      "at": "2026-10-19T19:22:30.576422+00:00",
+      "status": 200,
+      "bytes": 501,
+      "ttfbMs": 601.87,
+      "totalMs": 604.06
+    },
+    {
+      "host": "vista-frontend-sbt7d3iyka-uc.a.run.app",
+      "at": "2026-10-19T19:22:30.576743+00:00",
+      "status": 200,
+      "bytes": 501,
+      "ttfbMs": 243.52,
+      "totalMs": 245.69
+    },
+    {
+      "host": "vista.kuros.work",
+      "at": "2026-10-19T19:22:32.180713+00:00",
+      "status": 200,
+      "bytes": 501,
+      "ttfbMs": 583.13,
+      "totalMs": 585.79
+    },
+    {
+      "host": "vista-frontend-sbt7d3iyka-uc.a.run.app",
+      "at": "2026-10-19T19:22:32.180858+00:00",
+      "status": 200,
+      "bytes": 501,
+      "ttfbMs": 208.93,
+      "totalMs": 211.12
+    },
+    {
+      "host": "vista.kuros.work",
+      "at": "2026-10-19T19:22:33.766823+00:00",
+      "status": 200,
+      "bytes": 501,
+      "ttfbMs": 585.45,
+      "totalMs": 587.49
+    },
+    {
+      "host": "vista-frontend-sbt7d3iyka-uc.a.run.app",
+      "at": "2026-10-19T19:22:33.767024+00:00",
+      "status": 200,
+      "bytes": 501,
+      "ttfbMs": 272.57,
+      "totalMs": 275.68
+    },
+    {
+      "host": "vista.kuros.work",
+      "at": "2026-10-19T19:22:35.354647+00:00",
+      "status": 200,
+      "bytes": 501,
+      "ttfbMs": 528.96,
+      "totalMs": 531.54
+    },
+    {
+      "host": "vista-frontend-sbt7d3iyka-uc.a.run.app",
+      "at": "2026-10-19T19:22:35.354997+00:00",
+      "status": 200,
+      "bytes": 501,
+      "ttfbMs": 208.18,
+      "totalMs": 210.68
+    },
+    {
+      "host": "vista.kuros.work",
+      "at": "2026-10-19T19:22:36.886514+00:00",
+      "status": 200,
+      "bytes": 501,
+      "ttfbMs": 295.85,
+      "totalMs": 297.67
+    },
+    {
+      "host": "vista-frontend-sbt7d3iyka-uc.a.run.app",
+      "at": "2026-10-19T19:22:36.886693+00:00",
+      "status": 200,
+      "bytes": 501,
+      "ttfbMs": 198.06,
+      "totalMs": 200.14
+    },
+    {
+      "host": "vista.kuros.work",
+      "at": "2026-10-19T19:22:38.184493+00:00",
+      "status": 200,
+      "bytes": 501,
+      "ttfbMs": 737.39,
+      "totalMs": 739.64
+    },
+    {
+      "host": "vista-frontend-sbt7d3iyka-uc.a.run.app",
+      "at": "2026-10-19T19:22:38.184754+00:00",
+      "status": 200,
+      "bytes": 501,
+      "ttfbMs": 278.07,
+      "totalMs": 280.35
+    },
+    {
+      "host": "vista.kuros.work",
+      "at": "2026-10-19T19:22:39.924505+00:00",
+      "status": 200,
+      "bytes": 501,
+      "ttfbMs": 1282.11,
+      "totalMs": 1285.34
+    },
+    {
+      "host": "vista-frontend-sbt7d3iyka-uc.a.run.app",
+      "at": "2026-10-19T19:22:39.924780+00:00",
+      "status": 200,
+      "bytes": 501,
+      "ttfbMs": 207.71,
+      "totalMs": 209.53
+    },
+    {
+      "host": "vista.kuros.work",
+      "at": "2026-10-19T19:22:42.210224+00:00",
+      "status": 200,
+      "bytes": 501,
+      "ttfbMs": 270.01,
+      "totalMs": 271.92
+    },
+    {
+      "host": "vista-frontend-sbt7d3iyka-uc.a.run.app",
+      "at": "2026-10-19T19:22:42.210391+00:00",
+      "status": 200,
+      "bytes": 501,
+      "ttfbMs": 272.06,
+      "totalMs": 274.91
+    },
+    {
+      "host": "vista.kuros.work",
+      "at": "2026-10-19T19:22:43.485558+00:00",
+      "status": 200,
+      "bytes": 501,
+      "ttfbMs": 1633.87,
+      "totalMs": 1636.57
+    },
+    {
+      "host": "vista-frontend-sbt7d3iyka-uc.a.run.app",
+      "at": "2026-10-19T19:22:43.485902+00:00",
+      "status": 200,
+      "bytes": 501,
+      "ttfbMs": 201.55,
+      "totalMs": 203.16
+    },
+    {
+      "host": "vista.kuros.work",
+      "at": "2026-10-19T19:22:46.122381+00:00",
+      "status": 200,
+      "bytes": 501,
+      "ttfbMs": 815.01,
+      "totalMs": 818.31
+    },
+    {
+      "host": "vista-frontend-sbt7d3iyka-uc.a.run.app",
+      "at": "2026-10-19T19:22:46.122645+00:00",
+      "status": 200,
+      "bytes": 501,
+      "ttfbMs": 209.39,
+      "totalMs": 211.67
+    },
+    {
+      "host": "vista.kuros.work",
+      "at": "2026-10-19T19:22:47.940924+00:00",
+      "status": 200,
+      "bytes": 501,
+      "ttfbMs": 3451.31,
+      "totalMs": 3453.14
+    },
+    {
+      "host": "vista-frontend-sbt7d3iyka-uc.a.run.app",
+      "at": "2026-10-19T19:22:47.941056+00:00",
+      "status": 200,
+      "bytes": 501,
+      "ttfbMs": 193.96,
+      "totalMs": 196.1
+    },
+    {
+      "host": "vista.kuros.work",
+      "at": "2026-10-19T19:22:52.394327+00:00",
+      "status": 200,
+      "bytes": 501,
+      "ttfbMs": 1977.79,
+      "totalMs": 1980.57
+    },
+    {
+      "host": "vista-frontend-sbt7d3iyka-uc.a.run.app",
+      "at": "2026-10-19T19:22:52.394482+00:00",
+      "status": 200,
+      "bytes": 501,
+      "ttfbMs": 215.34,
+      "totalMs": 217.75
+    },
+    {
+      "host": "vista.kuros.work",
+      "at": "2026-10-19T19:22:55.375222+00:00",
+      "status": 200,
+      "bytes": 501,
+      "ttfbMs": 2839.24,
+      "totalMs": 2841.39
+    },
+    {
+      "host": "vista-frontend-sbt7d3iyka-uc.a.run.app",
+      "at": "2026-10-19T19:22:55.375576+00:00",
+      "status": 200,
+      "bytes": 501,
+      "ttfbMs": 201.74,
+      "totalMs": 204.74
+    },
+    {
+      "host": "vista.kuros.work",
+      "at": "2026-10-19T19:22:59.216825+00:00",
+      "status": 200,
+      "bytes": 501,
+      "ttfbMs": 1665.62,
+      "totalMs": 1668.26
+    },
+    {
+      "host": "vista-frontend-sbt7d3iyka-uc.a.run.app",
+      "at": "2026-10-19T19:22:59.216970+00:00",
+      "status": 200,
+      "bytes": 501,
+      "ttfbMs": 205.48,
+      "totalMs": 207.66
+    },
+    {
+      "host": "vista.kuros.work",
+      "at": "2026-10-19T19:23:01.885334+00:00",
+      "status": 200,
+      "bytes": 501,
+      "ttfbMs": 1845.68,
+      "totalMs": 1847.62
+    },
+    {
+      "host": "vista-frontend-sbt7d3iyka-uc.a.run.app",
+      "at": "2026-10-19T19:23:01.885470+00:00",
+      "status": 200,
+      "bytes": 501,
+      "ttfbMs": 268.67,
+      "totalMs": 271.24
+    },
+    {
+      "host": "vista.kuros.work",
+      "at": "2026-10-19T19:23:04.733200+00:00",
+      "status": 200,
+      "bytes": 501,
+      "ttfbMs": 1289.72,
+      "totalMs": 1292.21
+    },
+    {
+      "host": "vista-frontend-sbt7d3iyka-uc.a.run.app",
+      "at": "2026-10-19T19:23:04.733377+00:00",
+      "status": 200,
+      "bytes": 501,
+      "ttfbMs": 205.55,
+      "totalMs": 208.2
+    },
+    {
+      "host": "vista.kuros.work",
+      "at": "2026-10-19T19:23:07.025655+00:00",
+      "status": 0,
+      "errorType": "ConnectionError",
+      "error": "HTTPSConnectionPool(host='vista.kuros.work', port=443): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x707b41155460>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
+      "totalMs": 8101.96
+    },
+    {
+      "host": "vista-frontend-sbt7d3iyka-uc.a.run.app",
+      "at": "2026-10-19T19:23:07.025791+00:00",
+      "status": 200,
+      "bytes": 501,
+      "ttfbMs": 282.45,
+      "totalMs": 284.54
+    },
+    {
+      "host": "vista.kuros.work",
+      "at": "2026-10-19T19:23:16.127875+00:00",
+      "status": 200,
+      "bytes": 501,
+      "ttfbMs": 4803.71,
+      "totalMs": 4805.89
+    },
+    {
+      "host": "vista-frontend-sbt7d3iyka-uc.a.run.app",
+      "at": "2026-10-19T19:23:16.128149+00:00",
+      "status": 200,
+      "bytes": 501,
+      "ttfbMs": 210.3,
+      "totalMs": 211.99
+    }
+  ]
+}

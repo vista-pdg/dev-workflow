@@ -36,6 +36,7 @@ async function context(page,type,subtype,scene={nodes:[],edges:[]}) {
     const {useGraphStore}=await import('/src/store/graphStore.ts');
     useGraphStore.getState().setActiveStructureType(type,subtype);
     window.__vista.engine.loadStructure(scene.nodes,scene.edges,null);
+    useGraphStore.setState({canvasContext: scene.nodes.length ? {type,subtype} : null});
   },{type,subtype,scene});
 }
 async function capture(page,info,name) {
@@ -75,9 +76,10 @@ test('contextual families, scalar validation, keyboard focus and both themes',as
   await expect(page.locator('[data-cy=algo-family-linked-list] button')).toHaveCount(5);
   await expect(page.locator('[data-cy=algo-family-sorting] button')).toHaveCount(6);
   await page.locator('[data-cy=algo-item-linked-list-simple-merge-sort]').click();
-  await expect(page.getByLabel('Valores',{exact:true})).toBeVisible();
-  await page.getByLabel('Valores',{exact:true}).fill('3, -1, 3, 0');
-  await page.getByLabel('Valores',{exact:true}).focus();
+  await page.locator('[data-cy=algo-source-values]').check();
+  await expect(page.getByLabel('Valores para la nueva estructura',{exact:true})).toBeVisible();
+  await page.getByLabel('Valores para la nueva estructura',{exact:true}).fill('3, -1, 3, 0');
+  await page.getByLabel('Valores para la nueva estructura',{exact:true}).focus();
   await page.keyboard.press('Tab');
   await expect(page.locator('[data-cy=algo-generate]')).toBeFocused();
   await checkAccessibility(page,info);
@@ -85,12 +87,12 @@ test('contextual families, scalar validation, keyboard focus and both themes',as
   await page.locator('[data-cy=theme-toggle]').click();
   await page.locator('[data-cy=theme-light]').click();
   // Theme class changes after React commits; wait for the input color transition to settle.
-  await expect.poll(() => page.getByLabel('Valores',{exact:true}).evaluate(el => getComputedStyle(el).color)).toBe('rgb(0, 0, 0)');
+  await expect.poll(() => page.getByLabel('Valores para la nueva estructura',{exact:true}).evaluate(el => getComputedStyle(el).color)).toBe('rgb(0, 0, 0)');
   await checkAccessibility(page,info);
   await capture(page,info,'sorting-light');
-  await page.getByLabel('Valores',{exact:true}).fill(Array(33).fill('1').join(', '));
+  await page.getByLabel('Valores para la nueva estructura',{exact:true}).fill(Array(33).fill('1').join(', '));
   await page.locator('[data-cy=algo-generate]').click();
-  await expect(page.getByLabel('Valores',{exact:true})).toBeFocused();
+  await expect(page.getByLabel('Valores para la nueva estructura',{exact:true})).toBeFocused();
   await expect(page.locator('[data-cy=algo-error]')).toContainText('32');
   await checkAccessibility(page,info);
   await capture(page,info,'sorting-validation');
@@ -119,14 +121,14 @@ test('loading, catalog failure, explicit retry and pending request',async({page}
   let finish;
   const requestPending=new Promise(resolve=>{finish=resolve;});
   await page.route('**/api/algorithm/steps',async route=>{await requestPending;await route.fulfill({status:503,json:{message:'Servicio temporalmente ocupado.'}});});
-  await page.getByLabel('Valores',{exact:true}).press('Enter');
+  await page.getByLabel('Valores para la nueva estructura',{exact:true}).press('Enter');
   await expect(page.locator('[data-cy=algo-form]')).toHaveAttribute('aria-busy','true');
-  await expect(page.getByLabel('Valores',{exact:true})).toBeDisabled();
+  await expect(page.getByLabel('Valores para la nueva estructura',{exact:true})).toBeDisabled();
   await expect(page.locator('[data-cy=algo-generate]')).toBeDisabled();
   await capture(page,info,'sorting-pending');
   finish();
   await expect(page.locator('[data-cy=algo-error]')).toContainText('temporalmente');
-  await expect(page.getByLabel('Valores',{exact:true})).toBeEnabled();
+  await expect(page.getByLabel('Valores para la nueva estructura',{exact:true})).toBeEnabled();
   await checkAccessibility(page,info);
   await capture(page,info,'sorting-api-error');
 });

@@ -1,0 +1,20 @@
+{
+  "project": "vista-pdg",
+  "region": "us-central1",
+  "backend": {
+    "revision": "vista-backend-00012-dfk",
+    "commit": "9177bf3",
+    "digest": "sha256:f55f4a89fe180a6ba433d691565e212142fe03dcc4fafdf3e959bde353329044"
+  },
+  "frontend": {
+    "revision": "vista-frontend-00012-tf6",
+    "commits": [
+      "85754c8",
+      "495a0b9"
+    ],
+    "digest": "sha256:e1a69a3b8eadb5452cb5e40fb56c6e331c1717c837e7203a81933aa4df2f735b"
+  },
+  "hosting": "https://vista-pdg.web.app",
+  "model": "gemini-3.5-flash-lite",
+  "changesToCpuMemorySqlInstanceCaps": false
+}

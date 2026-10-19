@@ -1,0 +1,23 @@
+{
+  "checkedAt": "2026-10-19T19:51:55.990809+00:00",
+  "TXT": {
+    "ns13.domaincontrol.com": "_acme-challenge.vista.kuros.work. 3600 IN TXT\t\"k6Rmx2kbRWp8RM16ASt5SsYhQ5RMVeXjVvYQgFz-Kz4\"",
+    "ns14.domaincontrol.com": "_acme-challenge.vista.kuros.work. 3600 IN TXT\t\"k6Rmx2kbRWp8RM16ASt5SsYhQ5RMVeXjVvYQgFz-Kz4\""
+  },
+  "publicTxt": [
+    {
+      "name": "_acme-challenge.vista.kuros.work.",
+      "type": 16,
+      "TTL": 3600,
+      "data": "k6Rmx2kbRWp8RM16ASt5SsYhQ5RMVeXjVvYQgFz-Kz4"
+    }
+  ],
+  "cname": [
+    {
+      "name": "vista.kuros.work.",
+      "type": 5,
+      "TTL": 3600,
+      "data": "ghs.googlehosted.com."
+    }
+  ]
+}

@@ -29,7 +29,7 @@ Credenciales sembradas por `DataSeeder`: `admin@vista.com` / `admin123`.
 
 ## Backend — `backend/`
 
-Spring Boot 4.0.6, Java 21, Maven wrapper, empaquetado **war** (Tomcat `provided`).
+Spring Boot 4.0.8, Java 21, Maven wrapper, empaquetado **war** (Tomcat `provided`).
 
 | Comando | Qué hace |
 |---|---|

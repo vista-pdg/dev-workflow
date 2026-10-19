@@ -1,0 +1,71 @@
+{
+  "checkedAt": "2026-10-19T19:51:53.104401+00:00",
+  "services": {
+    "vista-backend": {
+      "readyRevision": "vista-backend-00012-dfk",
+      "traffic": [
+        {
+          "latestRevision": true,
+          "percent": 100,
+          "revisionName": "vista-backend-00012-dfk"
+        }
+      ],
+      "annotations": {
+        "autoscaling.knative.dev/maxScale": "3",
+        "autoscaling.knative.dev/minScale": "0",
+        "run.googleapis.com/sessionAffinity": "true"
+      },
+      "concurrency": 40,
+      "containers": [
+        {
+          "name": "backend",
+          "resources": {
+            "limits": {
+              "cpu": "1",
+              "memory": "1Gi"
+            }
+          },
+          "image": "us-central1-docker.pkg.dev/vista-pdg/vista/backend@sha256:f55f4a89fe180a6ba433d691565e212142fe03dcc4fafdf3e959bde353329044"
+        },
+        {
+          "name": "redis",
+          "resources": {
+            "limits": {
+              "cpu": "1",
+              "memory": "128Mi"
+            }
+          },
+          "image": "us-central1-docker.pkg.dev/vista-pdg/dockerhub/library/redis:8-alpine"
+        }
+      ]
+    },
+    "vista-frontend": {
+      "readyRevision": "vista-frontend-00012-tf6",
+      "traffic": [
+        {
+          "latestRevision": true,
+          "percent": 100,
+          "revisionName": "vista-frontend-00012-tf6"
+        }
+      ],
+      "annotations": {
+        "autoscaling.knative.dev/maxScale": "3",
+        "autoscaling.knative.dev/minScale": "0",
+        "run.googleapis.com/sessionAffinity": "false"
+      },
+      "concurrency": 200,
+      "containers": [
+        {
+          "name": "frontend",
+          "resources": {
+            "limits": {
+              "cpu": "1",
+              "memory": "256Mi"
+            }
+          },
+          "image": "us-central1-docker.pkg.dev/vista-pdg/vista/frontend:perf-20261019-affinity"
+        }
+      ]
+    }
+  }
+}

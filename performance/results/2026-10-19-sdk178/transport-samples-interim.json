@@ -1,0 +1,978 @@
+[
+  {
+    "at": "2026-10-19T19:08:45.484919Z",
+    "revision": "vista-backend-00011-f7q",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 0,
+    "elapsedMs": 782,
+    "active": 0
+  },
+  {
+    "at": "2026-10-19T19:08:45.340105Z",
+    "revision": "vista-backend-00011-f7q",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 0,
+    "elapsedMs": 695,
+    "active": 1
+  },
+  {
+    "at": "2026-10-19T19:08:44.457536Z",
+    "revision": "vista-backend-00011-f7q",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 0,
+    "elapsedMs": 746,
+    "active": 0
+  },
+  {
+    "at": "2026-10-19T19:08:44.289563Z",
+    "revision": "vista-backend-00011-f7q",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 0,
+    "elapsedMs": 653,
+    "active": 1
+  },
+  {
+    "at": "2026-10-19T19:08:43.312171Z",
+    "revision": "vista-backend-00011-f7q",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 0,
+    "elapsedMs": 640,
+    "active": 0
+  },
+  {
+    "at": "2026-10-19T19:08:42.838755Z",
+    "revision": "vista-backend-00011-f7q",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 0,
+    "elapsedMs": 533,
+    "active": 1
+  },
+  {
+    "at": "2026-10-19T19:08:42.450424Z",
+    "revision": "vista-backend-00011-f7q",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 0,
+    "elapsedMs": 779,
+    "active": 1
+  },
+  {
+    "at": "2026-10-19T19:08:42.338506Z",
+    "revision": "vista-backend-00011-f7q",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 0,
+    "elapsedMs": 624,
+    "active": 2
+  },
+  {
+    "at": "2026-10-19T19:08:41.260639Z",
+    "revision": "vista-backend-00011-f7q",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 0,
+    "elapsedMs": 699,
+    "active": 0
+  },
+  {
+    "at": "2026-10-19T19:08:41.255274Z",
+    "revision": "vista-backend-00011-f7q",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 0,
+    "elapsedMs": 625,
+    "active": 1
+  },
+  {
+    "at": "2026-10-19T19:08:40.497042Z",
+    "revision": "vista-backend-00011-f7q",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 0,
+    "elapsedMs": 774,
+    "active": 0
+  },
+  {
+    "at": "2026-10-19T19:08:40.425528Z",
+    "revision": "vista-backend-00011-f7q",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 0,
+    "elapsedMs": 543,
+    "active": 1
+  },
+  {
+    "at": "2026-10-19T19:08:39.073110Z",
+    "revision": "vista-backend-00011-f7q",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 0,
+    "elapsedMs": 602,
+    "active": 0
+  },
+  {
+    "at": "2026-10-19T19:08:39.040549Z",
+    "revision": "vista-backend-00011-f7q",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 0,
+    "elapsedMs": 778,
+    "active": 1
+  },
+  {
+    "at": "2026-10-19T19:08:38.497483Z",
+    "revision": "vista-backend-00011-f7q",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 0,
+    "elapsedMs": 811,
+    "active": 2
+  },
+  {
+    "at": "2026-10-19T19:08:37.896960Z",
+    "revision": "vista-backend-00011-f7q",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 0,
+    "elapsedMs": 618,
+    "active": 1
+  },
+  {
+    "at": "2026-10-19T19:08:37.416719Z",
+    "revision": "vista-backend-00011-f7q",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 0,
+    "elapsedMs": 752,
+    "active": 1
+  },
+  {
+    "at": "2026-10-19T19:08:37.414561Z",
+    "revision": "vista-backend-00011-f7q",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 0,
+    "elapsedMs": 533,
+    "active": 2
+  },
+  {
+    "at": "2026-10-19T19:08:36.409202Z",
+    "revision": "vista-backend-00011-f7q",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 0,
+    "elapsedMs": 751,
+    "active": 0
+  },
+  {
+    "at": "2026-10-19T19:08:35.968207Z",
+    "revision": "vista-backend-00011-f7q",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 0,
+    "elapsedMs": 574,
+    "active": 1
+  },
+  {
+    "at": "2026-10-19T19:08:35.528153Z",
+    "revision": "vista-backend-00011-f7q",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 0,
+    "elapsedMs": 786,
+    "active": 1
+  },
+  {
+    "at": "2026-10-19T19:08:35.280080Z",
+    "revision": "vista-backend-00011-f7q",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 0,
+    "elapsedMs": 720,
+    "active": 1
+  },
+  {
+    "at": "2026-10-19T19:08:34.593375Z",
+    "revision": "vista-backend-00011-f7q",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 0,
+    "elapsedMs": 865,
+    "active": 1
+  },
+  {
+    "at": "2026-10-19T19:08:34.572079Z",
+    "revision": "vista-backend-00011-f7q",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 0,
+    "elapsedMs": 730,
+    "active": 2
+  },
+  {
+    "at": "2026-10-19T19:08:34.073374Z",
+    "revision": "vista-backend-00011-f7q",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 0,
+    "elapsedMs": 1456,
+    "active": 2
+  },
+  {
+    "at": "2026-10-19T19:08:33.756792Z",
+    "revision": "vista-backend-00011-f7q",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 0,
+    "elapsedMs": 756,
+    "active": 2
+  },
+  {
+    "at": "2026-10-19T19:08:33.573410Z",
+    "revision": "vista-backend-00011-f7q",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 0,
+    "elapsedMs": 984,
+    "active": 2
+  },
+  {
+    "at": "2026-10-19T19:08:33.526767Z",
+    "revision": "vista-backend-00011-f7q",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 0,
+    "elapsedMs": 717,
+    "active": 3
+  },
+  {
+    "at": "2026-10-19T19:08:33.476497Z",
+    "revision": "vista-backend-00011-f7q",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 0,
+    "elapsedMs": 756,
+    "active": 4
+  },
+  {
+    "at": "2026-10-19T19:08:32.791240Z",
+    "revision": "vista-backend-00011-f7q",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 0,
+    "elapsedMs": 591,
+    "active": 3
+  },
+  {
+    "at": "2026-10-19T19:08:31.491860Z",
+    "revision": "vista-backend-00011-f7q",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 0,
+    "elapsedMs": 655,
+    "active": 0
+  },
+  {
+    "at": "2026-10-19T19:08:31.331997Z",
+    "revision": "vista-backend-00011-f7q",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 0,
+    "elapsedMs": 723,
+    "active": 1
+  },
+  {
+    "at": "2026-10-19T19:08:31.066958Z",
+    "revision": "vista-backend-00011-f7q",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 0,
+    "elapsedMs": 697,
+    "active": 2
+  },
+  {
+    "at": "2026-10-19T19:08:30.197613Z",
+    "revision": "vista-backend-00011-f7q",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 0,
+    "elapsedMs": 760,
+    "active": 0
+  },
+  {
+    "at": "2026-10-19T19:08:30.162824Z",
+    "revision": "vista-backend-00011-f7q",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 0,
+    "elapsedMs": 725,
+    "active": 1
+  },
+  {
+    "at": "2026-10-19T19:08:30.057657Z",
+    "revision": "vista-backend-00011-f7q",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 0,
+    "elapsedMs": 619,
+    "active": 2
+  },
+  {
+    "at": "2026-10-19T19:08:29.271724Z",
+    "revision": "vista-backend-00011-f7q",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 0,
+    "elapsedMs": 737,
+    "active": 0
+  },
+  {
+    "at": "2026-10-19T19:08:28.847113Z",
+    "revision": "vista-backend-00011-f7q",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 0,
+    "elapsedMs": 578,
+    "active": 1
+  },
+  {
+    "at": "2026-10-19T19:08:27.589831Z",
+    "revision": "vista-backend-00011-f7q",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 0,
+    "elapsedMs": 686,
+    "active": 0
+  },
+  {
+    "at": "2026-10-19T19:08:27.344920Z",
+    "revision": "vista-backend-00011-f7q",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 0,
+    "elapsedMs": 704,
+    "active": 1
+  },
+  {
+    "at": "2026-10-19T19:08:20.802844Z",
+    "revision": "vista-backend-00011-f7q",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 0,
+    "elapsedMs": 2055,
+    "active": 0
+  },
+  {
+    "at": "2026-10-19T19:08:20.705020Z",
+    "revision": "vista-backend-00011-f7q",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 0,
+    "elapsedMs": 1957,
+    "active": 1
+  },
+  {
+    "at": "2026-10-19T19:08:20.626062Z",
+    "revision": "vista-backend-00011-f7q",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 0,
+    "elapsedMs": 1878,
+    "active": 2
+  },
+  {
+    "at": "2026-10-19T19:08:20.626051Z",
+    "revision": "vista-backend-00011-f7q",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 0,
+    "elapsedMs": 1879,
+    "active": 2
+  },
+  {
+    "at": "2026-10-19T19:08:20.043393Z",
+    "revision": "vista-backend-00011-f7q",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 1893,
+    "elapsedMs": 2947,
+    "active": 0
+  },
+  {
+    "at": "2026-10-19T19:08:19.991665Z",
+    "revision": "vista-backend-00011-f7q",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 1572,
+    "elapsedMs": 2976,
+    "active": 1
+  },
+  {
+    "at": "2026-10-19T19:08:19.527323Z",
+    "revision": "vista-backend-00011-f7q",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 1857,
+    "elapsedMs": 2431,
+    "active": 2
+  },
+  {
+    "at": "2026-10-19T19:08:19.515784Z",
+    "revision": "vista-backend-00011-f7q",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 1839,
+    "elapsedMs": 2423,
+    "active": 3
+  },
+  {
+    "at": "2026-10-19T19:08:19.419279Z",
+    "revision": "vista-backend-00011-f7q",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 1697,
+    "elapsedMs": 2327,
+    "active": 4
+  },
+  {
+    "at": "2026-10-19T19:08:19.310907Z",
+    "revision": "vista-backend-00011-f7q",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 1575,
+    "elapsedMs": 2294,
+    "active": 5
+  },
+  {
+    "at": "2026-10-19T19:08:19.233093Z",
+    "revision": "vista-backend-00011-f7q",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 1518,
+    "elapsedMs": 2141,
+    "active": 6
+  },
+  {
+    "at": "2026-10-19T19:08:19.172824Z",
+    "revision": "vista-backend-00011-f7q",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 1545,
+    "elapsedMs": 2162,
+    "active": 7
+  },
+  {
+    "at": "2026-10-19T19:08:19.117975Z",
+    "revision": "vista-backend-00011-f7q",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 1443,
+    "elapsedMs": 2109,
+    "active": 8
+  },
+  {
+    "at": "2026-10-19T19:08:19.106480Z",
+    "revision": "vista-backend-00011-f7q",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 1068,
+    "elapsedMs": 2099,
+    "active": 9
+  },
+  {
+    "at": "2026-10-19T19:08:18.989397Z",
+    "revision": "vista-backend-00011-f7q",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 869,
+    "elapsedMs": 1989,
+    "active": 9
+  },
+  {
+    "at": "2026-10-19T19:08:18.953688Z",
+    "revision": "vista-backend-00011-f7q",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 1161,
+    "elapsedMs": 1945,
+    "active": 9
+  },
+  {
+    "at": "2026-10-19T19:08:18.932085Z",
+    "revision": "vista-backend-00011-f7q",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 1202,
+    "elapsedMs": 1923,
+    "active": 9
+  },
+  {
+    "at": "2026-10-19T19:08:18.789265Z",
+    "revision": "vista-backend-00011-f7q",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 998,
+    "elapsedMs": 1787,
+    "active": 9
+  },
+  {
+    "at": "2026-10-19T19:08:18.609866Z",
+    "revision": "vista-backend-00011-f7q",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 1028,
+    "elapsedMs": 1608,
+    "active": 9
+  },
+  {
+    "at": "2026-10-19T19:08:18.591279Z",
+    "revision": "vista-backend-00011-f7q",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 400,
+    "elapsedMs": 1695,
+    "active": 9
+  },
+  {
+    "at": "2026-10-19T19:08:18.588268Z",
+    "revision": "vista-backend-00011-f7q",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 987,
+    "elapsedMs": 1587,
+    "active": 9
+  },
+  {
+    "at": "2026-10-19T19:08:18.555586Z",
+    "revision": "vista-backend-00011-f7q",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 958,
+    "elapsedMs": 1555,
+    "active": 9
+  },
+  {
+    "at": "2026-10-19T19:08:18.452561Z",
+    "revision": "vista-backend-00011-f7q",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 794,
+    "elapsedMs": 1462,
+    "active": 9
+  },
+  {
+    "at": "2026-10-19T19:08:18.211255Z",
+    "revision": "vista-backend-00011-f7q",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 631,
+    "elapsedMs": 1300,
+    "active": 9
+  },
+  {
+    "at": "2026-10-19T19:08:18.169755Z",
+    "revision": "vista-backend-00011-f7q",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 647,
+    "elapsedMs": 1259,
+    "active": 9
+  },
+  {
+    "at": "2026-10-19T19:08:18.075140Z",
+    "revision": "vista-backend-00011-f7q",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 555,
+    "elapsedMs": 1169,
+    "active": 9
+  },
+  {
+    "at": "2026-10-19T19:08:18.029910Z",
+    "revision": "vista-backend-00011-f7q",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 553,
+    "elapsedMs": 1120,
+    "active": 9
+  },
+  {
+    "at": "2026-10-19T19:08:18.000215Z",
+    "revision": "vista-backend-00011-f7q",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 453,
+    "elapsedMs": 1095,
+    "active": 9
+  },
+  {
+    "at": "2026-10-19T19:08:17.988021Z",
+    "revision": "vista-backend-00011-f7q",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 420,
+    "elapsedMs": 1090,
+    "active": 9
+  },
+  {
+    "at": "2026-10-19T19:08:17.958818Z",
+    "revision": "vista-backend-00011-f7q",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 339,
+    "elapsedMs": 1063,
+    "active": 9
+  },
+  {
+    "at": "2026-10-19T19:08:17.868501Z",
+    "revision": "vista-backend-00011-f7q",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 0,
+    "elapsedMs": 1068,
+    "active": 9
+  },
+  {
+    "at": "2026-10-19T19:08:17.785092Z",
+    "revision": "vista-backend-00011-f7q",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 0,
+    "elapsedMs": 975,
+    "active": 9
+  },
+  {
+    "at": "2026-10-19T19:08:17.557446Z",
+    "revision": "vista-backend-00011-f7q",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 0,
+    "elapsedMs": 859,
+    "active": 9
+  },
+  {
+    "at": "2026-10-19T19:08:17.540944Z",
+    "revision": "vista-backend-00011-f7q",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 0,
+    "elapsedMs": 736,
+    "active": 9
+  },
+  {
+    "at": "2026-10-19T19:08:17.462745Z",
+    "revision": "vista-backend-00011-f7q",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 0,
+    "elapsedMs": 663,
+    "active": 9
+  },
+  {
+    "at": "2026-10-19T19:08:17.461299Z",
+    "revision": "vista-backend-00011-f7q",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 0,
+    "elapsedMs": 757,
+    "active": 9
+  },
+  {
+    "at": "2026-10-19T19:08:17.358781Z",
+    "revision": "vista-backend-00011-f7q",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 0,
+    "elapsedMs": 665,
+    "active": 9
+  },
+  {
+    "at": "2026-10-19T19:08:17.318110Z",
+    "revision": "vista-backend-00011-f7q",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 0,
+    "elapsedMs": 716,
+    "active": 9
+  },
+  {
+    "at": "2026-10-19T19:08:17.296655Z",
+    "revision": "vista-backend-00011-f7q",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 0,
+    "elapsedMs": 603,
+    "active": 9
+  },
+  {
+    "at": "2026-10-19T19:08:17.234716Z",
+    "revision": "vista-backend-00011-f7q",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 0,
+    "elapsedMs": 630,
+    "active": 9
+  },
+  {
+    "at": "2026-10-19T19:07:52.508025Z",
+    "revision": "vista-backend-00011-f7q",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 0,
+    "elapsedMs": 1467,
+    "active": 0
+  },
+  {
+    "at": "2026-10-19T19:04:59.045848Z",
+    "revision": "vista-backend-00010-cd2",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 1779,
+    "elapsedMs": 2633,
+    "active": 0
+  },
+  {
+    "at": "2026-10-19T19:04:58.903125Z",
+    "revision": "vista-backend-00010-cd2",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 1877,
+    "elapsedMs": 2488,
+    "active": 1
+  },
+  {
+    "at": "2026-10-19T19:04:58.793005Z",
+    "revision": "vista-backend-00010-cd2",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 1588,
+    "elapsedMs": 2389,
+    "active": 2
+  },
+  {
+    "at": "2026-10-19T19:04:58.791292Z",
+    "revision": "vista-backend-00010-cd2",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 1568,
+    "elapsedMs": 2389,
+    "active": 3
+  },
+  {
+    "at": "2026-10-19T19:04:58.791283Z",
+    "revision": "vista-backend-00010-cd2",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 1679,
+    "elapsedMs": 2380,
+    "active": 3
+  },
+  {
+    "at": "2026-10-19T19:04:58.754687Z",
+    "revision": "vista-backend-00010-cd2",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 1710,
+    "elapsedMs": 2343,
+    "active": 5
+  },
+  {
+    "at": "2026-10-19T19:04:58.597324Z",
+    "revision": "vista-backend-00010-cd2",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 1656,
+    "elapsedMs": 2188,
+    "active": 6
+  },
+  {
+    "at": "2026-10-19T19:04:58.592100Z",
+    "revision": "vista-backend-00010-cd2",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 1434,
+    "elapsedMs": 2195,
+    "active": 7
+  },
+  {
+    "at": "2026-10-19T19:04:58.492162Z",
+    "revision": "vista-backend-00010-cd2",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 1546,
+    "elapsedMs": 2093,
+    "active": 8
+  },
+  {
+    "at": "2026-10-19T19:04:58.492145Z",
+    "revision": "vista-backend-00010-cd2",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 1437,
+    "elapsedMs": 2094,
+    "active": 8
+  },
+  {
+    "at": "2026-10-19T19:04:58.291950Z",
+    "revision": "vista-backend-00010-cd2",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 1183,
+    "elapsedMs": 1979,
+    "active": 9
+  },
+  {
+    "at": "2026-10-19T19:04:58.192345Z",
+    "revision": "vista-backend-00010-cd2",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 1182,
+    "elapsedMs": 1880,
+    "active": 9
+  },
+  {
+    "at": "2026-10-19T19:04:58.121567Z",
+    "revision": "vista-backend-00010-cd2",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 992,
+    "elapsedMs": 1821,
+    "active": 9
+  },
+  {
+    "at": "2026-10-19T19:04:58.090680Z",
+    "revision": "vista-backend-00010-cd2",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 992,
+    "elapsedMs": 1786,
+    "active": 9
+  },
+  {
+    "at": "2026-10-19T19:04:58.065018Z",
+    "revision": "vista-backend-00010-cd2",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 1181,
+    "elapsedMs": 1754,
+    "active": 9
+  },
+  {
+    "at": "2026-10-19T19:04:57.991547Z",
+    "revision": "vista-backend-00010-cd2",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 964,
+    "elapsedMs": 1694,
+    "active": 9
+  },
+  {
+    "at": "2026-10-19T19:04:57.969895Z",
+    "revision": "vista-backend-00010-cd2",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 1090,
+    "elapsedMs": 1660,
+    "active": 9
+  },
+  {
+    "at": "2026-10-19T19:04:57.944957Z",
+    "revision": "vista-backend-00010-cd2",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 990,
+    "elapsedMs": 1643,
+    "active": 9
+  },
+  {
+    "at": "2026-10-19T19:04:57.835489Z",
+    "revision": "vista-backend-00010-cd2",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 1060,
+    "elapsedMs": 1527,
+    "active": 9
+  },
+  {
+    "at": "2026-10-19T19:04:57.830841Z",
+    "revision": "vista-backend-00010-cd2",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 991,
+    "elapsedMs": 1527,
+    "active": 9
+  },
+  {
+    "at": "2026-10-19T19:04:57.495175Z",
+    "revision": "vista-backend-00010-cd2",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 651,
+    "elapsedMs": 1199,
+    "active": 9
+  },
+  {
+    "at": "2026-10-19T19:04:57.493091Z",
+    "revision": "vista-backend-00010-cd2",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 596,
+    "elapsedMs": 1280,
+    "active": 9
+  },
+  {
+    "at": "2026-10-19T19:04:57.493075Z",
+    "revision": "vista-backend-00010-cd2",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 575,
+    "elapsedMs": 1197,
+    "active": 9
+  },
+  {
+    "at": "2026-10-19T19:04:57.399440Z",
+    "revision": "vista-backend-00010-cd2",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 464,
+    "elapsedMs": 1204,
+    "active": 9
+  },
+  {
+    "at": "2026-10-19T19:04:57.369006Z",
+    "revision": "vista-backend-00010-cd2",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 404,
+    "elapsedMs": 1177,
+    "active": 9
+  },
+  {
+    "at": "2026-10-19T19:04:57.296401Z",
+    "revision": "vista-backend-00010-cd2",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 584,
+    "elapsedMs": 1087,
+    "active": 9
+  },
+  {
+    "at": "2026-10-19T19:04:57.293694Z",
+    "revision": "vista-backend-00010-cd2",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 427,
+    "elapsedMs": 1183,
+    "active": 9
+  },
+  {
+    "at": "2026-10-19T19:04:57.293082Z",
+    "revision": "vista-backend-00010-cd2",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 483,
+    "elapsedMs": 1091,
+    "active": 8
+  },
+  {
+    "at": "2026-10-19T19:04:57.293072Z",
+    "revision": "vista-backend-00010-cd2",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 418,
+    "elapsedMs": 1100,
+    "active": 8
+  },
+  {
+    "at": "2026-10-19T19:04:57.262140Z",
+    "revision": "vista-backend-00010-cd2",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 370,
+    "elapsedMs": 1070,
+    "active": 9
+  },
+  {
+    "at": "2026-10-19T19:04:56.947485Z",
+    "revision": "vista-backend-00010-cd2",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 0,
+    "elapsedMs": 843,
+    "active": 9
+  },
+  {
+    "at": "2026-10-19T19:04:56.870483Z",
+    "revision": "vista-backend-00010-cd2",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 0,
+    "elapsedMs": 861,
+    "active": 9
+  },
+  {
+    "at": "2026-10-19T19:04:56.809954Z",
+    "revision": "vista-backend-00010-cd2",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 0,
+    "elapsedMs": 813,
+    "active": 9
+  },
+  {
+    "at": "2026-10-19T19:04:56.793498Z",
+    "revision": "vista-backend-00010-cd2",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 0,
+    "elapsedMs": 686,
+    "active": 9
+  },
+  {
+    "at": "2026-10-19T19:04:56.683434Z",
+    "revision": "vista-backend-00010-cd2",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 0,
+    "elapsedMs": 582,
+    "active": 9
+  },
+  {
+    "at": "2026-10-19T19:04:56.659123Z",
+    "revision": "vista-backend-00010-cd2",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 0,
+    "elapsedMs": 559,
+    "active": 9
+  },
+  {
+    "at": "2026-10-19T19:04:56.609755Z",
+    "revision": "vista-backend-00010-cd2",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 0,
+    "elapsedMs": 601,
+    "active": 9
+  },
+  {
+    "at": "2026-10-19T19:04:56.608561Z",
+    "revision": "vista-backend-00010-cd2",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 0,
+    "elapsedMs": 588,
+    "active": 9
+  },
+  {
+    "at": "2026-10-19T19:04:56.561021Z",
+    "revision": "vista-backend-00010-cd2",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 0,
+    "elapsedMs": 575,
+    "active": 9
+  },
+  {
+    "at": "2026-10-19T19:04:56.537067Z",
+    "revision": "vista-backend-00010-cd2",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 0,
+    "elapsedMs": 529,
+    "active": 9
+  },
+  {
+    "at": "2026-10-19T19:04:05.894411Z",
+    "revision": "vista-backend-00010-cd2",
+    "model": "gemini-3.5-flash-lite",
+    "queueMs": 0,
+    "elapsedMs": 1306,
+    "active": 0
+  }
+]
