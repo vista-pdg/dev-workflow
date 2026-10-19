@@ -83,7 +83,7 @@ test('context, tutorial focus and light theme at relevant viewports', async ({ p
   await expect(page.locator('[data-cy=tutorial]')).toBeVisible();
   await expect(page.locator('[data-cy=tutorial-prev]')).toBeDisabled();
   await checkAccessibility(page, testInfo);
-  for (let i = 0; i < 4; i++) await page.locator('[data-cy=tutorial-next]').click();
+  for (let i = 0; i < 5; i++) await page.locator('[data-cy=tutorial-next]').click();
   await expect(page.getByRole('heading', { name: 'Cambia la vista' })).toBeVisible();
   await page.keyboard.press('Escape');
   await expect(page.locator('[data-cy=tutorial]')).toHaveCount(0);
@@ -276,7 +276,13 @@ test('one navigation, exclusive tree/heap selection and original ICESI branding'
     const left = await page.locator('[data-cy=work-context]').evaluate(el => el.getBoundingClientRect().left);
     await sidebar.hover();
     await expect(sidebar).toHaveAttribute('data-expanded', 'true');
-    expect(await page.locator('[data-cy=icesi-brand]').evaluate(el => el.clientWidth)).toBe(87);
+    await expect.poll(() => page.locator('[data-cy=icesi-brand]').evaluate(el => el.clientWidth)).toBe(87);
+    expect(await sidebar.evaluate(el => {
+      const sidebar = el.getBoundingClientRect();
+      const logo = el.querySelector('[data-cy=icesi-brand]').getBoundingClientRect();
+      return Math.abs(logo.left + logo.width / 2 - sidebar.left - sidebar.width / 2);
+    })).toBeLessThan(1);
+    await page.screenshot({ path: testInfo.outputPath('navigation-hover.png'), animations: 'disabled' });
     expect(await page.locator('[data-cy=work-context]').evaluate(el => el.getBoundingClientRect().left)).toBe(left);
     await page.mouse.move(1000, 500);
     await expect(sidebar).toHaveAttribute('data-expanded', 'false');
@@ -291,6 +297,12 @@ test('one navigation, exclusive tree/heap selection and original ICESI branding'
   await toggle.click();
   await expect(sidebar).toHaveAttribute('data-expanded', 'true');
   await expect(toggle).toHaveAccessibleName('Contraer navegación');
+  await expect.poll(() => page.locator('[data-cy=icesi-brand]').evaluate(el => el.clientWidth)).toBe(87);
+  expect(await sidebar.evaluate(el => {
+    const sidebar = el.getBoundingClientRect();
+    const logo = el.querySelector('[data-cy=icesi-brand]').getBoundingClientRect();
+    return Math.abs(logo.left + logo.width / 2 - sidebar.left - sidebar.width / 2);
+  })).toBeLessThan(1);
   await checkAccessibility(page, testInfo);
   await page.screenshot({ path: testInfo.outputPath('navigation-expanded.png'), animations: 'disabled' });
   await toggle.click();
@@ -330,14 +342,14 @@ test('contextual tour points to controls and uses an isolated code example', asy
   await selectStructure(page, 'tree-avl');
   await page.locator('[data-cy=chat-toggle]').click();
   await page.locator('[data-cy=chat-input]').fill('Un borrador que debo conservar');
-  const targets = ['[data-cy=nav-family-tree]', '[data-cy=chat-compose]', '[data-cy=algo-catalog]', '[data-cy=tutorial-demo-area]', '[data-cy=mode-selector]'];
+  const targets = ['[data-cy=nav-family-tree]', '[data-cy=activity-selector]', '[data-cy=chat-compose]', '[data-cy=algo-catalog]', '[data-cy=tutorial-demo-area]', '[data-cy=mode-selector]'];
   for (const theme of ['dark', 'light']) {
     if (theme === 'light') await setLightTheme(page);
     await page.locator('[data-cy=tutorial-open]').click();
     await expect(page.locator('[data-cy=tutorial-next]')).toBeFocused();
     for (let index = 0; index < targets.length; index++) {
       await assertTourPlacement(page, targets[index]);
-      if (index === 3) {
+      if (index === 4) {
         await expect(page.locator('[data-cy=tutorial-code-demo]')).toBeVisible();
         await expect(page.locator('[data-cy=tutorial-code-line-2]')).toHaveAttribute('data-active', 'true');
         await page.locator('[data-cy=tutorial-code-java]').click();
@@ -349,7 +361,7 @@ test('contextual tour points to controls and uses an isolated code example', asy
         await page.locator('[data-cy=tutorial-code-pseudocode]').click();
       }
       await checkAccessibility(page, testInfo);
-      if (index === 0 || index === 1 || index === 3) {
+      if (index === 0 || index === 1 || index === 2 || index === 4) {
         const screenshot = testInfo.outputPath(`tutorial-${index + 1}-${theme}.png`);
         await page.screenshot({ path: screenshot, animations: 'disabled' });
         await testInfo.attach(`tutorial-${index + 1}-${theme}`, { path: screenshot, contentType: 'image/png' });
@@ -370,8 +382,8 @@ test('contextual tour points to controls and uses an isolated code example', asy
     await expect(page.locator('[data-cy=tutorial-demo-area]')).toHaveCount(0);
   }
   await page.locator('[data-cy=tutorial-open]').click();
-  for (let i = 0; i < 3; i++) await page.locator('[data-cy=tutorial-next]').click();
-  await assertTourPlacement(page, targets[3]);
+  for (let i = 0; i < 4; i++) await page.locator('[data-cy=tutorial-next]').click();
+  await assertTourPlacement(page, targets[4]);
   await page.keyboard.press('Escape');
   await page.locator('[data-cy=tutorial-open]').click();
   await assertTourPlacement(page, targets[0]);
@@ -402,7 +414,7 @@ test('tour reveals existing code and preserves the current trace and collapsed p
   await page.locator('[data-cy=code-toggle]').click();
   await page.locator('button[title="Reproducir (Espacio)"]').click();
   await page.locator('[data-cy=tutorial-open]').click();
-  for (let i = 0; i < 3; i++) await page.locator('[data-cy=tutorial-next]').click();
+  for (let i = 0; i < 4; i++) await page.locator('[data-cy=tutorial-next]').click();
   await assertTourPlacement(page, '[data-cy=code-panel]');
   await expect(page.locator('[data-cy=code-toggle]')).toHaveAttribute('aria-expanded', 'true');
   await expect(page.locator('[data-cy=code-line-11]')).toHaveAttribute('data-active', 'true');
@@ -430,6 +442,7 @@ test('tour remains usable while the catalog loads or fails', async ({ page }, te
     await route.fulfill({ status: 503, json: { message: 'Catálogo no disponible en fixture' } });
   });
   await page.locator('[data-cy=tutorial-open]').click();
+  await page.locator('[data-cy=tutorial-next]').click();
   await page.locator('[data-cy=tutorial-next]').click();
   await page.locator('[data-cy=tutorial-next]').click();
   try {
@@ -520,4 +533,48 @@ test('hover is default, tools stay at the bottom and theme follows its selected 
   await expect(page.locator('[data-cy=chat-toggle]')).toHaveAttribute('aria-pressed', 'false');
   await expect(page.locator('[data-cy=algorithm-toggle]')).toHaveAttribute('aria-pressed', 'true');
   await checkAccessibility(page, testInfo);
+});
+
+test('canvas source and complete code visibility · rendered states', async ({ page }, testInfo) => {
+  await openFixture(page);
+  await page.route('**/api/generate', route => route.fulfill({ json: {
+    error: false, message: null, contract: null,
+    nodes: [
+      { ...fixtureNode('n0', 3, 0), properties: { index: 0, role: 'bottom' } },
+      { ...fixtureNode('n1', 42, 2), properties: { index: 1, role: 'top' } },
+    ], edges: [], meta: { type: 'stack', subtype: 'simple', nodeCount: 2, edgeCount: 0, computedProperties: {} },
+  } }));
+  await selectStructure(page, 'stack');
+  await page.locator('[data-cy=chat-toggle]').click();
+  await page.locator('[data-cy=chat-input]').fill('pila con 3, 42');
+  await page.locator('[data-cy=chat-send]').click();
+  await expect(page.locator('[data-cy=chat-input]')).toBeEnabled();
+  await page.locator('[data-cy=algorithm-toggle]').click();
+  await page.locator('[data-cy=algo-item-stack-simple-pop]').click();
+  await expect(page.locator('[data-cy=algo-source-canvas]')).toBeChecked();
+  for (const source of ['canvas', 'values']) {
+    await page.locator(`[data-cy=algo-source-${source}]`).check();
+    await page.locator('[data-cy=algo-source]').scrollIntoViewIfNeeded();
+    await checkAccessibility(page, testInfo);
+    await page.screenshot({ path: testInfo.outputPath(`source-${source}.png`), animations: 'disabled' });
+  }
+  await page.locator('[data-cy=algo-source-canvas]').check();
+  await page.locator('[data-cy=algo-generate]').click();
+  await page.locator('[data-cy=algorithm-panel]').getByRole('button', { name: 'Cerrar panel', exact: true }).click();
+  const panel = page.locator('[data-cy=code-panel]');
+  await expect(panel).toBeVisible();
+  if (testInfo.project.name === 'mobile') await page.locator('[data-cy=code-toggle]').click();
+  await page.locator('[data-cy=code-view-java]').click();
+  const before = await panel.boundingBox();
+  await page.locator('[data-cy=code-visibility-toggle]').click();
+  await expect(panel).toBeHidden();
+  await page.locator('[data-cy=step-next]').click();
+  await checkAccessibility(page, testInfo);
+  await page.screenshot({ path: testInfo.outputPath('code-hidden.png'), animations: 'disabled' });
+  await page.locator('[data-cy=code-visibility-toggle]').click();
+  await expect(panel).toHaveAttribute('data-language', 'java');
+  await expect(panel).toHaveAttribute('data-active-line', '11');
+  expect(await panel.boundingBox()).toEqual(before);
+  await checkAccessibility(page, testInfo);
+  await page.screenshot({ path: testInfo.outputPath('code-restored.png'), animations: 'disabled' });
 });

@@ -41,7 +41,7 @@ for (const theme of ['light', 'dark']) {
       expect(control.height).toBeGreaterThanOrEqual(44);
     }
     await checkAccessibility(page, testInfo);
-    await testInfo.attach(`hu33-${theme}`, { body: await page.screenshot({ fullPage: true, animations: 'disabled' }), contentType: 'image/png' });
+    await testInfo.attach(`hu33-${theme}`, { body: await page.screenshot({ path: testInfo.outputPath(`hu33-${theme}.png`), fullPage: true, animations: 'disabled' }), contentType: 'image/png' });
     if (testInfo.project.name === 'mobile') {
       await page.locator('#root > div').evaluate(el => { el.scrollTop = el.scrollHeight; });
       await testInfo.attach(`hu33-${theme}-scrolled`, { body: await page.screenshot({ animations: 'disabled' }), contentType: 'image/png' });
