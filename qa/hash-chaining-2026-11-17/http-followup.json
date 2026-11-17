@@ -1,0 +1,27 @@
+{
+  "refinamiento": {
+    "status": 200,
+    "contract": {
+      "type": "hash-table",
+      "visual": null,
+      "size": 3,
+      "values": [
+        1,
+        4,
+        7,
+        10,
+        13
+      ],
+      "hashFunction": "modular"
+    }
+  },
+  "busquedaSobreCanvas": {
+    "status": 200,
+    "encontrado": true,
+    "figuraConservada": true
+  },
+  "subtipoNoSoportado": {
+    "status": 400,
+    "message": "Unsupported structure type: El subtipo seleccionado no está soportado por VISTA."
+  }
+}
