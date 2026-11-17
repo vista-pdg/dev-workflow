@@ -1,0 +1,5 @@
+npm ci: aprobado; lockfile de la base remota sin modificaciones
+npx tsc -p cypress/tsconfig.json --noEmit: aprobado
+npm run build: aprobado (incluye tsc -b)
+npm run lint: aprobado
+./mvnw spotless:check test: aprobado

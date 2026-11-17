@@ -1,0 +1,7 @@
+ Test Files  16 passed (16)
+      Tests  105 passed (105)
+File               | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s
+Statements   : 93.22% ( 661/709 )
+Branches     : 87.52% ( 407/465 )
+Functions    : 94.79% ( 182/192 )
+Lines        : 95.78% ( 546/570 )

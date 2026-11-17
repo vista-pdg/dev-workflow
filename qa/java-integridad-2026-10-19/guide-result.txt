@@ -1,0 +1,5 @@
+Java release: 17
+Repositorio guía: juanmarcosdev/Estructuras-no-recursivas
+Commit: c395fb0b88608295d18e7dc84afaa1509a7c03eb
+Compilación VistaStackPop.java + VistaQueueDequeue.java: aprobada
+Ejecución con [3,7,9]: pop=[9,7,3], dequeue=[3,7,9]; estructuras vacías al finalizar

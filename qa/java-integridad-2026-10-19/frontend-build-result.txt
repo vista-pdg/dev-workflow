@@ -1,0 +1,6 @@
+Set `VITE_CONFIG_NATIVE_IGNORE_WARNING=true` to suppress this warning.
+transforming...
+✓ 2794 modules transformed.
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 733ms

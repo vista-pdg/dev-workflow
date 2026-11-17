@@ -1,0 +1,3 @@
+npm run lint: aprobado
+npx tsc -p cypress/tsconfig.json --noEmit: aprobado
+git diff --check backend/frontend/dev-workflow: sin errores

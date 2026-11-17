@@ -1,0 +1,24 @@
+chrome: vista-java-cypress-chrome.log
+chrome: vista-java-cypress-chrome-tail.log
+✔  All specs passed!                        00:40       19       19        -        -        -
+chrome: vista-java-cypress-chrome-final.log
+✔  All specs passed!                        00:52        5        5        -        -        -
+Total único chrome: 75 archivos, 200 aprobadas, 0 fallos, 0 omitidas.
+
+firefox: vista-java-cypress-firefox-1.log
+✔  All specs passed!                        02:37       73       73        -        -        -
+An error occurred during the "clear data context" teardown step. This does not affect the exit code (0).
+Error: kill EACCES
+firefox: vista-java-cypress-firefox-2.log
+✔  All specs passed!                        01:20       59       59        -        -        -
+An error occurred during the "clear data context" teardown step. This does not affect the exit code (0).
+Error: kill EACCES
+firefox: vista-java-cypress-firefox-3.log
+✔  All specs passed!                        01:31       36       36        -        -        -
+An error occurred during the "clear data context" teardown step. This does not affect the exit code (0).
+Error: kill EACCES
+firefox: vista-java-cypress-firefox-4.log
+✔  All specs passed!                        01:20       32       32        -        -        -
+An error occurred during the "clear data context" teardown step. This does not affect the exit code (0).
+Error: kill EACCES
+Total único firefox: 75 archivos, 200 aprobadas, 0 fallos, 0 omitidas.

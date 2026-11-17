@@ -1,0 +1,179 @@
+{
+  "operaciones": 43,
+  "archivos": 38,
+  "javaRelease": 17,
+  "catalogo": [
+    {
+      "algoritmo": "graph/simple/bfs",
+      "archivo": "VistaBfs.java"
+    },
+    {
+      "algoritmo": "graph/simple/dfs",
+      "archivo": "VistaDfs.java"
+    },
+    {
+      "algoritmo": "graph/simple/dijkstra",
+      "archivo": "VistaDijkstra.java"
+    },
+    {
+      "algoritmo": "graph/simple/floyd",
+      "archivo": "VistaFloyd.java"
+    },
+    {
+      "algoritmo": "graph/simple/kruskal",
+      "archivo": "VistaKruskal.java"
+    },
+    {
+      "algoritmo": "graph/simple/prim",
+      "archivo": "VistaPrim.java"
+    },
+    {
+      "algoritmo": "hash-table/chaining/delete",
+      "archivo": "VistaHashDelete.java"
+    },
+    {
+      "algoritmo": "hash-table/chaining/insert",
+      "archivo": "VistaHashInsert.java"
+    },
+    {
+      "algoritmo": "hash-table/chaining/search",
+      "archivo": "VistaHashSearch.java"
+    },
+    {
+      "algoritmo": "linked-list/simple/append",
+      "archivo": "VistaListAppend.java"
+    },
+    {
+      "algoritmo": "linked-list/simple/bubble-sort",
+      "archivo": "VistaBubbleSort.java"
+    },
+    {
+      "algoritmo": "linked-list/simple/delete",
+      "archivo": "VistaListDelete.java"
+    },
+    {
+      "algoritmo": "linked-list/simple/heap-sort",
+      "archivo": "VistaHeapSort.java"
+    },
+    {
+      "algoritmo": "linked-list/simple/insertion-sort",
+      "archivo": "VistaInsertionSort.java"
+    },
+    {
+      "algoritmo": "linked-list/simple/merge-sort",
+      "archivo": "VistaMergeSort.java"
+    },
+    {
+      "algoritmo": "linked-list/simple/quick-sort",
+      "archivo": "VistaQuickSort.java"
+    },
+    {
+      "algoritmo": "linked-list/simple/reverse",
+      "archivo": "VistaListReverse.java"
+    },
+    {
+      "algoritmo": "linked-list/simple/search",
+      "archivo": "VistaListSearch.java"
+    },
+    {
+      "algoritmo": "linked-list/simple/selection-sort",
+      "archivo": "VistaSelectionSort.java"
+    },
+    {
+      "algoritmo": "linked-list/simple/traverse",
+      "archivo": "VistaListTraverse.java"
+    },
+    {
+      "algoritmo": "queue/simple/dequeue",
+      "archivo": "VistaQueueDequeue.java"
+    },
+    {
+      "algoritmo": "queue/simple/enqueue",
+      "archivo": "VistaQueueEnqueue.java"
+    },
+    {
+      "algoritmo": "queue/simple/peek",
+      "archivo": "VistaQueueFront.java"
+    },
+    {
+      "algoritmo": "stack/simple/peek",
+      "archivo": "VistaStackPeek.java"
+    },
+    {
+      "algoritmo": "stack/simple/pop",
+      "archivo": "VistaStackPop.java"
+    },
+    {
+      "algoritmo": "stack/simple/push",
+      "archivo": "VistaStackPush.java"
+    },
+    {
+      "algoritmo": "tree/avl/insert",
+      "archivo": "VistaAvl.java"
+    },
+    {
+      "algoritmo": "tree/avl/levelorder",
+      "archivo": "VistaTreeLevelorder.java"
+    },
+    {
+      "algoritmo": "tree/avl/postorder",
+      "archivo": "VistaTreePostorder.java"
+    },
+    {
+      "algoritmo": "tree/avl/preorder",
+      "archivo": "VistaTreePreorder.java"
+    },
+    {
+      "algoritmo": "tree/avl/search",
+      "archivo": "VistaTreeSearch.java"
+    },
+    {
+      "algoritmo": "tree/bst/inorder",
+      "archivo": "VistaInorder.java"
+    },
+    {
+      "algoritmo": "tree/bst/insert",
+      "archivo": "VistaBstInsert.java"
+    },
+    {
+      "algoritmo": "tree/bst/levelorder",
+      "archivo": "VistaTreeLevelorder.java"
+    },
+    {
+      "algoritmo": "tree/bst/postorder",
+      "archivo": "VistaTreePostorder.java"
+    },
+    {
+      "algoritmo": "tree/bst/preorder",
+      "archivo": "VistaTreePreorder.java"
+    },
+    {
+      "algoritmo": "tree/bst/search",
+      "archivo": "VistaTreeSearch.java"
+    },
+    {
+      "algoritmo": "tree/btree/levelorder",
+      "archivo": "VistaTreeLevelorder.java"
+    },
+    {
+      "algoritmo": "tree/btree/search",
+      "archivo": "VistaBtreeSearch.java"
+    },
+    {
+      "algoritmo": "tree/heap/extract",
+      "archivo": "VistaHeapExtract.java"
+    },
+    {
+      "algoritmo": "tree/heap/heapify",
+      "archivo": "VistaHeapify.java"
+    },
+    {
+      "algoritmo": "tree/heap/insert",
+      "archivo": "VistaHeapInsert.java"
+    },
+    {
+      "algoritmo": "tree/heap/peek",
+      "archivo": "VistaHeapPeek.java"
+    }
+  ]
+}
