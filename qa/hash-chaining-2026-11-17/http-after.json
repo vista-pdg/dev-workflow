@@ -1,0 +1,147 @@
+{
+  "fase": "backend corregido",
+  "status": 200,
+  "response": {
+    "error": false,
+    "message": null,
+    "attempts": null,
+    "contract": {
+      "type": "hash-table",
+      "visual": null,
+      "size": 3,
+      "values": [
+        1,
+        4,
+        7,
+        10
+      ],
+      "hashFunction": "modular"
+    },
+    "nodes": [
+      {
+        "id": "b0",
+        "label": "[0]",
+        "x": -3.5,
+        "y": 0.0,
+        "z": 0.0,
+        "depth": 0,
+        "parent": null,
+        "properties": {
+          "bucket": true
+        }
+      },
+      {
+        "id": "b1",
+        "label": "[1]",
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "depth": 0,
+        "parent": null,
+        "properties": {
+          "bucket": true
+        }
+      },
+      {
+        "id": "b2",
+        "label": "[2]",
+        "x": 3.5,
+        "y": 0.0,
+        "z": 0.0,
+        "depth": 0,
+        "parent": null,
+        "properties": {
+          "bucket": true
+        }
+      },
+      {
+        "id": "v0",
+        "label": "1",
+        "x": 0.0,
+        "y": -2.5,
+        "z": 0.0,
+        "depth": 1,
+        "parent": "b1",
+        "properties": {
+          "hashBucket": 1
+        }
+      },
+      {
+        "id": "v1",
+        "label": "4",
+        "x": 0.0,
+        "y": -5.0,
+        "z": 0.0,
+        "depth": 2,
+        "parent": "v0",
+        "properties": {
+          "hashBucket": 1
+        }
+      },
+      {
+        "id": "v2",
+        "label": "7",
+        "x": 0.0,
+        "y": -7.5,
+        "z": 0.0,
+        "depth": 3,
+        "parent": "v1",
+        "properties": {
+          "hashBucket": 1
+        }
+      },
+      {
+        "id": "v3",
+        "label": "10",
+        "x": 0.0,
+        "y": -10.0,
+        "z": 0.0,
+        "depth": 4,
+        "parent": "v2",
+        "properties": {
+          "hashBucket": 1
+        }
+      }
+    ],
+    "edges": [
+      {
+        "id": "e0",
+        "from": "b1",
+        "to": "v0",
+        "weight": null,
+        "directed": true
+      },
+      {
+        "id": "e1",
+        "from": "v0",
+        "to": "v1",
+        "weight": null,
+        "directed": true
+      },
+      {
+        "id": "e2",
+        "from": "v1",
+        "to": "v2",
+        "weight": null,
+        "directed": true
+      },
+      {
+        "id": "e3",
+        "from": "v2",
+        "to": "v3",
+        "weight": null,
+        "directed": true
+      }
+    ],
+    "meta": {
+      "type": "hash-table",
+      "subtype": null,
+      "nodeCount": 7,
+      "edgeCount": 4,
+      "computedProperties": {
+        "loadFactor": 1.3333333333333333,
+        "bucketCount": 3
+      }
+    }
+  }
+}

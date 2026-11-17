@@ -1,0 +1,13 @@
+{
+  "fase": "antes de reiniciar el backend",
+  "status": 400,
+  "response": {
+    "error": true,
+    "message": "Unsupported structure type: El subtipo seleccionado no está soportado por VISTA.",
+    "attempts": null,
+    "contract": null,
+    "nodes": null,
+    "edges": null,
+    "meta": null
+  }
+}
