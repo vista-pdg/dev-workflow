@@ -51078,6 +51078,132 @@
                 },
                 {
                   "type": "frame",
+                  "id": "uGNcx",
+                  "name": "Reconectando",
+                  "width": "fill_container",
+                  "fill": "$card",
+                  "stroke": "$border",
+                  "strokeWidth": 1,
+                  "layout": "vertical",
+                  "gap": 12,
+                  "padding": 20,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "hdOct",
+                      "name": "GENERANDO BANCO CON IA",
+                      "fill": "$muted-fg",
+                      "content": "GENERANDO BANCO CON IA",
+                      "fontFamily": "$font",
+                      "fontSize": 10,
+                      "fontWeight": "700",
+                      "letterSpacing": 1.8
+                    },
+                    {
+                      "type": "text",
+                      "id": "x6XmU",
+                      "name": "32 de 60 preguntas",
+                      "fill": "$fg",
+                      "content": "32 de 60 preguntas",
+                      "fontFamily": "Geist Mono",
+                      "fontSize": 20,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "CCBhs",
+                      "name": "Barra",
+                      "width": "fill_container",
+                      "height": 6,
+                      "fill": "$muted",
+                      "children": [
+                        {
+                          "type": "rectangle",
+                          "id": "a1SUQq",
+                          "name": "Avance",
+                          "fill": "$primary",
+                          "width": 180,
+                          "height": 6
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "xKHfO",
+                      "name": "Estado reintento",
+                      "width": "fill_container",
+                      "gap": 8,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon",
+                          "id": "NZvwq",
+                          "name": "Icono reintento",
+                          "width": 14,
+                          "height": 14,
+                          "icon": "refresh-cw",
+                          "library": "lucide",
+                          "fill": "$yellow"
+                        },
+                        {
+                          "type": "text",
+                          "id": "MbNkP",
+                          "name": "Se perdió la conexión. Reintentando el l",
+                          "fill": "$fg",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Se perdió la conexión. Reintentando el lote (1 de 3)…",
+                          "lineHeight": 1.45,
+                          "fontFamily": "$font",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "GwNnT",
+                      "name": "Los cortes breves de red y los 502/503/5",
+                      "fill": "$muted-fg",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Los cortes breves de red y los 502/503/504 se reintentan solos. Si los tres reintentos fallan, aparece el error con «Reanudar generación».",
+                      "lineHeight": 1.45,
+                      "fontFamily": "$font",
+                      "fontSize": 11,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "NgOVB",
+                      "name": "Botón Pausar",
+                      "height": 44,
+                      "stroke": "$border",
+                      "strokeWidth": 1,
+                      "gap": 8,
+                      "padding": [
+                        0,
+                        16
+                      ],
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "Tf0So",
+                          "name": "Pausar",
+                          "fill": "$fg",
+                          "content": "Pausar",
+                          "fontFamily": "$font",
+                          "fontSize": 13,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
                   "id": "ohRQp",
                   "name": "Error de generación",
                   "width": "fill_container",
@@ -51129,7 +51255,7 @@
                           "fill": "$fg",
                           "textGrowth": "fixed-width",
                           "width": "fill_container",
-                          "content": "El servicio del modelo no está disponible. El banco conserva 35 preguntas.",
+                          "content": "Se perdió la conexión con el servidor tras 3 reintentos. El banco conserva 32 preguntas.",
                           "lineHeight": 1.45,
                           "fontFamily": "$font",
                           "fontSize": 13,

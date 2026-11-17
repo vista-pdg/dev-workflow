@@ -214,6 +214,37 @@ limpia) se conserva; se actualizó la petición que la prueba espera.
   detienen la generación y se reanuda a mano.
 - Un quiz publicado no se puede editar ni eliminar si ya tiene intentos.
 
+## Incidencia posterior a la publicación (17 nov 2026)
+
+**Síntoma:** en producción, al generar el banco de un quiz de 3 preguntas × 20 estudiantes (60), la
+generación se detuvo con «No se pudo generar el lote. El banco conserva lo generado.».
+
+**Causa, según los registros de Cloud Run:** el servidor no falló. Los 16 lotes que llegaron
+respondieron 200 en ~4,5–5 s cada uno. Tras el octavo lote (32 de 60) el siguiente nunca llegó al
+servidor, y la IP pública del cliente cambió de `186.81.x` a `181.63.x` antes de que se reanudara: un
+corte o cambio de red mató la petición en curso. El cliente lo trataba como un error genérico y
+detenía todo el banco por un solo fallo. Al reanudar, el banco se completó (60/60).
+
+**Corrección:**
+- `useBankGeneration` reintenta solo los fallos transitorios (sin respuesta, 429, 502, 503, 504) con
+  esperas de 2, 5 y 10 s; muestra «Reintentando el lote (n de 3)» y, si persiste, la causa concreta.
+  401, 403, 404 y 409 no se reintentan y explican qué pasó (`generationFailure` en `lib/quiz.ts`).
+- Diseño: estado «Reconectando» añadido al frame `BWwJl` de pen.
+- Pruebas: Vitest de la clasificación de fallos; Cypress `ca11` con un corte pasajero que se
+  recupera solo y uno persistente que muestra la causa y se reanuda a mano, controlado con un
+  interruptor porque Chrome y Firefox reenvían en silencio un número distinto de veces un POST cortado.
+
+**Defecto encontrado al validar la corrección:** el contador de incidentes del modo de prueba
+perdía eventos simultáneos (lectura-modificación-escritura en dos transacciones). Con el código
+anterior, 12 incidentes paralelos quedaban en 3. Ahora se incrementa con un `UPDATE` atómico y el
+cliente no deja que una respuesta atrasada baje el contador. Prueba nueva:
+`QuizAttemptTest.simultaneousIncidentsAreAllCounted`. Era la causa del fallo intermitente de `ca6` en
+Firefox.
+
+**Verificación:** `make check-format` y `./mvnw verify` (406 pruebas, 0 fallos, JaCoCo cumple);
+`npm run lint`, `npm run build`, `npm run test:coverage` (119 pruebas); Cypress HU-34 + HU-16 · CA-3
+sin reintentos: Chrome 20/20, Firefox 20/20; `ca6` repetido 4 veces en Firefox; Playwright + axe 24/24.
+
 ## Hallazgos fuera de alcance
 
 - `main` de backend, frontend y dev-workflow va por detrás de ramas locales con PR abiertos; el PR
