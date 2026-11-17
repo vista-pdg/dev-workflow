@@ -1,0 +1,22 @@
+{
+  "fecha": "2026-11-17",
+  "branch": "fix/algoritmos-java-integridad-publicacion",
+  "repositorios": [
+    {
+      "repo": "backend",
+      "baseAntesDelPush": "93b8cb3e9c2f508db316738fce02b8f525702f03",
+      "commitsAjenosNuevos": [],
+      "headPublicado": "f119089efdcc9fec3e424fa5093ec8cb1242dcde",
+      "headVerificadoEnRemoto": "f119089efdcc9fec3e424fa5093ec8cb1242dcde",
+      "forcePush": false
+    },
+    {
+      "repo": "frontend",
+      "baseAntesDelPush": "cc876b29231cb0ea06e28125c7a32dd7e30e88f7",
+      "commitsAjenosNuevos": [],
+      "headPublicado": "1a756d46409b50ccb163d4fe537b5580499d7048",
+      "headVerificadoEnRemoto": "1a756d46409b50ccb163d4fe537b5580499d7048",
+      "forcePush": false
+    }
+  ]
+}

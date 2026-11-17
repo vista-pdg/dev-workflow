@@ -1,0 +1,134 @@
+{
+  "chrome": {
+    "archivos": 7,
+    "tests": 47,
+    "passed": 47,
+    "failed": 0,
+    "pending": 0,
+    "skipped": 0,
+    "specs": [
+      {
+        "archivo": "basic-heap-linear.cy.ts",
+        "tests": 8,
+        "passed": 8,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "basic-list-hash.cy.ts",
+        "tests": 8,
+        "passed": 8,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "basic-sorting.cy.ts",
+        "tests": 6,
+        "passed": 6,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "basic-trees.cy.ts",
+        "tests": 11,
+        "passed": 11,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "graph-algorithms.cy.ts",
+        "tests": 6,
+        "passed": 6,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "java-code-integrity.cy.ts",
+        "tests": 5,
+        "passed": 5,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "ui-code-representations.cy.ts",
+        "tests": 3,
+        "passed": 3,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      }
+    ]
+  },
+  "firefox": {
+    "archivos": 7,
+    "tests": 47,
+    "passed": 47,
+    "failed": 0,
+    "pending": 0,
+    "skipped": 0,
+    "specs": [
+      {
+        "archivo": "basic-heap-linear.cy.ts",
+        "tests": 8,
+        "passed": 8,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "basic-list-hash.cy.ts",
+        "tests": 8,
+        "passed": 8,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "basic-sorting.cy.ts",
+        "tests": 6,
+        "passed": 6,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "basic-trees.cy.ts",
+        "tests": 11,
+        "passed": 11,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "graph-algorithms.cy.ts",
+        "tests": 6,
+        "passed": 6,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "java-code-integrity.cy.ts",
+        "tests": 5,
+        "passed": 5,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "ui-code-representations.cy.ts",
+        "tests": 3,
+        "passed": 3,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      }
+    ]
+  }
+}
