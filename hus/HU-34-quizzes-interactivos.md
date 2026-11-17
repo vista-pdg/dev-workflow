@@ -1,6 +1,6 @@
 # HU-34 · Quizzes interactivos por curso con banco generado por IA
 
-Estado: implementada y validada en local. Rama de trabajo `feat/HU-34-quizzes-interactivos` creada desde `origin/main` en
+Estado: implementada, validada y publicada en `main`. Rama de trabajo `feat/HU-34-quizzes-interactivos` creada desde `origin/main` en
 worktrees aislados de backend, frontend y dev-workflow. Por instrucción explícita del usuario, esta HU
 se publica con commit y push directo a `main`, sin PR; esa instrucción sustituye la fase 7 del flujo.
 
@@ -128,7 +128,7 @@ de listas de estudiantes y recalificación manual.
 | 4 · Frontend | Cuatro páginas, `Workspace` extraído, `useExamGuard`, `useBankGeneration`. `npm run lint`, `npm run build` y `npm run test:coverage` (117 pruebas; `lib/quiz.ts` y `quizService.ts` al 100 %). |
 | 5 · Cypress | Ocho specs `hu-34-*.cy.ts` (16 pruebas). Suite completa: Chrome 157, 203/203; Firefox 158, 202/203 por una aserción del spec, corregida y repetida en verde. |
 | 6 · Integración y QA | Backend `e2e` y frontend levantados en puertos y base aislados; banco generado con Gemini real; Playwright + axe 24/24; capturas comparadas con pen. |
-| 7 · Publicación | Push directo a `main` autorizado por el usuario; ver «Publicación». |
+| 7 · Publicación | Publicada en `main` de los tres repos; CI y despliegue en verde (ver «Publicación»). |
 
 ## Diseño en pen
 
@@ -228,4 +228,14 @@ limpia) se conserva; se actualizó la petición que la prueba espera.
 
 ## Publicación
 
-Pendiente de registrar: commits, CI y despliegue.
+Push directo a `main` (avance rápido, sin PR ni force-push) el 17 de noviembre de 2026, tras volver a
+consultar cada remoto:
+
+| Repo | Commit | CI en `main` |
+|---|---|---|
+| backend | `f89af7d` feat(backend): quizzes por curso con banco generado por IA, intentos cronometrados y reportes | Run 44040527188: formato, pruebas y cobertura, E2E Chrome y Firefox, y despliegue a Cloud Run en verde. |
+| frontend | `bc27ac2` feat(frontend): quizzes del curso con modo de prueba, gestión docente y resultados | Run 44040550522: typecheck, build, lint, E2E Chrome y Firefox contra el backend de `main`, y despliegue a Cloud Run en verde. |
+| dev-workflow | `252d7e5` docs(HU-34): spec, diseño pen y evidencia de quizzes interactivos | Sin CI en push. |
+
+Tras el despliegue no se hizo una prueba manual sobre producción más allá del smoke test del propio
+flujo de CI (`/` y `/api/courses`).
