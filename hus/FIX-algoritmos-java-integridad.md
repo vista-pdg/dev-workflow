@@ -35,7 +35,9 @@ representación. El frontend ya tiene selector, copiado, descarga y mapa de lín
   locales pendientes de SDK, Firebase, performance y Terraform, y se conserva `bun.lock`.
   Push realizado el 17 de noviembre tras un segundo fetch: backend `f119089` (PR #16),
   frontend `1a756d4` (PR #17). Revalidación de esa base: 397 pruebas backend (dos omitidas),
-  105 unitarias frontend y 47 Cypress por navegador. No se hace merge ni despliegue.
+  105 unitarias frontend y 47 Cypress por navegador. El bloqueo de arranque remoto con Node 24
+  se corrige con Cypress Action v7 y revisión compartida fija: cabeceras backend `6ef9b49`,
+  frontend `60c9f27`. No se hace merge ni despliegue.
 
 Evidencia y límites: [informe QA](../qa/java-integridad-2026-10-19/REPORT.md).
 Revalidación y publicación: [16–17 de noviembre](../qa/java-integridad-2026-11-16/REPORT.md).
