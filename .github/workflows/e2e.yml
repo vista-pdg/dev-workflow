@@ -174,7 +174,7 @@ jobs:
       - name: Cypress
         env:
           VISTA_E2E_SOFTWARE_GL: "1"
-        uses: cypress-io/github-action@v6
+        uses: cypress-io/github-action@v7
         with:
           working-directory: frontend
           install: false
