@@ -1,0 +1,31 @@
+VISTA_UI_BASE_URL=... npx playwright test tests/ui/quizzes.spec.mjs
+
+
+Running 24 tests using 2 workers
+
+  ✓   1 [desktop] › tests/ui/quizzes.spec.mjs:93:3 › HU-34 · lista del estudiante · light (782ms)
+  ✓   3 [desktop] › tests/ui/quizzes.spec.mjs:127:3 › HU-34 · gestión y nuevo quiz · light (1.2s)
+  ✓   2 [desktop] › tests/ui/quizzes.spec.mjs:100:3 › HU-34 · modo de prueba · light (2.7s)
+  ✓   4 [desktop] › tests/ui/quizzes.spec.mjs:139:3 › HU-34 · resultados y banco · light (1.1s)
+  ✓   5 [desktop] › tests/ui/quizzes.spec.mjs:93:3 › HU-34 · lista del estudiante · dark (717ms)
+  ✓   7 [desktop] › tests/ui/quizzes.spec.mjs:127:3 › HU-34 · gestión y nuevo quiz · dark (1.1s)
+  ✓   8 [desktop] › tests/ui/quizzes.spec.mjs:139:3 › HU-34 · resultados y banco · dark (1.0s)
+  ✓   6 [desktop] › tests/ui/quizzes.spec.mjs:100:3 › HU-34 · modo de prueba · dark (2.7s)
+  ✓   9 [tablet] › tests/ui/quizzes.spec.mjs:93:3 › HU-34 · lista del estudiante · light (779ms)
+  ✓  10 [tablet] › tests/ui/quizzes.spec.mjs:100:3 › HU-34 · modo de prueba · light (1.7s)
+  ✓  11 [tablet] › tests/ui/quizzes.spec.mjs:127:3 › HU-34 · gestión y nuevo quiz · light (1.1s)
+  ✓  13 [tablet] › tests/ui/quizzes.spec.mjs:93:3 › HU-34 · lista del estudiante · dark (712ms)
+  ✓  12 [tablet] › tests/ui/quizzes.spec.mjs:139:3 › HU-34 · resultados y banco · light (1.0s)
+  ✓  15 [tablet] › tests/ui/quizzes.spec.mjs:127:3 › HU-34 · gestión y nuevo quiz · dark (1.1s)
+  ✓  14 [tablet] › tests/ui/quizzes.spec.mjs:100:3 › HU-34 · modo de prueba · dark (1.6s)
+  ✓  16 [tablet] › tests/ui/quizzes.spec.mjs:139:3 › HU-34 · resultados y banco · dark (999ms)
+  ✓  17 [mobile] › tests/ui/quizzes.spec.mjs:93:3 › HU-34 · lista del estudiante · light (729ms)
+  ✓  19 [mobile] › tests/ui/quizzes.spec.mjs:127:3 › HU-34 · gestión y nuevo quiz · light (1.1s)
+  ✓  18 [mobile] › tests/ui/quizzes.spec.mjs:100:3 › HU-34 · modo de prueba · light (1.7s)
+  ✓  20 [mobile] › tests/ui/quizzes.spec.mjs:139:3 › HU-34 · resultados y banco · light (998ms)
+  ✓  21 [mobile] › tests/ui/quizzes.spec.mjs:93:3 › HU-34 · lista del estudiante · dark (644ms)
+  ✓  23 [mobile] › tests/ui/quizzes.spec.mjs:127:3 › HU-34 · gestión y nuevo quiz · dark (1.1s)
+  ✓  22 [mobile] › tests/ui/quizzes.spec.mjs:100:3 › HU-34 · modo de prueba · dark (1.6s)
+  ✓  24 [mobile] › tests/ui/quizzes.spec.mjs:139:3 › HU-34 · resultados y banco · dark (984ms)
+
+  24 passed (16.0s)

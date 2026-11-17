@@ -1,0 +1,12 @@
+JAVA_HOME=/usr/lib/jvm/java-21-openjdk-amd64
+make format && make check-format && make test && ./mvnw -B -ntp verify
+
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.089 s -- in com.vista.pdg.quiz.QuizScenarioFactoryTest
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.257 s -- in com.vista.pdg.quiz.QuizAttemptTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s -- in com.vista.pdg.quiz.QuizReportWriterTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.060 s -- in com.vista.pdg.quiz.QuizManagementTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 s -- in com.vista.pdg.quiz.QuizQuestionWriterTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.010 s -- in com.vista.pdg.quiz.QuizResultsTest
+[INFO] Tests run: 405, Failures: 0, Errors: 0, Skipped: 2
+[INFO] All coverage checks have been met.
+[INFO] BUILD SUCCESS

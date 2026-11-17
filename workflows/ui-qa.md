@@ -296,3 +296,16 @@ y valida rastro/paso al alternar 2D/3D; los seis ordenamientos deben seguir hori
 VISTA_E2E_SOFTWARE_GL=1 npx cypress run --browser chrome --config baseUrl=http://127.0.0.1:5174 --env mailpitUrl=http://127.0.0.1:58025
 # Repetir secuencialmente con --browser firefox; no compartir una base mutada entre dos runs simultáneos.
 ```
+
+## Quizzes (HU-34)
+
+`tests/ui/quizzes.spec.mjs` uses deterministic API fixtures without credentials. In both themes
+and all three viewports it covers the student list, the exam mode (gate, question panel, focus-lost
+overlay, submit confirmation), teacher management with field validation, and results and bank. It
+asserts no document overflow, 44 px controls and axe. Screenshots are inspection attachments; no
+baselines are kept because the exam timer and dates are relative to the current time.
+Functional behaviour (course isolation, deadlines, grading, exports, exam protections) stays in
+frontend Cypress `hu-34-*.cy.ts` against the real backend with the `e2e` profile.
+Decorative text such as the exam watermark must be an SVG pattern, not text nodes: axe evaluates
+contrast on `aria-hidden` text. Scrollable table wrappers need `tabIndex=0`, a region label and
+`relative`, otherwise `sr-only` cells escape the wrapper and widen the document.

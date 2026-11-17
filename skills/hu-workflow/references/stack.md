@@ -53,6 +53,7 @@ service/
   algorithm/         AvlStepsService
 model/               contract/ generated/ response/ math/
 exception/           GlobalExceptionHandler + excepciones de dominio
+quiz/                HU-34: controller/ dto/ entity/ repository/ service/ — quizzes, banco con IA, intentos y reportes
 seeder/              DataSeeder
 ```
 
@@ -67,9 +68,10 @@ Notas que afectan a casi cualquier HU:
   `ddl-auto`.
 - `User` y `Role` cargan sus relaciones con `FetchType.EAGER`, así que no hay problemas de lazy
   loading fuera de transacción, pero cuidado al añadir colecciones nuevas.
-- `SecurityConfig` deja `permitAll` sólo en `/api/auth/**` y `/api/courses`; `/api/generate` y `/api/algorithm/steps` exigen sesión desde HU-16, `/api/analytics/**` es TEACHER y `/api/admin/**` ADMIN.
+- `SecurityConfig` deja `permitAll` sólo en `/api/auth/**` y `/api/courses`; `/api/generate` y `/api/algorithm/steps` exigen sesión desde HU-16, `/api/analytics/**` es TEACHER y `/api/admin/**` ADMIN. Desde HU-34, `/api/quizzes/manage/**` es TEACHER o ADMIN (el curso se valida en `QuizAccess`) y `/api/quizzes/**` exige sesión.
 - Las entidades `Permission` existen y se administran, pero **no se aplican en ningún sitio**: no hay
   un solo `@PreAuthorize`. La única autorización real es `hasRole("ADMIN")` sobre `/api/admin/**`.
+- Maven debe correr con **JDK 21** (`JAVA_HOME`): con JDK 25 Spotless/google-java-format falla con `NoSuchMethodError`.
 - Las pruebas de integración usan Testcontainers (Postgres 17, contenedor único por suite) vía `IntegrationTestSupport`; `FakeLlmConfig` sustituye a Gemini y `MutableClockConfig` permite mover el reloj.
 
 ## Frontend — `frontend/`
@@ -90,7 +92,7 @@ src/
   App.tsx            shell: sidebar + canvas + paneles
   core/              HU-18: motor de visualización, contrato Renderer, registro, layouts 2D (TS puro, Vitest)
   renderers/         adaptadores three/ (3D) y svg/ (2D); appEngine.ts los registra y crea el motor
-  pages/             WelcomePage, AdminPage, AnalyticsPage
+  pages/             WelcomePage, AdminPage, AnalyticsPage, Quiz{List,Exam,Management,Detail}Page (HU-34)
   components/        AppSidebar, ChatPanel, AlgorithmPanel, CanvasOverlay, VisualizationCanvas
     graph/           GraphScene, NodeSphere, EdgeSegment, EmptyScene (escena three, alimentada por props)
     ui/              primitivos shadcn: button, badge, separator, scroll-area, textarea
