@@ -22,7 +22,7 @@ proyecto para compartir correctamente las descargas con Firefox Snap.
 | backend | `93b8cb3` | `f119089` |
 | frontend | `cc876b2` | `1a756d4` |
 
-El [inventario del diff](publication-scope.json) verifica un solo commit adicional por repo,
+El [inventario del diff inicial](publication-scope.json) registra un solo commit Java por repo,
 mensajes de una línea sin trailers y ausencia de cambios a `pom.xml`, `package.json`,
 `package-lock.json`, `bun.lock` o archivos de Firebase. Los commits anteriores y los cambios
 pendientes de dominio/performance permanecen en sus ramas locales. No se modifica Terraform.
@@ -90,4 +90,6 @@ integrar. Se hizo push normal de cada rama, sin force-push, y se verificó cada 
 
 Los PR están enlazados entre sí y declaran su dependencia de los PR anteriores #15 y #16,
 respectivamente. La evidencia y esta spec se publican separadamente en dev-workflow con la
-misma rama y base. Esta entrega no incluye merge a main ni despliegue cloud.
+misma rama y base. Posteriormente se corrigió el arranque de CI mediante Cypress v7 y la
+referencia inmutable al workflow compartido; [diagnóstico, commits y ejecuciones](CI-2026-11-17.md).
+Esta entrega no incluye merge a main ni despliegue cloud.
