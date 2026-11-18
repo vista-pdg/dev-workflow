@@ -247,12 +247,11 @@ sin reintentos: Chrome 20/20, Firefox 20/20; `ca6` repetido 4 veces en Firefox; 
 
 ## Hallazgos fuera de alcance
 
-- `main` de backend, frontend y dev-workflow va por detrás de ramas locales con PR abiertos; el PR
-  frontend #17 tiene un fallo de Cypress en Firefox. No se tocan en esta HU y tendrán que
-  reintegrarse sobre este `main` (`App.tsx` y `AppSidebar.tsx` cambian aquí).
+- Las ramas con PR abiertos y el trabajo local de rendimiento quedaron integrados en `main` el
+  17 de noviembre; ver «Integración de ramas pendientes».
 - El JDK por defecto de la máquina (25) rompe Spotless; hay que usar JDK 21 (anotado en `stack.md`).
-- Las operaciones de heap rechazan algunos heaps de 8 nodos construidos con `heapify` cuando el
-  orden de los hijos se infiere de la coordenada `x` del layout 3D.
+- Las operaciones de heap rechazaban algunos heaps de 8 nodos construidos con `heapify` cuando el
+  orden de los hijos se infería de la coordenada `x` del layout 3D. Lo corrige `0e52e81`, ya en `main`.
 - `npx tsc -p cypress/tsconfig.json` ya fallaba en `main` por `window.__vista` sin tipar.
 - La memoria del agente indicaba «bun, nunca npm»; se siguió npm porque así lo fijan el encargo,
   `dev-workflow/AGENTS.md` y la CI.
@@ -270,3 +269,29 @@ consultar cada remoto:
 
 Tras el despliegue no se hizo una prueba manual sobre producción más allá del smoke test del propio
 flujo de CI (`/` y `/api/courses`).
+
+## Integración de ramas pendientes
+
+El 17 de noviembre de 2026, con autorización del usuario, se integró en `main` todo lo útil que
+seguía fuera: las cadenas de PR `feat/mejora-canvas-y-consistencia` y
+`fix/algoritmos-java-integridad-publicacion`, y el trabajo local `perf/vertex-dependencias-y-dominio`.
+Se descartaron los `fix(ci)` de esas ramas: fijaban el E2E a un SHA de una rama que no es `main`, y
+la acción Cypress v7 ya estaba en `main`.
+
+| Repo | Integra | Conflictos y ajustes |
+|---|---|---|
+| backend | `93b8cb3` canvas y disponibilidad de Gemini, `9177bf3` GenAI 1.78 con cola y tiempos acotados, `0e52e81` Java del catálogo y orden lógico de heaps | `GeminiLlmAdapter`: `completeJson` (banco de quizzes) pasa por el mismo semáforo y presupuesto de 55 s. |
+| frontend | `cc876b2` canvas y experiencia visual, `85754c8` dependencias y proxy de Hosting, `495a0b9` afinidad GAESA, `9ce6332` pruebas de Java | `App.tsx`: los pasos del tutorial que el PR desplazaba (1→2, 2→3) viven ahora en `Workspace.tsx`. Después, `c1b5cb0`: los quizzes usan `ManagementHeader` y la escala de título de 20 px. |
+| dev-workflow | `2667d9e` diseño del canvas, QA de integridad Java, rendimiento de 40 estudiantes e intento de dominio en Hosting (`4048a47`, antes sin confirmar) | `package.json`: se conservan las specs de quizzes y de layout. `pen/vista_design.pen`: los cambios no compartían frames (6 cambiados y 1 nuevo del PR, 9 de HU-34), se combinaron por id y pen abrió y guardó el resultado sin diferencias. |
+| terraform-iac | `3a6884c` Firebase Hosting delante de Cloud Run, `ec29903` certificado del dominio | `terraform plan` previo: sin cambios de recursos. CI run 44220558657: «Apply complete! Resources: 0 added, 0 changed, 0 destroyed». |
+
+Diseño: los frames `OPO5B`, `wlQaL`, `G6H10`, `BWwJl` y `Wua5N` toman la cabecera de gestión
+(símbolo ICESI, «VISTA / sección», «Volver al visualizador») y el título de 20 px. Exportaciones en
+`hus/evidence/HU-34/pen/` y capturas reales en `hus/evidence/HU-34/ui/cabecera-gestion-*.png`.
+
+**Verificación local:** backend `spotless:check` y `./mvnw verify` con JDK 21 (433 pruebas, 0 fallos,
+2 omitidas; JaCoCo cumple). Frontend `npm run lint`, `npm run build` y `npm run test:coverage` (125
+pruebas). Cypress completo sin reintentos: Firefox 217/217 y Chrome for Testing 153 217/217. Chrome
+158 se actualizó en la máquina y Cypress 16.2 no logra lanzarlo («* is not a valid URL»); no afecta
+al código. Playwright + axe de quizzes, layout de gestión, analítica y cursos: 66/66.
+
