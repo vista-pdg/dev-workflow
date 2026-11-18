@@ -1,0 +1,42 @@
+{
+  "students": 40,
+  "model": "gemini-3.5-flash-lite",
+  "resourceChanges": false,
+  "phases": [
+    {
+      "mode": "smoke",
+      "users": 1,
+      "limitSeconds": 90,
+      "maxGenerations": 1
+    },
+    {
+      "mode": "baseline",
+      "users": 40,
+      "limitSeconds": 90,
+      "maxGenerations": 0
+    },
+    {
+      "mode": "burst",
+      "users": 40,
+      "limitSeconds": 180,
+      "maxGenerations": 40
+    },
+    {
+      "mode": "mixed",
+      "users": 40,
+      "limitSeconds": 240,
+      "maxGenerations": 80
+    },
+    {
+      "mode": "soak",
+      "users": 40,
+      "limitSeconds": 1800,
+      "maxGenerations": 800
+    }
+  ],
+  "maxHttpGenerations": 921,
+  "failureCircuitBreaker": ">25% after 10 generations",
+  "cleanupRequired": true,
+  "additionalHostingControlMaxGenerations": 121,
+  "maxHttpGenerationsIncludingControlAndSessionCheck": 1044
+}

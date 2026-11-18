@@ -1,0 +1,19 @@
+{
+  "mode": "mixed",
+  "host": "https://vista-pdg.web.app",
+  "start": "2026-10-19T20:16:19.992894+00:00",
+  "end": "2026-10-19T20:17:51.869351+00:00",
+  "users": 40,
+  "ready": 40,
+  "finished": 40,
+  "generations": 80,
+  "generationFailures": 0,
+  "maxInflightGenerations": 4,
+  "dnsRouting": {
+    "mode": "system-dns"
+  },
+  "statusCounts": {
+    "200": 520,
+    "204": 80
+  }
+}

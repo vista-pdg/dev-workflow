@@ -1,0 +1,13 @@
+chrome: vista-java-publish-cypress-chrome-20261116.log
+✔  All specs passed!                        01:51       47       47        -        -        -
+Resultado único final: 7 archivos, 47 pruebas aprobadas.
+
+firefox: vista-java-publish-cypress-firefox-20261116.log
+✖  2 of 7 failed (29%)                      02:38       47       43        4        -        -
+An error occurred during the "clear data context" teardown step. This does not affect the exit code (4).
+Error: kill EACCES
+firefox: vista-java-publish-cypress-firefox-downloads-20261117.log
+✔  All specs passed!                        00:30        8        8        -        -        -
+An error occurred during the "clear data context" teardown step. This does not affect the exit code (0).
+Error: kill EACCES
+Resultado único final: 7 archivos, 47 pruebas aprobadas.

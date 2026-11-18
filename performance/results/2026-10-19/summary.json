@@ -1,0 +1,566 @@
+[
+  {
+    "mode": "baseline",
+    "host": "https://vista.kuros.work",
+    "start": "2026-10-19T18:27:58.523139+00:00",
+    "end": "2026-10-19T18:30:37.742062+00:00",
+    "users": 40,
+    "ready": 39,
+    "finished": 0,
+    "generations": 0,
+    "generationFailures": 0,
+    "maxInflightGenerations": 0,
+    "statusCounts": {
+      "200": 695,
+      "0": 9,
+      "204": 78
+    },
+    "requests": 782,
+    "failures": 9,
+    "generationPercentilesMs": {},
+    "memory": {},
+    "endpoints": {
+      "api/algorithm-avl": {
+        "requests": 147,
+        "failures": 0,
+        "p50": 189.87,
+        "p95": 1057.77,
+        "p99": 14993.55,
+        "max": 28919.43
+      },
+      "api/catalog": {
+        "requests": 39,
+        "failures": 0,
+        "p50": 147.69,
+        "p95": 1216.82,
+        "p99": 1685.76,
+        "max": 1685.76
+      },
+      "api/clear-session": {
+        "requests": 39,
+        "failures": 0,
+        "p50": 398.03,
+        "p95": 1746.78,
+        "p99": 1938.45,
+        "max": 1938.45
+      },
+      "api/quota": {
+        "requests": 186,
+        "failures": 1,
+        "p50": 151.37,
+        "p95": 1030.61,
+        "p99": 14774.06,
+        "max": 60001.86
+      },
+      "api/session": {
+        "requests": 186,
+        "failures": 0,
+        "p50": 148.82,
+        "p95": 1028.46,
+        "p99": 2773.26,
+        "max": 3501.86
+      },
+      "auth/login": {
+        "requests": 39,
+        "failures": 0,
+        "p50": 465.13,
+        "p95": 3698.03,
+        "p99": 20556.67,
+        "max": 20556.67
+      },
+      "auth/logout": {
+        "requests": 39,
+        "failures": 0,
+        "p50": 380.63,
+        "p95": 3480.95,
+        "p99": 3696.28,
+        "max": 3696.28
+      },
+      "frontend/css": {
+        "requests": 33,
+        "failures": 0,
+        "p50": 134.32,
+        "p95": 1048.53,
+        "p99": 11967.73,
+        "max": 11967.73
+      },
+      "frontend/html": {
+        "requests": 40,
+        "failures": 6,
+        "p50": 1519.51,
+        "p95": 25331.79,
+        "p99": 64248.62,
+        "max": 64248.62
+      },
+      "frontend/js": {
+        "requests": 34,
+        "failures": 2,
+        "p50": 529.85,
+        "p95": 112756.63,
+        "p99": 124302.86,
+        "max": 124302.86
+      }
+    }
+  },
+  {
+    "mode": "baseline",
+    "host": "https://vista-frontend-sbt7d3iyka-uc.a.run.app",
+    "start": "2026-10-19T18:30:34.679570+00:00",
+    "end": "2026-10-19T18:31:50.299522+00:00",
+    "users": 40,
+    "ready": 40,
+    "finished": 0,
+    "generations": 0,
+    "generationFailures": 0,
+    "maxInflightGenerations": 0,
+    "statusCounts": {
+      "200": 715,
+      "204": 80
+    },
+    "requests": 795,
+    "failures": 0,
+    "generationPercentilesMs": {},
+    "memory": {},
+    "endpoints": {
+      "api/algorithm-avl": {
+        "requests": 145,
+        "failures": 0,
+        "p50": 132.12,
+        "p95": 262.97,
+        "p99": 293.64,
+        "max": 295.58
+      },
+      "api/catalog": {
+        "requests": 40,
+        "failures": 0,
+        "p50": 125.98,
+        "p95": 139.24,
+        "p99": 149.25,
+        "max": 149.25
+      },
+      "api/clear-session": {
+        "requests": 40,
+        "failures": 0,
+        "p50": 151.22,
+        "p95": 192.69,
+        "p99": 201.03,
+        "max": 201.03
+      },
+      "api/quota": {
+        "requests": 185,
+        "failures": 0,
+        "p50": 130.96,
+        "p95": 280.48,
+        "p99": 381.21,
+        "max": 413.68
+      },
+      "api/session": {
+        "requests": 185,
+        "failures": 0,
+        "p50": 128.53,
+        "p95": 246.64,
+        "p99": 271.07,
+        "max": 271.27
+      },
+      "auth/login": {
+        "requests": 40,
+        "failures": 0,
+        "p50": 235.28,
+        "p95": 281.1,
+        "p99": 320.2,
+        "max": 320.2
+      },
+      "auth/logout": {
+        "requests": 40,
+        "failures": 0,
+        "p50": 176.18,
+        "p95": 236.93,
+        "p99": 274.35,
+        "max": 274.35
+      },
+      "frontend/css": {
+        "requests": 40,
+        "failures": 0,
+        "p50": 114.62,
+        "p95": 128.08,
+        "p99": 137.6,
+        "max": 137.6
+      },
+      "frontend/html": {
+        "requests": 40,
+        "failures": 0,
+        "p50": 200.65,
+        "p95": 280.77,
+        "p99": 381.13,
+        "max": 381.13
+      },
+      "frontend/js": {
+        "requests": 40,
+        "failures": 0,
+        "p50": 513.6,
+        "p95": 536.62,
+        "p99": 561.2,
+        "max": 561.2
+      }
+    }
+  },
+  {
+    "mode": "burst",
+    "host": "https://vista-frontend-sbt7d3iyka-uc.a.run.app",
+    "start": "2026-10-19T18:34:00.204596+00:00",
+    "end": "2026-10-19T18:34:38.509954+00:00",
+    "users": 40,
+    "ready": 40,
+    "finished": 40,
+    "generations": 40,
+    "generationFailures": 0,
+    "maxInflightGenerations": 40,
+    "statusCounts": {
+      "200": 400,
+      "204": 80
+    },
+    "requests": 480,
+    "failures": 0,
+    "generationPercentilesMs": {
+      "p50": 7249.33,
+      "p95": 14260.08,
+      "p99": 15534.69,
+      "max": 15534.69
+    },
+    "memory": {
+      "active": 40
+    },
+    "endpoints": {
+      "api/algorithm-avl": {
+        "requests": 40,
+        "failures": 0,
+        "p50": 127.02,
+        "p95": 138.73,
+        "p99": 152.1,
+        "max": 152.1
+      },
+      "api/catalog": {
+        "requests": 40,
+        "failures": 0,
+        "p50": 125.36,
+        "p95": 146.63,
+        "p99": 180.49,
+        "max": 180.49
+      },
+      "api/clear-session": {
+        "requests": 40,
+        "failures": 0,
+        "p50": 120.97,
+        "p95": 134.75,
+        "p99": 145.19,
+        "max": 145.19
+      },
+      "api/quota": {
+        "requests": 40,
+        "failures": 0,
+        "p50": 128.01,
+        "p95": 152.66,
+        "p99": 180.11,
+        "max": 180.11
+      },
+      "api/session": {
+        "requests": 80,
+        "failures": 0,
+        "p50": 124.56,
+        "p95": 138.43,
+        "p99": 150.49,
+        "max": 150.49
+      },
+      "auth/login": {
+        "requests": 40,
+        "failures": 0,
+        "p50": 229.83,
+        "p95": 288.47,
+        "p99": 300.35,
+        "max": 300.35
+      },
+      "auth/logout": {
+        "requests": 40,
+        "failures": 0,
+        "p50": 126.59,
+        "p95": 138.64,
+        "p99": 151.06,
+        "max": 151.06
+      },
+      "frontend/css": {
+        "requests": 40,
+        "failures": 0,
+        "p50": 113.67,
+        "p95": 125.22,
+        "p99": 129.6,
+        "max": 129.6
+      },
+      "frontend/html": {
+        "requests": 40,
+        "failures": 0,
+        "p50": 198.98,
+        "p95": 284.69,
+        "p99": 374.13,
+        "max": 374.13
+      },
+      "frontend/js": {
+        "requests": 40,
+        "failures": 0,
+        "p50": 516.4,
+        "p95": 547.96,
+        "p99": 554.79,
+        "max": 554.79
+      },
+      "vertex/generate-structure": {
+        "requests": 40,
+        "failures": 0,
+        "p50": 7249.33,
+        "p95": 14260.08,
+        "p99": 15534.69,
+        "max": 15534.69
+      }
+    }
+  },
+  {
+    "mode": "mixed",
+    "host": "https://vista-frontend-sbt7d3iyka-uc.a.run.app",
+    "start": "2026-10-19T18:32:03.532338+00:00",
+    "end": "2026-10-19T18:33:31.337621+00:00",
+    "users": 40,
+    "ready": 40,
+    "finished": 40,
+    "generations": 80,
+    "generationFailures": 0,
+    "maxInflightGenerations": 5,
+    "statusCounts": {
+      "200": 520,
+      "204": 80
+    },
+    "requests": 600,
+    "failures": 0,
+    "generationPercentilesMs": {
+      "p50": 820.69,
+      "p95": 1082.7,
+      "p99": 1494.17,
+      "max": 1494.17
+    },
+    "memory": {
+      "active": 80
+    },
+    "endpoints": {
+      "api/algorithm-avl": {
+        "requests": 80,
+        "failures": 0,
+        "p50": 129.88,
+        "p95": 154.93,
+        "p99": 220.54,
+        "max": 220.54
+      },
+      "api/catalog": {
+        "requests": 40,
+        "failures": 0,
+        "p50": 126.59,
+        "p95": 141.08,
+        "p99": 158.94,
+        "max": 158.94
+      },
+      "api/clear-session": {
+        "requests": 40,
+        "failures": 0,
+        "p50": 123.14,
+        "p95": 135.25,
+        "p99": 145.33,
+        "max": 145.33
+      },
+      "api/quota": {
+        "requests": 40,
+        "failures": 0,
+        "p50": 127.14,
+        "p95": 146.53,
+        "p99": 155.78,
+        "max": 155.78
+      },
+      "api/session": {
+        "requests": 120,
+        "failures": 0,
+        "p50": 125.18,
+        "p95": 145.32,
+        "p99": 179.64,
+        "max": 243.02
+      },
+      "auth/login": {
+        "requests": 40,
+        "failures": 0,
+        "p50": 228.13,
+        "p95": 263.19,
+        "p99": 264.76,
+        "max": 264.76
+      },
+      "auth/logout": {
+        "requests": 40,
+        "failures": 0,
+        "p50": 128.15,
+        "p95": 141.38,
+        "p99": 148.01,
+        "max": 148.01
+      },
+      "frontend/css": {
+        "requests": 40,
+        "failures": 0,
+        "p50": 115.41,
+        "p95": 123.92,
+        "p99": 178.15,
+        "max": 178.15
+      },
+      "frontend/html": {
+        "requests": 40,
+        "failures": 0,
+        "p50": 198.29,
+        "p95": 264.42,
+        "p99": 307.75,
+        "max": 307.75
+      },
+      "frontend/js": {
+        "requests": 40,
+        "failures": 0,
+        "p50": 517.13,
+        "p95": 542.95,
+        "p99": 563.5,
+        "max": 563.5
+      },
+      "vertex/generate-chat": {
+        "requests": 40,
+        "failures": 0,
+        "p50": 825.01,
+        "p95": 1047.21,
+        "p99": 1494.17,
+        "max": 1494.17
+      },
+      "vertex/generate-structure": {
+        "requests": 40,
+        "failures": 0,
+        "p50": 803.85,
+        "p95": 1082.7,
+        "p99": 1266.09,
+        "max": 1266.09
+      }
+    }
+  },
+  {
+    "mode": "smoke",
+    "host": "https://vista.kuros.work",
+    "start": "2026-10-19T18:27:12.920195+00:00",
+    "end": "2026-10-19T18:27:18.967998+00:00",
+    "users": 1,
+    "ready": 1,
+    "finished": 1,
+    "generations": 1,
+    "generationFailures": 0,
+    "maxInflightGenerations": 1,
+    "statusCounts": {
+      "200": 10,
+      "204": 2
+    },
+    "requests": 12,
+    "failures": 0,
+    "generationPercentilesMs": {
+      "p50": 1329.89,
+      "p95": 1329.89,
+      "p99": 1329.89,
+      "max": 1329.89
+    },
+    "memory": {
+      "null": 1
+    },
+    "endpoints": {
+      "api/algorithm-avl": {
+        "requests": 1,
+        "failures": 0,
+        "p50": 450.35,
+        "p95": 450.35,
+        "p99": 450.35,
+        "max": 450.35
+      },
+      "api/catalog": {
+        "requests": 1,
+        "failures": 0,
+        "p50": 152.97,
+        "p95": 152.97,
+        "p99": 152.97,
+        "max": 152.97
+      },
+      "api/clear-session": {
+        "requests": 1,
+        "failures": 0,
+        "p50": 1739.09,
+        "p95": 1739.09,
+        "p99": 1739.09,
+        "max": 1739.09
+      },
+      "api/quota": {
+        "requests": 1,
+        "failures": 0,
+        "p50": 188.64,
+        "p95": 188.64,
+        "p99": 188.64,
+        "max": 188.64
+      },
+      "api/session": {
+        "requests": 2,
+        "failures": 0,
+        "p50": 145.91,
+        "p95": 382.55,
+        "p99": 382.55,
+        "max": 382.55
+      },
+      "auth/login": {
+        "requests": 1,
+        "failures": 0,
+        "p50": 230.36,
+        "p95": 230.36,
+        "p99": 230.36,
+        "max": 230.36
+      },
+      "auth/logout": {
+        "requests": 1,
+        "failures": 0,
+        "p50": 420.6,
+        "p95": 420.6,
+        "p99": 420.6,
+        "max": 420.6
+      },
+      "frontend/css": {
+        "requests": 1,
+        "failures": 0,
+        "p50": 153.35,
+        "p95": 153.35,
+        "p99": 153.35,
+        "max": 153.35
+      },
+      "frontend/html": {
+        "requests": 1,
+        "failures": 0,
+        "p50": 331.19,
+        "p95": 331.19,
+        "p99": 331.19,
+        "max": 331.19
+      },
+      "frontend/js": {
+        "requests": 1,
+        "failures": 0,
+        "p50": 520.92,
+        "p95": 520.92,
+        "p99": 520.92,
+        "max": 520.92
+      },
+      "vertex/generate-structure": {
+        "requests": 1,
+        "failures": 0,
+        "p50": 1329.89,
+        "p95": 1329.89,
+        "p99": 1329.89,
+        "max": 1329.89
+      }
+    }
+  }
+]

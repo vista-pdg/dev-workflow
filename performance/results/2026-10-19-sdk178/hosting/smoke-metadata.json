@@ -1,0 +1,16 @@
+{
+  "mode": "smoke",
+  "host": "https://vista-pdg.web.app",
+  "start": "2026-10-19T19:41:33.253264+00:00",
+  "end": "2026-10-19T19:41:38.468784+00:00",
+  "users": 1,
+  "ready": 1,
+  "finished": 1,
+  "generations": 1,
+  "generationFailures": 0,
+  "maxInflightGenerations": 1,
+  "statusCounts": {
+    "200": 10,
+    "204": 2
+  }
+}

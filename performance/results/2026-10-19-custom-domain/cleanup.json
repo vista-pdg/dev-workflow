@@ -1,0 +1,27 @@
+{
+  "runId": "20261019-a11c4a",
+  "course": "PERF-20261019-A11C4A",
+  "accountsRemoved": 40,
+  "records": [
+    {
+      "cleanup": "performance-complete",
+      "remainingAccounts": 0,
+      "remainingCourses": 0,
+      "remainingEvents": 0,
+      "remainingUsage": 0
+    },
+    {
+      "cleanup": "performance-usage",
+      "removed": 40
+    },
+    {
+      "cleanup": "performance-events",
+      "removed": 580
+    },
+    {
+      "cleanup": "database-capacity",
+      "maxConnections": 25
+    }
+  ],
+  "temporaryJob": "vista-perf-cleanup-20261019-a11c4a-97b8"
+}

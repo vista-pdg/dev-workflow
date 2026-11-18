@@ -1,0 +1,17 @@
+{
+  "window": {
+    "start": "2026-10-19T19:00:00Z",
+    "end": "2026-10-19T19:48:00Z"
+  },
+  "utilizationMaxBucketMeans": {
+    "run.googleapis.com/container/cpu/utilizations": {
+      "vista-backend": 26.95,
+      "vista-frontend": 3.54
+    },
+    "run.googleapis.com/container/memory/utilizations": {
+      "vista-backend": 39.82,
+      "vista-frontend": 17.34
+    }
+  },
+  "allMetricSeriesComplete": true
+}

@@ -8,7 +8,7 @@ que puede estar donde quieras (en este documento, `vista/`):
 
 ```
 vista/                                     carpeta raíz: no es un repo
-├── backend/        vista-pdg/backend      Spring Boot 4.0.6 · Java 21 · Postgres
+├── backend/        vista-pdg/backend      Spring Boot 4.0.8 · Java 21 · Postgres
 ├── frontend/       vista-pdg/frontend     React 19 · Vite 8 · Tailwind v4 · three.js
 ├── dev-workflow/   vista-pdg/dev-workflow este repo
 ├── terraform-backend/  recursos de soporte Terraform

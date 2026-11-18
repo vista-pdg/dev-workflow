@@ -1,0 +1,15 @@
+{
+  "checkedAt": "2026-10-19T21:08:04.389569+00:00",
+  "dnsRouting": {
+    "mode": "firebase-origin-during-dns-propagation",
+    "hostname": "vista.kuros.work",
+    "resolveTo": "vista-pdg.web.app",
+    "addresses": [
+      "199.36.158.100",
+      "2620:0:890::100"
+    ]
+  },
+  "tlsVerification": true,
+  "status": 404,
+  "isVistaHtml": false
+}

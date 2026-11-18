@@ -1,0 +1,17 @@
+{
+  "mode": "soak",
+  "host": "https://vista-frontend-sbt7d3iyka-uc.a.run.app",
+  "start": "2026-10-19T19:08:24.125479+00:00",
+  "end": "2026-10-19T19:39:29.601695+00:00",
+  "users": 40,
+  "ready": 40,
+  "finished": 8,
+  "generations": 764,
+  "generationFailures": 1,
+  "maxInflightGenerations": 6,
+  "statusCounts": {
+    "200": 2651,
+    "0": 1,
+    "204": 80
+  }
+}

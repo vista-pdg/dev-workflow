@@ -1,0 +1,12 @@
+{"at": "2026-10-19T19:40:22.092445+00:00", "method": "GET", "name": "frontend/html", "ms": 308.348, "bytes": 501, "status": 200, "failure": null, "memory": null}
+{"at": "2026-10-19T19:40:22.627298+00:00", "method": "GET", "name": "frontend/js", "ms": 534.757, "bytes": 1667674, "status": 200, "failure": null, "memory": null}
+{"at": "2026-10-19T19:40:22.753745+00:00", "method": "GET", "name": "frontend/css", "ms": 126.371, "bytes": 59523, "status": 200, "failure": null, "memory": null}
+{"at": "2026-10-19T19:40:23.507567+00:00", "method": "POST", "name": "auth/login", "ms": 753.74, "bytes": 548, "status": 200, "failure": null, "memory": null}
+{"at": "2026-10-19T19:40:23.728344+00:00", "method": "GET", "name": "api/catalog", "ms": 220.684, "bytes": 10503, "status": 200, "failure": null, "memory": null}
+{"at": "2026-10-19T19:40:23.886655+00:00", "method": "GET", "name": "api/quota", "ms": 158.178, "bytes": 126, "status": 200, "failure": null, "memory": null}
+{"at": "2026-10-19T19:40:24.472822+00:00", "method": "GET", "name": "api/session", "ms": 586.055, "bytes": 75, "status": 200, "failure": null, "memory": null}
+{"at": "2026-10-19T19:40:25.808307+00:00", "method": "POST", "name": "vertex/generate-structure", "ms": 1335.259, "bytes": 1667, "status": 200, "failure": null, "memory": "active"}
+{"at": "2026-10-19T19:40:26.020369+00:00", "method": "POST", "name": "api/algorithm-avl", "ms": 211.851, "bytes": 10058, "status": 200, "failure": null, "memory": null}
+{"at": "2026-10-19T19:40:26.160897+00:00", "method": "GET", "name": "api/session", "ms": 140.444, "bytes": 79, "status": 200, "failure": null, "memory": null}
+{"at": "2026-10-19T19:40:26.296185+00:00", "method": "DELETE", "name": "api/clear-session", "ms": 135.095, "bytes": 0, "status": 204, "failure": null, "memory": null}
+{"at": "2026-10-19T19:40:26.468923+00:00", "method": "POST", "name": "auth/logout", "ms": 172.67, "bytes": 0, "status": 204, "failure": null, "memory": null}

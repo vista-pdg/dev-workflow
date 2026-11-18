@@ -1,0 +1,1222 @@
+{
+  "chrome": {
+    "archivos": 75,
+    "tests": 200,
+    "passed": 200,
+    "failed": 0,
+    "pending": 0,
+    "skipped": 0,
+    "specs": [
+      {
+        "archivo": "admin-deletion.cy.ts",
+        "tests": 3,
+        "passed": 3,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "basic-heap-linear.cy.ts",
+        "tests": 8,
+        "passed": 8,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "basic-list-hash.cy.ts",
+        "tests": 8,
+        "passed": 8,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "basic-sorting.cy.ts",
+        "tests": 6,
+        "passed": 6,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "basic-trees.cy.ts",
+        "tests": 11,
+        "passed": 11,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "canvas-algorithm-source.cy.ts",
+        "tests": 3,
+        "passed": 3,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "canvas-code-visibility.cy.ts",
+        "tests": 1,
+        "passed": 1,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "discrete-groups.cy.ts",
+        "tests": 1,
+        "passed": 1,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "email-verification.cy.ts",
+        "tests": 2,
+        "passed": 2,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "fix-chat-conserva-lo-escrito.cy.ts",
+        "tests": 5,
+        "passed": 5,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "graph-algorithms.cy.ts",
+        "tests": 6,
+        "passed": 6,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "hu-06-ca1-ranking-estructuras.cy.ts",
+        "tests": 1,
+        "passed": 1,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "hu-06-ca2-ranking-algoritmos.cy.ts",
+        "tests": 1,
+        "passed": 1,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "hu-06-ca3-tasa-reintento.cy.ts",
+        "tests": 1,
+        "passed": 1,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "hu-06-ca4-cohorte-periodo.cy.ts",
+        "tests": 1,
+        "passed": 1,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "hu-06-ca5-umbral-anonimato.cy.ts",
+        "tests": 1,
+        "passed": 1,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "hu-06-ca6-sin-individuos.cy.ts",
+        "tests": 1,
+        "passed": 1,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "hu-06-ca7-exportacion.cy.ts",
+        "tests": 1,
+        "passed": 1,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "hu-06-integracion-real.cy.ts",
+        "tests": 1,
+        "passed": 1,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "hu-08-ca1-welcome-register-login.cy.ts",
+        "tests": 11,
+        "passed": 11,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "hu-08-ca2-token-pair-session.cy.ts",
+        "tests": 6,
+        "passed": 6,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "hu-08-ca3-teacher-redirect.cy.ts",
+        "tests": 8,
+        "passed": 8,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "hu-16-ca1-registro-vinculado-a-curso.cy.ts",
+        "tests": 4,
+        "passed": 4,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "hu-16-ca2-correo-no-institucional.cy.ts",
+        "tests": 3,
+        "passed": 3,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "hu-16-ca3-asistente-requiere-sesion.cy.ts",
+        "tests": 3,
+        "passed": 3,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "hu-16-ca4-segregacion-de-roles.cy.ts",
+        "tests": 5,
+        "passed": 5,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "hu-16-ca5-trazabilidad-seudonimizada.cy.ts",
+        "tests": 2,
+        "passed": 2,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "hu-17-ca1-consumo-dentro-de-limites.cy.ts",
+        "tests": 2,
+        "passed": 2,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "hu-17-ca2-agotamiento-de-la-cuota-diaria.cy.ts",
+        "tests": 2,
+        "passed": 2,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "hu-17-ca3-limite-de-tasa.cy.ts",
+        "tests": 2,
+        "passed": 2,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "hu-17-ca4-aviso-preventivo.cy.ts",
+        "tests": 2,
+        "passed": 2,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "hu-17-ca5-reinicio-de-la-ventana-diaria.cy.ts",
+        "tests": 2,
+        "passed": 2,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "hu-17-ca6-ajuste-de-cuota-por-el-administrador.cy.ts",
+        "tests": 4,
+        "passed": 4,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "hu-18-ca1-conmutacion-conserva-la-estructura.cy.ts",
+        "tests": 2,
+        "passed": 2,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "hu-18-ca2-conmutacion-durante-la-ejecucion.cy.ts",
+        "tests": 2,
+        "passed": 2,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "hu-18-ca3-conmutacion-repetida.cy.ts",
+        "tests": 1,
+        "passed": 1,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "hu-18-ca4-independencia-del-nucleo.cy.ts",
+        "tests": 2,
+        "passed": 2,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "hu-18-ca5-persistencia-de-la-preferencia.cy.ts",
+        "tests": 3,
+        "passed": 3,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "hu-18-ca6-degradacion-sin-webgl.cy.ts",
+        "tests": 3,
+        "passed": 3,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "hu-18-ca7-registro-del-modo.cy.ts",
+        "tests": 1,
+        "passed": 1,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "hu-19-ca1-cobertura-de-familias.cy.ts",
+        "tests": 1,
+        "passed": 1,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "hu-19-ca2-disposicion-jerarquica.cy.ts",
+        "tests": 1,
+        "passed": 1,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "hu-19-ca3-paridad-de-pasos-bfs.cy.ts",
+        "tests": 1,
+        "passed": 1,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "hu-19-ca4-paridad-del-catalogo.cy.ts",
+        "tests": 2,
+        "passed": 2,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "hu-19-ca5-animacion-pop.cy.ts",
+        "tests": 2,
+        "passed": 2,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "hu-19-ca6-accesibilidad-2d.cy.ts",
+        "tests": 3,
+        "passed": 3,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "hu-21-ca1-estructura-por-lenguaje-natural.cy.ts",
+        "tests": 2,
+        "passed": 2,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "hu-21-ca2-ejecucion-de-algoritmo.cy.ts",
+        "tests": 1,
+        "passed": 1,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "hu-21-ca3-solicitud-fuera-de-alcance.cy.ts",
+        "tests": 2,
+        "passed": 2,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "hu-21-ca4-patrones-de-reintento.cy.ts",
+        "tests": 2,
+        "passed": 2,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "hu-21-ca5-seudonimizacion-en-origen.cy.ts",
+        "tests": 1,
+        "passed": 1,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "hu-21-ca6-resiliencia-del-registro.cy.ts",
+        "tests": 1,
+        "passed": 1,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "hu-22a-ca1-linea-y-nodo-sincronizados.cy.ts",
+        "tests": 2,
+        "passed": 2,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "hu-22a-ca4-retroceso.cy.ts",
+        "tests": 2,
+        "passed": 2,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "hu-22a-ca6-coherencia-rastro-animacion.cy.ts",
+        "tests": 2,
+        "passed": 2,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "hu-22b-ca2-inspector-de-variables.cy.ts",
+        "tests": 2,
+        "passed": 2,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "hu-22b-ca3-pila-de-llamadas.cy.ts",
+        "tests": 2,
+        "passed": 2,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "hu-22b-ca5-codigo-por-familia.cy.ts",
+        "tests": 2,
+        "passed": 2,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "hu-32-ca1-refinamiento-incremental.cy.ts",
+        "tests": 3,
+        "passed": 3,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "hu-32-ca2-cambio-de-propiedad-y-de-tipo.cy.ts",
+        "tests": 2,
+        "passed": 2,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "hu-32-ca4-caducidad-y-renovacion.cy.ts",
+        "tests": 2,
+        "passed": 2,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "hu-32-ca6-aislamiento-y-borrado.cy.ts",
+        "tests": 2,
+        "passed": 2,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "hu-32-ca8-cuota-y-degradacion.cy.ts",
+        "tests": 2,
+        "passed": 2,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "hu-33-gestion-cursos-y-asignaciones.cy.ts",
+        "tests": 3,
+        "passed": 3,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "management-style.cy.ts",
+        "tests": 1,
+        "passed": 1,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "sidebar-hierarchy.cy.ts",
+        "tests": 1,
+        "passed": 1,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "tutorial-activities.cy.ts",
+        "tests": 1,
+        "passed": 1,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "java-code-integrity.cy.ts",
+        "tests": 5,
+        "passed": 5,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "ui-code-panel-bounds.cy.ts",
+        "tests": 1,
+        "passed": 1,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "ui-code-panel-controls.cy.ts",
+        "tests": 2,
+        "passed": 2,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "ui-code-panel-move.cy.ts",
+        "tests": 3,
+        "passed": 3,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "ui-code-panel-resize.cy.ts",
+        "tests": 1,
+        "passed": 1,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "ui-code-panel-state.cy.ts",
+        "tests": 1,
+        "passed": 1,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "ui-code-representations.cy.ts",
+        "tests": 3,
+        "passed": 3,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "ui-learning-flow.cy.ts",
+        "tests": 4,
+        "passed": 4,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      }
+    ]
+  },
+  "firefox": {
+    "archivos": 75,
+    "tests": 200,
+    "passed": 200,
+    "failed": 0,
+    "pending": 0,
+    "skipped": 0,
+    "specs": [
+      {
+        "archivo": "admin-deletion.cy.ts",
+        "tests": 3,
+        "passed": 3,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "basic-heap-linear.cy.ts",
+        "tests": 8,
+        "passed": 8,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "basic-list-hash.cy.ts",
+        "tests": 8,
+        "passed": 8,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "basic-sorting.cy.ts",
+        "tests": 6,
+        "passed": 6,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "basic-trees.cy.ts",
+        "tests": 11,
+        "passed": 11,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "canvas-algorithm-source.cy.ts",
+        "tests": 3,
+        "passed": 3,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "canvas-code-visibility.cy.ts",
+        "tests": 1,
+        "passed": 1,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "discrete-groups.cy.ts",
+        "tests": 1,
+        "passed": 1,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "email-verification.cy.ts",
+        "tests": 2,
+        "passed": 2,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "fix-chat-conserva-lo-escrito.cy.ts",
+        "tests": 5,
+        "passed": 5,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "graph-algorithms.cy.ts",
+        "tests": 6,
+        "passed": 6,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "hu-06-ca1-ranking-estructuras.cy.ts",
+        "tests": 1,
+        "passed": 1,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "hu-06-ca2-ranking-algoritmos.cy.ts",
+        "tests": 1,
+        "passed": 1,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "hu-06-ca3-tasa-reintento.cy.ts",
+        "tests": 1,
+        "passed": 1,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "hu-06-ca4-cohorte-periodo.cy.ts",
+        "tests": 1,
+        "passed": 1,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "hu-06-ca5-umbral-anonimato.cy.ts",
+        "tests": 1,
+        "passed": 1,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "hu-06-ca6-sin-individuos.cy.ts",
+        "tests": 1,
+        "passed": 1,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "hu-06-ca7-exportacion.cy.ts",
+        "tests": 1,
+        "passed": 1,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "hu-06-integracion-real.cy.ts",
+        "tests": 1,
+        "passed": 1,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "hu-08-ca1-welcome-register-login.cy.ts",
+        "tests": 11,
+        "passed": 11,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "hu-08-ca2-token-pair-session.cy.ts",
+        "tests": 6,
+        "passed": 6,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "hu-08-ca3-teacher-redirect.cy.ts",
+        "tests": 8,
+        "passed": 8,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "hu-16-ca1-registro-vinculado-a-curso.cy.ts",
+        "tests": 4,
+        "passed": 4,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "hu-16-ca2-correo-no-institucional.cy.ts",
+        "tests": 3,
+        "passed": 3,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "hu-16-ca3-asistente-requiere-sesion.cy.ts",
+        "tests": 3,
+        "passed": 3,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "hu-16-ca4-segregacion-de-roles.cy.ts",
+        "tests": 5,
+        "passed": 5,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "hu-16-ca5-trazabilidad-seudonimizada.cy.ts",
+        "tests": 2,
+        "passed": 2,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "hu-17-ca1-consumo-dentro-de-limites.cy.ts",
+        "tests": 2,
+        "passed": 2,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "hu-17-ca2-agotamiento-de-la-cuota-diaria.cy.ts",
+        "tests": 2,
+        "passed": 2,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "hu-17-ca3-limite-de-tasa.cy.ts",
+        "tests": 2,
+        "passed": 2,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "hu-17-ca4-aviso-preventivo.cy.ts",
+        "tests": 2,
+        "passed": 2,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "hu-17-ca5-reinicio-de-la-ventana-diaria.cy.ts",
+        "tests": 2,
+        "passed": 2,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "hu-17-ca6-ajuste-de-cuota-por-el-administrador.cy.ts",
+        "tests": 4,
+        "passed": 4,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "hu-18-ca1-conmutacion-conserva-la-estructura.cy.ts",
+        "tests": 2,
+        "passed": 2,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "hu-18-ca2-conmutacion-durante-la-ejecucion.cy.ts",
+        "tests": 2,
+        "passed": 2,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "hu-18-ca3-conmutacion-repetida.cy.ts",
+        "tests": 1,
+        "passed": 1,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "hu-18-ca4-independencia-del-nucleo.cy.ts",
+        "tests": 2,
+        "passed": 2,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "hu-18-ca5-persistencia-de-la-preferencia.cy.ts",
+        "tests": 3,
+        "passed": 3,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "hu-18-ca6-degradacion-sin-webgl.cy.ts",
+        "tests": 3,
+        "passed": 3,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "hu-18-ca7-registro-del-modo.cy.ts",
+        "tests": 1,
+        "passed": 1,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "hu-19-ca1-cobertura-de-familias.cy.ts",
+        "tests": 1,
+        "passed": 1,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "hu-19-ca2-disposicion-jerarquica.cy.ts",
+        "tests": 1,
+        "passed": 1,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "hu-19-ca3-paridad-de-pasos-bfs.cy.ts",
+        "tests": 1,
+        "passed": 1,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "hu-19-ca4-paridad-del-catalogo.cy.ts",
+        "tests": 2,
+        "passed": 2,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "hu-19-ca5-animacion-pop.cy.ts",
+        "tests": 2,
+        "passed": 2,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "hu-19-ca6-accesibilidad-2d.cy.ts",
+        "tests": 3,
+        "passed": 3,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "hu-21-ca1-estructura-por-lenguaje-natural.cy.ts",
+        "tests": 2,
+        "passed": 2,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "hu-21-ca2-ejecucion-de-algoritmo.cy.ts",
+        "tests": 1,
+        "passed": 1,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "hu-21-ca3-solicitud-fuera-de-alcance.cy.ts",
+        "tests": 2,
+        "passed": 2,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "hu-21-ca4-patrones-de-reintento.cy.ts",
+        "tests": 2,
+        "passed": 2,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "hu-21-ca5-seudonimizacion-en-origen.cy.ts",
+        "tests": 1,
+        "passed": 1,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "hu-21-ca6-resiliencia-del-registro.cy.ts",
+        "tests": 1,
+        "passed": 1,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "hu-22a-ca1-linea-y-nodo-sincronizados.cy.ts",
+        "tests": 2,
+        "passed": 2,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "hu-22a-ca4-retroceso.cy.ts",
+        "tests": 2,
+        "passed": 2,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "hu-22a-ca6-coherencia-rastro-animacion.cy.ts",
+        "tests": 2,
+        "passed": 2,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "hu-22b-ca2-inspector-de-variables.cy.ts",
+        "tests": 2,
+        "passed": 2,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "hu-22b-ca3-pila-de-llamadas.cy.ts",
+        "tests": 2,
+        "passed": 2,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "hu-22b-ca5-codigo-por-familia.cy.ts",
+        "tests": 2,
+        "passed": 2,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "hu-32-ca1-refinamiento-incremental.cy.ts",
+        "tests": 3,
+        "passed": 3,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "hu-32-ca2-cambio-de-propiedad-y-de-tipo.cy.ts",
+        "tests": 2,
+        "passed": 2,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "hu-32-ca4-caducidad-y-renovacion.cy.ts",
+        "tests": 2,
+        "passed": 2,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "hu-32-ca6-aislamiento-y-borrado.cy.ts",
+        "tests": 2,
+        "passed": 2,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "hu-32-ca8-cuota-y-degradacion.cy.ts",
+        "tests": 2,
+        "passed": 2,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "hu-33-gestion-cursos-y-asignaciones.cy.ts",
+        "tests": 3,
+        "passed": 3,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "java-code-integrity.cy.ts",
+        "tests": 5,
+        "passed": 5,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "management-style.cy.ts",
+        "tests": 1,
+        "passed": 1,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "sidebar-hierarchy.cy.ts",
+        "tests": 1,
+        "passed": 1,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "tutorial-activities.cy.ts",
+        "tests": 1,
+        "passed": 1,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "ui-code-panel-bounds.cy.ts",
+        "tests": 1,
+        "passed": 1,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "ui-code-panel-controls.cy.ts",
+        "tests": 2,
+        "passed": 2,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "ui-code-panel-move.cy.ts",
+        "tests": 3,
+        "passed": 3,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "ui-code-panel-resize.cy.ts",
+        "tests": 1,
+        "passed": 1,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "ui-code-panel-state.cy.ts",
+        "tests": 1,
+        "passed": 1,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "ui-code-representations.cy.ts",
+        "tests": 3,
+        "passed": 3,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      },
+      {
+        "archivo": "ui-learning-flow.cy.ts",
+        "tests": 4,
+        "passed": 4,
+        "failed": 0,
+        "pending": 0,
+        "skipped": 0
+      }
+    ]
+  }
+}

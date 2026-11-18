@@ -1,0 +1,13 @@
+{
+  "at": "2026-10-19T21:17:06.989895+00:00",
+  "host": "https://vista.kuros.work",
+  "routeTo": "ghs.googlehosted.com",
+  "tlsVerification": true,
+  "status": 200,
+  "isVistaHtml": true,
+  "ms": 2322.9,
+  "addresses": [
+    "142.251.107.121",
+    "2607:f8b0:400c:c0d::79"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "accountsRemovedByAdminApi": 40,
+  "databaseCleanup": [
+    {
+      "cleanup": "performance-complete",
+      "remainingAccounts": 0,
+      "remainingCourses": 0,
+      "remainingEvents": 0
+    },
+    {
+      "cleanup": "performance-usage",
+      "removed": 40
+    },
+    {
+      "cleanup": "performance-events",
+      "removed": 534
+    }
+  ],
+  "jobExecution": "vista-performance-cleanup-20261019-64mr4"
+}

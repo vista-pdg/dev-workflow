@@ -1,0 +1,43 @@
+{
+  "fecha": "2026-11-16",
+  "repositorios": [
+    {
+      "repo": "backend",
+      "remoteRefs": {
+        "origin/main": "429f1d88853542e9d362a83fafe0cfe81daab3e1",
+        "origin/feat/mejora-canvas-y-consistencia": "93b8cb3e9c2f508db316738fce02b8f525702f03"
+      },
+      "commitsRemotosAusentesEnLaCopia": []
+    },
+    {
+      "repo": "frontend",
+      "remoteRefs": {
+        "origin/main": "6834ecaf493a0083c4a576f184b0d69b462e4568",
+        "origin/feat/mejora-canvas-y-consistencia": "cc876b29231cb0ea06e28125c7a32dd7e30e88f7"
+      },
+      "commitsRemotosAusentesEnLaCopia": []
+    },
+    {
+      "repo": "dev-workflow",
+      "remoteRefs": {
+        "origin/main": "9d79c7ea4ed44c36a9c3fb5e0651607c39d41647",
+        "origin/feat/mejora-canvas-y-consistencia": "2667d9ed484fa97aa785fc75266aa7121d56aaee"
+      },
+      "commitsRemotosAusentesEnLaCopia": []
+    },
+    {
+      "repo": "terraform-iac",
+      "remoteRefs": {
+        "origin/main": "7e0830fad0c429d030676b01e2d4ea99958978a5"
+      },
+      "commitsRemotosAusentesEnLaCopia": []
+    },
+    {
+      "repo": "terraform-backend",
+      "remoteRefs": {
+        "origin/main": "63f91527511dd66a84e8749a55a0b992e2302bfe"
+      },
+      "commitsRemotosAusentesEnLaCopia": []
+    }
+  ]
+}

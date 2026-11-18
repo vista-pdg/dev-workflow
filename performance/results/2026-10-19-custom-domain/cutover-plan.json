@@ -1,0 +1,13 @@
+{
+  "hostname": "vista.kuros.work",
+  "oldCname": "ghs.googlehosted.com",
+  "newCname": "vista-pdg.web.app",
+  "ttlSeconds": 600,
+  "savedBy": "GoDaddy DNS UI",
+  "cutoverAtUTC": "2026-10-19T21:10:00Z",
+  "verifyDeadlineUTC": "2026-10-19T21:20:00Z",
+  "authorization": "User explicitly accepted possible temporary outage and rollback if failure persists after ten minutes",
+  "rollbackCondition": "Firebase still returns 404 or invalid VISTA HTML at deadline",
+  "rollbackTarget": "ghs.googlehosted.com",
+  "resourcesChanged": false
+}

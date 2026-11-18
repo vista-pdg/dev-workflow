@@ -24,6 +24,7 @@ async function openAnalytics(page, theme, mode = 'available') {
     } });
   });
   await page.goto('/analytics');
+  await expect(page.locator('[data-cy=analytics-page]')).toBeVisible();
   await expect(page.locator('[data-cy=analytics-courses-loading]')).toHaveCount(0);
   await expect(page.locator('[data-cy=analytics-loading]')).toHaveCount(0);
   await page.evaluate(() => document.fonts.ready);
@@ -37,7 +38,7 @@ async function inspect(page, testInfo, name) {
   }));
   for (const r of controls) { expect(r.x).toBeGreaterThanOrEqual(0); expect(r.right).toBeLessThanOrEqual(page.viewportSize().width); expect(r.height).toBeGreaterThanOrEqual(44); }
   await checkAccessibility(page, testInfo);
-  await testInfo.attach(name, { body: await page.screenshot({ fullPage: true, animations: 'disabled' }), contentType: 'image/png' });
+  await testInfo.attach(name, { body: await page.screenshot({ path: testInfo.outputPath(`${name}.png`), fullPage: true, animations: 'disabled' }), contentType: 'image/png' });
   if (testInfo.project.name === 'mobile') {
     await page.locator('[data-cy=analytics-page]').evaluate(el => { el.scrollTop = el.scrollHeight; });
     await testInfo.attach(`${name}-scrolled`, { body: await page.screenshot({ animations: 'disabled' }), contentType: 'image/png' });

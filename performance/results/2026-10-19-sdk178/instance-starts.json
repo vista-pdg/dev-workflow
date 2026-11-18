@@ -1,0 +1,252 @@
+[
+  {
+    "resource": {
+      "labels": {
+        "revision_name": "vista-backend-00012-dfk",
+        "service_name": "vista-backend"
+      }
+    },
+    "textPayload": "STARTUP TCP probe succeeded after 4 attempts for container \"backend\" on port 8080.",
+    "timestamp": "2026-10-19T19:41:05.450608Z"
+  },
+  {
+    "resource": {
+      "labels": {
+        "revision_name": "vista-backend-00012-dfk",
+        "service_name": "vista-backend"
+      }
+    },
+    "textPayload": "STARTUP TCP probe succeeded after 4 attempts for container \"backend\" on port 8080.",
+    "timestamp": "2026-10-19T19:41:05.072175Z"
+  },
+  {
+    "resource": {
+      "labels": {
+        "revision_name": "vista-backend-00012-dfk",
+        "service_name": "vista-backend"
+      }
+    },
+    "textPayload": "STARTUP TCP probe succeeded after 1 attempt for container \"redis\" on port 6379.",
+    "timestamp": "2026-10-19T19:40:50.448990Z"
+  },
+  {
+    "resource": {
+      "labels": {
+        "revision_name": "vista-backend-00012-dfk",
+        "service_name": "vista-backend"
+      }
+    },
+    "textPayload": "STARTUP TCP probe succeeded after 1 attempt for container \"redis\" on port 6379.",
+    "timestamp": "2026-10-19T19:40:50.070553Z"
+  },
+  {
+    "resource": {
+      "labels": {
+        "revision_name": "vista-backend-00012-dfk",
+        "service_name": "vista-backend"
+      }
+    },
+    "textPayload": "Starting new instance. Reason: AUTOSCALING - Instance started due to configured scaling factors (e.g. CPU utilization, request throughput, etc.) or no existing capacity for current traffic.",
+    "timestamp": "2026-10-19T19:40:49.092339Z"
+  },
+  {
+    "resource": {
+      "labels": {
+        "revision_name": "vista-backend-00012-dfk",
+        "service_name": "vista-backend"
+      }
+    },
+    "textPayload": "Starting new instance. Reason: AUTOSCALING - Instance started due to configured scaling factors (e.g. CPU utilization, request throughput, etc.) or no existing capacity for current traffic.",
+    "timestamp": "2026-10-19T19:40:49.055511Z"
+  },
+  {
+    "resource": {
+      "labels": {
+        "revision_name": "vista-backend-00012-dfk",
+        "service_name": "vista-backend"
+      }
+    },
+    "textPayload": "STARTUP TCP probe succeeded after 4 attempts for container \"backend\" on port 8080.",
+    "timestamp": "2026-10-19T19:40:16.247670Z"
+  },
+  {
+    "resource": {
+      "labels": {
+        "revision_name": "vista-backend-00012-dfk",
+        "service_name": "vista-backend"
+      }
+    },
+    "textPayload": "STARTUP TCP probe succeeded after 1 attempt for container \"redis\" on port 6379.",
+    "timestamp": "2026-10-19T19:40:00.356948Z"
+  },
+  {
+    "resource": {
+      "labels": {
+        "revision_name": "vista-backend-00012-dfk",
+        "service_name": "vista-backend"
+      }
+    },
+    "textPayload": "Starting new instance. Reason: DEPLOYMENT_ROLLOUT - Instance started due to traffic shifting between revisions due to deployment, traffic split adjustment, or deployment health check.",
+    "timestamp": "2026-10-19T19:39:47.512458Z"
+  },
+  {
+    "resource": {
+      "labels": {
+        "revision_name": "vista-backend-00011-f7q",
+        "service_name": "vista-backend"
+      }
+    },
+    "textPayload": "STARTUP TCP probe succeeded after 4 attempts for container \"backend\" on port 8080.",
+    "timestamp": "2026-10-19T19:07:38.555789Z"
+  },
+  {
+    "resource": {
+      "labels": {
+        "revision_name": "vista-backend-00011-f7q",
+        "service_name": "vista-backend"
+      }
+    },
+    "textPayload": "STARTUP TCP probe succeeded after 1 attempt for container \"redis\" on port 6379.",
+    "timestamp": "2026-10-19T19:07:23.554373Z"
+  },
+  {
+    "resource": {
+      "labels": {
+        "revision_name": "vista-backend-00011-f7q",
+        "service_name": "vista-backend"
+      }
+    },
+    "textPayload": "Starting new instance. Reason: AUTOSCALING - Instance started due to configured scaling factors (e.g. CPU utilization, request throughput, etc.) or no existing capacity for current traffic.",
+    "timestamp": "2026-10-19T19:07:11.733612Z"
+  },
+  {
+    "resource": {
+      "labels": {
+        "revision_name": "vista-backend-00011-f7q",
+        "service_name": "vista-backend"
+      }
+    },
+    "textPayload": "STARTUP TCP probe succeeded after 4 attempts for container \"backend\" on port 8080.",
+    "timestamp": "2026-10-19T19:07:11.057231Z"
+  },
+  {
+    "resource": {
+      "labels": {
+        "revision_name": "vista-backend-00011-f7q",
+        "service_name": "vista-backend"
+      }
+    },
+    "textPayload": "STARTUP TCP probe succeeded after 1 attempt for container \"redis\" on port 6379.",
+    "timestamp": "2026-10-19T19:06:55.634293Z"
+  },
+  {
+    "resource": {
+      "labels": {
+        "revision_name": "vista-backend-00011-f7q",
+        "service_name": "vista-backend"
+      }
+    },
+    "textPayload": "Starting new instance. Reason: DEPLOYMENT_ROLLOUT - Instance started due to traffic shifting between revisions due to deployment, traffic split adjustment, or deployment health check.",
+    "timestamp": "2026-10-19T19:06:54.547701Z"
+  },
+  {
+    "resource": {
+      "labels": {
+        "revision_name": "vista-frontend-00011-c89",
+        "service_name": "vista-frontend"
+      }
+    },
+    "textPayload": "STARTUP HTTP probe succeeded after 2 attempts for container \"frontend\" on port 8080 path \"/healthz\".",
+    "timestamp": "2026-10-19T19:05:27.901620Z"
+  },
+  {
+    "resource": {
+      "labels": {
+        "revision_name": "vista-frontend-00011-c89",
+        "service_name": "vista-frontend"
+      }
+    },
+    "textPayload": "Starting new instance. Reason: AUTOSCALING - Instance started due to configured scaling factors (e.g. CPU utilization, request throughput, etc.) or no existing capacity for current traffic.",
+    "timestamp": "2026-10-19T19:05:25.312576Z"
+  },
+  {
+    "resource": {
+      "labels": {
+        "revision_name": "vista-frontend-00011-c89",
+        "service_name": "vista-frontend"
+      }
+    },
+    "textPayload": "STARTUP HTTP probe succeeded after 2 attempts for container \"frontend\" on port 8080 path \"/healthz\".",
+    "timestamp": "2026-10-19T19:05:24.784728Z"
+  },
+  {
+    "resource": {
+      "labels": {
+        "revision_name": "vista-frontend-00011-c89",
+        "service_name": "vista-frontend"
+      }
+    },
+    "textPayload": "Starting new instance. Reason: DEPLOYMENT_ROLLOUT - Instance started due to traffic shifting between revisions due to deployment, traffic split adjustment, or deployment health check.",
+    "timestamp": "2026-10-19T19:05:22.184972Z"
+  },
+  {
+    "resource": {
+      "labels": {
+        "revision_name": "vista-backend-00010-cd2",
+        "service_name": "vista-backend"
+      }
+    },
+    "textPayload": "STARTUP TCP probe succeeded after 4 attempts for container \"backend\" on port 8080.",
+    "timestamp": "2026-10-19T19:03:11.105976Z"
+  },
+  {
+    "resource": {
+      "labels": {
+        "revision_name": "vista-backend-00010-cd2",
+        "service_name": "vista-backend"
+      }
+    },
+    "textPayload": "STARTUP TCP probe succeeded after 1 attempt for container \"redis\" on port 6379.",
+    "timestamp": "2026-10-19T19:02:56.104850Z"
+  },
+  {
+    "resource": {
+      "labels": {
+        "revision_name": "vista-backend-00010-cd2",
+        "service_name": "vista-backend"
+      }
+    },
+    "textPayload": "Starting new instance. Reason: AUTOSCALING - Instance started due to configured scaling factors (e.g. CPU utilization, request throughput, etc.) or no existing capacity for current traffic.",
+    "timestamp": "2026-10-19T19:02:54.594245Z"
+  },
+  {
+    "resource": {
+      "labels": {
+        "revision_name": "vista-backend-00010-cd2",
+        "service_name": "vista-backend"
+      }
+    },
+    "textPayload": "STARTUP TCP probe succeeded after 4 attempts for container \"backend\" on port 8080.",
+    "timestamp": "2026-10-19T19:02:54.190441Z"
+  },
+  {
+    "resource": {
+      "labels": {
+        "revision_name": "vista-backend-00010-cd2",
+        "service_name": "vista-backend"
+      }
+    },
+    "textPayload": "STARTUP TCP probe succeeded after 1 attempt for container \"redis\" on port 6379.",
+    "timestamp": "2026-10-19T19:02:37.762943Z"
+  },
+  {
+    "resource": {
+      "labels": {
+        "revision_name": "vista-backend-00010-cd2",
+        "service_name": "vista-backend"
+      }
+    },
+    "textPayload": "Starting new instance. Reason: DEPLOYMENT_ROLLOUT - Instance started due to traffic shifting between revisions due to deployment, traffic split adjustment, or deployment health check.",
+    "timestamp": "2026-10-19T19:02:36.238550Z"
+  }
+]

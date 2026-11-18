@@ -1,0 +1,6 @@
+Backend Surefire XML: {"tests": 393, "failures": 0, "errors": 0, "skipped": 2}
+chrome: ✔  All specs passed!                        05:31      195      195        -        -        -
+firefox: ✔  All specs passed!                        05:55      195      195        -        -        -
+Frontend: 105 unit tests; build and lint passed.
+Visual: 101 passed; 4 skipped by viewport; zero baseline updates.
+nginx real image: GAESA/GCLB bridge, legacy compatibility, bearer, no-store and SPA passed.

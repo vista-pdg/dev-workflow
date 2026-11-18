@@ -1,0 +1,1109 @@
+{
+  "label": "before-dns",
+  "freshConnections": true,
+  "summary": {
+    "https://vista.kuros.work": {
+      "requests": 40,
+      "failures": 1,
+      "p50Ms": 728.306,
+      "p95Ms": 4735.128,
+      "p99Ms": 4846.541
+    },
+    "https://vista-pdg.web.app": {
+      "requests": 40,
+      "failures": 0,
+      "p50Ms": 190.485,
+      "p95Ms": 215.291,
+      "p99Ms": 277.654
+    },
+    "https://vista-frontend-sbt7d3iyka-uc.a.run.app": {
+      "requests": 40,
+      "failures": 0,
+      "p50Ms": 216.509,
+      "p95Ms": 275.502,
+      "p99Ms": 309.883
+    }
+  },
+  "samples": [
+    {
+      "host": "https://vista.kuros.work",
+      "round": 1,
+      "at": "2026-10-19T20:02:47.211413+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 608.065
+    },
+    {
+      "host": "https://vista-pdg.web.app",
+      "round": 1,
+      "at": "2026-10-19T20:02:47.819488+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 190.146
+    },
+    {
+      "host": "https://vista-frontend-sbt7d3iyka-uc.a.run.app",
+      "round": 1,
+      "at": "2026-10-19T20:02:48.009640+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 309.883
+    },
+    {
+      "host": "https://vista-pdg.web.app",
+      "round": 2,
+      "at": "2026-10-19T20:02:48.319539+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 198.326
+    },
+    {
+      "host": "https://vista.kuros.work",
+      "round": 2,
+      "at": "2026-10-19T20:02:48.517874+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 280.683
+    },
+    {
+      "host": "https://vista-frontend-sbt7d3iyka-uc.a.run.app",
+      "round": 2,
+      "at": "2026-10-19T20:02:48.798565+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 208.233
+    },
+    {
+      "host": "https://vista-frontend-sbt7d3iyka-uc.a.run.app",
+      "round": 3,
+      "at": "2026-10-19T20:02:49.006810+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 204.405
+    },
+    {
+      "host": "https://vista-pdg.web.app",
+      "round": 3,
+      "at": "2026-10-19T20:02:49.211223+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 194.144
+    },
+    {
+      "host": "https://vista.kuros.work",
+      "round": 3,
+      "at": "2026-10-19T20:02:49.405374+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 1528.465
+    },
+    {
+      "host": "https://vista.kuros.work",
+      "round": 4,
+      "at": "2026-10-19T20:02:50.933854+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 1275.415
+    },
+    {
+      "host": "https://vista-pdg.web.app",
+      "round": 4,
+      "at": "2026-10-19T20:02:52.209277+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 199.68
+    },
+    {
+      "host": "https://vista-frontend-sbt7d3iyka-uc.a.run.app",
+      "round": 4,
+      "at": "2026-10-19T20:02:52.408968+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 206.176
+    },
+    {
+      "host": "https://vista-frontend-sbt7d3iyka-uc.a.run.app",
+      "round": 5,
+      "at": "2026-10-19T20:02:52.615157+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 208.705
+    },
+    {
+      "host": "https://vista.kuros.work",
+      "round": 5,
+      "at": "2026-10-19T20:02:52.823870+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 1305.126
+    },
+    {
+      "host": "https://vista-pdg.web.app",
+      "round": 5,
+      "at": "2026-10-19T20:02:54.129002+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 183.232
+    },
+    {
+      "host": "https://vista-frontend-sbt7d3iyka-uc.a.run.app",
+      "round": 6,
+      "at": "2026-10-19T20:02:54.312253+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 278.753
+    },
+    {
+      "host": "https://vista.kuros.work",
+      "round": 6,
+      "at": "2026-10-19T20:02:54.591015+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 2294.46
+    },
+    {
+      "host": "https://vista-pdg.web.app",
+      "round": 6,
+      "at": "2026-10-19T20:02:56.885480+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 179.098
+    },
+    {
+      "host": "https://vista-frontend-sbt7d3iyka-uc.a.run.app",
+      "round": 7,
+      "at": "2026-10-19T20:02:57.064588+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 195.402
+    },
+    {
+      "host": "https://vista-pdg.web.app",
+      "round": 7,
+      "at": "2026-10-19T20:02:57.259995+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 181.921
+    },
+    {
+      "host": "https://vista.kuros.work",
+      "round": 7,
+      "at": "2026-10-19T20:02:57.441922+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 259.827
+    },
+    {
+      "host": "https://vista.kuros.work",
+      "round": 8,
+      "at": "2026-10-19T20:02:57.701763+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 1303.575
+    },
+    {
+      "host": "https://vista-frontend-sbt7d3iyka-uc.a.run.app",
+      "round": 8,
+      "at": "2026-10-19T20:02:59.005348+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 208.809
+    },
+    {
+      "host": "https://vista-pdg.web.app",
+      "round": 8,
+      "at": "2026-10-19T20:02:59.214164+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 277.654
+    },
+    {
+      "host": "https://vista.kuros.work",
+      "round": 9,
+      "at": "2026-10-19T20:02:59.491833+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 271.855
+    },
+    {
+      "host": "https://vista-pdg.web.app",
+      "round": 9,
+      "at": "2026-10-19T20:02:59.763697+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 182.709
+    },
+    {
+      "host": "https://vista-frontend-sbt7d3iyka-uc.a.run.app",
+      "round": 9,
+      "at": "2026-10-19T20:02:59.946409+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 275.502
+    },
+    {
+      "host": "https://vista-pdg.web.app",
+      "round": 10,
+      "at": "2026-10-19T20:03:00.221927+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 190.485
+    },
+    {
+      "host": "https://vista-frontend-sbt7d3iyka-uc.a.run.app",
+      "round": 10,
+      "at": "2026-10-19T20:03:00.412420+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 222.491
+    },
+    {
+      "host": "https://vista.kuros.work",
+      "round": 10,
+      "at": "2026-10-19T20:03:00.634919+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 4846.541
+    },
+    {
+      "host": "https://vista.kuros.work",
+      "round": 11,
+      "at": "2026-10-19T20:03:05.481473+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 1308.927
+    },
+    {
+      "host": "https://vista-frontend-sbt7d3iyka-uc.a.run.app",
+      "round": 11,
+      "at": "2026-10-19T20:03:06.790406+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 221.133
+    },
+    {
+      "host": "https://vista-pdg.web.app",
+      "round": 11,
+      "at": "2026-10-19T20:03:07.011544+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 175.11
+    },
+    {
+      "host": "https://vista-frontend-sbt7d3iyka-uc.a.run.app",
+      "round": 12,
+      "at": "2026-10-19T20:03:07.186674+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 209.791
+    },
+    {
+      "host": "https://vista-pdg.web.app",
+      "round": 12,
+      "at": "2026-10-19T20:03:07.396470+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 175.183
+    },
+    {
+      "host": "https://vista.kuros.work",
+      "round": 12,
+      "at": "2026-10-19T20:03:07.571662+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 2347.474
+    },
+    {
+      "host": "https://vista-pdg.web.app",
+      "round": 13,
+      "at": "2026-10-19T20:03:09.919149+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 184.753
+    },
+    {
+      "host": "https://vista-frontend-sbt7d3iyka-uc.a.run.app",
+      "round": 13,
+      "at": "2026-10-19T20:03:10.103908+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 208.189
+    },
+    {
+      "host": "https://vista.kuros.work",
+      "round": 13,
+      "at": "2026-10-19T20:03:10.312105+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 728.306
+    },
+    {
+      "host": "https://vista.kuros.work",
+      "round": 14,
+      "at": "2026-10-19T20:03:11.040424+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 1310.53
+    },
+    {
+      "host": "https://vista-frontend-sbt7d3iyka-uc.a.run.app",
+      "round": 14,
+      "at": "2026-10-19T20:03:12.350961+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 244.302
+    },
+    {
+      "host": "https://vista-pdg.web.app",
+      "round": 14,
+      "at": "2026-10-19T20:03:12.595269+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 198.466
+    },
+    {
+      "host": "https://vista-frontend-sbt7d3iyka-uc.a.run.app",
+      "round": 15,
+      "at": "2026-10-19T20:03:12.793748+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 220.659
+    },
+    {
+      "host": "https://vista-pdg.web.app",
+      "round": 15,
+      "at": "2026-10-19T20:03:13.014413+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 186.479
+    },
+    {
+      "host": "https://vista.kuros.work",
+      "round": 15,
+      "at": "2026-10-19T20:03:13.200899+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 1301.043
+    },
+    {
+      "host": "https://vista-frontend-sbt7d3iyka-uc.a.run.app",
+      "round": 16,
+      "at": "2026-10-19T20:03:14.501956+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 216.509
+    },
+    {
+      "host": "https://vista.kuros.work",
+      "round": 16,
+      "at": "2026-10-19T20:03:14.718475+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 930.502
+    },
+    {
+      "host": "https://vista-pdg.web.app",
+      "round": 16,
+      "at": "2026-10-19T20:03:15.648990+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 199.531
+    },
+    {
+      "host": "https://vista-pdg.web.app",
+      "round": 17,
+      "at": "2026-10-19T20:03:15.848538+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 197.584
+    },
+    {
+      "host": "https://vista.kuros.work",
+      "round": 17,
+      "at": "2026-10-19T20:03:16.046132+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 1567.309
+    },
+    {
+      "host": "https://vista-frontend-sbt7d3iyka-uc.a.run.app",
+      "round": 17,
+      "at": "2026-10-19T20:03:17.613449+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 250.214
+    },
+    {
+      "host": "https://vista-frontend-sbt7d3iyka-uc.a.run.app",
+      "round": 18,
+      "at": "2026-10-19T20:03:17.863684+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 244.124
+    },
+    {
+      "host": "https://vista.kuros.work",
+      "round": 18,
+      "at": "2026-10-19T20:03:18.107813+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 317.315
+    },
+    {
+      "host": "https://vista-pdg.web.app",
+      "round": 18,
+      "at": "2026-10-19T20:03:18.425136+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 215.291
+    },
+    {
+      "host": "https://vista.kuros.work",
+      "round": 19,
+      "at": "2026-10-19T20:03:18.640442+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 304.873
+    },
+    {
+      "host": "https://vista-pdg.web.app",
+      "round": 19,
+      "at": "2026-10-19T20:03:18.945323+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 180.321
+    },
+    {
+      "host": "https://vista-frontend-sbt7d3iyka-uc.a.run.app",
+      "round": 19,
+      "at": "2026-10-19T20:03:19.125650+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 197.724
+    },
+    {
+      "host": "https://vista-frontend-sbt7d3iyka-uc.a.run.app",
+      "round": 20,
+      "at": "2026-10-19T20:03:19.323390+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 199.541
+    },
+    {
+      "host": "https://vista-pdg.web.app",
+      "round": 20,
+      "at": "2026-10-19T20:03:19.522938+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 173.372
+    },
+    {
+      "host": "https://vista.kuros.work",
+      "round": 20,
+      "at": "2026-10-19T20:03:19.696319+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 575.863
+    },
+    {
+      "host": "https://vista.kuros.work",
+      "round": 21,
+      "at": "2026-10-19T20:03:20.272196+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 583.582
+    },
+    {
+      "host": "https://vista-frontend-sbt7d3iyka-uc.a.run.app",
+      "round": 21,
+      "at": "2026-10-19T20:03:20.855788+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 221.007
+    },
+    {
+      "host": "https://vista-pdg.web.app",
+      "round": 21,
+      "at": "2026-10-19T20:03:21.076803+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 203.257
+    },
+    {
+      "host": "https://vista.kuros.work",
+      "round": 22,
+      "at": "2026-10-19T20:03:21.280073+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 252.017
+    },
+    {
+      "host": "https://vista-pdg.web.app",
+      "round": 22,
+      "at": "2026-10-19T20:03:21.532100+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 210.242
+    },
+    {
+      "host": "https://vista-frontend-sbt7d3iyka-uc.a.run.app",
+      "round": 22,
+      "at": "2026-10-19T20:03:21.742348+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 221.807
+    },
+    {
+      "host": "https://vista.kuros.work",
+      "round": 23,
+      "at": "2026-10-19T20:03:21.964170+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 548.42
+    },
+    {
+      "host": "https://vista-pdg.web.app",
+      "round": 23,
+      "at": "2026-10-19T20:03:22.512596+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 206.284
+    },
+    {
+      "host": "https://vista-frontend-sbt7d3iyka-uc.a.run.app",
+      "round": 23,
+      "at": "2026-10-19T20:03:22.718888+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 243.701
+    },
+    {
+      "host": "https://vista.kuros.work",
+      "round": 24,
+      "at": "2026-10-19T20:03:22.962609+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 261.453
+    },
+    {
+      "host": "https://vista-frontend-sbt7d3iyka-uc.a.run.app",
+      "round": 24,
+      "at": "2026-10-19T20:03:23.224075+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 220.178
+    },
+    {
+      "host": "https://vista-pdg.web.app",
+      "round": 24,
+      "at": "2026-10-19T20:03:23.444261+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 196.303
+    },
+    {
+      "host": "https://vista-pdg.web.app",
+      "round": 25,
+      "at": "2026-10-19T20:03:23.640577+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 170.603
+    },
+    {
+      "host": "https://vista.kuros.work",
+      "round": 25,
+      "at": "2026-10-19T20:03:23.811188+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 275.686
+    },
+    {
+      "host": "https://vista-frontend-sbt7d3iyka-uc.a.run.app",
+      "round": 25,
+      "at": "2026-10-19T20:03:24.086881+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 209.068
+    },
+    {
+      "host": "https://vista-pdg.web.app",
+      "round": 26,
+      "at": "2026-10-19T20:03:24.295961+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 203.712
+    },
+    {
+      "host": "https://vista.kuros.work",
+      "round": 26,
+      "at": "2026-10-19T20:03:24.499680+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 262.182
+    },
+    {
+      "host": "https://vista-frontend-sbt7d3iyka-uc.a.run.app",
+      "round": 26,
+      "at": "2026-10-19T20:03:24.761875+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 197.754
+    },
+    {
+      "host": "https://vista.kuros.work",
+      "round": 27,
+      "at": "2026-10-19T20:03:24.959639+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 242.076
+    },
+    {
+      "host": "https://vista-frontend-sbt7d3iyka-uc.a.run.app",
+      "round": 27,
+      "at": "2026-10-19T20:03:25.201724+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 269.659
+    },
+    {
+      "host": "https://vista-pdg.web.app",
+      "round": 27,
+      "at": "2026-10-19T20:03:25.471388+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 184.225
+    },
+    {
+      "host": "https://vista-pdg.web.app",
+      "round": 28,
+      "at": "2026-10-19T20:03:25.655627+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 210.226
+    },
+    {
+      "host": "https://vista-frontend-sbt7d3iyka-uc.a.run.app",
+      "round": 28,
+      "at": "2026-10-19T20:03:25.865863+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 269.573
+    },
+    {
+      "host": "https://vista.kuros.work",
+      "round": 28,
+      "at": "2026-10-19T20:03:26.135443+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 4735.128
+    },
+    {
+      "host": "https://vista-pdg.web.app",
+      "round": 29,
+      "at": "2026-10-19T20:03:30.870583+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 197.852
+    },
+    {
+      "host": "https://vista.kuros.work",
+      "round": 29,
+      "at": "2026-10-19T20:03:31.068443+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 4665.487
+    },
+    {
+      "host": "https://vista-frontend-sbt7d3iyka-uc.a.run.app",
+      "round": 29,
+      "at": "2026-10-19T20:03:35.733936+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 195.841
+    },
+    {
+      "host": "https://vista-frontend-sbt7d3iyka-uc.a.run.app",
+      "round": 30,
+      "at": "2026-10-19T20:03:35.929792+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 211.166
+    },
+    {
+      "host": "https://vista.kuros.work",
+      "round": 30,
+      "at": "2026-10-19T20:03:36.140964+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 676.604
+    },
+    {
+      "host": "https://vista-pdg.web.app",
+      "round": 30,
+      "at": "2026-10-19T20:03:36.817575+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 201.074
+    },
+    {
+      "host": "https://vista.kuros.work",
+      "round": 31,
+      "at": "2026-10-19T20:03:37.018661+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 1560.899
+    },
+    {
+      "host": "https://vista-frontend-sbt7d3iyka-uc.a.run.app",
+      "round": 31,
+      "at": "2026-10-19T20:03:38.579569+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 274.407
+    },
+    {
+      "host": "https://vista-pdg.web.app",
+      "round": 31,
+      "at": "2026-10-19T20:03:38.853984+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 190.443
+    },
+    {
+      "host": "https://vista-pdg.web.app",
+      "round": 32,
+      "at": "2026-10-19T20:03:39.044444+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 225.331
+    },
+    {
+      "host": "https://vista.kuros.work",
+      "round": 32,
+      "at": "2026-10-19T20:03:39.269789+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 612.842
+    },
+    {
+      "host": "https://vista-frontend-sbt7d3iyka-uc.a.run.app",
+      "round": 32,
+      "at": "2026-10-19T20:03:39.882637+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 199.778
+    },
+    {
+      "host": "https://vista-pdg.web.app",
+      "round": 33,
+      "at": "2026-10-19T20:03:40.082431+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 213.683
+    },
+    {
+      "host": "https://vista-frontend-sbt7d3iyka-uc.a.run.app",
+      "round": 33,
+      "at": "2026-10-19T20:03:40.296123+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 211.065
+    },
+    {
+      "host": "https://vista.kuros.work",
+      "round": 33,
+      "at": "2026-10-19T20:03:40.507196+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 334.906
+    },
+    {
+      "host": "https://vista.kuros.work",
+      "round": 34,
+      "at": "2026-10-19T20:03:40.842116+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 720.224
+    },
+    {
+      "host": "https://vista-frontend-sbt7d3iyka-uc.a.run.app",
+      "round": 34,
+      "at": "2026-10-19T20:03:41.562350+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 210.91
+    },
+    {
+      "host": "https://vista-pdg.web.app",
+      "round": 34,
+      "at": "2026-10-19T20:03:41.773266+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 186.834
+    },
+    {
+      "host": "https://vista-frontend-sbt7d3iyka-uc.a.run.app",
+      "round": 35,
+      "at": "2026-10-19T20:03:41.960113+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 218.447
+    },
+    {
+      "host": "https://vista-pdg.web.app",
+      "round": 35,
+      "at": "2026-10-19T20:03:42.178578+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 194.225
+    },
+    {
+      "host": "https://vista.kuros.work",
+      "round": 35,
+      "at": "2026-10-19T20:03:42.372809+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 833.903
+    },
+    {
+      "host": "https://vista-frontend-sbt7d3iyka-uc.a.run.app",
+      "round": 36,
+      "at": "2026-10-19T20:03:43.206727+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 209.886
+    },
+    {
+      "host": "https://vista-pdg.web.app",
+      "round": 36,
+      "at": "2026-10-19T20:03:43.416619+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 181.753
+    },
+    {
+      "host": "https://vista.kuros.work",
+      "round": 36,
+      "at": "2026-10-19T20:03:43.598381+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 296.615
+    },
+    {
+      "host": "https://vista-pdg.web.app",
+      "round": 37,
+      "at": "2026-10-19T20:03:43.895010+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 178.392
+    },
+    {
+      "host": "https://vista.kuros.work",
+      "round": 37,
+      "at": "2026-10-19T20:03:44.073412+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 868.283
+    },
+    {
+      "host": "https://vista-frontend-sbt7d3iyka-uc.a.run.app",
+      "round": 37,
+      "at": "2026-10-19T20:03:44.941700+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 219.31
+    },
+    {
+      "host": "https://vista.kuros.work",
+      "round": 38,
+      "at": "2026-10-19T20:03:45.161022+00:00",
+      "status": 0,
+      "validHtml": false,
+      "error": "ConnectionError",
+      "ms": 5008.018
+    },
+    {
+      "host": "https://vista-pdg.web.app",
+      "round": 38,
+      "at": "2026-10-19T20:03:50.169047+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 167.421
+    },
+    {
+      "host": "https://vista-frontend-sbt7d3iyka-uc.a.run.app",
+      "round": 38,
+      "at": "2026-10-19T20:03:50.336477+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 218.988
+    },
+    {
+      "host": "https://vista-pdg.web.app",
+      "round": 39,
+      "at": "2026-10-19T20:03:50.555479+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 177.784
+    },
+    {
+      "host": "https://vista.kuros.work",
+      "round": 39,
+      "at": "2026-10-19T20:03:50.733271+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 825.248
+    },
+    {
+      "host": "https://vista-frontend-sbt7d3iyka-uc.a.run.app",
+      "round": 39,
+      "at": "2026-10-19T20:03:51.558527+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 206.41
+    },
+    {
+      "host": "https://vista.kuros.work",
+      "round": 40,
+      "at": "2026-10-19T20:03:51.764950+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 1303.801
+    },
+    {
+      "host": "https://vista-pdg.web.app",
+      "round": 40,
+      "at": "2026-10-19T20:03:53.068758+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 204.352
+    },
+    {
+      "host": "https://vista-frontend-sbt7d3iyka-uc.a.run.app",
+      "round": 40,
+      "at": "2026-10-19T20:03:53.273118+00:00",
+      "status": 200,
+      "validHtml": true,
+      "bytes": 501,
+      "ms": 250.222
+    }
+  ]
+}

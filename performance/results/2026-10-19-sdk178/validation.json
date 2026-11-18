@@ -1,0 +1,70 @@
+{
+  "backend": {
+    "tests": 393,
+    "failures": 0,
+    "errors": 0,
+    "skippedLive": 2
+  },
+  "frontend": {
+    "unitTests": 105,
+    "lineCoveragePercent": 95.78,
+    "build": "passed",
+    "lint": "passed"
+  },
+  "cypressFinal": {
+    "chrome": {
+      "tests": 195,
+      "passed": 195,
+      "exitCode": 0
+    },
+    "firefox": {
+      "tests": 195,
+      "passed": 195,
+      "exitCode": 0,
+      "teardownWarning": "kill EACCES; Cypress explicitly reported exit code unchanged"
+    }
+  },
+  "visual": {
+    "uniqueChecksValidatedAcrossRuns": 101,
+    "viewportSpecificSkips": 4,
+    "baselineUpdates": 0,
+    "fixturesUpdated": [
+      "canvas identity",
+      "current values field accessible name",
+      "wait for analytics shell"
+    ],
+    "finalRunPassed": 101,
+    "finalRunSkipped": 4,
+    "finalRunFailures": 0,
+    "server": "Vite8.3.4"
+  },
+  "nginxIntegration": "passed: GAESA/GCLB/legacy bridge, bearer, no-store, SPA",
+  "terraform": {
+    "fmt": "passed",
+    "validate": "passed",
+    "hostingPlanApply": "passed: project/site imported; rewrite/release active; custom domain pending certificate/DNS",
+    "resourceChangesRemaining": 0,
+    "finalPlan": "output refresh only; no resource mutations"
+  },
+  "dependencyAudits": {
+    "MavenPackages": 197,
+    "MavenKnownAdvisories": 0,
+    "npmProductionAdvisories": 0,
+    "npmDevelopmentHigh": 7
+  },
+  "commits": {
+    "backend": "9177bf3",
+    "frontend": "85754c8",
+    "terraform-iac": "3a6884c",
+    "frontendAffinity": "495a0b9",
+    "terraformDomain": "ec29903"
+  },
+  "hostingLiveSession": "passed after GAESA fix: cookie attributes, 10 session reads, refresh, follow-up generation",
+  "cleanup": {
+    "verified": true,
+    "accountsRemoved": 40,
+    "remainingTestRows": 0,
+    "temporaryJobDeleted": true,
+    "credentialManifestRemoved": true
+  }
+}

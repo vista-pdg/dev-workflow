@@ -40,7 +40,11 @@ async function openFixture(page, mode='2D') {
   await page.evaluate(()=>document.fonts.ready);
 }
 async function loadGraph(page) {
-  await page.evaluate(({nodes,edges})=>window.__vista.engine.loadStructure(nodes,edges,null),{nodes,edges});
+  await page.evaluate(async ({nodes,edges})=>{
+    const {useGraphStore}=await import('/src/store/graphStore.ts');
+    window.__vista.engine.loadStructure(nodes,edges,null);
+    useGraphStore.setState({canvasContext:{type:'graph',subtype:null}});
+  },{nodes,edges});
 }
 async function settled(page) {
   await page.evaluate(()=>Promise.all(document.getAnimations().filter(a=>a.effect?.getComputedTiming().iterations!==Infinity).map(a=>a.finished.catch(()=>undefined))));

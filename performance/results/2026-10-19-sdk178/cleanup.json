@@ -1,0 +1,30 @@
+{
+  "runId": "20261019-12e99b",
+  "course": "PERF-20261019-12E99B",
+  "accountsRemoved": 40,
+  "records": [
+    {
+      "cleanup": "performance-complete",
+      "remainingAccounts": 0,
+      "remainingCourses": 0,
+      "remainingEvents": 0,
+      "remainingUsage": 0
+    },
+    {
+      "cleanup": "performance-usage",
+      "removed": 40
+    },
+    {
+      "cleanup": "performance-events",
+      "removed": 1939
+    },
+    {
+      "cleanup": "database-capacity",
+      "maxConnections": 25
+    }
+  ],
+  "temporaryJob": "vista-perf-cleanup-20261019-12e99b-e850",
+  "jobDeleted": true,
+  "transactionCommitted": true,
+  "verificationNote": "Cloud job succeeded; parser fixed to support null rows and jsonPayload. Verified retained logs and job deletion without rerunning SQL."
+}

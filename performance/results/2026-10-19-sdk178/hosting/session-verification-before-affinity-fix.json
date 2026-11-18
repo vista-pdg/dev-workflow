@@ -1,0 +1,11 @@
+{
+  "host": "https://vista-pdg.web.app",
+  "checks": {
+    "memory_header_active": true,
+    "affinity_cookie_secure_httponly": false,
+    "session_continuity_10_requests": true,
+    "refresh_preserves_session": true,
+    "followup_structure": true
+  },
+  "generations": 2
+}

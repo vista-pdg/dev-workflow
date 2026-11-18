@@ -1,0 +1,9 @@
+{
+  "exitCode": 143,
+  "reason": "SIGTERM; sin fallo de prueba registrado antes de la interrupción",
+  "archivosCompletados": 67,
+  "tests": 180,
+  "passed": 180,
+  "failed": 0,
+  "ultimoArchivoCompleto": "tutorial-activities.cy.ts"
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "repo": "backend",
+    "head": "6ef9b49081191acc2c978c2bcaa0a03cb30803d1",
+    "remoteVerified": "6ef9b49081191acc2c978c2bcaa0a03cb30803d1",
+    "sharedWorkflowRevision": "3bce988eaac695732a20f66b83bd8471e61d1e47"
+  },
+  {
+    "repo": "frontend",
+    "head": "60c9f2723d2fad71d506d8250e8f836a8f6521d8",
+    "remoteVerified": "60c9f2723d2fad71d506d8250e8f836a8f6521d8",
+    "sharedWorkflowRevision": "3bce988eaac695732a20f66b83bd8471e61d1e47"
+  }
+]
