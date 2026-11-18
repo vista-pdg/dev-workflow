@@ -136,9 +136,9 @@ Seis pedidos del usuario sobre los quizzes de la HU-34:
 | 1 · Diseño en pen | hecha |
 | 2 · Backend | hecha (`f19d9f1`, `b0e27ff`) |
 | 3 · Pruebas backend | hecha |
-| 4 · Frontend | hecha (`066d1a5`, `7215507`) |
+| 4 · Frontend | hecha (`066d1a5`, `7215507`, `bcf8909`) |
 | 5 · Cypress | hecha |
-| 6 · Integración | en curso: suites completas |
+| 6 · Integración | hecha |
 | 7 · Aprobación y publicación | pendiente |
 
 ## Diseño en pen
@@ -227,6 +227,10 @@ Capturas reales con API simulada, en claro y oscuro y en escritorio, tableta y m
 - `QuizScenarioFactoryTest`: las descripciones cambian (valores sin corchetes y con la estructura
   nombrada) y el escenario incluye la preparación.
 - `QuizQuestionWriterTest`: `Scenario` lleva la preparación.
+- `tests/ui/learning-flow.spec.mjs`: el recorrido de la guía incluye los dos pasos de Quizzes.
+- Línea base `tests/ui/__screenshots__/linux/desktop/learning-flow-light.png`: estaba desactualizada
+  desde HU-34. La única diferencia es el icono del enlace «Quizzes» que HU-34 añadió a la barra; se
+  revisó y se regeneró solo esa captura.
 
 ## Defectos encontrados durante la QA
 
@@ -235,6 +239,26 @@ Capturas reales con API simulada, en claro y oscuro y en escritorio, tableta y m
   con scroll. Se corrigió en `7215507` y la spec Playwright lo verifica.
 - Contraste de las etiquetas pequeñas en rojo y violeta sobre su tinte (axe, 4,4:1 y 4,37:1):
   corregido antes del commit.
+- La guía a veces dejaba el foco en el `<dialog>` y no en «Siguiente»: lo intentaba enfocar mientras
+  la tarjeta seguía oculta, antes de medir su posición. Aparecía en 2 de 18 recorridos en paralelo
+  ahora que la guía termina con la barra expandida. Desde `bcf8909` el foco pasa a «Siguiente»
+  cuando la tarjeta ya es visible: 18 de 18.
+
+## Comprobaciones
+
+| Suite | Resultado |
+|---|---|
+| Backend `spotless:check` y `./mvnw verify` (JDK 21) | 443 pruebas, 0 fallos, 3 omitidas (2 previas y la viva); JaCoCo cumple |
+| Prueba viva con Gemini (`VISTA_LIVE_LLM=1`) | 43/43 |
+| Frontend `npm run lint`, `npm run build`, `npm run test:coverage` | sin errores; 137 pruebas; cobertura 94,7 % |
+| Cypress completo, Firefox 158 | 231/231. Dos pruebas antiguas pasaron al segundo intento por un 503 transitorio del Mailpit local al registrar el estudiante (`VERIFICATION_MAIL_UNAVAILABLE`) |
+| Cypress completo, Chrome for Testing 157 | 230/231 en la primera pasada. Falló la aserción de «quiz a medias» (el progreso desaparece al completarse) y se corrigió; la spec pasa 3/3. Los otros reintentos (chat y banco) pasan dos veces seguidas sin reintentos |
+| E2E de la guía y la barra tras `bcf8909` | 9/9 en Firefox y en Chrome, sin reintentos |
+| Playwright `test:ui` y `test:a11y` (escritorio, tableta, móvil) | 155 pasadas y 4 omitidas por plataforma en cada una |
+
+Chrome 158 instalado en la máquina no arranca con Cypress 16.2 («* is not a valid URL»); se usó
+Chrome for Testing 157, como en HU-34. Vite se cayó una vez por un fallo de V8 en Node 26 («Lazy
+deopt after a fast API call…») al servir un módulo grande; tras reiniciarlo, la suite pasó.
 
 ## Hallazgos fuera de alcance
 

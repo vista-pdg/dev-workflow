@@ -342,7 +342,8 @@ test('contextual tour points to controls and uses an isolated code example', asy
   await selectStructure(page, 'tree-avl');
   await page.locator('[data-cy=chat-toggle]').click();
   await page.locator('[data-cy=chat-input]').fill('Un borrador que debo conservar');
-  const targets = ['[data-cy=nav-family-tree]', '[data-cy=activity-selector]', '[data-cy=chat-compose]', '[data-cy=algo-catalog]', '[data-cy=tutorial-demo-area]', '[data-cy=mode-selector]'];
+  // HU-35: el estudiante termina la guía en Quizzes (de su curso y de estudio).
+  const targets = ['[data-cy=nav-family-tree]', '[data-cy=activity-selector]', '[data-cy=chat-compose]', '[data-cy=algo-catalog]', '[data-cy=tutorial-demo-area]', '[data-cy=mode-selector]', '[data-cy=sidebar-quizzes]', '[data-cy=sidebar-quizzes]'];
   for (const theme of ['dark', 'light']) {
     if (theme === 'light') await setLightTheme(page);
     await page.locator('[data-cy=tutorial-open]').click();
