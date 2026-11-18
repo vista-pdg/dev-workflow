@@ -1,6 +1,6 @@
 # HU-36 · Quizzes editables con instrucciones y material, y analítica pedagógica por temas
 
-Estado: en implementación. Rama `feat/HU-36-quizzes-editables-y-analitica` en backend, frontend y
+Estado: fases 0 a 6 completas; la publicación espera la aprobación del usuario. Rama `feat/HU-36-quizzes-editables-y-analitica` en backend, frontend y
 dev-workflow, creada desde `main` tras publicar la HU-35 (backend `b0e27ff`, frontend `bcf8909`,
 dev-workflow `1108a42`). La publicación espera la aprobación del usuario (fase 7).
 
@@ -150,11 +150,11 @@ Pedidos del usuario, como docente y para el panel analítico:
 |---|---|
 | 0 · Preparación | Hecha: spec, choques y ramas. |
 | 1 · Diseño en pen | Hecha: siete frames nuevos. |
-| 2 · Backend | Pendiente |
-| 3 · Pruebas backend | Pendiente |
-| 4 · Frontend | Pendiente |
-| 5 · Cypress | Pendiente |
-| 6 · Integración y QA visual | Pendiente |
+| 2 · Backend | Hecha: `9b708f5`. |
+| 3 · Pruebas backend | Hecha: 458 pruebas, 0 fallos; JaCoCo cumplido. |
+| 4 · Frontend | Hecha: `5935cfb` y ajustes de QA. |
+| 5 · Cypress | Hecha: una spec por grupo de criterios y E2E de HU-06 adaptadas. |
+| 6 · Integración y QA visual | Hecha: ver «Comprobaciones». |
 | 7 · Publicación | Espera aprobación |
 
 ## Diseño en pen
@@ -172,6 +172,103 @@ cambió. Exportaciones en `hus/evidence/HU-36/pen/`.
 | `Nuky1` HU-36 · Analítica pedagógica — quizzes, uso y estados | Tabla por quiz, Uso de VISTA con segmentos Estructuras, Algoritmos y Reintentos sin filas ocultas, aviso único de anonimato, sin intentos, cargando, error, fechas y tiempo medido en parte |
 | `rFuXc` HU-36 · Analítica pedagógica — móvil | Filtros apilados, pestañas, indicadores 2 × 2 y temas que más cuestan |
 
+## Contrato implementado
+
+| Método y ruta | Uso | Errores |
+|---|---|---|
+| `POST /api/quizzes/manage` | `instructions` opcional (≤ 2000) | 422 por campo |
+| `GET/PUT /api/quizzes/manage/{id}/guidance` | Instrucciones y fuentes del quiz | 409 `QUIZ_ALREADY_PUBLISHED` |
+| `POST .../materials/link` | `{url, crawl}`: lee la página, el PDF, el Markdown o el cuaderno; con `crawl`, el sitio | 400 `fieldErrors.url` con el motivo; 409 `MATERIAL_LIMIT` |
+| `POST .../materials/file` | multipart `file` (.pdf, .md, .txt, .docx, .ipynb) | 400 `fieldErrors.file`; 413 `FILE_TOO_LARGE` |
+| `DELETE .../materials/{mid}` | Quita una fuente del borrador | 404, 409 |
+| `PUT .../questions/{qid}` | Edición `{statement, options, correctIndex, explanation, hint, source}` | 400 por campo (`statement`, `options.N`, `correctIndex`, `hint`…); 409 `QUESTION_LOCKED` |
+| `POST .../questions/{qid}/ai-proposal` | `{instruction}` ≤ 600 → propuesta sin guardar | 422 `AI_PROPOSAL_INVALID`; 503 sin modelo |
+| `PUT /api/quizzes/{id}/attempt/answers/{p}` y `PUT /api/study-quizzes/{id}/questions/{p}/answer` | `elapsedMs` opcional ≥ 0 | 422 si es negativo |
+| `GET /api/analytics/report[.csv]` | `courseCode` obligatorio; `from`, `to`, `quizId` opcionales | 400 si el quiz no es del curso |
+| `GET /api/analytics/quizzes?courseCode=` | Quizzes publicados para el filtro | 403 sin acceso |
+
+La lectura de material vive en `quiz/material`: un `TextExtractor` por formato (HTML con jsoup,
+PDF con PDFBox 3.0.8, DOCX con StAX sin DTD ni entidades y con tope de 25 MB descomprimidos,
+Markdown/texto y cuadernos), `MaterialReader` con el recorrido acotado (30 páginas, 40 s, misma
+sección, sin recursos estáticos) y `HttpMaterialFetcher` con la guardia `PublicAddressGuard`
+(solo http/https, puertos 80/443, sin loopback, privadas, enlace local, NAT de operador,
+multidifusión, ULA ni IPv4 mapeada; cada redirección vuelve a pasar la guardia; máximo 3). El perfil
+`e2e` usa `StubMaterialFetcher`, sin red. `MaterialExcerpts` elige hasta 6 fragmentos (6000
+caracteres) que nombren la estructura del tema.
+
+El proxy nginx del frontend limitaba todo `/api/` a 1 MB; se añadió la ruta de subida de material con
+11 MB (`nginx -t` correcto con la imagen `nginx-unprivileged:1.30-alpine`). El tiempo de un sitio
+completo (40 s) cabe en el presupuesto de 58 s del proxy y 60 s de Firebase Hosting.
+
+## Validación con el material real del curso
+
+`MaterialLiveTest` (opcional, `VISTA_LIVE_MATERIAL=1`) lee <https://cyedbooks.github.io/CyED1/>
+con la guardia de red real: **30 páginas (el tope), 374 244 caracteres, 22 s**. Para el tema
+«Tabla hash — Inserción» elige fragmentos del capítulo de tablas hash (función hash, encadenamiento,
+`CHAINED-HASH-DELETE`, `TablaHash` genérica). El libro usa KaTeX: las fórmulas llegan como TeX
+(`$m \ll |U|$`) y no duplicadas. Hoy el libro solo publica las unidades 1 a 3, así que temas como AVL
+o grafos no reciben fragmentos de él y se generan solo con las reglas de VISTA.
+
+## Evidencia por criterio
+
+| CA | Implementación | Pruebas |
+|---|---|---|
+| 1 · Instrucciones | `Quiz.instructions`, `QuizGuidance`, prompt «Instrucciones del docente y material» | `QuizGuidanceTest.instructionsAndRelatedMaterialReachEveryBatchOfTheirTopic`; `quizGuidance.test.ts`; `hu-36-ca1-ca2-instrucciones-y-material` |
+| 2 · Material | `quiz/material/*`, `QuizMaterialService`, `MaterialSources`, `GuidancePanel` | `MaterialReadingTest` (6), `QuizGuidanceTest.materialIsValidatedLimitedAndOnlyEditableInDraft`, `MaterialLiveTest`; E2E ca1-ca2 (2) |
+| 3 · Edición manual | `QuizBankEditor.update`, `QuestionRules`, `QuestionEditor`, `BankQuestionCard` | `QuizGuidanceTest.questionsAreEditedByHandWithFieldValidation` y `publishedQuizOnlyEditsUnassignedQuestions…`; E2E ca3-ca4 (2) |
+| 4 · Edición con IA | `QuizQuestionWriter.revise`, `revision-prompt.txt`, `AiQuestionEditor` | `QuizGuidanceTest.aiProposesWithoutSavingAndAppliedProposalIsMarked`; E2E ca3-ca4 |
+| 5 · Filtros y anonimato | `AnalyticsFilter`, `AnalyticsDisclosure` por grupo, `AnalyticsPage` | `AnalyticsDisclosureTest` (11), `PedagogicalAnalyticsTest`, `QuizAnalyticsTest`, `AnalyticsPage.test.ts`; E2E HU-06 ca4, ca5 y HU-36 ca5-ca10 |
+| 6 · Temas | `LearningAnalyticsRepository`, `LearningInsights`, `AnalyticsTopics`, `AnalyticsSummary` | `LearningInsightsTest` (3), `QuizAnalyticsTest`; E2E ca5-ca10 |
+| 7 · Preguntas | `LearningInsights` (≥ 3 respuestas, opción incorrecta más elegida), `AnalyticsQuestions` | `LearningInsightsTest`; E2E ca5-ca10 |
+| 8 · Quizzes y resumen | `QuizInsight`, `AnalyticsQuizzes`, indicadores | `LearningInsightsTest.summarizesEachQuiz…`; E2E ca5-ca10 |
+| 9 · Tiempo por pregunta | `time_spent_ms`, `useVisibleTime` | `QuizGuidanceTest` (acotado al intento), `QuizAnalyticsTest`; `quizService.test.ts`; E2E ca9 |
+| 10 · CSV | `AnalyticsCsv` por secciones y nombre con curso y periodo | `AnalyticsDisclosureTest.csv…`, `PedagogicalAnalyticsHttpTest`, `QuizAnalyticsTest`; E2E HU-06 ca7 y HU-36 ca5-ca10 |
+| 11 · Guía | `tutorialSteps` (8 pasos para docentes) | `tutorialSteps.test.ts`; E2E ca11 y HU-35 ca8-ca9 |
+
+## Cambio en pruebas existentes
+
+- HU-06: la supresión por fila (CA-5) quedó sustituida por el umbral del grupo. `AnalyticsDisclosureTest`
+  se reescribió (11 casos), tres casos de `PedagogicalAnalyticsTest` y los de `PedagogicalAnalyticsHttpTest`
+  y `PedagogicalAnalyticsServiceTest` se adaptaron. En Cypress, Estructuras, Algoritmos y Reintentos se abren
+  desde «Uso de VISTA», CA-5 comprueba el aviso único y CA-7 el nombre nuevo del CSV.
+- HU-35: la guía del docente pasa de 7 a 8 pasos.
+- Playwright: `analytics.spec.mjs` usa el contrato nuevo (pestañas, aviso de grupo, sin respuestas) y
+  `quizzes.spec.mjs` los campos nuevos del banco. Nueva `quiz-guidance.spec.mjs`, incluida en
+  `test:ui` y `test:a11y`.
+
+## Defectos encontrados durante la QA
+
+- El botón «Eliminar quiz» del borrador tenía contraste 4,28:1 en tema claro (rojo sobre su tinte). El
+  diseño en pen ya lo dibujaba con texto en primer plano y borde rojo; se alineó, igual que «Eliminar»
+  en cada pregunta. Venía de HU-34: su prueba visual solo cubría un quiz publicado.
+- El campo de archivo oculto con `sr-only` contaba como control visible de 1 px; ahora es `hidden` y el
+  botón «Elegir archivo» lo describe.
+
+## Comprobaciones
+
+| Comprobación | Resultado |
+|---|---|
+| Backend `./mvnw verify` (JDK 21) | 458 pruebas, 0 fallos, 3 omitidas; JaCoCo cumplido |
+| `MaterialLiveTest` con red (`VISTA_LIVE_MATERIAL=1`) | 1/1: CyED1, 30 páginas en 22 s |
+| Frontend `npm run lint`, `npx tsc -b`, `npm run build` | Limpios |
+| Vitest con cobertura | 149 pruebas; 94,98 % de líneas |
+| Cypress completo, Firefox | 237/238; el fallo era la E2E de HU-33 que esperaba el ranking de un curso sin actividad, adaptada al aviso de grupo y repetida en verde (3/3) |
+| Cypress completo, Chrome for Testing 157 | 238/238 |
+| E2E de HU-36 y HU-33 sin reintentos, Firefox | 10/10 |
+| Playwright `test:ui` y `test:a11y` | 167 pasadas y 4 omitidas en cada una (escritorio, tableta y móvil) |
+| `nginx -t` con la plantilla renderizada | Correcto |
+
+Reintentos observados en las pasadas completas: la primera de las E2E de material fallaba en el primer
+intento porque el `beforeEach` leía el código del curso al encolar el `select`, antes de crearlo; se
+corrigió con `cy.then` y pasó 3 de 3 veces sin reintentos en Chrome. Los demás reintentos fueron
+pruebas antiguas que pasaron en el segundo intento (gestos táctiles, conmutación 2D/3D, código Java, Prim
+y un 503 transitorio de `registration-code` del Mailpit local). Durante la QA, Vite se cayó una vez con
+el error de V8 de Node 26 ya registrado en HU-35; se reinició y se repitieron las suites.
+
+Evidencias: `hus/evidence/HU-36/pen/` (frames) y `hus/evidence/HU-36/ui/` (analítica en todas sus
+vistas y estados, nuevo quiz con material, banco, editor y propuesta de la IA; escritorio y móvil, ambos
+temas).
+
 ## Hallazgos fuera de alcance
 
-Ninguno por ahora.
+- El título que publica CyED1 repite el nombre del libro («… I - … I»); VISTA lo guarda tal cual.

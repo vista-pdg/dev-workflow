@@ -50,7 +50,10 @@ const fixtures = {
   '/api/quizzes/manage': [summary, { ...summary, id: 7, title: 'Quiz 3 · Grafos', status: 'DRAFT', phase: 'DRAFT', bankSize: 35, attemptsStarted: 0, attemptsFinished: 0 }],
   '/api/quizzes/manage/5': {
     quiz: summary,
-    questions: [1, 2].map(i => ({ id: i, topicKey: 'tree/avl/insert', ...question(i), correctIndex: 1, explanation: 'Caso izquierda-izquierda: rotación simple a la derecha.', timesAssigned: i - 1 })),
+    questions: [1, 2].map(i => ({ id: i, topicKey: 'tree/avl/insert', ...question(i), correctIndex: 1, explanation: 'Caso izquierda-izquierda: rotación simple a la derecha.',
+      hint: 'Compara el factor de balance de 29 antes y después de insertar 23.', timesAssigned: i - 1, editable: i === 1, editKind: null, editedAt: null })),
+    instructions: null,
+    materials: [],
   },
   '/api/quizzes/manage/5/results': {
     quiz: summary,
