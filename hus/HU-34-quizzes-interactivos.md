@@ -306,3 +306,21 @@ código anterior calificaba 0 de 1 y el corregido 1 de 1. HU-34 + estilo de gest
 Chrome for Testing 153 19/19 y Firefox 19/19; `ca4` y `ca8` repetidos 4 veces en Chrome; lint, build,
 125 pruebas de Vitest y Playwright de quizzes 24/24.
 
+Con la corrección publicada (run 44226733768), Chrome en CI volvió a fallar igual: P2 del estudiante
+«top» quedó sin responder. No se reprodujo en local, ni con Chrome for Testing 157 (la versión de CI)
+en la suite completa (218/218). La explicación más consistente es que la prueba leía la pregunta 1,
+aún en pantalla tras «Siguiente», y volvía a marcar una opción ya marcada, sin generar guardado. El
+helper `answerCurrent` ahora espera la pregunta activa, el `PUT` de esa posición con 200 y la
+respuesta guardada en el servidor; `ca8` espera además a que la pregunta 2 esté activa (`f999be7`).
+
+| Repo | Commits finales | CI en `main` |
+|---|---|---|
+| backend | `a4084af` | Run 44223289243: formato, pruebas, E2E Chrome y Firefox, y despliegue (`vista-backend-00016`). |
+| frontend | `ca31a0f`, `c1b5cb0`, `9c9d0f8`, `f999be7` | Run 44231003952: build, E2E Chrome 157 218/218 y Firefox 160 218/218 sin reintentos, y despliegue (`vista-frontend-00015`). |
+| dev-workflow | `671b285`, `aff852a`, `5f61b55` y este registro | Sin CI en push. |
+| terraform-iac | `ec29903` | Run 44220558657: apply sin cambios de recursos. |
+
+Smoke en producción tras el despliegue: `vista.kuros.work` 200, `/api/courses` 200, `/api/quizzes`
+sin sesión 401 y `vista-pdg.web.app` 200. PR cerrados: backend #16, frontend #17 y dev-workflow #6
+(los #15, #16 y #5 quedaron marcados como fusionados por GitHub al entrar sus commits en `main`).
+
