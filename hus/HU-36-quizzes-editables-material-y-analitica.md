@@ -1,8 +1,7 @@
 # HU-36 · Quizzes editables con instrucciones y material, y analítica pedagógica por temas
 
-Estado: fases 0 a 6 completas; la publicación espera la aprobación del usuario. Rama `feat/HU-36-quizzes-editables-y-analitica` en backend, frontend y
-dev-workflow, creada desde `main` tras publicar la HU-35 (backend `b0e27ff`, frontend `bcf8909`,
-dev-workflow `1108a42`). La publicación espera la aprobación del usuario (fase 7).
+Estado: publicada en `main` el 18 de noviembre con aprobación del usuario (backend `74c8c35`,
+frontend `df36355`, dev-workflow `871b682`); CI y despliegue en verde en backend y frontend.
 
 ## Necesidad
 
@@ -155,7 +154,7 @@ Pedidos del usuario, como docente y para el panel analítico:
 | 4 · Frontend | Hecha: `5935cfb` y ajustes de QA. |
 | 5 · Cypress | Hecha: una spec por grupo de criterios y E2E de HU-06 adaptadas. |
 | 6 · Integración y QA visual | Hecha: ver «Comprobaciones». |
-| 7 · Publicación | Espera aprobación |
+| 7 · Publicación | Hecha: push directo a `main` aprobado por el usuario; ver «Publicación». |
 
 ## Diseño en pen
 
@@ -268,6 +267,18 @@ el error de V8 de Node 26 ya registrado en HU-35; se reinició y se repitieron l
 Evidencias: `hus/evidence/HU-36/pen/` (frames) y `hus/evidence/HU-36/ui/` (analítica en todas sus
 vistas y estados, nuevo quiz con material, banco, editor y propuesta de la IA; escritorio y móvil, ambos
 temas).
+
+## Publicación
+
+El usuario aprobó subir directo a `main`, como en HU-34 y HU-35. Primera CI tras el push:
+
+- Backend: falló la E2E de Firefox porque el runner no pudo descargar Maven
+  (`wget: Failed to fetch apache-maven-3.9.8-bin.zip`) y el backend no arrancó. Fallo de
+  infraestructura: al relanzar el job, todo en verde, incluido el despliegue a Cloud Run.
+- Frontend: en Chrome, la E2E de la guía docente quedó en el paso 6/8 tras seis clics: un clic en
+  «Siguiente» se perdió durante la transición de un paso. Las E2E de la guía (HU-35 y HU-36) ahora
+  esperan que el contador avance tras cada clic (`df36355`); pasaron 2 de 2 sin reintentos en local y
+  la CI quedó en verde, con despliegue.
 
 ## Hallazgos fuera de alcance
 
