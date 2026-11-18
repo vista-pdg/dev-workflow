@@ -1,0 +1,118 @@
+{
+  "runRequestCount": [
+    {
+      "service": "vista-backend",
+      "codeClass": "2xx",
+      "count": 2446.0
+    },
+    {
+      "service": "vista-backend",
+      "codeClass": "4xx",
+      "count": 11.0
+    },
+    {
+      "service": "vista-frontend",
+      "codeClass": "2xx",
+      "count": 3108.0
+    },
+    {
+      "service": "vista-frontend",
+      "codeClass": "3xx",
+      "count": 44.0
+    },
+    {
+      "service": "vista-frontend",
+      "codeClass": "4xx",
+      "count": 16.0
+    }
+  ],
+  "run.googleapis.com/container/cpu/utilizations": {
+    "vista-backend": 0.24627070903128787,
+    "vista-frontend": 0.03386243411581577
+  },
+  "run.googleapis.com/container/memory/utilizations": {
+    "vista-backend": 0.38355170355902857,
+    "vista-frontend": 0.193328857421875
+  },
+  "runMaxInstances": [
+    {
+      "labels": {
+        "state": "active"
+      },
+      "service": "vista-backend",
+      "max": 3.0
+    },
+    {
+      "labels": {
+        "state": "idle"
+      },
+      "service": "vista-backend",
+      "max": 3.0
+    },
+    {
+      "labels": {
+        "state": "active"
+      },
+      "service": "vista-frontend",
+      "max": 1.0
+    },
+    {
+      "labels": {
+        "state": "idle"
+      },
+      "service": "vista-frontend",
+      "max": 1.0
+    }
+  ],
+  "cloudsql.googleapis.com/database/cpu/utilization": [
+    {
+      "labels": {},
+      "max": 0.12054498880164222
+    }
+  ],
+  "cloudsql.googleapis.com/database/memory/utilization": [
+    {
+      "labels": {},
+      "max": 1.0
+    }
+  ],
+  "cloudsql.googleapis.com/database/postgresql/num_backends": [
+    {
+      "labels": {
+        "database": "cloudsqladmin"
+      },
+      "max": 2.0
+    },
+    {
+      "labels": {
+        "database": "postgres"
+      },
+      "max": 0.0
+    },
+    {
+      "labels": {
+        "database": "template1"
+      },
+      "max": 0.0
+    },
+    {
+      "labels": {
+        "database": "vista_pdg"
+      },
+      "max": 15.0
+    }
+  ],
+  "vertexInvocationsByCode": {
+    "200": 121
+  },
+  "vertexTokens": {
+    "input": 267497,
+    "output": 4611
+  },
+  "window": {
+    "start": "2026-10-19T20:00:00Z",
+    "end": "2026-10-19T20:25:00Z"
+  },
+  "notes": "Cloud Monitoring project-window totals may include other project traffic; CPU/memory distributions use maximum interval mean, not instantaneous peaks.",
+  "vertexCostEstimateUSD": 0.09177659999999999
+}

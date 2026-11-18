@@ -12,6 +12,9 @@ import gevent
 from gevent.event import Event
 from locust import HttpUser, between, events, task
 from locust.exception import StopUser
+from domain_routing import use_firebase_origin
+
+DNS_ROUTING = use_firebase_origin() if os.environ.get("VISTA_LOAD_ROUTE_FIREBASE") == "true" else {"mode": "system-dns"}
 
 MODE = os.environ.get("VISTA_LOAD_MODE", "baseline")
 EXPECTED_USERS = int(os.environ.get("VISTA_LOAD_USERS", "40"))
@@ -55,6 +58,7 @@ def end(environment, **kwargs):
             "end": datetime.now(timezone.utc).isoformat(), "users": EXPECTED_USERS,
             "ready": ready, "finished": finished, "generations": generated,
             "generationFailures": failures, "maxInflightGenerations": peak,
+            "dnsRouting": DNS_ROUTING,
             "statusCounts": dict(Counter(str(s["status"]) for s in samples))}
     (OUTPUT / f"{MODE}-metadata.json").write_text(json.dumps(data, indent=2))
     (OUTPUT / f"{MODE}-samples.jsonl").write_text("".join(json.dumps(s) + "\n" for s in samples))

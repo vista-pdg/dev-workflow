@@ -1,0 +1,31 @@
+{
+  "cutoverAtUTC": "2026-10-19T21:10:00Z",
+  "finalFailureCheckUTC": "2026-10-19T21:20:03.391555+00:00",
+  "rollbackAtUTC": "2026-10-19T21:20:15Z",
+  "rollbackTarget": "ghs.googlehosted.com",
+  "ttlSeconds": 600,
+  "recoveryObservedUTC": "2026-10-19T21:22:19.839261+00:00",
+  "migrationCompleted": false,
+  "normalDnsRecovered": true,
+  "latestSystemProbe": {
+    "status": 200,
+    "isVistaHtml": true,
+    "ms": 1197.7,
+    "tlsVerification": true
+  },
+  "latestFirebaseOriginProbe": {
+    "status": 404,
+    "isVistaHtml": false,
+    "ms": 61.94,
+    "tlsVerification": true
+  },
+  "firebase": {
+    "hostState": "HOST_MISMATCH",
+    "ownershipState": "OWNERSHIP_MISSING",
+    "issues": null,
+    "certState": "CERT_ACTIVE"
+  },
+  "newVertexGenerations": 0,
+  "newTemporaryAccounts": 0,
+  "notes": "Rollback saved after the authorized ten-minute window; timestamp approximates UI submission. Recovery is observed from this client, not a claim of global cache propagation."
+}

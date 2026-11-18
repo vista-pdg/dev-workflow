@@ -1,0 +1,20 @@
+{
+  "checkedAt": "2026-10-19T20:43:17.091319+00:00",
+  "dns": [
+    {
+      "server": "ns13.domaincontrol.com",
+      "answer": "vista.kuros.work.\t600\tIN\tCNAME\tghs.googlehosted.com."
+    },
+    {
+      "server": "ns14.domaincontrol.com",
+      "answer": "vista.kuros.work.\t600\tIN\tCNAME\tghs.googlehosted.com."
+    }
+  ],
+  "services": {},
+  "firebase": {
+    "hostState": "HOST_MISMATCH",
+    "ownershipState": "OWNERSHIP_MISSING",
+    "issues": null,
+    "certState": "CERT_PROPAGATING"
+  }
+}

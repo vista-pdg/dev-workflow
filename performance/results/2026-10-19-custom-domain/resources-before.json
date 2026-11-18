@@ -1,0 +1,80 @@
+{
+  "checkedAt": "2026-10-19T20:04:09.839165+00:00",
+  "services": {
+    "vista-backend": {
+      "revision": "vista-backend-00012-dfk",
+      "traffic": [
+        {
+          "latestRevision": true,
+          "percent": 100,
+          "revisionName": "vista-backend-00012-dfk"
+        }
+      ],
+      "concurrency": 40,
+      "annotations": {
+        "autoscaling.knative.dev/maxScale": "3",
+        "autoscaling.knative.dev/minScale": "0",
+        "run.googleapis.com/sessionAffinity": "true"
+      },
+      "containers": [
+        {
+          "name": "backend",
+          "image": "us-central1-docker.pkg.dev/vista-pdg/vista/backend@sha256:f55f4a89fe180a6ba433d691565e212142fe03dcc4fafdf3e959bde353329044",
+          "resources": {
+            "limits": {
+              "cpu": "1",
+              "memory": "1Gi"
+            }
+          }
+        },
+        {
+          "name": "redis",
+          "image": "us-central1-docker.pkg.dev/vista-pdg/dockerhub/library/redis:8-alpine",
+          "resources": {
+            "limits": {
+              "cpu": "1",
+              "memory": "128Mi"
+            }
+          }
+        }
+      ]
+    },
+    "vista-frontend": {
+      "revision": "vista-frontend-00012-tf6",
+      "traffic": [
+        {
+          "latestRevision": true,
+          "percent": 100,
+          "revisionName": "vista-frontend-00012-tf6"
+        }
+      ],
+      "concurrency": 200,
+      "annotations": {
+        "autoscaling.knative.dev/maxScale": "3",
+        "autoscaling.knative.dev/minScale": "0",
+        "run.googleapis.com/sessionAffinity": "false"
+      },
+      "containers": [
+        {
+          "name": "frontend",
+          "image": "us-central1-docker.pkg.dev/vista-pdg/vista/frontend:perf-20261019-affinity",
+          "resources": {
+            "limits": {
+              "cpu": "1",
+              "memory": "256Mi"
+            }
+          }
+        }
+      ]
+    }
+  },
+  "sql": {
+    "databaseVersion": "POSTGRES_17",
+    "name": "vista-pg",
+    "settings": {
+      "activationPolicy": "ALWAYS",
+      "tier": "db-f1-micro"
+    },
+    "state": "RUNNABLE"
+  }
+}

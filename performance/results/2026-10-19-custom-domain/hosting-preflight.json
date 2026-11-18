@@ -1,0 +1,15 @@
+{
+  "host": "https://vista.kuros.work",
+  "status": 404,
+  "validVistaHtml": false,
+  "tlsVerification": true,
+  "dnsRouting": {
+    "mode": "firebase-origin-during-dns-propagation",
+    "hostname": "vista.kuros.work",
+    "resolveTo": "vista-pdg.web.app",
+    "addresses": [
+      "199.36.158.100",
+      "2620:0:890::100"
+    ]
+  }
+}

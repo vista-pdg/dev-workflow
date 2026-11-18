@@ -59,3 +59,60 @@ No se fusionaron PRs ni se hizo push de estos cambios. El CD de main puede reemp
 manuales si se integra sin los parches; Terraform ignora imágenes gestionadas por ese CD.
 Informe, métricas sanitizadas, auditorías y resultados en performance/results; no subir tokens,
 credenciales ni bun.lock. El README de performance documenta reproducción y limpieza segura.
+
+## Ampliación autorizada: dominio propio y comparación final
+
+El usuario pidió conectar vista.kuros.work a Firebase Hosting y repetir performance con los
+recursos cloud actuales. Se conserva la rama y el hard stop de publicación GitHub.
+Criterios: certificado válido antes de DNS, cambiar solo CNAME vista al destino entregado
+por Firebase, comparar conexiones nuevas antes/después con controles web.app/run.app, y
+validar 40 estudiantes con generaciones reales, algoritmos, sesión y refresh.
+Repetir baseline, ráfaga, mixed y soak30m de forma acotada; registrar revisiones, consumo y
+limpiar las nuevas cuentas/curso PERF. Sin ampliar CPU/RAM/SQL/instancias ni cambiar modelo.
+Progreso: certificado pasó de VALIDATING a PROPAGATING; panel GoDaddy accesible por navegador.
+
+Checkpoint20:45UTC: controles web.app terminados: ráfaga40/40 (p95 18.02s, arranques nuevos
+coincidentes) y mixed80/80 (p95 1.074s). Con baseline:2826 peticiones Locust/0fallos.
+Vertex121/121200; recursos/revisiones sin cambios; limpieza del nuevo lote40 verificada,
+con cero cuentas/curso/eventos/usos restantes y job/manifiesto eliminados. Evidencia en
+performance/results/2026-10-19-custom-domain/REPORT.md.
+
+GoDaddy conserva CNAME antiguo con TTL reducido600s, confirmado por ambos autoritativos.
+TXT de propiedad en raíz publicado, pero Firebase sigue OWNERSHIP_MISSING/CERT_PROPAGATING;
+el origen para el Host personalizado devuelve404 con TLS válido. Cambio de destino y
+prueba final por dominio pendientes; no declarar migración terminada ni esperar que la
+propagación por sí sola resuelva la acreditación. Nueva prueba necesita nuevo lote PERF.
+
+Revisión21:08UTC: CERT_ACTIVE, pero OWNERSHIP_MISSING y preflight404 persisten. La revisión
+automática rechazó guardar el nuevo CNAME por riesgo de cortar el dominio publicado.
+Edición cancelada sin cambios. Pendiente respuesta humana explícita para asumir el corte
+con comprobación de10min y rollback si sigue404; no eludir el rechazo por otra vía.
+
+El usuario luego autorizó explícitamente el cambio con ese riesgo y rollback. A21:10UTC
+se guardó CNAME vista→vista-pdg.web.app, TTL600. Confirmado por ambos autoritativos, Google
+DNS y resolver local. Hasta21:15UTC sigue404 con TLS válido; comprobar hasta21:20UTC y
+revertir a ghs.googlehosted.com si el origen no sirve VISTA. Carga final aún no iniciada.
+
+Resultado21:20UTC: persistió404 durante10min; se ejecutó el rollback autorizado a
+ghs.googlehosted.com/TTL600. Ambos autoritativos lo confirman. Origen anterior verificado200
+con TLS válido; web.app200 a21:21UTC. El resolver local aún retenía Firebase al primer
+control posterior al rollback. No hubo generaciones Vertex ni cuentas nuevas en este
+intento. Mantener protegida la ruta Cloud Run y resolver acreditación antes de otro corte.
+
+Recuperación observada21:22:19UTC (16:22 Colombia): DNS normal ya resuelve Cloud Run y
+vista.kuros.work devuelve200/HTML VISTA con TLS válido. Rollback completo desde este
+cliente; no implica expiración de todas las cachés globales. Firebase continúa404 y la
+migración no se completó. Resumen verificable en cutover-result.json; sin carga final.
+
+## Material docente solicitado por separado
+
+Se priorizaron y completaron dos documentos editables antes de retomar dominio/performance:
+
+- Introducción de máximo60min, demostración Chat→lienzo→Algoritmos y práctica pila/cola/hash:
+  https://chatgpt.com/space/page_f566887594c881919ae05d3f64f6f43d.
+- Evaluación individual para30 personas/4 evaluadores/90min:30 casos distintos, una pregunta
+  oral por persona, clave docente, rúbrica y turnos de10min:
+  https://chatgpt.com/space/page_6056530dca508191a78684bd54e802e0.
+
+El usuario aclaró que90min es la duración de la sesión completa, no el tiempo por estudiante.
+Heap no se exige en la evaluación; prioridad se aborda solo como concepto introductorio.
