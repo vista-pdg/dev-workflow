@@ -295,3 +295,14 @@ pruebas). Cypress completo sin reintentos: Firefox 217/217 y Chrome for Testing 
 158 se actualizó en la máquina y Cypress 16.2 no logra lanzarlo («* is not a valid URL»); no afecta
 al código. Playwright + axe de quizzes, layout de gestión, analítica y cursos: 66/66.
 
+**CI tras integrar (frontend run 44223304380):** falló el E2E de Chrome en `hu-34-ca8-ca9` (promedio
+1,3 en vez de 2,5); Firefox, backend y despliegue del backend en verde. Causa real del producto:
+la entrega no esperaba a que terminara de guardarse la última respuesta, así que un estudiante que
+elegía y entregaba enseguida podía quedar calificado sin ella; además, «Guardado» seguía mostrando el
+guardado anterior. Corrección: los guardados van en cola, «Entregar» (y el cierre por tiempo) esperan
+a que termine la cola, y el indicador dice «Guardando…» mientras tanto. Diseño: tarjeta «Guardando
+respuesta» en el frame `lNtAe`. Prueba nueva en `hu-34-ca4-ca7`: con el guardado retenido 1,5 s, el
+código anterior calificaba 0 de 1 y el corregido 1 de 1. HU-34 + estilo de gestión sin reintentos:
+Chrome for Testing 153 19/19 y Firefox 19/19; `ca4` y `ca8` repetidos 4 veces en Chrome; lint, build,
+125 pruebas de Vitest y Playwright de quizzes 24/24.
+

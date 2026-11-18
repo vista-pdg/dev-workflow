@@ -48093,6 +48093,54 @@
                   ]
                 }
               ]
+            },
+            {
+              "type": "frame",
+              "id": "N6aOx",
+              "name": "Guardando respuesta",
+              "width": "fill_container",
+              "fill": "$card",
+              "stroke": "$border",
+              "strokeWidth": 1,
+              "layout": "vertical",
+              "gap": 12,
+              "padding": 24,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "xdvKS",
+                  "name": "GUARDANDO RESPUESTA",
+                  "fill": "$muted-fg",
+                  "content": "GUARDANDO RESPUESTA",
+                  "fontFamily": "$font",
+                  "fontSize": 10,
+                  "fontWeight": "700",
+                  "letterSpacing": 1.8
+                },
+                {
+                  "type": "text",
+                  "id": "JP8eE",
+                  "name": "Guardando…",
+                  "fill": "$muted-fg",
+                  "content": "Guardando…",
+                  "fontFamily": "Geist Mono",
+                  "fontSize": 11,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "znmUU",
+                  "name": "Explicación",
+                  "fill": "$fg",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "El indicador cambia a «Guardando…» mientras la respuesta va al servidor. Si el estudiante entrega en ese momento, «Entregando…» espera a que se guarde antes de calificar.",
+                  "lineHeight": 1.45,
+                  "fontFamily": "$font",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                }
+              ]
             }
           ]
         },
