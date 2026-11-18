@@ -1,0 +1,45 @@
+tema	contexto	resultado	detalle
+graph/simple/bfs	vacío	OK	6 nodos
+graph/simple/dfs	vacío	OK	6 nodos
+graph/simple/dijkstra	vacío	OK	6 nodos
+graph/simple/floyd	vacío	OK	6 nodos
+graph/simple/kruskal	vacío	OK	6 nodos
+graph/simple/prim	vacío	OK	6 nodos
+hash-table/chaining/delete	vacío	OK	15 nodos
+hash-table/chaining/insert	vacío	OK	15 nodos
+hash-table/chaining/search	vacío	OK	15 nodos
+linked-list/simple/append	vacío	OK	8 nodos
+linked-list/simple/bubble-sort	vacío	OK	6 nodos
+linked-list/simple/delete	vacío	OK	8 nodos
+linked-list/simple/heap-sort	vacío	OK	6 nodos
+linked-list/simple/insertion-sort	vacío	OK	6 nodos
+linked-list/simple/merge-sort	vacío	OK	6 nodos
+linked-list/simple/quick-sort	vacío	OK	6 nodos
+linked-list/simple/reverse	vacío	OK	8 nodos
+linked-list/simple/search	vacío	OK	8 nodos
+linked-list/simple/selection-sort	vacío	OK	6 nodos
+linked-list/simple/traverse	vacío	OK	8 nodos
+queue/simple/dequeue	vacío	OK	8 nodos
+queue/simple/enqueue	vacío	OK	8 nodos
+queue/simple/peek	vacío	OK	8 nodos
+stack/simple/peek	vacío	OK	8 nodos
+stack/simple/pop	vacío	OK	8 nodos
+stack/simple/push	vacío	OK	8 nodos
+tree/avl/insert	vacío	OK	8 nodos
+tree/avl/levelorder	vacío	OK	8 nodos
+tree/avl/postorder	vacío	OK	8 nodos
+tree/avl/preorder	vacío	OK	8 nodos
+tree/avl/search	vacío	OK	8 nodos
+tree/bst/inorder	vacío	OK	8 nodos
+tree/bst/insert	vacío	OK	8 nodos
+tree/bst/levelorder	vacío	OK	8 nodos
+tree/bst/postorder	vacío	OK	8 nodos
+tree/bst/preorder	vacío	OK	8 nodos
+tree/bst/search	vacío	OK	8 nodos
+tree/heap/extract	vacío	OK	8 nodos
+tree/heap/heapify	-	sin chat	se reproduce con valores
+tree/heap/insert	vacío	OK	8 nodos
+tree/heap/peek	vacío	OK	8 nodos
+tree/avl/insert	sesión previa	OK	8 nodos
+graph/simple/bfs	sesión previa	OK	6 nodos
+stack/simple/peek	sesión previa	OK	8 nodos

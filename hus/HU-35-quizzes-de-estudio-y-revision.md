@@ -45,8 +45,9 @@ Seis pedidos del usuario sobre los quizzes de la HU-34:
 5. **Quiz de estudio: creación.** El estudiante elige temas del catálogo y de 1 a 10 preguntas. El
    banco se genera por lotes con el mismo generador de los quizzes de curso (escenarios validados,
    redacción por IA y descarte de preguntas inválidas), con progreso visible. Cada lote consume un
-   mensaje de la cuota diaria del asistente. Solo su autor lo ve: cualquier otra cuenta, incluidos
-   docentes y administradores, recibe 404. El autor puede eliminarlo.
+   mensaje de la cuota diaria del asistente. Solo su autor lo ve: otro estudiante recibe 404 y los
+   docentes y administradores, que no tienen quizzes de estudio, reciben 403. El autor puede
+   eliminarlo.
 6. **Quiz de estudio: resolución.** La pregunta aparece junto a VISTA sin temporizador, pantalla
    completa ni bloqueos. El estudiante puede pedir una pista, responder y comprobar (ve si acertó, la
    opción correcta y la justificación) o ver la solución sin responder. Cada pregunta se responde una
@@ -59,8 +60,8 @@ Seis pedidos del usuario sobre los quizzes de la HU-34:
 8. **Tutorial.** La guía de VISTA añade pasos sobre Quizzes. El estudiante ve los de su curso, la
    revisión, el botón al chat y los quizzes de estudio con pistas, solución y tutor. El docente ve que
    gestiona los cursos que tiene asignados.
-9. **Sidebar.** Expandir o contraer la barra lateral, por hover, foco o botón, no muestra barras de
-   desplazamiento ni destellos amarillos.
+9. **Sidebar.** Expandir la barra lateral, por hover o con el botón, no muestra el destello amarillo:
+   los botones de demo no toman su hover mientras la barra se anima.
 
 ## Alcance backend
 
@@ -87,7 +88,7 @@ Seis pedidos del usuario sobre los quizzes de la HU-34:
 - `QuizListPage`: «Revisar» y sección «Quizzes de estudio».
 - Páginas nuevas: `QuizReviewPage` (`/quizzes/:id/revision`), `StudyQuizNewPage`
   (`/quizzes/estudio/nuevo`) y `StudyQuizPage` (`/quizzes/estudio/:id`), con tutor.
-- `InterfaceTutorial`: pasos de Quizzes según el rol. `AppSidebar`: sin desborde horizontal.
+- `InterfaceTutorial`: pasos de Quizzes según el rol. `AppSidebar`: botones de demo inertes durante la expansión.
 
 ## Decisiones
 
@@ -133,11 +134,11 @@ Seis pedidos del usuario sobre los quizzes de la HU-34:
 |---|---|
 | 0 · Spec y ramas | hecha |
 | 1 · Diseño en pen | hecha |
-| 2 · Backend | pendiente |
-| 3 · Pruebas backend | pendiente |
-| 4 · Frontend | pendiente |
-| 5 · Cypress | pendiente |
-| 6 · Integración | pendiente |
+| 2 · Backend | hecha (`f19d9f1`, `b0e27ff`) |
+| 3 · Pruebas backend | hecha |
+| 4 · Frontend | hecha (`066d1a5`, `7215507`) |
+| 5 · Cypress | hecha |
+| 6 · Integración | en curso: suites completas |
 | 7 · Aprobación y publicación | pendiente |
 
 ## Diseño en pen
@@ -157,9 +158,87 @@ cambió. Las exportaciones están en `hus/evidence/HU-35/pen/`.
 | `qi8U2` HU-35 · Quiz de estudio y tutor — estados | Correcta, incorrecta, solución vista, tutor escribiendo, sin cuota o con error, resumen, vacío, ajeno, revisión no disponible, incompleto, cargando |
 | `dd4uC` HU-35 · Guía de VISTA · Quizzes | Pasos 7 y 8 del estudiante y el paso docente sobre «Quizzes» en la barra lateral |
 
-El arreglo del sidebar (CA-9) no cambia el diseño: elimina un desborde transitorio.
+El arreglo del sidebar (CA-9) no cambia el diseño: los botones de demo aparecen cuando la barra
+termina de expandirse, en vez de deslizarse bajo el cursor con su hover amarillo.
+
+Tras la QA visual se ajustaron en pen (`k4PiW`, `kMWuk`, `qi8U2`) tres detalles de la
+implementación: las etiquetas pequeñas «Tu respuesta», «Incorrecto» y «Justificación» van en el
+color de texto (el rojo y el violeta sobre su propio tinte no llegaban a 4,5:1; el color queda en el
+icono y el borde, como en `Alert`), la nota conserva «aciertos» y el texto de nota oculta conserva
+«aún no publica la nota», que ya verificaba la E2E de HU-34.
+
+## Causa del destello amarillo (CA-9)
+
+La primera hipótesis (una barra de desplazamiento horizontal amarilla durante la animación) se
+descartó midiendo: 0 px de barra en todos los fotogramas, con y sin `overflow-x` automático. La
+causa real, reproducida con Playwright en 6 de 8 entradas: al expandirse, el botón de demo (matraz)
+de cada familia nace en x = 36–64, dentro del carril de 64 px por donde entra el cursor. Toma
+`:hover` (borde y fondo `yellow-main` con transición de 150 ms) y se desliza hasta x = 211 en
+300 ms, dejando una estela amarilla. Ahora `AppSidebar` marca la barra como asentada al terminar la
+transición de ancho (`data-settled`). Hasta entonces los botones de demo no admiten puntero y son
+transparentes. Con movimiento reducido no hay animación y se asienta al instante. Tras el arreglo,
+0 de 8 entradas capturan el hover y el hover normal funciona una vez asentada.
+
+## Validación de los escenarios (CA-2)
+
+**Determinista, en cada lote.** `QuizScenarioCheck` recorre la ruta de `POST /api/generate` sin el
+modelo. Después, el algoritmo del tema corre sobre la estructura generada y posicionada, y de ahí
+salen los hechos. Si algo falla, se sortea otro escenario (hasta 6 veces). Resultado sobre el
+catálogo:
+
+- Los 41 temas ofrecidos producen escenarios validados con 4 semillas
+  (`QuizScenarioFactoryTest.everyOfferedTopicYieldsAValidatedScenarioAndBTreesAreNotOffered`).
+- Ofrecen chat 40 temas. Heapify ofrece solo «Cargar en Algoritmos»: el chat inserta uno a uno y
+  construiría otro heap.
+- Los 2 temas de B-árbol dejan de ofrecerse.
+- Once operaciones sobre el lienzo ahora traen el rastro real: 3 de tabla hash y 5 de lista
+  enlazada antes salían sin hechos, y 3 de heap se calculaban sobre un heap distinto al del chat.
+
+**Con el modelo real, opcional.** `QuizChatPromptLiveTest` (`VISTA_LIVE_LLM=1`, `GEMINI_API_KEY`)
+envía a `gemini-3.5-flash-lite`, por la misma ruta del chat, la instrucción de cada tema. Compara
+la estructura obtenida con la que describe el texto de la propia instrucción. Resultado del 18 de
+noviembre: **43 de 43 OK**, 40 temas con la sesión vacía y 3 (AVL, grafo, pila) con una sesión
+previa de la misma familia, que prueban que «desde cero» no refina la estructura vigente. Informe:
+`hus/evidence/HU-35/validacion-chat-gemini.tsv`. La clave local tiene límite por minuto. La prueba
+espera 5 s entre llamadas y reintenta un 429 pasado el minuto; un 429 no dice nada de la
+instrucción.
+
+## Evidencia por criterio
+
+| CA | Implementación | Pruebas |
+|---|---|---|
+| 1 · Escenario al chat | `ScenarioCard`, `prefillChat`, `prefillAlgorithm`, `ChatPanel`, `AlgorithmPanel` | `hu-35-ca1-escenario-al-chat.cy.ts`; `QuizReviewTest.attemptQuestionsCarryTheValidatedVistaSetupButNeverTheAnswer`; Playwright `study-quizzes.spec.mjs` (modo de prueba) |
+| 2 · Escenarios validados | `QuizScenarioFactory`, `QuizScenarioCheck`, `QuizTopics.available` | `QuizScenarioFactoryTest` (5); `QuizChatPromptLiveTest` (43/43 con Gemini) |
+| 3 · Docentes por curso | ya existía (`QuizAccess`); validado | `hu-35-ca3-docente-por-curso.cy.ts`; `QuizManagementTest.onlyAssignedTeachersAndAdminsManageACourseQuiz` (ahora también al retirar la asignación); `hu-34-ca10-permisos.cy.ts` |
+| 4 · Revisión | `QuizAttemptService.review`, `QuizReviewPage`, `QuizListPage` | `QuizReviewTest` (3); `hu-35-ca4-revision.cy.ts` |
+| 5 · Estudio: creación | `StudyQuizService`, `QuizQuestionGenerator`, `StudyQuizNewPage`, `StudyQuizSection` | `StudyQuizTest` (creación, visibilidad, validación); `hu-35-ca5-ca6-quiz-de-estudio.cy.ts` |
+| 6 · Estudio: resolución | `StudyQuizPage`, `OptionOutcome` | `StudyQuizTest.hintSolutionAndAnswerFollowTheStudyRules`; `hu-35-ca5-ca6-quiz-de-estudio.cy.ts` |
+| 7 · Tutor IA | `QuizTutor`, `tutor-prompt.txt`, `StudyTutor` | `StudyQuizTest.theTutorAnswersAboutTheQuestionWithoutRevealingItAndUsesTheQuota`; `hu-35-ca7-tutor.cy.ts` |
+| 8 · Tutorial | `lib/tutorialSteps.ts`, `InterfaceTutorial`, `AppSidebar` | `tutorialSteps.test.ts`; `hu-35-ca8-ca9-guia-y-sidebar.cy.ts`; `ui-learning-flow.cy.ts` |
+| 9 · Sidebar | `AppSidebar` (`data-settled`) | `hu-35-ca8-ca9-guia-y-sidebar.cy.ts`; reproducción con Playwright (ver arriba) |
+
+Capturas reales con API simulada, en claro y oscuro y en escritorio, tableta y móvil:
+`hus/evidence/HU-35/ui/`.
+
+## Cambio en pruebas existentes
+
+- `ui-learning-flow.cy.ts`: la guía del estudiante pasa de 6 a 8 pasos, así que el recorrido hace 7
+  «Siguiente» antes de «Terminar».
+- `QuizScenarioFactoryTest`: las descripciones cambian (valores sin corchetes y con la estructura
+  nombrada) y el escenario incluye la preparación.
+- `QuizQuestionWriterTest`: `Scenario` lleva la preparación.
+
+## Defectos encontrados durante la QA
+
+- La página del quiz de estudio se desplazaba ~30 px al escribir al tutor y cortaba la cabecera:
+  los textos `sr-only` del registro, absolutos, no tenían un ancestro posicionado dentro del panel
+  con scroll. Se corrigió en `7215507` y la spec Playwright lo verifica.
+- Contraste de las etiquetas pequeñas en rojo y violeta sobre su tinte (axe, 4,4:1 y 4,37:1):
+  corregido antes del commit.
 
 ## Hallazgos fuera de alcance
 
 - Las operaciones de B-árbol del panel de algoritmos exigen un B-árbol en el lienzo que el chat no
-  puede generar.
+  puede generar (el generador devuelve una estructura vacía para `tree/btree`).
+- Los quizzes de curso ya publicados conservan sus escenarios anteriores: sin preparación y, en
+  tablas hash, sin número de cubetas. Un quiz nuevo ya los trae.
